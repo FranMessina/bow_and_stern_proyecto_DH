@@ -1,73 +1,83 @@
-*{
-    box-sizing: border-box;
+* {
+  box-sizing: border-box;
 }
 
-body{
-    font-family: 'Lora', sans-serif;
+body {
+  font-family: "Lora", sans-serif;
+  background-color: #ebebeb;
 }
 
-.main-header{
-    background-color: rgb(15, 89, 99);
-    padding: 5px 15px;
-    border-bottom: solid 3px rgb(0, 0, 0);
+.main-header {
+  background-color: rgb(15, 89, 99);
+  padding: 5px 15px;
+  border-bottom: solid 3px rgb(0, 0, 0);
 }
 
-.main-header-bar1{
+.main-header-bar1 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.main-header-bar2 {
+  display: none;
+}
+
+.main-header-bar2 ul {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+}
+
+.main-header-bar2 a {
+  text-decoration: none;
+  color: #222222;
+  display: inline-block;
+  padding: 5px;
+  font-size: 22px;
+}
+
+.burger-menu {
+  color: #222222;
+  display: block;
+  margin-right: 5px;
+  font-size: 20px;
+  text-align: right;
+}
+
+.main-img img {
+  display: block;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  border-bottom: 1px solid black;
+  margin: auto;
+  width: 100vw;
+  max-width: 1920px;
+}
+
+@media (min-width: 980px) {
+  .main-header-bar2 {
+    border: solid 2px red;
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-}
-
-.main-header-bar2{
+  }
+  .main-header-bar2 ul {
+    display: flex;
+  }
+  .burger-menu {
     display: none;
+  }
 }
 
-.main-header-bar2 ul{
-    list-style: none;
-    margin: 0px;
-    padding: 0px;
-}
-
-.main-header-bar2 a{
-    text-decoration: none;
-    color: #222222;
-    display: inline-block;
-    padding: 5px;
-    font-size: 22px;
-}
-
-.burger-menu{
-    color: #222222;
-    display: block;
-    margin-right: 5px;
-    font-size: 20px;
-    text-align: right;
-}
-
-@media (min-width:980px){
-    .main-header-bar2{
-        border: solid 2px red;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-    .main-header-bar2 ul{
-        display: flex;
-    }
-    .burger-menu{
-        display: none;
-    }
-}
-
-
-@media (min-width:1200px){
-    .main-header-bar1{
-        max-width: 1200px;
-        margin: auto;
-        border: solid 1px blue
-    }
-    .main-header-bar2 a{
-        font-size: 25px;
-    }
+@media (min-width: 1200px) {
+  .main-header-bar1 {
+    max-width: 1600px;
+    margin: auto;
+    border: solid 1px blue;
+  }
+  .main-header-bar2 a {
+    font-size: 25px;
+  }
 }
