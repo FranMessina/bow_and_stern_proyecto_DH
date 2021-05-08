@@ -1,14 +1,21 @@
 * {
   box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
 }
 
 body {
-  font-family: "Lora", sans-serif;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 300;
   background-color: #666;
 }
 
+.icon {
+  width: 40px;
+}
+
 .main-header {
-  background-color: rgb(15, 89, 99);
+  background-color: #333333;
   padding: 5px 15px;
   border-bottom: solid 3px rgb(0, 0, 0);
 }
@@ -18,6 +25,7 @@ body {
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+  color: #ebebeb;
 }
 
 .main-header-bar2 {
@@ -26,20 +34,18 @@ body {
 
 .main-header-bar2 ul {
   list-style: none;
-  margin: 0px;
-  padding: 0px;
 }
 
 .main-header-bar2 a {
   text-decoration: none;
-  color: #222222;
+  color: #ebebeb;
   display: inline-block;
   padding: 5px;
   font-size: 22px;
 }
 
 .burger-menu {
-  color: #222222;
+  color: #ebebeb;
   display: block;
   margin-right: 5px;
   font-size: 20px;
@@ -56,6 +62,71 @@ body {
   max-width: 1920px;
 }
 
+.catalogue-link {
+  background-color: rgba(48, 209, 238, 0.349);
+  border: 1px solid black;
+  text-align: center;
+  padding: 20px;
+}
+
+.catalogue-link a {
+  text-decoration: none;
+  color: #ebebeb;
+  font-weight: 300;
+}
+
+.showcase {
+  display: flex;
+  flex-flow: column wrap;
+}
+
+.showcase-title {
+  text-align: center;
+  width: 100vw;
+  margin-top: 15px;
+}
+
+.showcase h4 {
+  padding: 10px;
+  font-weight: 300;
+  border-bottom: 1px solid black;
+}
+
+.showcase1 {
+  text-align: center;
+  background-color: rgba(48, 209, 238, 0.349);
+  max-width: 750px;
+  border: 1px solid black;
+}
+
+.showcase1 img {
+  width: 100%;
+  margin: 0px;
+}
+
+.showcase1 a {
+  text-decoration: none;
+  color: #ebebeb;
+  font-weight: 300;
+}
+
+.showcase2 {
+  text-align: center;
+  background-color: rgba(48, 209, 238, 0.349);
+  max-width: 750px;
+  border: black solid 1px;
+}
+
+.showcase2 img {
+  width: 100%;
+}
+
+.showcase2 a {
+  text-decoration: none;
+  color: #ebebeb;
+  font-weight: 300;
+}
+
 @media (min-width: 980px) {
   .main-header-bar2 {
     border: solid 2px red;
@@ -69,6 +140,19 @@ body {
   .burger-menu {
     display: none;
   }
+  .icon {
+    width: 50px;
+  }
+  .showcase {
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+  }
+  .showcase1,
+  .showcase2 {
+    flex: 50%;
+  }
 }
 
 @media (min-width: 1200px) {
@@ -79,5 +163,14 @@ body {
   }
   .main-header-bar2 a {
     font-size: 25px;
+  }
+  .showcase {
+    max-width: 1920px;
+    justify-content: space-evenly;
+    margin: auto;
+  }
+  .catalogue-link {
+    max-width: 1920px;
+    margin: auto;
   }
 }

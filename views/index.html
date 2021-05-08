@@ -9,6 +9,10 @@
       rel="stylesheet"
     />
     <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
     />
@@ -21,6 +25,10 @@
     <!-- Barra superior de la pagina-->
     <header class="main-header">
       <div class="main-header-bar1">
+        <!-- Icono -->
+        <div class="icon">
+          <img src="/img/logo1.svg" alt="logo" />
+        </div>
         <!-- Texto con el nombre de la pagina-->
         <h2 class="webname">Nombre de la pagina</h2>
 
@@ -30,20 +38,48 @@
         </a>
 
         <!-- Opciones del menu para pagina en pantallas grandes-->
-        <div class="main-header-bar2">
+        <nav class="main-header-bar2">
           <ul>
             <li><a href="/login">login</a></li>
             <li><a href="/register">register</a></li>
             <li><a href="/productCart">productCart</a></li>
             <li><a href="/productDetail">productDetail</a></li>
           </ul>
-        </div>
+        </nav>
       </div>
     </header>
+    <main>
+      <!-- Imagen principal -->
+      <div class="main-img">
+        <img src="/img/home-main-picture.jpg" alt="main-image" />
+      </div>
+      <!-- Link a catalogo de barcos disponibles -->
+      <div class="catalogue-link">
+        <h3><a href="#">Ver barcos disponibles</a></h3>
+      </div>
 
-    <!-- Imagen principal -->
-    <div class="main-img">
-      <img src="/img/home-main-picture.jpg" alt="main-image" />
-    </div>
+      <!-- Sector de barcos destacados -->
+      <section class="showcase">
+        <div class="showcase-title">
+          <h2>Barcos destacados</h2>
+        </div>
+        <!-- Destacado 1 -->
+        <article class="showcase1">
+          <a href="#"
+            ><h4>Nombre del barco</h4>
+            <img src="/img/yacht1.jpg" alt="" />
+            <p>Disfruta de esta hermosa embarcacion en la region del caribe</p>
+          </a>
+        </article>
+        <!-- Destacado 2 -->
+        <article class="showcase2">
+          <a href="#"
+            ><h4>Nombre del barco</h4>
+            <img src="/img/yacht1.jpg" alt="" />
+            <p>Disfruta de esta hermosa embarcacion en la region del caribe</p>
+          </a>
+        </article>
+      </section>
+    </main>
   </body>
 </html>
