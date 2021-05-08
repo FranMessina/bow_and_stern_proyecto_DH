@@ -3,12 +3,13 @@
 }
 
 body {
-  font-family: "Lora", sans-serif;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 300;
   background-color: #666;
 }
 
 .main-header {
-  background-color: rgb(15, 89, 99);
+  background-color: #333333;
   padding: 5px 15px;
   border-bottom: solid 3px rgb(0, 0, 0);
 }
@@ -18,6 +19,7 @@ body {
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+  color: #ebebeb;
 }
 
 .main-header-bar2 {
@@ -39,7 +41,7 @@ body {
 }
 
 .burger-menu {
-  color: #222222;
+  color: #ebebeb;
   display: block;
   margin-right: 5px;
   font-size: 20px;
@@ -54,6 +56,18 @@ body {
   margin: auto;
   width: 100vw;
   max-width: 1920px;
+}
+
+.catalogue-link {
+  background-color: rgba(48, 209, 238, 0.349);
+  border: 1px solid black;
+  text-align: center;
+}
+
+.catalogue-link a {
+  text-decoration: none;
+  color: #ebebeb;
+  font-weight: 300;
 }
 
 @media (min-width: 980px) {
