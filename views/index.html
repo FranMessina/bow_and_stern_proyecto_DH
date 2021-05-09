@@ -2,84 +2,211 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="/css/normalize.css" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500&display=swap"
-      rel="stylesheet"
-    />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
     />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/css/index-css.css" />
-    <title>Index</title>
+    <title>Home Page</title>
   </head>
   <body>
-    <!-- Barra superior de la pagina-->
-    <header class="main-header">
-      <div class="main-header-bar1">
-        <!-- Icono -->
-        <div class="icon">
-          <img src="/img/logo1.svg" alt="logo" />
-        </div>
-        <!-- Texto con el nombre de la pagina-->
-        <h2 class="webname">Nombre de la pagina</h2>
-
-        <!-- Icono de 3 lineas para menu desplegable en mobile-->
-        <a href="#" class="burger-menu">
-          <i class="fas fa-bars"></i>
+    <!-- Header - barra de navegacion - imagen principal -->
+    <header>
+      <nav>
+        <a href="/" class="logo-name">
+          <img src="/img/logo1.svg" alt="" />
+          <h2>WebPageName</h2>
         </a>
-
-        <!-- Opciones del menu para pagina en pantallas grandes-->
-        <nav class="main-header-bar2">
-          <ul>
-            <li><a href="/login">login</a></li>
-            <li><a href="/register">register</a></li>
-            <li><a href="/productCart">productCart</a></li>
-            <li><a href="/productDetail">productDetail</a></li>
+        <div class="nav-links">
+          <ul id="navLinks">
+            <i class="fas fa-times" onclick="hideMenu()"></i>
+            <li><a href="#">HOME</a></li>
+            <li><a href="#">CATALOGO</a></li>
+            <li><a href="#">ABOUT US</a></li>
+            <li><a href="#">LOGIN</a></li>
+            <li><a href="#">REGISTER</a></li>
+            <li><a href="#">CARRITO</a></li>
           </ul>
-        </nav>
+        </div>
+        <i class="fas fa-bars" onclick="showMenu()"></i>
+      </nav>
+
+      <div class="text-box">
+        <h1>Whatever you want</h1>
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Velit sint
+          deleniti quas explicabo ex, quidem iste, dignissimos alias error illum
+          delectus ullam harum nemo esse, beatae sit totam doloremque dolores.
+        </p>
+        <a href="#" class="boats-btn">Ver barcos disponibles</a>
       </div>
     </header>
+    <!-- Cuerpo principal de la pagina-->
     <main>
-      <!-- Imagen principal -->
-      <div class="main-img">
-        <img src="/img/home-main-picture.jpg" alt="main-image" />
-      </div>
-      <!-- Link a catalogo de barcos disponibles -->
-      <div class="catalogue-link">
-        <h3><a href="#">Ver barcos disponibles</a></h3>
-      </div>
+      <!-- Barcos destacados -->
+      <section class="destacados">
+        <h2>Embarcaciones destacadas</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maxime
+          repudiandae, nulla non nesciunt consectetur deleniti. Laboriosam illum
+          inventore eveniet ipsum ab tenetur ipsa eaque totam, eius, praesentium
+          sed dolorem repellat?
+        </p>
 
-      <!-- Sector de barcos destacados -->
-      <section class="showcase">
-        <div class="showcase-title">
-          <h2>Barcos destacados</h2>
+        <div class="row">
+          <article class="boat-ex">
+            <h3>Nombre del barco</h3>
+            <img src="/img/home-main-picture.jpg" alt="" />
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum
+              quae esse reiciendis illo. Non obcaecati corporis quod officiis
+              eaque necessitatibus ut minima. Illum dolor maiores aperiam
+              repellat dolore iste, explicabo earum ipsum eos delectus fugiat
+              amet reiciendis voluptatum quae omnis! Ipsam illo ullam doloribus
+              vel assumenda obcaecati soluta optio sed.
+            </p>
+          </article>
+          <article class="boat-ex">
+            <h3>Nombre del barco</h3>
+            <img src="/img/home-main-picture.jpg" alt="" />
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum
+              quae esse reiciendis illo. Non obcaecati corporis quod officiis
+              eaque necessitatibus ut minima. Illum dolor maiores aperiam
+              repellat dolore iste, explicabo earum ipsum eos delectus fugiat
+              amet reiciendis voluptatum quae omnis! Ipsam illo ullam doloribus
+              vel assumenda obcaecati soluta optio sed.
+            </p>
+          </article>
+          <article class="boat-ex">
+            <h3>Nombre del barco</h3>
+            <img src="/img/home-main-picture.jpg" alt="" />
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum
+              quae esse reiciendis illo. Non obcaecati corporis quod officiis
+              eaque necessitatibus ut minima. Illum dolor maiores aperiam
+              repellat dolore iste, explicabo earum ipsum eos delectus fugiat
+              amet reiciendis voluptatum quae omnis! Ipsam illo ullam doloribus
+              vel assumenda obcaecati soluta optio sed.
+            </p>
+          </article>
         </div>
-        <!-- Destacado 1 -->
-        <article class="showcase1">
-          <a href="#"
-            ><h4>Nombre del barco</h4>
-            <img src="/img/yacht1.jpg" alt="" />
-            <p>Disfruta de esta hermosa embarcacion en la region del caribe</p>
-          </a>
-        </article>
-        <!-- Destacado 2 -->
-        <article class="showcase2">
-          <a href="#"
-            ><h4>Nombre del barco</h4>
-            <img src="/img/yacht1.jpg" alt="" />
-            <p>Disfruta de esta hermosa embarcacion en la region del caribe</p>
-          </a>
-        </article>
+      </section>
+      <!-- Sobre nosotros/servicios/porque elegirnos/que ofrecemos -->
+      <section class="information">
+        <h3>Lo que necesitas saber sobre nosotros!</h3>
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident,
+          fugit optio error voluptate dolorum aliquid voluptatum. Molestias,
+          veritatis! Ipsa similique ut molestiae dolorem recusandae est
+          asperiores, modi ullam officia dolore.
+        </p>
+        <div class="col-cont">
+          <div class="col">
+            <div class="imgcont">
+              <img src="/img/home-main-picture.jpg" alt="" />
+            </div>
+            <div class="textcont">
+              <h4>Que ofrecemos</h4>
+              <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa
+                ipsam nisi, saepe eius consequatur tempora unde labore beatae
+                laborum qui officiis totam, natus magni quas, perferendis non
+                corporis sed possimus doloribus est perspiciatis odit dolorum?
+                Rem suscipit vitae voluptatum aliquid?Lorem ipsum, dolor sit
+                amet consectetur adipisicing elit. Dolorum inventore tempora
+                optio repudiandae id molestias ex rem iste. Obcaecati at
+                repudiandae fugiat aperiam placeat quo commodi ab voluptatem
+                sequi alias, deserunt aliquid vel nihil facere cum quam
+                explicabo quia voluptate minus aliquam praesentium inventore! Et
+                quo sapiente dolore unde voluptatum debitis iure blanditiis vel
+                culpa incidunt! Id nam voluptates delectus?
+              </p>
+            </div>
+          </div>
+          <div class="colb">
+            <div class="imgcont">
+              <img src="/img/home-main-picture.jpg" alt="" />
+            </div>
+            <div class="textcont">
+              <h4>Que ofrecemos</h4>
+              <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa
+                ipsam nisi, saepe eius consequatur tempora unde labore beatae
+                laborum qui officiis totam, natus magni quas, perferendis non
+                corporis sed possimus doloribus est perspiciatis odit dolorum?
+                Rem suscipit vitae voluptatum aliquid?Lorem ipsum dolor sit amet
+                consectetur adipisicing elit. Deserunt iure a quis at autem
+                earum in vitae aliquid fugit possimus distinctio officia, quos
+                perspiciatis illo omnis adipisci dolores animi suscipit ad nobis
+                eos numquam est nemo modi! Voluptatum culpa et labore quod
+                repellat distinctio neque exercitationem quos id harum. Quae
+                perspiciatis vitae minus a dolorem ratione possimus! Soluta, vel
+                magni.
+              </p>
+            </div>
+          </div>
+          <div class="col">
+            <div class="imgcont">
+              <img src="/img/home-main-picture.jpg" alt="" />
+            </div>
+            <div class="textcont">
+              <h4>Que ofrecemos</h4>
+              <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa
+                ipsam nisi, saepe eius consequatur tempora unde labore beatae
+                laborum qui officiis totam, natus magni quas, perferendis non
+                corporis sed possimus doloribus est perspiciatis odit dolorum?
+                Rem suscipit vitae voluptatum aliquid?Lorem ipsum dolor, sit
+                amet consectetur adipisicing elit. Beatae sapiente consequuntur
+                alias voluptatum sit blanditiis. Alias libero sit et neque quis,
+                corporis aperiam incidunt, consequatur dicta recusandae harum a
+                nobis, unde perferendis facere eligendi. Ipsa vitae officia
+                eveniet repellat provident deserunt vel corporis nesciunt
+                expedita voluptates maxime dicta libero, doloribus ullam a
+                iusto, eligendi aut facere! Possimus alias atque accusamus?
+              </p>
+            </div>
+          </div>
+        </div>
       </section>
     </main>
+
+    <footer>
+      <h4>ABOUT US</h4>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique
+        aliquid hic officiis sunt quisquam qui nemo impedit sed dignissimos
+        quam. Aut reprehenderit ducimus beatae enim. <br />
+        Quidem at earum veritatis vitae optio quos architecto nihil ratione
+        commodi dolor, sint eum beatae atque, nulla maiores doloribus incidunt
+        dolorem, laborum repellat deserunt exercitationem?
+      </p>
+      <div class="icons">
+        <i class="fas fa-facebook"></i>
+        <i class="fas fa-instagram"></i>
+        <i class="fas fa-twitter"></i>
+        <i class="fas fa-linkedin"></i>
+      </div>
+    </footer>
+
+    <!-- Javascript para menu desplegable -->
+    <script>
+      var navLinks = document.getElementById("navLinks");
+      function showMenu() {
+        navLinks.style.right = 0;
+      }
+      function hideMenu() {
+        navLinks.style.right = "-200px";
+      }
+    </script>
   </body>
 </html>
