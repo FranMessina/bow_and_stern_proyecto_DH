@@ -36,6 +36,19 @@ body {
   list-style: none;
 }
 
+.main-header-bar2 ul li::after {
+  content: "";
+  width: 0%;
+  height: 2px;
+  background: rgb(9, 117, 136);
+  display: block;
+  margin: auto;
+  transition: 0.5s;
+}
+.main-header-bar2 ul li:hover::after {
+  width: 80%;
+}
+
 .main-header-bar2 a {
   text-decoration: none;
   color: #ebebeb;
@@ -126,7 +139,7 @@ body {
 
 @media (min-width: 980px) {
   .main-header-bar2 {
-    border: solid 2px red;
+    /* border: solid 2px red; */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -152,7 +165,7 @@ body {
   .main-header-bar1 {
     max-width: 1600px;
     margin: auto;
-    border: solid 1px blue;
+    /* border: solid 1px blue; */
   }
   .main-header-bar2 a {
     font-size: 25px;
