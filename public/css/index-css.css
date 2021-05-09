@@ -62,14 +62,16 @@ body {
   max-width: 1920px;
 }
 
-.catalogue-link {
-  background-color: rgba(48, 209, 238, 0.349);
+.catalogue-link div {
+  background-color: rgb(9, 117, 136);
   border: 1px solid black;
+  border-bottom: 2px solid black;
   text-align: center;
   padding: 20px;
 }
 
-.catalogue-link a {
+.catalogue-link,
+.catalogue-link h3 {
   text-decoration: none;
   color: #ebebeb;
   font-weight: 300;
@@ -78,12 +80,17 @@ body {
 .showcase {
   display: flex;
   flex-flow: column wrap;
+  align-items: center;
+  background-color: aliceblue;
+  border-right: 1px black solid;
+  border-left: 1px black solid;
 }
 
 .showcase-title {
   text-align: center;
   width: 100vw;
   margin-top: 15px;
+  margin-bottom: 15px;
 }
 
 .showcase h4 {
@@ -92,35 +99,25 @@ body {
   border-bottom: 1px solid black;
 }
 
-.showcase1 {
+.showcase1,
+.showcase2 {
   text-align: center;
-  background-color: rgba(48, 209, 238, 0.349);
+  background-color: rgb(9, 117, 136);
   max-width: 750px;
   border: 1px solid black;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  margin-left: 0px;
+  padding-bottom: 5px;
 }
 
-.showcase1 img {
+.showcase1 img,
+.showcase2 img {
   width: 100%;
   margin: 0px;
 }
 
-.showcase1 a {
-  text-decoration: none;
-  color: #ebebeb;
-  font-weight: 300;
-}
-
-.showcase2 {
-  text-align: center;
-  background-color: rgba(48, 209, 238, 0.349);
-  max-width: 750px;
-  border: black solid 1px;
-}
-
-.showcase2 img {
-  width: 100%;
-}
-
+.showcase1 a,
 .showcase2 a {
   text-decoration: none;
   color: #ebebeb;
@@ -145,13 +142,9 @@ body {
   }
   .showcase {
     flex-flow: row wrap;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     align-content: center;
-  }
-  .showcase1,
-  .showcase2 {
-    flex: 50%;
   }
 }
 
@@ -166,10 +159,10 @@ body {
   }
   .showcase {
     max-width: 1920px;
-    justify-content: space-evenly;
     margin: auto;
+    justify-content: space-around;
   }
-  .catalogue-link {
+  .catalogue-link div {
     max-width: 1920px;
     margin: auto;
   }
