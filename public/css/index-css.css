@@ -38,6 +38,16 @@ nav .logo-name {
   flex-flow: row wrap;
   justify-content: start;
   align-items: center;
+  align-content: center;
+}
+nav .logo-name h2::after {
+  content: "";
+  width: 0%;
+  height: 4px;
+  background: rgb(9, 117, 136);
+  display: block;
+  margin: auto;
+  transition: 0.5s;
 }
 
 .nav-links {
