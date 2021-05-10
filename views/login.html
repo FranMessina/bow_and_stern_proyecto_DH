@@ -1,12 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-</head>
-<body>
-    
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+  /> 
+    <link rel="stylesheet" href="/css/login-css.css" />
+    <title>login</title>
+  </head>
+  <body>
+    <form action="/login" method="POST" class="create-form">
+      <h1>Register</h1>
+      <h2>Create your account</h2>
+
+      <div class="form-field">
+        <label>First Name</label>
+        <input
+          type="text"
+          name="fistName"
+          placeholder=""
+          class="field"
+          required
+        />
+      </div>
+
+      <div class="form-field">
+        <label>Last Name</label>
+        <input
+          type="text"
+          name="lastName"
+          placeholder=""
+          class="field"
+          required
+        />
+      </div>
+
+      <div class="form-field">
+        <label>Username</label>
+        <input type="text" name="user" placeholder="" class="field" required />
+      </div>
+
+      <div class="form-field">
+        <label>Email Address</label>
+        <input
+          type="email"
+          name="email"
+          placeholder=""
+          class="field"
+          required
+        />
+      </div>
+
+      <div class="form-field">
+        <label>Password</label>
+        <input
+          type="password"
+          name="pass"
+          placeholder=""
+          class="field"
+          required
+        />
+      </div>
+
+      <div class="form-field">
+        <label>Confirm Password</label>
+        <input
+          type="password"
+          name="passConfirm"
+          placeholder=""
+          class="field"
+          required
+        />
+      </div>
+
+      <div>
+        <label>I accept the <a href="">terms of user</a></label>
+        <input type="checkbox" />
+      </div>
+
+      <button type="submit" class="register-button">Register</button>
+
+      <div class="link">
+        <a href="/login">I am already registered</a>
+        <a href="/">Return to home</a>
+      </div>
+    </form>
+  </body>
 </html>
