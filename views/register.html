@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/register-css.css" />
+    <title>register</title>
+  </head>
+  <body>
+    <form action="/register" method="POST" class="create-form">
+      <h1>Register</h1>
+      <h2>Create your account</h2>
+
+      <div class="form-field">
+        <label>First Name</label>
+        <input
+          type="text"
+          name="fistName"
+          placeholder=""
+          class="field"
+          required
+        />
+      </div>
+
+      <div class="form-field">
+        <label>Last Name</label>
+        <input
+          type="text"
+          name="lastName"
+          placeholder=""
+          class="field"
+          required
+        />
+      </div>
+
+      <div class="form-field">
+        <label>Username</label>
+        <input type="text" name="user" placeholder="" class="field" required />
+      </div>
+
+      <div class="form-field">
+        <label>Email Address</label>
+        <input
+          type="email"
+          name="email"
+          placeholder=""
+          class="field"
+          required
+        />
+      </div>
+
+      <div class="form-field">
+        <label>Password</label>
+        <input
+          type="password"
+          name="pass"
+          placeholder=""
+          class="field"
+          required
+        />
+      </div>
+
+      <div class="form-field">
+        <label>Confirm Password</label>
+        <input
+          type="password"
+          name="passConfirm"
+          placeholder=""
+          class="field"
+          required
+        />
+      </div>
+
+      <div>
+        <label>I accept the <a href="">terms of user</a></label>
+        <input type="checkbox" />
+      </div>
+
+      <button type="submit" class="register-button">Register</button>
+
+      <div class="link">
+        <a href="/login">I am already registered</a>
+        <a href="/home">Return to home</a>
+      </div>
+    </form>
+  </body>
+</html>
