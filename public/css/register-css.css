@@ -6,7 +6,7 @@
 
   
   body {
-    font-family: "Quicksand", sans-serif;
+    font-family: "Poppins", sans-serif;
   }
 
 
@@ -21,14 +21,15 @@
 }
 
 h1 {
-  color: #1a468f;
+  font-weight: 300;
+  color: rgb(9,117,136);
   text-align: center;
   font-size: 30px;
   margin-bottom: 5px;
 }
 
 h2 {
-  color: #1a468f;
+  color: rgb(9,117,136);
   text-align: center;
   font-size: 17px;
   margin-bottom: 30px;
@@ -41,7 +42,7 @@ h2 {
 .form-field label {
   margin-bottom: 5px;
   display: block;
-  font-size: 15px;
+  font-size: 13px;
 }
 
 .field {
@@ -49,15 +50,16 @@ h2 {
   width: 100%;
   padding: 10px;
   border: none;
-  border-bottom: 1.5px solid  darkblue;
+  border-bottom: 1.5px solid  #ebebeb;
+  outline: none;
 }
 
 .register-button {  
-  background-color: #1a468f;
+  background-color: rgb(9,117,136);
   border: none;
   font-size: 15px;
   color: white;
-  padding: 5px 50px;
+  padding: 7px 60px;
   border-radius: 4px;
   display: block;
   margin: auto;
@@ -67,18 +69,25 @@ h2 {
 
 .register-button:hover {
   cursor: pointer;
-  background-color: rgb(81, 129, 177);
+  background-color: rgb(18, 178, 206);
   color: black;
 }
 
 a{
   text-decoration: none;
-  font-size: 15px;
+  font-size: 12px;
   color: rgb(155, 152, 152);
+  margin-top: 15px;
 }
 
 
 .link {
-  display: block;
-  justify-content: space-between ;
+  display: flex;
+  justify-content: center;
+  flex-flow: column wrap;
+  align-items: center;
+}
+
+.link p, .link a {
+    font-size: 12px;
 }
