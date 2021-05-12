@@ -1,0 +1,161 @@
+/*--ACOMODANDO-EL-DOCUMENTO----------------*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  
+}
+
+/*--EDICION DEL FORM----------------*/
+.form{
+    width: 400px;
+    padding: 30px;
+    margin: auto;
+    margin-top: 50px;
+    font-family:"calibri";
+    color: black;
+}
+/*--EDICION DEL TITULO----------------*/
+.titulo{
+    margin-bottom: 30px;
+    
+}
+/*--EDICION DE IMPUTS----------------*/
+.cajas{
+    width: 100%;
+    background: rgb(196, 243, 239);
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    border: none;
+    font-family: 'calibri';
+    color: black;
+    font-size: 14px;
+    border-left: 35px solid #5b7fc4;
+    transition: all .3s ease;
+}
+
+.cajas:hover{
+    border-left: 20px solid #03295c;
+}
+
+/*--TERMINOS Y CONDICIONES----------------*/
+.terminos1 {
+    text-align: center;
+}
+.terminos2 {
+    text-decoration: none;
+    color:black;
+}
+/*--EDICION DEL BOTON----------------*/
+
+.boton1{
+    padding: 10px;
+    width: 100px;
+    background: #2f70c7;
+    border:none;
+    color: white;
+    border-radius: 4px;
+    margin-top: 15px;
+    margin-right: 400px;
+    margin-bottom: 15px;
+    transition: all .5s ease;
+    display: flex;
+    margin: auto;
+    font-family:"calibri";
+    text-align:center;
+}
+
+.boton1:hover{
+    background:#03295c;
+    cursor:pointer;
+}
+
+/*--EDICION YA TENGO CUENTA----------------*/
+.cuenta {
+color:black;
+text-align: center;
+text-decoration: none;
+font-family:"calibri";
+}
+
+.cuenta:hover {
+    color: #03295c;
+}
+
+/*--EDICION DE ICONOS----------------*/
+
+
+.field {
+    border: solid 1px #ccc;
+    padding:5px;
+    padding-top: 20px;
+    width: 200px;
+
+}
+.field-container div{
+    display: inline-block;
+    vertical-align: top;
+    margin-top: -50px;
+}
+
+
+.field-container i{
+    border: solid 1px #ccc;
+    background-color: #5b7fc4;
+    padding:5px 5px 6px 5px;
+    border-right: -4px;
+}
+
+
+/*--MAS EDICION DE ICONOS----------------*/
+
+#menu, form{
+    width: 340px;
+    margin: 0 auto;
+}
+
+#menu ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#menu ul li{
+    display: inline-block;
+    width:50%;
+    height: 10%;
+    margin-right: -4px;
+    margin-bottom: -500px;
+    margin-top: auto
+}
+
+#menu ul li a{
+    color: #222;
+    font-family: "calibri";
+    display: block;
+    padding: 20px 20px;
+    text-decoration: none; 
+    font-size: 20px;
+}
+#menu ul li a:haver{
+    background-color: teal;
+
+}
+
+.active{
+    background-color:cornflowerblue !important;
+}
+.columns >div{
+    display: inline-block;
+    vertical-align: top;
+    width: 50%;
+    margin-right: -4px;
+}
+.columns field{
+    width: 70px;
+}
+
+#form-register{
+    display: none;
+}
