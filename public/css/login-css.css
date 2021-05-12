@@ -1,14 +1,12 @@
 * {
-    box-sizing: border-box;
-    padding: 0px;
-    margin: 0px;
-  }
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+}
 
-  
-  body {
-    font-family: "Poppins", sans-serif;
-  }
-
+body {
+  font-family: "Poppins", sans-serif;
+}
 
 .create-form {
   background-color: #ffffff;
@@ -49,10 +47,10 @@ h2 {
   width: 100%;
   padding: 10px;
   border: none;
-  border-bottom: 1.5px solid  darkblue;
+  border-bottom: 1.5px solid darkblue;
 }
 
-.register-button {  
+.register-button {
   background-color: #1a468f;
   border: none;
   font-size: 15px;
@@ -71,12 +69,11 @@ h2 {
   color: black;
 }
 
-a{
+a {
   text-decoration: none;
   font-size: 15px;
   color: rgb(155, 152, 152);
 }
-
 
 .link {
   display: flex;
