@@ -33,7 +33,9 @@ app.get("/carrito", (req, res) => {
 	res.sendFile(path.resolve(__dirname, "./views/carrito.html"));
 });
 
-
+app.get("/summary", (req, res) => {
+	res.sendFile(path.resolve(__dirname, "./views/summary.html"));
+});
 
 app.get("/groupSize", (req, res) => {
 	res.sendFile(path.resolve(__dirname, "./views/groupSize.html"));
