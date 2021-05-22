@@ -3,84 +3,105 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Producto seleccionado</title>
+    <title>Formulario Carrito</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link rel = "stylesheet" href = "/css/normalize.css">
-    <link rel = "stylesheet" href = "/css/productCart.css">
+    <link rel = "stylesheet" href = "/css/styles-carrito.css">
     <script src="https://kit.fontawesome.com/8accbfc9de.js" crossorigin="anonymous"></script>
-    <link
-		rel="stylesheet"
-		href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-	/>
 </head>
 <body>
-     <main>
-         <section>
-             <h3>Servicio seleccionado</h3>
-             <article class=product>
-                 <img src = "img/barco4.jpg" alt = "barco" width = "300px" height = "300px">
-                 <div>
-                    <i class="fas fa-user"></i>
-                    <p class="user">Usuario que reserva</h3>
-                 </div>
-                 <div>
-                    <i class="fas fa-envelope-square"></i>
-                    <p class="e-mail">E-mail</p>
-                </div>
-                <div>
-                    <i class="far fa-calendar-check"></i>
-                    <p class="fecha">Fecha de Reserva</p>
-                </div>
-                <div>
-                    <i class="fas fa-map-marked-alt"></i>
-                     <p class="maps">Ruta Seleccionada</p>
-                </div>
-                <div>
-                    <i class="fas fa-users"></i>
-                     <p class="personas">Cantidad de Personas</p>
-                </div>
-                <div>
-                     <i class="fas fa-drumstick-bite"></i>
-                     <p class="buffet">Buffet a Bordo: Sí /No</p>
-                </div>
-                <div>
-                    <i class="fas fa-glass-cheers"></i>
-                    <p class="catering">Catering: Sí/No </p>
-               </div>
-               <div>
-                <i class="fas fa-swimmer"></i>
-                <p class="buceo">Servicio de Buceo: Sí/No </p>
-                </div>
-             </article>
-         </section>
-     </main>
-     <footer>
-         </section>
-         <strong>
-             <div class="object">
-                 <div>
-            <i class="fas fa-credit-card"></i>
-                 </div>
+    <div id="menu">
+        <ul>
+            <li><a href="#" class="active">Ingresá tus Datos</a></li>
+            <li><a href="#">Armá tu programa de diversión</a></li>
+        </ul>
+    </div>
+    <div id="formularios">
+    <form action="">
+  <!--FORMULARIO-->
+  <form class ="form">
+    
+          <!--IMPUTS-->
+        <div class="field-container">
+            <!-- Usuario-->
+            <i class="far fa-address-card"></i>
+            <input class="cajas" type="text" placeholder="Nombre y Apellido" required maxlength="40">
         </div>
-         <h3>OPCIONES DE PAGO</h3>
-         <p>Aceptamos los siguientes metodos pagos(tarjetas)</p>
-         <ul class=tarjetas_contenedoras>
-                <li class="tarjetas">
-                    <img src = "img/amex.jpg" alt = "Amex" width = "30px" height = "30px">
-                </li>
-                <li class="tarjetas">
-                    <img src = "img/visa.jpg" alt = "visa" width = "30px" height = "30px">
-                </li>
-                <li class="tarjetas">
-                    <img src = "img/mastercard.jpg" alt = "mastercard" width = "30px" height = "30px">
-                </li>
-         </section>
-         </section>
-         <p>Copyright 1999-2020</p>
-         </section>
+        <div class="field-container">
+              <!-- email-->
+            <i class="far fa-envelope"></i>
+            <input class="cajas" type="email" placeholder="Email" required maxlength="40">
+        </div>
+        <div class="field-container">
+            <!-- celular-->
+            <i class="fas fa-mobile-alt"></i>
+            <input class="cajas" type="tel" placeholder="Celular" required maxlength="40">
+        </div>
+        </form>
+        
+        <!--MAS IMPUTS-->
+        <form action="#" id="form-register">
+        <div class="columns">
+        <div class="field-container">
+            <!-- Marca/Modelo-->
+            <i class="fas fa-dharmachakra"></i>
+            <input class="cajas" type="text" placeholder="Marca/Modelo" required maxlength="40">
+        </div>
 
-         <input class="boton1" type="submit" value="CONFIRMAR">
-         <input class="boton2" type="submit" value="VOLVER">
- </footer>
- </body>
- </html>
+        <div class="field-container">
+            <!-- Tripulación-->
+            <i class="fas fa-anchor"></i>
+            <input class="cajas" type="Tripulación" placeholder="Tripulación" required maxlength="40">
+        </div>
+           
+        <div class="field-container">
+             <!-- Cabina-->
+             <i class="fas fa-vector-square"></i>
+            <input class="cajas" type="Cabina" placeholder="Cabina" required maxlength="40">
+        </div>
+
+        <div class="field-container">
+             <!-- Buffet a Bordo-->
+             <i class="fas fa-hamburger"></i>
+            <input class="cajas" type="Buffet a bordo" placeholder="Buffet a bordo" required maxlength="40">
+        </div>
+
+        <div class="field-container">
+                <!-- Catering-->
+                <i class="fas fa-glass-cheers"></i>
+            <input class="cajas" type="Catering" placeholder="Catering" required maxlength="40">
+        </div>
+
+        <div class="field-container">
+                <!-- Servicio de Buceo-->
+                <i class="fas fa-swimmer"></i>
+            <input class="cajas" type="Servicio de Buceo" placeholder="Servicio de Buceo" required maxlength="40">
+        </div>   
+        </div>
+        </div>
+        <!------TERMINOS-Y-CONDICIONES-------------------------------------------------------------------------------------->
+        <p class="terminos1"><input type="checkbox" required>&nbsp; Estoy de acuerdo con <a href="" class="terminos2">Terminos y condiciones</a></p>
+        
+        <!------SUBMIT------------------------------------->
+        <input class="boton1" type="submit" value="REGISTRAR">
+        
+        <!------YA-TENGO-CUENTA------------------------------------------->
+        <p class="cuenta"><a href="" class="cuenta">Ya tengo Cuenta</a></p>
+    </form>   
+    </form>
+</div>
+    <!--FIN-DEL-FORMULARIO------------>
+    <script src="jquery.js"></script>
+    <script>
+        $(function(){
+            $("#menu li").on("click", function(){
+                var i= $(this).index();
+                $("#formularios form").hide();
+                $("#formularios form").eq(i).show();
+                $("#menu li a").removeClass("active");
+                $(this).find("a").addClass("active");
+            });
+        });
+    </script>
+</body>
+</html>
