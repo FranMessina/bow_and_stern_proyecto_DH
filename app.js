@@ -25,14 +25,16 @@ app.get("/productDetail", (req, res) => {
 	res.sendFile(path.resolve(__dirname, "./views/productDetail.html"));
 });
 
-app.get("/productCart", (req, res) => {
-	res.sendFile(path.resolve(__dirname, "./views/productCart.html"));
-});
-
 app.get("/header", (req, res) => {
 	res.sendFile(path.resolve(__dirname, "./views/header-suelto.html"));
 });
 
 app.get("/carrito", (req, res) => {
 	res.sendFile(path.resolve(__dirname, "./views/carrito.html"));
+});
+
+
+
+app.get("/groupSize", (req, res) => {
+	res.sendFile(path.resolve(__dirname, "./views/groupSize.html"));
 });

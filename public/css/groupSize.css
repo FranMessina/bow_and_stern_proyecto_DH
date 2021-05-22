@@ -1,0 +1,122 @@
+*{
+    font-family: 'Poppins', sans-serif;
+
+}
+* {
+    box-sizing: border-box;
+}
+
+header{
+    height: 10vh;
+    
+}
+
+main{
+    display: flex;
+    margin: auto;
+    justify-content: center;
+}
+.formulario {
+    width: 500px;
+    height:700px;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 50px;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+  }
+
+.formulario h2{
+    font-size: 30px;
+    padding:10px;
+
+}
+.formulario article{
+    padding:20px;
+
+}
+
+#contenedor{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+  .value-button {
+    display: inline-block;
+    border: 1px solid #ddd;
+    margin: 0px;
+    width: 40px;
+    height:40px;
+    text-align: center;
+    vertical-align: middle;
+    padding: 11px 0;
+    background: #eee;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  .value-button:hover {
+    cursor: pointer;
+  }
+  
+  form #decrease {
+    margin-right: -4px;
+    border-radius: 8px 0 0 8px;
+  }
+  
+  form #increase {
+    margin-left: -4px;
+    border-radius: 0 8px 8px 0;
+  }
+  
+  form #input-wrap {
+    margin: 0px;
+    padding: 0px;
+  }
+  
+  input#number {
+    text-align: center;
+    border: none;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    margin: 0px;
+    width: 40px;
+    height: 40px;
+  }
+  
+  input[type=number]::-webkit-inner-spin-button,
+  input[type=number]::-webkit-outer-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+  }
+
+
+
+
+#botones{
+ width: 100%;
+
+ margin-top: 45px
+ 
+}
+#botones button{
+    background-color: rgb(31, 139, 158);
+    height: 40px;
+    width:80%;
+    border:0px;
+    border-radius:10px;
+    color:white
+
+}
+
+
+
+footer{
+    height:20vh;
+
+}
