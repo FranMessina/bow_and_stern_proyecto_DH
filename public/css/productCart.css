@@ -8,6 +8,12 @@ body {
 	line-height: 1.42857143;
 }
 
+
+header{
+    height: 10vh;
+    
+}
+
 .icono {
 	display: block;
 	margin: 0 15px 15px 0;
@@ -35,10 +41,18 @@ i.class {
 	object-position: top;
 }
 
+h2 {
+	font-size: 24px;
+	padding-top: 0px;
+	padding-left: 400px;
+	padding-right: -30px;
+}
+
+
 h3 {
 	font-size: 24px;
 	padding-top: 0px;
-	padding-left: 100px;
+	padding-left: 150px;
 	padding-right: -30px;
 }
 
@@ -48,7 +62,7 @@ h3 {
 	text-align: left;
 }
 .product p {
-	margin-left: 0px;
+	margin-left: 30px;
 	vertical-align: top;
 	display: inline-block;
 }
@@ -56,7 +70,7 @@ h3 {
 	display: block;
 	float: left;
 	margin: auto;
-	border-radius: 50px;
+	
 }
 
 .product i {
@@ -69,7 +83,7 @@ h3 {
 	border-radius: 50%;
 	position: absolute;
 	margin-top: 20px;
-	margin-left: 10px;
+	margin-left: 40px;
 }
 
 .user {
@@ -130,27 +144,38 @@ h3 {
 	color: #1259c3;
 	font-size: 30px;
 	text-align: center;
-	margin-left: -150px;
+	margin-left: -50px;
 	margin-top: 33px;
 	position: absolute;
 }
 
 .tarjetas_contenedoras {
 	padding: 0;
+
 }
+ 
 
 .tarjetas {
 	display: inline-block;
 	padding: 10px;
+	
+	
+ 
+	
 }
 .tarjetas img {
 	height: auto;
 	width: 90px;
+	justify-content:flex-start;
+	padding-left: 45%;
+	margin-left: 120%;
+	
 }
 
 p {
 	font-size: 16px;
-	font-weight: normal;
+	font-weight: bold;
+	margin-left: 100px;
 }
 
 strong {
@@ -175,7 +200,7 @@ strong {
 	position: absolute;
 }
 
-.boton2:hover {
+.boton1:hover {
 	background: #03295c;
 	cursor: pointer;
 }
@@ -201,7 +226,19 @@ strong {
 	cursor: pointer;
 }
 
+.cajaop{
+
+	width: 700px;
+	margin-right: 200px;
+	border-radius: 30px ;
+}
+
+footer{
+    height:20vh;
+}
+
 i.footer {
 	font-size: 100px;
 	color: #f09d;
 }
+
