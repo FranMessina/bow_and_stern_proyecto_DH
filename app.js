@@ -41,3 +41,7 @@ app.get("/groupSize", (req, res) => {
 app.get("/summary", (req, res) => {
 	res.sendFile(path.resolve(__dirname, "./views/summary.html"));
 });
+
+app.get("/package", (req, res) => {
+	res.sendFile(path.resolve(__dirname, "./views/foodPackage.html"));
+});

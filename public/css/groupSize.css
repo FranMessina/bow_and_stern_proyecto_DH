@@ -21,28 +21,29 @@ main{
     justify-content: center;
 
 }
-.formulario {
+.formularioGS {
+    display: flex;
     width: 300px;
     height:700px;
-    margin: 0 auto;
+    margin: auto;
     text-align: center;
-    padding-top: 50px;
+    padding: 50px;
     box-shadow: 5px 5px 7px #17b2eb;
-    display: flex;
     flex-direction: column;
     background-color: white;
     border-radius: 50px;
   }
 
-.formulario h2{
-    font-size: 30px;
-    padding:10px;
+.formularioGS h2{
+    font-size: 25px;
+       
 
 }
-.formulario article{
-    padding:20px;
-
+.formularioGS article{
+  padding:20px;
+  margin-top:10px;
 }
+
 
 #contenedor{
     display: flex;
@@ -114,7 +115,7 @@ main{
 #botones button{
     background-color: rgb(31, 139, 158);
     height: 40px;
-    width:80%;
+    width:100%;
     border:0px;
     border-radius:10px;
     color:white
@@ -131,7 +132,7 @@ footer{
 
 @media (min-width: 768px) {
 
-  .formulario {
+  .formularioGS {
     width: 500px;
     height:700px;
   
