@@ -37,6 +37,10 @@ app.get("/summary", (req, res) => {
 	res.sendFile(path.resolve(__dirname, "./views/summary.html"));
 });
 
+app.get("/selectdate", (req, res) => {
+	res.sendFile(path.resolve(__dirname, "./views/selectdate.html"));
+});
+
 app.get("/groupSize", (req, res) => {
 	res.sendFile(path.resolve(__dirname, "./views/groupSize.html"));
 });
