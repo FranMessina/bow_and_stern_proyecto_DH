@@ -32,6 +32,7 @@ main{
     flex-direction: column;
     background-color: white;
     border-radius: 50px;
+    position:relative;
   }
 
 .formularioGS h2{
@@ -121,6 +122,14 @@ main{
     color:white
 
 }
+#back{
+  font-size:20px;
+  position:absolute;
+  top: 30px;
+  left:30px;
+  color: #a9d5eb;
+}
+
 
 
 

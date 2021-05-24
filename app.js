@@ -42,6 +42,10 @@ app.get("/summary", (req, res) => {
 	res.sendFile(path.resolve(__dirname, "./views/summary.html"));
 });
 
-app.get("/package", (req, res) => {
+app.get("/foodPackage", (req, res) => {
 	res.sendFile(path.resolve(__dirname, "./views/foodPackage.html"));
+});
+
+app.get("/experiencePackage", (req, res) => {
+	res.sendFile(path.resolve(__dirname, "./views/experiencePackage.html"));
 });
