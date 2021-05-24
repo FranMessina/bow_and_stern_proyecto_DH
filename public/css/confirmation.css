@@ -17,12 +17,12 @@ main{
     justify-content: center;
 
 }
-.formularioFP {
+.contenedor {
     width: 300px;
-    height:700px;
+    height:400px;
     margin: auto;
     text-align: center;
-    padding-top: 50px;
+    padding-top: 40px;
     box-shadow: 5px 5px 7px #17b2eb;
     display: flex;
     flex-direction: column;
@@ -32,28 +32,14 @@ main{
   }
 
 
-#menu {
-    width: 250px;
-    height:350px ;
-    border-radius: 15px;
-}
+  footer{
+    height:20vh;
+  }
 
-#select select {
-   padding:2px;
-  
-}
-
-#select{
-    
-   position: absolute;
-   bottom:140px;
-   left:25px
-}
-
-#botones{
+  #botones{
     width: 100%;
    
-    margin-top: 100px
+    margin-top: 10px
     
    }
    #botones button{
@@ -69,54 +55,13 @@ main{
    }
 
    #botones button:hover{
-    background-color: rgb(66, 179, 199);
-    cursor: pointer;
-}
-
-#back{
-    font-size:20px;
-    position:absolute;
-    top: 30px;
-    left:30px;
-    color: #a9d5eb;
-}
-
-
-
-  footer{
-    height:20vh;
-  }
-
-
-
-
-
-
-
-
-
-
+       background-color: rgb(66, 179, 199);
+       cursor: pointer;
+   }
 
 
   @media (min-width: 768px){
-    .formularioFP {
+    .contenedor {
         width: 500px;
-        height:700px;}
-    #menu{
-        width: 400px;
-        height: 450px;
-
+        height: 300px;}
     }
-    #select{
-    
-        position: absolute;
-        bottom:94px;
-        left:52px
-     }
-     #botones{
-
-        margin-top: 45px
-        
-       }
-  }
-

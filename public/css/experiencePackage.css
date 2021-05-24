@@ -101,13 +101,17 @@ main{
        color:white;
        position:absolute;
        bottom:50px;
-       right:50px
+       right:50px;
 
-        
-       
+   transition-property: all;
+   transition-duration: 500ms;
 
    }
 
+#botones button:hover{
+background-color: rgb(66, 179, 199);
+cursor: pointer;
+}
 #back{
     font-size:20px;
     position:absolute;
