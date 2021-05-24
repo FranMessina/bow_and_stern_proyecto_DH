@@ -6,6 +6,10 @@
     box-sizing: border-box;
 }
 
+body{
+  background-color: #54e5ff ;
+}
+
 header{
     height: 10vh;
     
@@ -15,6 +19,7 @@ main{
     display: flex;
     margin: auto;
     justify-content: center;
+
 }
 .formulario {
     width: 500px;
@@ -22,9 +27,11 @@ main{
     margin: 0 auto;
     text-align: center;
     padding-top: 50px;
-    border: 1px solid black;
+    box-shadow: 5px 5px 7px #17b2eb;
     display: flex;
     flex-direction: column;
+    background-color: white;
+    border-radius: 50px;
   }
 
 .formulario h2{
