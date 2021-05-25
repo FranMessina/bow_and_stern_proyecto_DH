@@ -1,167 +1,216 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel = "stylesheet" href="/css/normalize.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
-    <link rel="stylesheet" href="/css/productDetail.css">
-    <title>productDetail</title>
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="/css/normalize.css" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+		/>
+		<link rel="preconnect" href="https://fonts.gstatic.com" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+			integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
+			crossorigin="anonymous"
+		/>
+		<link rel="stylesheet" href="/css/header-suelto.css" />
+		<link rel="stylesheet" href="/css/productDetail.css" />
+		<title>productDetail</title>
+	</head>
+	<body>
+		<header>
+			<nav>
+				<a href="/" class="logo-name">
+					<img src="/img/logoBlanco.png" alt="" />
+				</a>
+				<div class="nav-links">
+					<ul id="navLinks">
+						<i class="fas fa-times" onclick="hideMenu()"></i>
+						<li><a href="/">HOME</a></li>
+						<li><a href="/productDetail">PRODUCT DETAIL</a></li>
+						<li><a href="#">ABOUT US</a></li>
+						<li><a href="/login">LOGIN</a></li>
+						<li><a href="/register">REGISTER</a></li>
+						<li><a href="/cart">CHECKOUT</a></li>
+					</ul>
+				</div>
+				<i class="fas fa-bars" onclick="showMenu()"></i>
+			</nav>
+		</header>
 
+		<main>
+			<div
+				id="carouselExampleControls"
+				class="carousel slide"
+				data-ride="carousel"
+			>
+				<div class="carousel-inner">
+					<div class="carousel-item active">
+						<img
+							class="d-block w-100"
+							src="/img/catamaranPerfil-horizontal.jpeg"
+							alt="First slide"
+						/>
+					</div>
+					<div class="carousel-item">
+						<img
+							class="d-block w-100"
+							src="/img/catamaranAtadecer-horizontal.jpeg"
+							alt="Second slide"
+						/>
+					</div>
+					<div class="carousel-item">
+						<img
+							class="d-block w-100"
+							src="/img/catamaranFrente-horizontal.jpeg"
+							alt="Third slide"
+						/>
+					</div>
+				</div>
+				<a
+					class="carousel-control-prev"
+					href="#carouselExampleControls"
+					role="button"
+					data-slide="prev"
+				>
+					<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+					<span class="sr-only">Previous</span>
+				</a>
+				<a
+					class="carousel-control-next"
+					href="#carouselExampleControls"
+					role="button"
+					data-slide="next"
+				>
+					<span class="carousel-control-next-icon" aria-hidden="true"></span>
+					<span class="sr-only">Next</span>
+				</a>
+			</div>
 
-    
-</head>
-<body>
-    <header> 
+			<section class="mainsection">
+				<article class="article1">
+					<h3>
+						Charter this Fountain Pajot 40ft Cruising Catamaran in Cancún.
+					</h3>
+					<p>From USD $1000 /hour</p>
+				</article>
 
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="#">Navbar</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-          
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                  <a class="nav-link" href="">Home <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Link</a>
-                </li>
-                <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Dropdown
-                  </a>
-                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="#">Action</a>
-                    <a class="dropdown-item" href="#">Another action</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">Something else here</a>
-                  </div>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link disabled" href="#">Disabled</a>
-                </li>
-              </ul>
-              <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-              </form>
-            </div>
-          </nav>
-        
-        
-    <!-- barra en comun -->
-    </header>
-   
+				<article class="article2">
+					<p>
+						Enjoy Cancún, Mexico by boat. Rent a 40' Cruising Catamaran for up
+						to 30 people. Sailing and Enjoying
+					</p>
+					<p><a href="#">read more</a></p>
+				</article>
+			</section>
 
-    <main>
-        
-<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img class="d-block w-100" src="/img/catamaranPerfil-horizontal.jpeg" alt="First slide">
-    </div>
-    <div class="carousel-item">
-      <img class="d-block w-100" src="/img/catamaranAtadecer-horizontal.jpeg" alt="Second slide">
-    </div>
-    <div class="carousel-item">
-      <img class="d-block w-100" src="/img/catamaranFrente-horizontal.jpeg" alt="Third slide">
-    </div>
-  </div>
-  <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </a>
-</div>
-          
-          
-          
-          <section class= mainsection>
-                       
-            <article class= article1>
-            <h3> Charter this Fountain Pajot 40ft Cruising Catamaran rental in Cancún.</h3>
-                        <p>  From USD $1000 /hour </p></article>
-               
-            <article class= article2>
-                        <p>Enjoy Cancún, Mexico by boat. Rent a 40' Cruising Catamaran for up to 30 people. 
-                              Sailing and Enjoying</p>
-                        <p><a href="#">read more</a></p>
-                       
-                    </section>
-                    <section class= secondarysection>
-                    <article>
-                        <p> <h3>This boat includes the following amenities:</h3>
-                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-                            Quo fugiat excepturi, impedit aspernatur quae provident dicta asperiores unde perferendis quisquam rem in
-                             porro et iure aut reiciendis molestiae veniam amet. </p>
-                        <p> You may also add the following!
-                            <h3>Paquetes</h3>
-                            <ul>
-                                <li>Paquete 1</li>
-                                <li>Paquete 2</li>
-                                <li>Paquete 3</li>
-                                <li>Paquete 4</li>
-                            </ul>
-                        </p>
-                        </article>
+			<section class="secondarysection">
+				<article>
+					<h3>This boat includes the following amenities:</h3>
+					<p>
+						Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quo fugiat
+						excepturi, impedit aspernatur quae provident dicta asperiores unde
+						perferendis quisquam rem in porro et iure aut reiciendis molestiae
+						veniam amet.
+					</p>
+					<p>You may also add the following!</p>
+					<h3>Addons:</h3>
+					<ul class="addonslist">
+						<li>Package 1</li>
+						<li>Package 2</li>
+						<li>Package 3</li>
+						<li>Package 4</li>
+					</ul>
+				</article>
 
+				<article>
+					<p>Check availability</p>
+					<div>
+						<input type="date" />
+					</div>
+				</article>
+			</section>
+		</main>
 
-                
+		<section class="exfooter">
+			<h4>See what previous clients think about this boat!</h4>
+			<div class="review">
+				<h5>Jonathan Marquee</h5>
+				<p>
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio ex amet
+					enim sint incidunt qui laborum omnis ea, facere, illum nesciunt quas
+					ratione nihil magni assumenda dolorum nam porro officia.
+				</p>
+			</div>
+			<div class="review">
+				<h5>Alice Monroe</h5>
+				<p>
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio ex amet
+					enim sint incidunt qui laborum omnis ea, facere, illum nesciunt quas
+					ratione nihil magni assumenda dolorum nam porro officia.
+				</p>
+			</div>
+			<div class="review">
+				<h5>Michael Birmingham</h5>
+				<p>
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio ex amet
+					enim sint incidunt qui laborum omnis ea, facere, illum nesciunt quas
+					ratione nihil magni assumenda dolorum nam porro officia.
+				</p>
+			</div>
+		</section>
 
-                    <article >
-                        <p>Check availability</p>
-                        <div>
-                        <input type="date" /> </div>
-                        </article>
+		<!-- reviews y abt us -->
+		<footer>
+			<h4>MORE INFORMATION</h4>
+			<p>
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique
+				aliquid hic officiis sunt quisquam qui nemo impedit sed dignissimos
+				quam. Aut reprehenderit ducimus beatae enim. <br />
+				Quidem at earum veritatis vitae optio quos architecto nihil ratione
+				commodi dolor, sint eum beatae atque, nulla maiores doloribus incidunt
+				dolorem, laborum repellat deserunt exercitationem?
+			</p>
+			<div class="icons">
+				<a href="https://www.facebook.com" target="_blank">
+					<i class="fab fa-facebook-f"></i>
+				</a>
 
-                    </section>
-                    
-                    
-                </div>
-            </div>
-            
-    </main>
+				<a href="https://www.instagram.com" target="_blank">
+					<i class="fab fa-instagram"></i>
+				</a>
 
-    <section class=exfooter>
-        <h4>Reviews</h4>
-        <div>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate sed impedit fugit magni, voluptates eveniet atque sequi error, repudiandae nihil nostrum aliquid pariatur beatae consequuntur. Illum aut maxime neque voluptas.
-        </div>
-
-        </section>
-   
-        <!-- reviews y abt us -->
-        <footer>
-            
-
-
-<section>
-            <h4>ABOUT US</h4>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique
-              aliquid hic officiis sunt quisquam qui nemo impedit sed dignissimos
-              quam. Aut reprehenderit ducimus beatae enim. <br>
-              Quidem at earum veritatis vitae optio quos architecto nihil ratione
-              commodi dolor, sint eum beatae atque, nulla maiores doloribus incidunt
-              dolorem, laborum repellat deserunt exercitationem?
-            </p>
-            <div class="icons">
-              <a href="#"><i class="fab fa-facebook-f"></i></a>
-              <a href="#"><i class="fab fa-instagram"></i></a>
-              <a href="#"><i class="fab fa-twitter"></i></a>
-              <a href="#"><i class="fab fa-linkedin"></i></a>
-            </div></section>
-          </footer>
-          <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-          <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
-</body>
+				<a href="https://www.twitter.com" target="_blank">
+					<i class="fab fa-twitter"></i>
+				</a>
+			</div>
+		</footer>
+		<!-- Javascript para menu desplegable -->
+		<script>
+			var navLinks = document.getElementById("navLinks");
+			function showMenu() {
+				navLinks.style.right = 0;
+			}
+			function hideMenu() {
+				navLinks.style.right = "-200px";
+			}
+		</script>
+		<script
+			src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+			integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+			crossorigin="anonymous"
+		></script>
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+			crossorigin="anonymous"
+		></script>
+	</body>
 </html>

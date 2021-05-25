@@ -29,7 +29,6 @@ app.get("/header", (req, res) => {
 	res.sendFile(path.resolve(__dirname, "./views/header-suelto.html"));
 });
 
-
 app.get("/summary", (req, res) => {
 	res.sendFile(path.resolve(__dirname, "./views/summary.html"));
 });
@@ -42,10 +41,6 @@ app.get("/groupSize", (req, res) => {
 	res.sendFile(path.resolve(__dirname, "./views/groupSize.html"));
 });
 
-app.get("/summary", (req, res) => {
-	res.sendFile(path.resolve(__dirname, "./views/summary.html"));
-});
-
 app.get("/foodPackage", (req, res) => {
 	res.sendFile(path.resolve(__dirname, "./views/foodPackage.html"));
 });
@@ -53,10 +48,14 @@ app.get("/foodPackage", (req, res) => {
 app.get("/experiencePackage", (req, res) => {
 	res.sendFile(path.resolve(__dirname, "./views/experiencePackage.html"));
 });
+
 app.get("/confirmation", (req, res) => {
 	res.sendFile(path.resolve(__dirname, "./views/confirmation.html"));
 });
 
 app.get("/createaccount", (req, res) => {
 	res.sendFile(path.resolve(__dirname, "./views/createaccount.html"));
+});
+app.get("/logreg", (req, res) => {
+	res.sendFile(path.resolve(__dirname, "./views/loginregister.html"));
 });
