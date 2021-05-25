@@ -290,3 +290,8 @@ i.footer {
 	color: #f09d;
 }
 
+@media (max-width: 300px){
+    .contenedorprincipal {
+        width: 300px;
+        height: 513px;}
+    }

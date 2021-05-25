@@ -56,3 +56,7 @@ app.get("/experiencePackage", (req, res) => {
 app.get("/confirmation", (req, res) => {
 	res.sendFile(path.resolve(__dirname, "./views/confirmation.html"));
 });
+
+app.get("/createaccount", (req, res) => {
+	res.sendFile(path.resolve(__dirname, "./views/createaccount.html"));
+});
