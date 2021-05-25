@@ -29,6 +29,7 @@ main{
     background-color: white;
     border-radius: 50px;
     justify-content: space-around;
+    position:relative;
   }
 
   .formularioFP section{
