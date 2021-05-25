@@ -18,9 +18,9 @@ main{
 
 }
 .formularioFP {
-    width: 300px;
-    height:700px;
-    margin: auto;
+    width: 100vw;
+    height:175vh;
+    align-items: center;
     text-align: center;
     padding-top: 50px;
     box-shadow: 5px 5px 7px #17b2eb;
@@ -28,12 +28,12 @@ main{
     flex-direction: column;
     background-color: white;
     border-radius: 50px;
-    position: relative;
+    justify-content: space-around;
   }
 
   .formularioFP section{
     width: 100%;
-    height:75%;
+    height:83%;
     display:flex;
     flex-direction:row;
     flex-wrap: wrap;
@@ -41,14 +41,21 @@ main{
 
   }
   .formularioFP section div{
-      width:45%;
-      height:45%;
+      width:90%;
+      height:25%;
       color: white;
       background-color:rgb(31, 139, 158);
       border-radius: 10px;
-     
+      margin-top: 10px;
+     transition: all;
+     transition-duration: 200ms;
       
   }
+
+  .formularioFP section div:hover{
+    box-shadow: 0px 0px 10px rgb(59, 170, 255)
+  }
+
 
   p {
     display: block;
@@ -89,6 +96,7 @@ main{
 
 #botones{
     width: 100%;
+    margin-top: 20px;
     
     
    }
@@ -99,10 +107,6 @@ main{
        border:0px;
        border-radius:10px;
        color:white;
-       position:absolute;
-       bottom:50px;
-       right:50px;
-
    transition-property: all;
    transition-duration: 500ms;
 
@@ -145,8 +149,30 @@ cursor: pointer;
    
      #botones{
 
-        margin-top: 45px
+        margin-bottom: 25px
         
        }
+      
+
+        .formularioFP section{
+          width: 100%;
+          height:75%;
+          display:flex;
+          flex-direction:row;
+          flex-wrap: wrap;
+          justify-content: space-evenly;
+      
+        }
+        .formularioFP section div{
+          width:45%;
+          height:45%;
+          color: white;
+          background-color:rgb(31, 139, 158);
+          border-radius: 10px;
+          margin-top: 10px;
+         transition: all;
+         transition-duration: 200ms;
+          
+      }
   }
 
