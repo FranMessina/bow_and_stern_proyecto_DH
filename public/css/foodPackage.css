@@ -1,0 +1,122 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background-color: #54e5ff ;
+  }
+
+header{
+    height: 10vh;
+}
+
+main{
+    display: flex;
+    margin: auto;
+    justify-content: center;
+
+}
+.formularioFP {
+    width: 300px;
+    height:700px;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+    box-shadow: 5px 5px 7px #17b2eb;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 50px;
+    position: relative;
+  }
+
+
+#menu {
+    width: 250px;
+    height:350px ;
+    border-radius: 15px;
+}
+
+#select select {
+   padding:2px;
+  
+}
+
+#select{
+    
+   position: absolute;
+   bottom:140px;
+   left:25px
+}
+
+#botones{
+    width: 100%;
+   
+    margin-top: 100px
+    
+   }
+   #botones button{
+       background-color: rgb(31, 139, 158);
+       height: 40px;
+       width:80%;
+       border:0px;
+       border-radius:10px;
+       color:white;
+       transition-property: all;
+       transition-duration: 500ms;
+   
+   }
+
+   #botones button:hover{
+    background-color: rgb(66, 179, 199);
+    cursor: pointer;
+}
+
+#back{
+    font-size:20px;
+    position:absolute;
+    top: 30px;
+    left:30px;
+    color: #a9d5eb;
+}
+
+
+
+  footer{
+    height:20vh;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+  @media (min-width: 768px){
+    .formularioFP {
+        width: 500px;
+        height:700px;}
+    #menu{
+        width: 400px;
+        height: 450px;
+
+    }
+    #select{
+    
+        position: absolute;
+        bottom:94px;
+        left:52px
+     }
+     #botones{
+
+        margin-top: 45px
+        
+       }
+  }
+

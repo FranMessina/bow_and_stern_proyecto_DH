@@ -6,6 +6,10 @@
     box-sizing: border-box;
 }
 
+body{
+  background-color: #54e5ff ;
+}
+
 header{
     height: 10vh;
     
@@ -15,27 +19,32 @@ main{
     display: flex;
     margin: auto;
     justify-content: center;
+
 }
-.formulario {
-    width: 500px;
-    height:700px;
-    margin: 0 auto;
-    text-align: center;
-    padding-top: 50px;
-    border: 1px solid black;
+.formularioGS {
     display: flex;
+    width: 300px;
+    height:700px;
+    margin: auto;
+    text-align: center;
+    padding: 50px;
+    box-shadow: 5px 5px 7px #17b2eb;
     flex-direction: column;
+    background-color: white;
+    border-radius: 50px;
+    position:relative;
   }
 
-.formulario h2{
-    font-size: 30px;
-    padding:10px;
+.formularioGS h2{
+    font-size: 25px;
+       
 
 }
-.formulario article{
-    padding:20px;
-
+.formularioGS article{
+  padding:20px;
+  margin-top:10px;
 }
+
 
 #contenedor{
     display: flex;
@@ -107,16 +116,45 @@ main{
 #botones button{
     background-color: rgb(31, 139, 158);
     height: 40px;
-    width:80%;
+    width:100%;
     border:0px;
     border-radius:10px;
-    color:white
+    transition-property: all;
+    transition-duration: 500ms;
+    color:white;
 
 }
+
+#botones button:hover{
+ background-color: rgb(66, 179, 199);
+ cursor: pointer;
+}
+#back{
+  font-size:20px;
+  position:absolute;
+  top: 30px;
+  left:30px;
+  color: #a9d5eb;
+}
+
 
 
 
 footer{
     height:20vh;
 
+}
+
+
+@media (min-width: 768px) {
+
+  .formularioGS {
+    width: 500px;
+    height:700px;
+  
+  }
+      
+     
+  
+  
 }
