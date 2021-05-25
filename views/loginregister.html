@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="/css/normalize.css" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+		/>
+		<link rel="stylesheet" href="/css/login-css.css" />
+		<link rel="stylesheet" href="/css/register-css.css" />
+		<link rel="stylesheet" href="/css/loginregister.css" />
+		<title>Login & Register</title>
+	</head>
+	<body>
+		<header>
+			<nav>
+				<a href="/" class="logo-name">
+					<img src="/img/logoBlanco.png" alt="" />
+				</a>
+				<div class="nav-links">
+					<!-- Links de navegacion -->
+					<ul id="navLinks">
+						<i class="fas fa-times" onclick="hideMenu()"></i>
+						<li><a href="/">HOME</a></li>
+						<li><a href="/productDetail">PRODUCT DETAIL</a></li>
+						<li><a href="#">ABOUT US</a></li>
+						<li><a href="/login">LOGIN</a></li>
+						<li><a href="/register">REGISTER</a></li>
+						<li><a href="/cart">CHECKOUT</a></li>
+					</ul>
+				</div>
+				<!-- Icono para abrir menu en mobile -->
+				<i class="fas fa-bars" onclick="showMenu()"></i>
+			</nav>
+		</header>
+
+		<div class="form-box" id="whiteBox">
+			<div class="btnbox">
+				<div id="btn"></div>
+				<button type="button" class="toggle" onclick="log()">LOG IN</button>
+				<button type="button" class="toggle" onclick="reg()">REGISTER</button>
+			</div>
+			<form action="/login" method="POST" class="login-box" id="login">
+				<h1>Login</h1>
+
+				<div class="form-field">
+					<label for="username">Username</label>
+					<input
+						type="text"
+						name="username"
+						id="username"
+						placeholder=""
+						class="field"
+						required
+					/>
+				</div>
+
+				<div class="form-field">
+					<label for="password">Password</label>
+					<input
+						type="password"
+						name="pass"
+						id="pass"
+						placeholder=""
+						class="field"
+						required
+					/>
+				</div>
+
+				<div>
+					<label> Remember me</label>
+					<input type="checkbox" name="remember" id="remember" />
+				</div>
+
+				<button type="submit" class="login-button">Login</button>
+
+				<div class="link">
+					<a href="#">Lost your Password?</a><br />
+					<p>Don't have an account?<a href="/register"> Register</a></p>
+					<a href="/">Return to home</a>
+				</div>
+			</form>
+
+			<form action="/register" method="POST" class="create-form" id="register">
+				<h1>Register</h1>
+				<h2>Create your account</h2>
+
+				<div class="form-field">
+					<label>First Name</label>
+					<input
+						type="text"
+						name="fistName"
+						placeholder=""
+						class="field"
+						required
+					/>
+				</div>
+
+				<div class="form-field">
+					<label>Last Name</label>
+					<input
+						type="text"
+						name="lastName"
+						placeholder=""
+						class="field"
+						required
+					/>
+				</div>
+
+				<div class="form-field">
+					<label>Username</label>
+					<input
+						type="text"
+						name="user"
+						placeholder=""
+						class="field"
+						required
+					/>
+				</div>
+
+				<div class="form-field">
+					<label>Email Address</label>
+					<input
+						type="email"
+						name="email"
+						placeholder=""
+						class="field"
+						required
+					/>
+				</div>
+
+				<div class="form-field">
+					<label>Password</label>
+					<input
+						type="password"
+						name="pass"
+						placeholder=""
+						class="field"
+						required
+					/>
+				</div>
+
+				<div class="form-field">
+					<label>Confirm Password</label>
+					<input
+						type="password"
+						name="passConfirm"
+						placeholder=""
+						class="field"
+						required
+					/>
+				</div>
+
+				<div>
+					<label>I accept the <a href="">terms of user</a></label>
+					<input type="checkbox" />
+				</div>
+
+				<button type="submit" class="register-button">Register</button>
+
+				<div class="link">
+					<p>Already a member? <a href="/login"> Login </a></p>
+					<a href="/">Return to home</a>
+				</div>
+			</form>
+		</div>
+
+		<footer>
+			<h4>MORE INFORMATION</h4>
+			<p>
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique
+				aliquid hic officiis sunt quisquam qui nemo impedit sed dignissimos
+				quam. Aut reprehenderit ducimus beatae enim. <br />
+				Quidem at earum veritatis vitae optio quos architecto nihil ratione
+				commodi dolor, sint eum beatae atque, nulla maiores doloribus incidunt
+				dolorem, laborum repellat deserunt exercitationem?
+			</p>
+			<div class="icons">
+				<a href="https://www.facebook.com" target="_blank">
+					<i class="fab fa-facebook-f"></i>
+				</a>
+				<a href="https://www.instagram.com" target="_blank">
+					<i class="fab fa-instagram"></i>
+				</a>
+				<a href="https://www.twitter.com" target="_blank">
+					<i class="fab fa-twitter"></i>
+				</a>
+			</div>
+		</footer>
+
+		<!-- Javascript para menu desplegable -->
+		<script>
+			var navLinks = document.getElementById("navLinks");
+			function showMenu() {
+				navLinks.style.right = 0;
+			}
+			function hideMenu() {
+				navLinks.style.right = "-200px";
+			}
+			var btn = document.getElementById("btn");
+			var login = document.getElementById("login");
+			var register = document.getElementById("register");
+			var box = document.getElementById("whiteBox");
+			function log() {
+				btn.style.left = "0px";
+				btn.style.width = "110px";
+				login.style.left = "30px";
+				register.style.left = "450px";
+				box.style.height = "600px";
+			}
+			function reg() {
+				btn.style.left = "110px";
+				btn.style.width = "140px";
+				register.style.left = "15px";
+				login.style.left = "-450px";
+				box.style.height = "850px";
+			}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,215 @@
+* {
+	margin: 0;
+	padding: 0;
+	font-family: "Poppins", sans-serif;
+	box-sizing: border-box;
+}
+/* Todo esto de aca abajo es para el header suelto */
+header {
+	height: 130vh;
+	width: 100%;
+	background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)),
+		url(/img/home-main-picture.jpg);
+	background-size: cover;
+	background-position: center;
+	position: relative;
+	top: 0px;
+}
+
+nav {
+	display: flex;
+	padding: 15px 35px;
+	justify-content: space-between;
+	align-items: center;
+	align-content: center;
+	flex-flow: row wrap;
+}
+
+nav img {
+	width: 100px;
+	margin-right: 10px;
+}
+
+nav .logo-name {
+	display: flex;
+	text-decoration: none;
+	color: #fff;
+	flex-flow: row wrap;
+	justify-content: start;
+	align-items: center;
+}
+
+.nav-links {
+	flex: 1;
+	text-align: right;
+}
+
+.nav-links ul li {
+	list-style: none;
+	display: inline-block;
+	padding: 8px 12px;
+	position: relative;
+}
+
+.nav-links ul li a {
+	color: #fff;
+	text-decoration: none;
+	font-size: 15px;
+}
+
+.nav-links ul li::after {
+	content: "";
+	width: 0%;
+	height: 3px;
+	background: rgb(9, 117, 136);
+	display: block;
+	margin: auto;
+	transition: 0.5s;
+}
+
+.nav-links ul li:hover::after {
+	width: 80%;
+}
+
+nav .fas {
+	display: none;
+}
+
+@media (max-width: 980px) {
+	nav {
+		flex-flow: row wrap;
+	}
+	.text-box h1 {
+		font-size: 20px;
+	}
+	.nav-links ul li {
+		display: block;
+	}
+	.nav-links ul {
+		position: absolute;
+		background: rgb(9, 117, 136);
+		height: 100vh;
+		width: 200px;
+		top: 0;
+		right: -200px;
+		text-align: left;
+		z-index: 2;
+		transition: 1s;
+	}
+	nav .fas {
+		display: block;
+		color: #fff;
+		margin: 12px;
+		font-size: 18px;
+		cursor: pointer;
+	}
+	.nav-links ul {
+		padding: 30px;
+	}
+}
+
+@media (max-width: 420px) {
+	nav a h2 {
+		display: none;
+	}
+}
+
+/* aca termina el header */
+
+/* Aca empieza el footer */
+
+footer {
+	border-top: 1px #ebebeb solid;
+	width: 100%;
+	text-align: center;
+	padding: 30px 0px;
+	margin-top: 50px;
+}
+
+footer h4 {
+	margin-top: 20px;
+	margin-bottom: 25px;
+	font-size: 20px;
+	font-weight: 300;
+}
+
+footer p {
+	color: #777;
+}
+
+.icons a {
+	text-decoration: none;
+	color: rgb(9, 117, 136);
+}
+
+.icons {
+	color: rgb(9, 117, 136);
+	font-size: 20px;
+	margin: 20px auto;
+}
+.fab {
+	margin-left: 7px;
+}
+
+/* termina el footer */
+
+/* Login register*/
+
+.form-box {
+	width: 380px;
+	height: 680px;
+	position: absolute;
+	top: 40%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	margin: 6% auto;
+	background: #fff;
+	padding: 5px;
+	box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.2);
+	overflow: hidden;
+	transition: all 0.3s;
+}
+
+.btnbox {
+	width: 250px;
+	margin: 35px auto;
+	position: relative;
+	box-shadow: 0 0 20px 9px #2483ff1f;
+	border-radius: 30px;
+	justify-content: space-evenly;
+}
+
+.toggle {
+	padding: 10px 30px;
+	cursor: pointer;
+	background: transparent;
+	border: 0;
+	outline: none;
+	position: relative;
+}
+
+form {
+	transition: all 1s;
+}
+
+#btn {
+	top: 0;
+	left: 0;
+	position: absolute;
+	width: 110px;
+	height: 100%;
+	background: linear-gradient(to right, #1183c5, #065dff);
+	border-radius: 30px;
+	transition: 0.5s;
+}
+
+#register {
+	position: absolute;
+	left: 450px;
+	top: 10%;
+}
+
+#login {
+	position: absolute;
+	left: 30px;
+}
