@@ -3,6 +3,9 @@ const app = express();
 
 const path = require("path");
 
+const checkoutRoutes= require("./routes/checkoutRoutes");
+
+
 app.use(express.static(path.resolve(__dirname, "./public")));
 
 app.listen(3000, () => {
@@ -37,13 +40,7 @@ app.get("/selectdate", (req, res) => {
 	res.sendFile(path.resolve(__dirname, "./views/selectdate.html"));
 });
 
-app.get("/groupSize", (req, res) => {
-	res.sendFile(path.resolve(__dirname, "./views/groupSize.html"));
-});
-
-app.get("/foodPackage", (req, res) => {
-	res.sendFile(path.resolve(__dirname, "./views/foodPackage.html"));
-});
+app.use("/checkout", checkoutRoutes)
 
 app.get("/experiencePackage", (req, res) => {
 	res.sendFile(path.resolve(__dirname, "./views/experiencePackage.html"));
