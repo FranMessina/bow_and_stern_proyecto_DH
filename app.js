@@ -18,14 +18,6 @@ app.get("/", (req, res) => {
 	res.sendFile(path.resolve(__dirname, "./views/index.html"));
 });
 
-app.get("/login", (req, res) => {
-	res.sendFile(path.resolve(__dirname, "./views/login.html"));
-});
-
-app.get("/register", (req, res) => {
-	res.sendFile(path.resolve(__dirname, "./views/register.html"));
-});
-
 app.get("/productDetail", (req, res) => {
 	res.sendFile(path.resolve(__dirname, "./views/productDetail.html"));
 });
@@ -37,7 +29,3 @@ app.get("/header", (req, res) => {
 app.use("/checkout", checkoutRoutes);
 
 app.use("/user", userRoutes);
-
-app.get("/logreg", (req, res) => {
-	res.sendFile(path.resolve(__dirname, "./views/loginregister.html"));
-});
