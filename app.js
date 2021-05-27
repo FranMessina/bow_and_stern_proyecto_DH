@@ -8,6 +8,8 @@ const checkoutRoutes= require("./routes/checkoutRoutes");
 
 app.use(express.static(path.resolve(__dirname, "./public")));
 
+app.set ('view engine', 'ejs');
+
 app.listen(3000, () => {
 	console.log("Servidor Corriendo en puerto 3000");
 });
