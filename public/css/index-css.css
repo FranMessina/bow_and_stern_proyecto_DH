@@ -135,7 +135,6 @@ nav .fas {
 		text-align: left;
 		z-index: 2;
 		transition: 1s;
-		overflow: hidden;
 	}
 	nav .fas {
 		display: block;
@@ -146,12 +145,6 @@ nav .fas {
 	}
 	.nav-links ul {
 		padding: 30px;
-	}
-}
-
-@media (max-width: 420px) {
-	nav a h2 {
-		display: none;
 	}
 }
 
