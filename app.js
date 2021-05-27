@@ -3,12 +3,12 @@ const app = express();
 
 const path = require("path");
 
-const checkoutRoutes= require("./routes/checkoutRoutes");
-
+const checkoutRoutes = require("./routes/checkoutRoutes");
+const userRoutes = require("./routes/userRoutes");
 
 app.use(express.static(path.resolve(__dirname, "./public")));
 
-app.set ('view engine', 'ejs');
+app.set("view engine", "ejs");
 
 app.listen(3000, () => {
 	console.log("Servidor Corriendo en puerto 3000");
@@ -34,27 +34,10 @@ app.get("/header", (req, res) => {
 	res.sendFile(path.resolve(__dirname, "./views/header-suelto.html"));
 });
 
-app.get("/summary", (req, res) => {
-	res.sendFile(path.resolve(__dirname, "./views/summary.html"));
-});
+app.use("/checkout", checkoutRoutes);
 
-app.get("/selectdate", (req, res) => {
-	res.sendFile(path.resolve(__dirname, "./views/selectdate.html"));
-});
+app.use("/user", userRoutes);
 
-app.use("/checkout", checkoutRoutes)
-
-app.get("/experiencePackage", (req, res) => {
-	res.sendFile(path.resolve(__dirname, "./views/experiencePackage.html"));
-});
-
-app.get("/confirmation", (req, res) => {
-	res.sendFile(path.resolve(__dirname, "./views/confirmation.html"));
-});
-
-app.get("/createaccount", (req, res) => {
-	res.sendFile(path.resolve(__dirname, "./views/createaccount.html"));
-});
 app.get("/logreg", (req, res) => {
 	res.sendFile(path.resolve(__dirname, "./views/loginregister.html"));
 });
