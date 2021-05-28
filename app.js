@@ -16,15 +16,15 @@ app.listen(3000, () => {
 });
 
 app.get("/", (req, res) => {
-	res.sendFile(path.resolve(__dirname, "./views/index.html"));
+	res.render("index");
 });
 
 app.get("/productDetail", (req, res) => {
-	res.sendFile(path.resolve(__dirname, "./views/productDetail.html"));
+	res.render("productDetail");
 });
 
 app.get("/header", (req, res) => {
-	res.sendFile(path.resolve(__dirname, "./views/header-suelto.html"));
+	res.render("header-suelto");
 });
 
 app.use("/checkout", checkoutRoutes);

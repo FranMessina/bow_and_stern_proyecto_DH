@@ -8,7 +8,7 @@ const userController = {
 		res.render("register");
 	},
 	logreg: (req, res) => {
-		res.render("logreg");
+		res.render("loginregister");
 	},
 };
 
