@@ -97,6 +97,18 @@ main{
 
   @media (min-width: 200px){
     .contenedor {
-        width: 500px;
-        height: 300px;}
+      width: 500px;
+      height:300px;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      }
+
+    .product img{
+      display: block;
+	    float: left;
+	    margin: auto;
+	    margin-left: 270px;
+      margin-top:-90px;
+    }
     }
