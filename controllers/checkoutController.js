@@ -2,25 +2,25 @@ const path = require("path");
 
 const checkoutController = {
 	groupSize: (req, res) => {
-		res.sendFile(path.resolve("./views/groupSize.html"));
+		res.render("checkout/groupSize");
 	},
 	experiencePackage: (req, res) => {
-		res.sendFile(path.resolve("./views/experiencePackage.html"));
+		res.render("checkout/experiencePackage");
 	},
 	foodPackage: (req, res) => {
-		res.sendFile(path.resolve("./views/foodPackage.html"));
+		res.render("checkout/foodPackage");
 	},
 	selectDate: (req, res) => {
-		res.sendFile(path.resolve("./views/selectDate.html"));
+		res.render("checkout/selectDate");
 	},
 	confirmation: (req, res) => {
-		res.sendFile(path.resolve("./views/confirmation.html"));
+		res.render("checkout/confirmation");
 	},
 	summary: (req, res) => {
-		res.sendFile(path.resolve("./views/summary.html"));
+		res.render("checkout/summary");
 	},
 	createAccount: (req, res) => {
-		res.sendFile(path.resolve("./views/createAccount.html"));
+		res.render("checkout/createAccount");
 	},
 };
 

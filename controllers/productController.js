@@ -5,8 +5,8 @@ const productController = {
 		res.render("products/productDetail");
 	},
 	list: (req, res) => {
-		res.render("products/list");	
-    },
+		res.render("products/list");
+	},
 };
 
-module.exports = productController; 
+module.exports = productController;

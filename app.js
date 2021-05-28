@@ -5,7 +5,7 @@ const path = require("path");
 
 const checkoutRoutes = require("./routes/checkoutRoutes");
 const userRoutes = require("./routes/userRoutes");
-const productRoutes = require ('./routes/productRoutes');
+const productRoutes = require("./routes/productRoutes");
 
 app.use(express.static(path.resolve(__dirname, "./public")));
 
@@ -31,4 +31,4 @@ app.use("/checkout", checkoutRoutes);
 
 app.use("/user", userRoutes);
 
-app.use ('/products', productRoutes);
+app.use("/products", productRoutes);
