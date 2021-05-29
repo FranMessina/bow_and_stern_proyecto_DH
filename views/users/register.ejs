@@ -1,68 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+		/>
+		<link rel="stylesheet" href="/css/account.css" />
 
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/> 
-    <link rel="stylesheet" href="/css/register-css.css" />
-    
-    <title>Register</title>
+		<title>Register</title>
+	</head>
 
-  </head>
+	<body>
+		<header>
+			<nav>
+				<a href="/" class="logo-name">
+					<img src="/img/logoBlanco.png" alt="" />
+				</a>
+				<div class="nav-links">
+					<!-- Links de navegacion -->
+					<ul id="navLinks">
+						<i class="fas fa-times" onclick="hideMenu()"></i>
+						<li><a href="/">HOME</a></li>
+						<li><a href="/productDetail">PRODUCT DETAIL</a></li>
+						<li><a href="#">ABOUT US</a></li>
+						<li><a href="/login">LOGIN</a></li>
+						<li><a href="/register">REGISTER</a></li>
+						<li><a href="/cart">CHECKOUT</a></li>
+					</ul>
+				</div>
+				<!-- Icono para abrir menu en mobile -->
+				<i class="fas fa-bars" onclick="showMenu()"></i>
+			</nav>
 
-  <body>
 
-    <form action="/register" method="POST" class="create-form">
-      
-      <h1>Register</h1>
-      <h2>Create your account</h2>
+		<form action="/register" method="POST" class="create-form">
+			<h1>Create your account</h1>
 
-      <div class="form-field">
-        <label>First Name</label>
-        <input type="text" name="fistName" placeholder="" class="field" required/>
-      </div>
+			<div class="form-field">
+				<!-- <label>First Name</label> -->
+				<input
+					type="text"
+					name="fistName"
+					placeholder="First Name"
+					class="field"
+          autocomplete="disabled"
+					required
+				/>
+			</div>
 
-      <div class="form-field">
-        <label>Last Name</label>
-        <input type="text" name="lastName" placeholder="" class="field" required/>
-      </div>
+			<div class="form-field">
+				<!-- <label>Last Name</label> -->
+				<input
+					type="text"
+					name="lastName"
+					placeholder="Last Name"
+					class="field"
+          autocomplete="disabled"
+					required
+				/>
+			</div>
 
-      <div class="form-field">
-        <label>Username</label>
-        <input type="text" name="user" placeholder="" class="field" required />
-      </div>
+			<div class="form-field">
+				<!-- <label>Username</label> -->
+				<input type="text" name="user" placeholder="Username" class="field" required />
+			</div>
 
-      <div class="form-field">
-        <label>Email Address</label>
-        <input type="email" name="email" placeholder="" class="field" required/>
-      </div>
+			<div class="form-field">
+				<!-- <label>Email Address</label> -->
+				<input
+					type="email"
+					name="email"
+					placeholder="johndoe@example.com"
+					class="field"
+					required
+				/>
+			</div>
 
-      <div class="form-field">
-        <label>Password</label>
-        <input type="password" name="pass" placeholder="" class="field" required/>
-      </div>
+			<div class="form-field">
+				<!-- <label>Password</label> -->
+				<input
+					type="password"
+					name="pass"
+					placeholder="Password"
+					class="field"
+					required
+				/>
+			</div>
 
-      <div class="form-field">
-        <label>Confirm Password</label>
-        <input type="password" name="passConfirm" placeholder="" class="field" required/>
-      </div>
+			<div class="form-field">
+				<!-- <label>Confirm Password</label> -->
+				<input
+					type="password"
+					name="passConfirm"
+					placeholder="Confirm your password"
+					class="field"
+					required
+				/>
+			</div>
 
-      <div>
-        <label>I accept the <a href="">terms of user</a></label>
-        <input type="checkbox" />
-      </div>
+			<div class='accountcheck'>
+				<label class='remember'>I accept the <a href="">terms of user</a></label>
+				<input type="checkbox" />
+			</div>
 
-      <button type="submit" class="register-button">Register</button>
+			<button type="submit" class="button">Register</button>
 
-      <div class="link">
-        <p> Already a member? <a href="/login"> Login </a>
-        </p>
-        <a href="/">Return to home</a>
-      </div>
-    </form>
-  </body>
+			<div class="link">
+				<p>Already a member? <a href="/login"> Login </a></p>
+				<a href="/">Return to home</a>
+			</div>
+      		</header>
+
+          <%- include('../partials/footer') %>
+			<!-- Javascript para menu desplegable -->
+			<script>
+				var navLinks = document.getElementById('navLinks');
+				function showMenu() {
+					navLinks.style.right = 0;
+				}
+				function hideMenu() {
+					navLinks.style.right = '-200px';
+				}
+			</script>
+		</form>
+	</body>
 </html>
