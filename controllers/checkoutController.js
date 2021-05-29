@@ -17,7 +17,7 @@ const checkoutController = {
 		res.render("checkout/confirmation");
 	},
 	summary: (req, res) => {
-		res.render("checkout/summary");
+		res.render("checkout/Summary");
 	},
 	createAccount: (req, res) => {
 		res.render("checkout/createAccount");
