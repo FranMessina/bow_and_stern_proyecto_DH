@@ -20,8 +20,7 @@ h2{
   padding-left: 10%;
 }
 
-p{
-  margin-left: 200px;
+.consulta{
   font-weight: bold;
 }
 .product {
@@ -44,7 +43,6 @@ p{
 	
 }
 
-
 main{
     display: flex;
     margin: auto;
@@ -65,7 +63,12 @@ main{
     position: relative;
   }
 
-
+.singinapp{
+  color: rgb(9,117,136);
+  font-weight: bold;
+  font-size: 18px;
+  padding-block-end: 20px;
+}
   footer{
     height:20vh;
   }
@@ -97,8 +100,8 @@ main{
 
   @media (min-width: 200px){
     .contenedor {
-      width: 500px;
-      height:300px;
+      width: 350px;
+      height:380px;
       display: flex;
       flex-direction: column;
       position: relative;

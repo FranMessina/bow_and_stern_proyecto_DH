@@ -8,23 +8,21 @@ body{
   }
 
 h1{
-    font-size: 32px;
+    font-size: 28px;
     font-weight: bold;
     color: rgb(9,117,136);
-    text-align: start;
-    padding-left: 20px;
     margin-bottom: 5px;
 }
 
 h2{
    
-    font-size: 32px;
+    font-size: 28px;
     font-weight: bold;
     color: rgb(9,117,136);
-    text-align: start;
-    padding-left: 20px;
+    text-align: center;
     margin-bottom: 5px;
     margin-top: 0px;
+    margin-left: 65px;
 }
 
 main{
@@ -38,10 +36,9 @@ header{
     
 }
 p{
-    font-size: 18px;
+    font-size: 14px;
     color: black;
     font-weight: bold;
-    margin-left: -2px;
 }
 
 a{
@@ -68,6 +65,7 @@ a{
         padding: 31px 0 5px;
         border-radius: 6px;
         margin: 0 auto 20px;
+        display: flex;
         -webkit-animation-name: _1P6F-;
         animation-name: _1P6F-;
         -webkit-animation-duration: 1.5s;
@@ -77,15 +75,27 @@ a{
         -webkit-animation-fill-mode: forwards;
         animation-fill-mode: forwards;
     }
+
+    .cajaprincipal, .form1 {
+        -webkit-box-flex: 0;
+        flex-grow: 0;
+    }
+
+   
+    
+
 }
 
-
-
-@media (min-width: 768px){
-.conteinerprincipal {
-    -webkit-box-flex: 0;
-    flex-grow: 0;
+@media(min-width:371px){
+    #botones button {
+        margin-left: 45%;
+        text-align: center;
+        justify-content: center;
+        margin-top: -47px ;
+        position: relative;
+    }
 }
+
 
 .conteinerprincipal {
     display: -webkit-box;
@@ -97,7 +107,7 @@ a{
     flex-grow: 1;
     flex-shrink: 0;
 }
-}
+
 
 .cajaprincipal {
     -webkit-box-pack: justify;
@@ -108,12 +118,6 @@ a{
     margin: 0 auto;
 }
 
-@media (min-width: 768px){
-.cajaprincipal, .form1 {
-    -webkit-box-flex: 0;
-    flex-grow: 0;
-}
-}
 
 .cajaprincipal, .form1 {
     display: -webkit-box;
@@ -165,13 +169,6 @@ a{
 }
 
 
-@media (min-width: 375px){
-.start {
-    margin-right: 8px;
-}
-}
-
-
 .icono {
     display: block;
     width: 23px;
@@ -202,39 +199,12 @@ a{
     background: none;
 }
 
-@media (min-width: 768px){
-.inboxduret {
-    margin-left: 20px;
-}
-}
-
-.inboxduret{
-    margin: 0 0 0 4px;
-    line-height: 1.57;
-}
 
 .cajaduracion{
     
     display: flex;
     font-size: 12px;
     color: black;
-}
-
-.cajaduracion p{
-   
-    display: flex;
-    margin-left: 100px;
-    font-size: 12px;
-    color: black;
-}
-
-.inboxduret p {
-    white-space: pre;
-    margin-top: 0px;
-}
-
-.inboxduret dd {
-    margin: 0;
 }
 
 
@@ -278,7 +248,6 @@ label {
     margin: .4rem 0;
     font-weight: bold;
     margin-left: 50px;
-    text-align: justify;
 }
 
 footer{
