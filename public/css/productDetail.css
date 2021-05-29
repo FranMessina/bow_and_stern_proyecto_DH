@@ -76,6 +76,19 @@ body {
 	margin: auto;
 }
 
+.maps iframe {
+	width: 90%;
+}
+.maps {
+	width: 77vw;
+	margin: auto;
+	padding: 20px 0px;
+	border-radius: 10px;
+	box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.5);
+	text-align: center;
+}
+
+
 .icons a {
 	text-decoration: none;
 	color: rgb(9, 117, 136);
