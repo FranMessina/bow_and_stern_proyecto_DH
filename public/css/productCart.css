@@ -245,28 +245,22 @@ p {
 
 #botones{
     display: flex;
-    margin-top: -75px   
 }
 
 #botones button {
-
     background-color: rgb(31, 139, 158);
     height: 40px;
-    width: 8%;
+    width: 20%;
     border: 0px;
     border-radius: 10px;
     color: wheat;
     font-weight: bold;
-    margin-left: 50%;
     transition-property: all;
     transition-duration: 500ms;
-    text-align: center;
-    justify-content: center;
-    margin-top: 17px ;
+    margin-left: 40%;
     position: relative;
-    
-  
 }
+
 #botones button:hover {
     background-color: rgb(66, 179, 199);
     cursor: pointer;
