@@ -4,7 +4,7 @@
 
 body {
 	font-family: "Poppins", sans-serif;
-	font-weight: bold;
+	font-weight: 400;
 }
 
 /* rgb(9, 117, 136); */
@@ -78,6 +78,8 @@ body {
 
 .maps iframe {
 	width: 90%;
+	height: 400px;
+	border: 0;
 }
 .maps {
 	width: 77vw;
@@ -106,7 +108,7 @@ footer {
 }
 
 footer h4 {
-	font-weight: bold;
+	font-weight: 400;
 }
 
 .exfooter {
@@ -125,7 +127,7 @@ footer h4 {
 
 .exfooter h4 {
 	color: black;
-	font-weight: bold;
+	font-weight: 400;
 	font-size: 35px;
 }
 
@@ -142,7 +144,7 @@ footer h4 {
 }
 
 .review h5 {
-	font-weight: bold;
+	font-weight: 400;
 	color: black;
 	margin-top: 5px;
 }
