@@ -1,3 +1,46 @@
+.divCentrado {
+  padding-top: 2%;
+  display: flex;
+  justify-content: center;
+  padding-block-end: 2%;
+}
+
+.consulta{
+  font-weight: bold;
+  font-size: 25px;
+}
+
+
+.button {
+  background-color: rgb(31, 139, 158);
+  height: 40px;
+  width: 40%;
+  border: 0px;
+  border-radius: 10px;
+  color: wheat;
+  font-weight: bold;
+}
+
+.button2 {
+  background-color: rgb(255, 255, 255);
+  height: 40px;
+  width: 40%;
+  border: 0px;
+  border-radius: 10px;
+  color: rgb(31, 139, 158);
+  font-weight: bold;
+}
+
+.button:hover {
+  background-color: rgb(66, 179, 199);
+  cursor: pointer;
+}
+
+.button2:hover {
+  background-color: #54e5ff ;
+  cursor: pointer;
+}
+
 *{
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
@@ -11,107 +54,23 @@ header{
     height: 10vh;
 }
 
-h2{
-  text-align: center;
-  font-size: 18px;
-  margin-left: 26px;
-  margin-right: 69%;
-  margin-bottom: -37px;
-  padding-left: 10%;
-}
-
-.consulta{
-  font-weight: bold;
-}
-.product {
-
-	margin-top: 10px;
-	text-align: left;
-}
-
-.product p {
-	margin-left: 49px;
-	vertical-align: top;
-	display: inline-block;
-}
-.product img {
-	display: block;
-	float: left;
-	margin: auto;
-	margin-left: 270px;
-  margin-top:-90px;
-	
-}
-
-main{
-    display: flex;
-    margin: auto;
-    justify-content: center;
-
-}
 .contenedor {
-    width: 300px;
-    height:400px;
-    margin: auto;
-    text-align: center;
-    padding-top: 40px;
-    box-shadow: 5px 5px 7px #17b2eb;
-    display: flex;
-    flex-direction: column;
-    background-color: white;
-    border-radius: 50px;
-    position: relative;
-  }
-
-.singinapp{
-  color: rgb(9,117,136);
-  font-weight: bold;
-  font-size: 18px;
-  padding-block-end: 20px;
+  display: flex;
+  width: 300px;
+  height:700px;
+  margin: auto;
+  text-align: center;
+  padding: 50px;
+  box-shadow: 5px 5px 7px #17b2eb;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 50px;
+  position:relative;
 }
-  footer{
-    height:20vh;
+
+@media (min-width: 768px){
+  .contenedor {
+   width: 500px;
+  height:270px;
   }
-
-  #botones{
-    width: 100%;
-   
-    margin-top: 10px
-    
-   }
-   #botones button{
-       background-color: rgb(31, 139, 158);
-       height: 40px;
-       width:80%;
-       border:0px;
-       border-radius:10px;
-       color:white;
-       transition-property: all;
-       transition-duration: 500ms;
-       font-weight: bold;
-   
-   }
-
-   #botones button:hover{
-       background-color: rgb(66, 179, 199);
-       cursor: pointer;
-   }
-
-
-  @media (min-width: 200px){
-    .contenedor {
-      width: 350px;
-      height:380px;
-      display: flex;
-      flex-direction: column;
-      position: relative;
-      }
-
-    .product img{
-      display: block;
-	    float: left;
-	    margin: auto;
-	    margin-left: 270px;
-      margin-top:-90px;
-    }
-    }
+}
