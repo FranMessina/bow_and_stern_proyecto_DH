@@ -14,7 +14,7 @@
 .button {
   background-color: rgb(31, 139, 158);
   height: 40px;
-  width: 40%;
+  width: 60%;
   border: 0px;
   border-radius: 10px;
   color: wheat;
@@ -24,7 +24,7 @@
 .button2 {
   background-color: rgb(255, 255, 255);
   height: 40px;
-  width: 40%;
+  width: 60%;
   border: 0px;
   border-radius: 10px;
   color: rgb(31, 139, 158);
@@ -54,6 +54,10 @@ header{
     height: 10vh;
 }
 
+p{
+  font-weight: bold;
+}
+
 .contenedor {
   display: flex;
   width: 300px;
@@ -71,6 +75,6 @@ header{
 @media (min-width: 768px){
   .contenedor {
    width: 500px;
-  height:270px;
+  height:350px;
   }
 }
