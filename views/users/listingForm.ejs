@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<%- include('../partials/head')%>
+
+		<link rel="stylesheet" href="/css/listingForm.css" />
+	</head>
+	<body>
+		<header>
+			<nav>
+				<a href="/" class="logo-name">
+					<img src="/img/logoBlanco.png" alt="" />
+				</a>
+				<div class="nav-links">
+					<ul id="navLinks">
+						<i class="fas fa-times" onclick="hideMenu()"></i>
+						<li><a href="/">HOME</a></li>
+						<li><a href="/productDetail">PRODUCT DETAIL</a></li>
+						<li><a href="#">ABOUT US</a></li>
+						<li><a href="/login">LOGIN</a></li>
+						<li><a href="/register">REGISTER</a></li>
+						<li><a href="/cart">CHECKOUT</a></li>
+					</ul>
+				</div>
+				<i class="fas fa-bars" onclick="showMenu()"></i>
+			</nav>
+		</header>
+
+		<main>
+			<h1>Please input your vessel's information</h1>
+			<div class="formbox">
+				<form action="#" method="GET" class="create-form" autocomplete="off">
+					<div class="formcol">
+						<h3>Boat information</h3>
+						<div class="form-field">
+							<input
+								type="text"
+								name="boatName"
+								placeholder="Name of the vessel"
+								class="field"
+							/>
+						</div>
+
+						<div class="form-field">
+							<input
+								type="text"
+								name="regNum"
+								placeholder="Registration Number"
+								class="field"
+							/>
+						</div>
+
+						<div class="form-field">
+							<input
+								type="text"
+								name="year"
+								placeholder="Manufacture Year"
+								class="field"
+							/>
+						</div>
+
+						<div class="form-field">
+							<input
+								type="text"
+								name="measures"
+								placeholder="How many foots? Feets? Inches?"
+								class="field"
+							/>
+						</div>
+
+						<div class="form-field">
+							<input
+								type="text"
+								name="more"
+								placeholder="No se que mas necesitamos"
+								class="field"
+							/>
+						</div>
+
+						<div class="form-field">
+							<input
+								type="text"
+								name="more"
+								placeholder="No se que mas necesitamos"
+								class="field"
+							/>
+						</div>
+					</div>
+					<div class="formcol">
+						<h3>Owner Information</h3>
+						<div class="form-field">
+							<input
+								type="text"
+								name="ownername"
+								placeholder="Full Name"
+								class="field"
+							/>
+						</div>
+
+						<div class="form-field">
+							<input
+								type="text"
+								name=""
+								placeholder="Last Name"
+								class="field"
+							/>
+						</div>
+
+						<div class="form-field">
+							<input
+								type="text"
+								name="user"
+								placeholder="Username"
+								class="field"
+							/>
+						</div>
+
+						<div class="form-field">
+							<input
+								type="email"
+								name="email"
+								placeholder="johndoe@example.com"
+								class="field"
+							/>
+						</div>
+					</div>
+
+					<button type="submit" class="button" onclick="succesBox()">
+						Send Information
+					</button>
+				</form>
+			</div>
+
+			<div class="succes" id="succesBox">
+				<p><span class="bigtext">Thank You!</span> <br /></p>
+				<p>
+					The information has been sent and we will contact you as soon as
+					possible to add you boat to our page!
+				</p>
+
+				<a href="/"><button>Return to home</button></a>
+			</div>
+		</main>
+		<!-- footer -->
+		<%- include ('../partials/footer')%>
+
+		<!-- Javascript para menu desplegable -->
+		<script>
+			var navLinks = document.getElementById('navLinks');
+			function showMenu() {
+				navLinks.style.right = 0;
+			}
+			function hideMenu() {
+				navLinks.style.right = '-200px';
+			}
+
+			var box = document.getElementById('succesBox');
+			function succesBox() {
+				box.style.opacity = 1;
+			}
+		</script>
+	</body>
+</html>

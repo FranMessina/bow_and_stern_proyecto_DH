@@ -1,11 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-
-		<%- include('../partials/head')%> 
+		<%- include('../partials/head')%>
 
 		<link rel="stylesheet" href="/css/account.css" />
-
 	</head>
 
 	<body>
@@ -30,94 +28,101 @@
 				<i class="fas fa-bars" onclick="showMenu()"></i>
 			</nav>
 
+			<form action="/register" method="POST" class="create-form">
+				<h1>Create your account</h1>
 
-		<form action="/register" method="POST" class="create-form">
-			<h1>Create your account</h1>
+				<div class="form-field">
+					<!-- <label>First Name</label> -->
+					<input
+						type="text"
+						name="fistName"
+						placeholder="First Name"
+						class="field"
+						required
+					/>
+				</div>
 
-			<div class="form-field">
-				<!-- <label>First Name</label> -->
-				<input
-					type="text"
-					name="fistName"
-					placeholder="First Name"
-					class="field"
-					required
-				/>
-			</div>
+				<div class="form-field">
+					<!-- <label>Last Name</label> -->
+					<input
+						type="text"
+						name="lastName"
+						placeholder="Last Name"
+						class="field"
+						required
+					/>
+				</div>
 
-			<div class="form-field">
-				<!-- <label>Last Name</label> -->
-				<input
-					type="text"
-					name="lastName"
-					placeholder="Last Name"
-					class="field"
-					required
-				/>
-			</div>
+				<div class="form-field">
+					<!-- <label>Username</label> -->
+					<input
+						type="text"
+						name="user"
+						placeholder="Username"
+						class="field"
+						required
+					/>
+				</div>
 
-			<div class="form-field">
-				<!-- <label>Username</label> -->
-				<input type="text" name="user" placeholder="Username" class="field" required />
-			</div>
+				<div class="form-field">
+					<!-- <label>Email Address</label> -->
+					<input
+						type="email"
+						name="email"
+						placeholder="johndoe@example.com"
+						class="field"
+						required
+					/>
+				</div>
 
-			<div class="form-field">
-				<!-- <label>Email Address</label> -->
-				<input
-					type="email"
-					name="email"
-					placeholder="johndoe@example.com"
-					class="field"
-					required
-				/>
-			</div>
+				<div class="form-field">
+					<!-- <label>Password</label> -->
+					<input
+						type="password"
+						name="pass"
+						placeholder="Password"
+						class="field"
+						required
+					/>
+				</div>
 
-			<div class="form-field">
-				<!-- <label>Password</label> -->
-				<input
-					type="password"
-					name="pass"
-					placeholder="Password"
-					class="field"
-					required
-				/>
-			</div>
+				<div class="form-field">
+					<!-- <label>Confirm Password</label> -->
+					<input
+						type="password"
+						name="passConfirm"
+						placeholder="Confirm your password"
+						class="field"
+						required
+					/>
+				</div>
 
-			<div class="form-field">
-				<!-- <label>Confirm Password</label> -->
-				<input
-					type="password"
-					name="passConfirm"
-					placeholder="Confirm your password"
-					class="field"
-					required
-				/>
-			</div>
+				<div class="accountcheck">
+					<label class="remember"
+						>I accept the <a href="">terms of user</a></label
+					>
+					<input type="checkbox" />
+				</div>
 
-			<div class='accountcheck'>
-				<label class='remember'>I accept the <a href="">terms of user</a></label>
-				<input type="checkbox" />
-			</div>
+				<button type="submit" class="button">Register</button>
 
-			<button type="submit" class="button">Register</button>
+				<div class="link">
+					<p>Already a member? <a href="/login"> Login </a></p>
+					<a href="/">Return to home</a>
+				</div>
+			</form>
+		</header>
 
-			<div class="link">
-				<p>Already a member? <a href="/login"> Login </a></p>
-				<a href="/">Return to home</a>
-			</div>
-      		</header>
-
-          <%- include('../partials/footer') %>
-			<!-- Javascript para menu desplegable -->
-			<script>
-				var navLinks = document.getElementById('navLinks');
-				function showMenu() {
-					navLinks.style.right = 0;
-				}
-				function hideMenu() {
-					navLinks.style.right = '-200px';
-				}
-			</script>
-		</form>
+		<%- include('../partials/footer') %>
+		<!-- Javascript para menu desplegable -->
+		<script>
+			var navLinks = document.getElementById('navLinks');
+			function showMenu() {
+				navLinks.style.right = 0;
+			}
+			function hideMenu() {
+				navLinks.style.right = '-200px';
+			}
+		</script>
 	</body>
 </html>
