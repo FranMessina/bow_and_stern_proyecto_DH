@@ -12,44 +12,31 @@
 </head>
 <body>
    <header>
-
    </header>
-    
+
 <main>
-    <div class="conteinerprincipal"> 
-    <div class="cajaprincipal"> 
-   
-    <form action="/" method="get" class=form1>      
-        <h1>Estimated date</h1>
-    <p>Please enter your preferred departure date:</p>
-    <div class= "cajagendefecha">
-        <div class="cajadefecha">
-                    <div class="marcfecha">
-                        
-                        <input type="date" id="start" name="trip-start"
-                        value="2021-05-24"
-                        min="2021-01-01" max="2021-12-31">
-                        <div class="icono"></div>
-                    </div> 
+    <div class="contenedor">        
+        <!--<form action="/" method="get" class=form1>  -->    
+        <h1 class="h">Estimated date</h1>
+        <p>Please enter your preferred departure date:</p>
+        <!--<div class= "cajagendefecha">-->
+        <div class="cajadefecha">                       
+            <input type="date" id="start" name="trip-start" value="2021-05-24" min="2021-01-01" max="2021-12-31">                                
         </div>
-            <h2>Alternative date</h2>
-        <p>Please enter and alternative date in case your preferred date isn´t available:</p>
+        <h2 class="h">Alternative date</h2>
+        <p>Please enter an alternative date in case your preferred date isn´t available:</p>
         <div class="cajadefecha">
-            <div class="marcfecha">
-                <input type="date" id="start" name="trip-start"
-                value="2021-05-24"
-                min="2021-01-01" max="2021-12-31">
-                <div class="icono"></div>
-            </div>
+            <input type="date" id="start" name="trip-start"
+            value="2021-05-24"
+            min="2021-01-01" max="2021-12-31">              
         </div>
-    </div>
-    </div>
+        <div class="divCentrado">
+            <button class="button" type="submit">NEXT</button>
+        </div>
+        <!--</div>-->
     </div>
 </main>
 
-<div id="botones">
-    <button type="submit">NEXT</button>
-    </div>
 
 <footer>
 </footer>

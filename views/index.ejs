@@ -1,22 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" />
-		<link
-			href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap"
-			rel="stylesheet"
-		/>
-		<link rel="stylesheet" href="/css/normalize.css" />
-		<link
-			rel="stylesheet"
-			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-		/>
+
+		<%- include('./partials/head')%> 
+
 		<link rel="stylesheet" href="/css/index-css.css" />
-		<title>Bow & Stern</title>
+	
 	</head>
+	
 	<body>
 		<!-- Header - barra de navegacion - imagen principal -->
 		<header>
@@ -180,30 +171,9 @@
 				</div>
 			</section>
 		</main>
-
-		<footer>
-			<h4>MORE INFORMATION</h4>
-			<p>
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique
-				aliquid hic officiis sunt quisquam qui nemo impedit sed dignissimos
-				quam. Aut reprehenderit ducimus beatae enim. <br />
-				Quidem at earum veritatis vitae optio quos architecto nihil ratione
-				commodi dolor, sint eum beatae atque, nulla maiores doloribus incidunt
-				dolorem, laborum repellat deserunt exercitationem?
-			</p>
-			<div class="icons">
-				<a href="https://www.facebook.com" target="_blank">
-					<i class="fab fa-facebook-f"></i>
-				</a>
-				<a href="https://www.instagram.com" target="_blank">
-					<i class="fab fa-instagram"></i>
-				</a>
-				<a href="https://www.twitter.com" target="_blank">
-					<i class="fab fa-twitter"></i>
-				</a>
-			</div>
-		</footer>
-
+		
+		<%- include ('./partials/footer')%>
+	
 		<!-- Javascript para menu desplegable -->
 		<script>
 			var navLinks = document.getElementById("navLinks");
