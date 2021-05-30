@@ -4,9 +4,6 @@
 }
 
 
-body{
-    background-color: #54e5ff ;
-  }
 
 header{
     height: 10vh;
@@ -19,12 +16,13 @@ main{
 
 }
 .contenedor {
-    width: 300px;
+    width: 90%;
     height:400px;
     margin: auto;
     text-align: center;
     padding-top: 40px;
-    box-shadow: 5px 5px 7px #17b2eb;
+    box-shadow: 5px 5px 7px #ebebeb;
+    border: 1px solid #ebebeb;
     display: flex;
     flex-direction: column;
     background-color: white;
@@ -52,6 +50,7 @@ main{
        color:white;
        transition-property: all;
        transition-duration: 500ms;
+      ;
    
    }
 
@@ -64,5 +63,11 @@ main{
   @media (min-width: 768px){
     .contenedor {
         width: 500px;
-        height: 300px;}
+        height: 300px;
+        box-shadow: 5px 5px 7px #17b2eb;
+        border:0px}
+        body{
+          background-color: #54e5ff ;
+        }
+      
     }

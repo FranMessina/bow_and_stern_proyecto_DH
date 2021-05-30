@@ -4,15 +4,13 @@
     font-family: 'Poppins', sans-serif;
 }
 
-body{
-    background-color: #54e5ff ;
-  }
+
 
 h1{
     font-size: 32px;
     font-weight: bold;
     color: rgb(9,117,136);
-    margin-bottom: 5px;
+    margin-bottom: 20px;
 }
 
 h2{
@@ -76,15 +74,13 @@ p {
 
 .contenedor {
     display: flex;
-    width: 300px;
+    width: 100vw;
     height:1000px;
     margin: auto;
     text-align: center;
     padding: 50px;
-    box-shadow: 5px 5px 7px #17b2eb;
     flex-direction: column;
     background-color: white;
-    border-radius: 50px;
     position:relative;
   }
 
@@ -93,8 +89,12 @@ p {
     .contenedor {
         width: 500px;
         height:850px;
+        box-shadow: 5px 5px 7px #17b2eb;
+        border-radius: 50px;
       }
-    
+      body{
+        background-color: #54e5ff ;
+      }
 
     .seccion {
 
