@@ -8,6 +8,6 @@ Nelo/Matias: Ajustes form checkout.
 
 Francisco: Form de carga producto/servicio. Pendiente de def: mantener diseño con variantes respecto a login/register o ajustar a los mismos. Reviews. Home revision y ajustes de texto.
 
-Silvina: EJS instalacion-ejecucion-implementacion. Mapa de ubicacion para productDetail. Pendiente de def: agregar a la seccion -Get Directons From/to- o por el contrario no aclarar el sitio exacto y ajustar el diseño.
+Silvina: EJS instalacion-ejecucion-implementacion. Mapa de ubicacion para productDetail. Pendiente de def: agregar a la seccion -Get Directions From/to- o por el contrario no aclarar el sitio exacto y ajustar el diseño.
 
 Francisco/Silvina: Ajustes form login/registro. Pendiente de def: Elegir opcion a implementar -form arch separdados/juntos. Revision vistas/rutas.

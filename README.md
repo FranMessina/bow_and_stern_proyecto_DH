@@ -7,7 +7,7 @@ Participantes:
 Matias Giles, Silvina Donvito, Francisco Messina, Nelo Aldana Sanchez.
 
 Tematica del sitio:
-Plataforma digital orientada a la nautica. Su rol principal sera actuar como nexto entre propietarios de barcos dispuestos a rentar su nave -hacer charter- y clientes interesados en contratar el servicio. Se cobrara comision por transaccion a ambos usuarios. 
+Plataforma digital orientada a la nautica. Su rol principal sera actuar como nexo entre propietarios de barcos dispuestos a rentar su nave -hacer charter- y clientes interesados en contratar el servicio. Se cobrara comision por transaccion a ambos usuarios. 
 
 Público objetivo:
 Nuestra pagina tiene como objetivo dos tipos de clientes:
