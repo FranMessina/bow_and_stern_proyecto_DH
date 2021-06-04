@@ -10,10 +10,6 @@ Pactar fechas de pre-entrega para debatir los resultados en el grupo y sugerir m
 Empezar a hacer:
 Mayor planificación previa al desarrollo.
 Incluir micro zooms durante la semana para despejar dudas particulares.
-
-
-Opinion de Francisco:
-
 Aunque nos distribuimos bien las tareas, 
 me parece que tenemos que ser mas claros en algunas consigna y 
 establecernos objetivos mas pequeños para hacer un progreso mas fluido.
@@ -24,4 +20,24 @@ agregar las tareas en el tablero Trello, con mas diligencia.
 
 Opinion de Matias: 
 Me di cuenta que cuando hicimos la division de trabajo, fuimos poco precisos con ciertos aspectos, como por ejemplo colores y tipografias de la pagina. Si bien no aclaramos estos pormenores a proposito, para poder mostrar distintos diseños, termino siendo contraproducente tener que cambiar el estilo de todos para adaptarnos al que consideramos mejor. Por suerte(gran punto a favor) pactamos la primer pre entrega grupal con un gran margen de tiempo hasta la entrega final, por lo que todos tuvimos tiempo de adaptarlo. Por ahi podriamos haber probado colores y tipografias antes de que cada uno empiece con su codigo, decidirlas, y luego implementarlas cada uno por separado.
+
+
+
+Retrospectiva segundo sprint: 
+
+Comenzar a hacer:
+Aplicarle fecha de entrega a los tickets de trello.
+
+
+Hacer mas:
+Hacer mas checkouts
+
+Continuar haciendo: 
+En el segundo sprint el grupo ha utilizado una metodologia diferente a la primera. Hemos implementado un seguimiento mas riguroso de las tareas de los participantes, dandonos constante feedback en pos de llegar a la entrega con el resultado esperado. A su vez, hemos asignado tareas mucho mas especificas a trello, y le asignamos un responsable (o dos) a cada ticket, de esta manera todos sabiamos que hacer.
+Implementamos tareas sub grupales
+
+Hacer menos:
+Contar con tus compañeros, pero no sobrecargarlos con preguntas. Realizar un esfuerzo individual por comprender individualmente o con ayuda de los profesores primero.
+
+
 
