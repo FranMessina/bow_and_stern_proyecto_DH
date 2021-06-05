@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-
-		<%- include('../partials/head')%> 
+		<%- include('../partials/head')%>
 
 		<link
 			rel="stylesheet"
@@ -12,9 +11,8 @@
 		/>
 		<link rel="stylesheet" href="/css/header-suelto.css" />
 		<link rel="stylesheet" href="/css/productDetail.css" />
-	
 	</head>
-	
+
 	<body>
 		<header>
 			<nav>
@@ -25,11 +23,11 @@
 					<ul id="navLinks">
 						<i class="fas fa-times" onclick="hideMenu()"></i>
 						<li><a href="/">HOME</a></li>
-						<li><a href="/productDetail">PRODUCT DETAIL</a></li>
+						<li><a href="/products/catalogue">CATALOGUE</a></li>
 						<li><a href="#">ABOUT US</a></li>
-						<li><a href="/login">LOGIN</a></li>
-						<li><a href="/register">REGISTER</a></li>
-						<li><a href="/cart">CHECKOUT</a></li>
+						<li><a href="/user/login">LOGIN</a></li>
+						<li><a href="/user/register">REGISTER</a></li>
+						<li><a href="/checkout/cart">CHECKOUT</a></li>
 					</ul>
 				</div>
 				<i class="fas fa-bars" onclick="showMenu()"></i>
@@ -37,7 +35,7 @@
 		</header>
 
 		<main>
-			<div
+			<!-- <div
 				id="carouselExampleControls"
 				class="carousel slide"
 				data-ride="carousel"
@@ -83,22 +81,15 @@
 					<span class="carousel-control-next-icon" aria-hidden="true"></span>
 					<span class="sr-only">Next</span>
 				</a>
-			</div>
+			</div> -->
 
 			<section class="mainsection">
 				<article class="article1">
-					<h3>
-						Charter this Fountain Pajot 40ft Cruising Catamaran in Cancún.
-					</h3>
-					<p>From USD $1000 /hour</p>
+					<h3><%= boat.boatName %></h3>
 				</article>
 
 				<article class="article2">
-					<p>
-						Enjoy Cancún, Mexico by boat. Rent a 40' Cruising Catamaran for up
-						to 30 people. Sailing and Enjoying
-					</p>
-					<p><a href="#">read more</a></p>
+					<p><%= boat.description %></p>
 				</article>
 			</section>
 
@@ -111,33 +102,29 @@
 						perferendis quisquam rem in porro et iure aut reiciendis molestiae
 						veniam amet.
 					</p>
-					<p>You may also add the following!</p>
-					<h3>Addons:</h3>
-					<ul class="addonslist">
-						<li>Package 1</li>
-						<li>Package 2</li>
-						<li>Package 3</li>
-						<li>Package 4</li>
-					</ul>
 				</article>
 
 				<article>
-					<p>Check availability</p>
-					<div>
-						<input type="date" />
-					</div>
+					<p>Make a reservation!</p>
 				</article>
 			</section>
-		
-			<section class= "maps">
-				<h5>Approximate location</h5> 
-				<p> You'll get directions to the departure location when you make a booking</p>
-    
-				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3291.411270533529!2d-58.56903898506724!3d-34.41630705511248!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bca591f8dd6a0d%3A0x1e17d0fa6d823716!2sPuerto%20Encantado!5e0!3m2!1ses-419!2sar!4v1622226180854!5m2!1ses-419!2sar"  allowfullscreen="" loading="lazy"></iframe>
-			
-			</section>
 
+			<section class="maps">
+				<h5>Approximate location</h5>
+				<p>
+					You'll get directions to the departure location when you make a
+					booking
+				</p>
+
+				<iframe
+					src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3291.411270533529!2d-58.56903898506724!3d-34.41630705511248!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bca591f8dd6a0d%3A0x1e17d0fa6d823716!2sPuerto%20Encantado!5e0!3m2!1ses-419!2sar!4v1622226180854!5m2!1ses-419!2sar"
+					allowfullscreen=""
+					loading="lazy"
+				></iframe>
+			</section>
 		</main>
+
+		<!-- reviews -->
 
 		<section class="exfooter">
 			<h4>See what previous clients think about this boat!</h4>
@@ -167,18 +154,18 @@
 			</div>
 		</section>
 
-		<!-- reviews y abt us -->
-			
+		<!-- footer -->
+
 		<%- include ('../partials/footer')%>
-		
+
 		<!-- Javascript para menu desplegable -->
 		<script>
-			var navLinks = document.getElementById("navLinks");
+			var navLinks = document.getElementById('navLinks');
 			function showMenu() {
 				navLinks.style.right = 0;
 			}
 			function hideMenu() {
-				navLinks.style.right = "-200px";
+				navLinks.style.right = '-200px';
 			}
 		</script>
 		<script

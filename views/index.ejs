@@ -1,13 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-
-		<%- include('./partials/head')%> 
+		<%- include('./partials/head')%>
 
 		<link rel="stylesheet" href="/css/index-css.css" />
-	
 	</head>
-	
+
 	<body>
 		<!-- Header - barra de navegacion - imagen principal -->
 		<header>
@@ -20,11 +18,11 @@
 					<ul id="navLinks">
 						<i class="fas fa-times" onclick="hideMenu()"></i>
 						<li><a href="/">HOME</a></li>
-						<li><a href="/productDetail">PRODUCT DETAIL</a></li>
+						<li><a href="/products/catalogue">CATALOGUE</a></li>
 						<li><a href="#">ABOUT US</a></li>
-						<li><a href="/login">LOGIN</a></li>
-						<li><a href="/register">REGISTER</a></li>
-						<li><a href="/cart">CHECKOUT</a></li>
+						<li><a href="/user/login">LOGIN</a></li>
+						<li><a href="/user/register">REGISTER</a></li>
+						<li><a href="/checkout/cart">CHECKOUT</a></li>
 					</ul>
 				</div>
 				<!-- Icono para abrir menu en mobile -->
@@ -171,17 +169,17 @@
 				</div>
 			</section>
 		</main>
-		
+
 		<%- include ('./partials/footer')%>
-	
+
 		<!-- Javascript para menu desplegable -->
 		<script>
-			var navLinks = document.getElementById("navLinks");
+			var navLinks = document.getElementById('navLinks');
 			function showMenu() {
 				navLinks.style.right = 0;
 			}
 			function hideMenu() {
-				navLinks.style.right = "-200px";
+				navLinks.style.right = '-200px';
 			}
 		</script>
 	</body>

@@ -3,13 +3,12 @@ const productModule = require('../modules/productModule');
 
 const productController = {
 	productDetail: (req, res) => {
-		res.render('products/productDetail');
-	},
-	list: (req, res) => {
-		res.render('products/list');
+		const boat = productModule.findByPk(req.params.id);
+
+		res.render('products/productDetail', { boat });
 	},
 	createListing: (req, res) => {
-		res.render('users/listingForm');
+		res.render('products/listingForm');
 	},
 	catalogue: (req, res) => {
 		res.render('products/catalogue');
@@ -21,11 +20,8 @@ const productController = {
 			year,
 			measures,
 			vesselType,
-			legalpapers,
+			description,
 			boatimg,
-			ownername,
-			userID,
-			email,
 		} = req.body;
 
 		const listing = {
@@ -34,18 +30,14 @@ const productController = {
 			year,
 			measures,
 			vesselType,
-			legalpapers,
+			description,
 			boatimg,
-			ownername,
-			userID,
-			email,
 		};
 
 		const newListing = productModule.create(listing);
 
-		res.send(newListing);
+		res.redirect('/products/detail/' + newListing.id);
 	},
-
 };
 
 module.exports = productController;
