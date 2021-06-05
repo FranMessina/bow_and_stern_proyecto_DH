@@ -19,6 +19,8 @@
   border-radius: 10px;
   color: wheat;
   font-weight: bold;
+  transition-property: all;
+  transition-duration: 500ms;
 }
 
 .button2 {
@@ -29,6 +31,9 @@
   border-radius: 10px;
   color: rgb(31, 139, 158);
   font-weight: bold;
+  padding: 2px;
+  transition-property: all;
+  transition-duration: 500ms;
 }
 
 .button:hover {

@@ -11,6 +11,9 @@ const productController = {
 	createListing: (req, res) => {
 		res.render('users/listingForm');
 	},
+	catalogue: (req, res) => {
+		res.render('products/catalogue');
+	},
 	create: (req, res) => {
 		const {
 			boatName,
@@ -42,6 +45,7 @@ const productController = {
 
 		res.send(newListing);
 	},
+
 };
 
 module.exports = productController;
