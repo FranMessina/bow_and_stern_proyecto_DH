@@ -82,18 +82,18 @@
 								<option value="monohull">Yacht</option>
 							</select>
 						</div>
-
+						<!-- 
 						<div class="form-field">
 							<label for="">Legal Papers</label>
 							<input type="file" name="legalpapers" class="field" multiple />
-						</div>
+						</div> -->
 
 						<div class="form-field">
 							<label for="">Pictures of your boat</label>
-							<input type="file" name="boatimg" class="field" multiple />
+							<input type="file" name="boatImg" class="field" multiple />
 						</div>
 					</div>
-					<div class="formcol">
+					<!-- <div class="formcol">
 						<h3>Owner Information</h3>
 						<div class="form-field">
 							<input
@@ -130,14 +130,14 @@
 								class="field"
 							/>
 						</div>
-					</div>
+					</div> -->
 
 					<button type="submit" class="button" onclick="succesBox()">
 						Send Information
 					</button>
 				</form>
 			</div>
-
+			<!-- 
 			<div class="succes" id="succesBox">
 				<p><span class="bigtext">Thank You!</span> <br /></p>
 				<p>
@@ -146,7 +146,7 @@
 				</p>
 
 				<a href="/"><button>Return to home</button></a>
-			</div>
+			</div> -->
 		</main>
 		<!-- footer -->
 		<%- include ('../partials/footer')%>
@@ -161,10 +161,10 @@
 				navLinks.style.right = '-200px';
 			}
 
-			var box = document.getElementById('succesBox');
-			function succesBox() {
-				box.style.opacity = 1;
-			}
+			// 	var box = document.getElementById('succesBox');
+			// 	function succesBox() {
+			// 		box.style.opacity = 1;
+			// 	}
 		</script>
 	</body>
 </html>

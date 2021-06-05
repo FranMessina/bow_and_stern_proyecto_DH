@@ -8,6 +8,9 @@ const productController = {
 	list: (req, res) => {
 		res.render('products/list');
 	},
+	createListing: (req, res) => {
+		res.render('users/listingForm');
+	},
 	create: (req, res) => {
 		const {
 			boatName,

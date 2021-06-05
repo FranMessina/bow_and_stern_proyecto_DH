@@ -10,9 +10,6 @@ const userController = {
 	logreg: (req, res) => {
 		res.render('users/loginregister');
 	},
-	createListing: (req, res) => {
-		res.render('users/listingForm');
-	},
 };
 
 module.exports = userController;
