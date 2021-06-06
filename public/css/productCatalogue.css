@@ -213,9 +213,16 @@ main{
 
 .boatContainer{
     height:50vh;
-    width: 27vw;
+    width: 40vw;
 
 
+    
+}
+
+@media (min-width: 980px){
+    .boatContainer{
+        width: 27vw;
+    }
 }
 
 
