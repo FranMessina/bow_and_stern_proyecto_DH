@@ -17,7 +17,10 @@ h2 {
     color:  rgb(9,117,136);
 }   
 
-.button {
+a {
+    width: 60px;
+    text-align: center;
+    text-decoration: none;
     background-color:  rgb(9,117,136);;
     border: none;
     font-size: 15px;
@@ -31,7 +34,7 @@ h2 {
     transition: 0.5s;
 }
 
-.button:hover {
+a:hover {
     cursor: pointer;
     background-color: rgb(18,178,206);
     color: black;
