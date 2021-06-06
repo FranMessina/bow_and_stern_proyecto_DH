@@ -52,7 +52,7 @@
 }
 
 body{
-    background-color: #54e5ff ;
+  background: linear-gradient( #54e5ff, #1fa7bf);
   }
 
 header{
@@ -62,6 +62,11 @@ header{
 p{
   font-weight: bold;
 }
+
+footer{
+  height:60vh;
+}
+
 
 .contenedor {
   display: flex;

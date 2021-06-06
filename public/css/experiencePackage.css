@@ -142,7 +142,7 @@ cursor: pointer;
         border-radius: 50px;}
     
         body{
-          background-color: #54e5ff ;
+          background: linear-gradient( #54e5ff, #1fa7bf);
         }
       
         header{
