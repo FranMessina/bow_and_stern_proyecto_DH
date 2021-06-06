@@ -121,6 +121,7 @@ body {
 	width: 350px;
 	margin: auto;
 	margin-top: 20px;
+	margin-bottom: 20px;
 	box-shadow: 0 0 10px 0 rgba(255, 255, 255, 0.472);
 	text-align: center;
 }

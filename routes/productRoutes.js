@@ -3,10 +3,8 @@ const path = require('path');
 const productRoutes = express.Router();
 const productController = require('../controllers/productController');
 
-productRoutes.get('/productDetail', productController.productDetail);
-productRoutes.get('/list', productController.list);
+productRoutes.get('/detail/:id', productController.productDetail);
 productRoutes.get('/createlisting', productController.createListing);
-
 
 productRoutes.get('/catalogue', productController.catalogue);
 

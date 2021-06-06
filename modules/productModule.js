@@ -14,11 +14,26 @@ module.exports = {
 		fs.writeFileSync(this.filename, listingJson);
 	},
 	create(listing) {
+		listing.id = this.generateId();
+
 		const listings = this.readFile();
 
 		const updatedListings = [...listings, listing];
 
 		this.writeFile(updatedListings);
 		return listing;
+	},
+	findByPk(id) {
+		const boats = this.readFile();
+
+		const reqBoat = boats.find((boat) => boat.id == id);
+
+		return reqBoat;
+	},
+	generateId() {
+		const boats = this.readFile();
+		const lastBoat = boats.pop();
+
+		return lastBoat.id + 1;
 	},
 };
