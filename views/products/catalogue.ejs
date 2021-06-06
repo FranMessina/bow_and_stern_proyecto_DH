@@ -28,21 +28,19 @@
 		</header>
 
 		<main>
+			<% boats.forEach((boat) => { %>
+			<a href="/products/detail/<%= boat.id %> ">
+				<article class="boatContainer">
+					<h2><%= boat.name %></h2>
+					<div class="imgcontainer">
+						<img src="<%= boat.image %> " alt="" />
+					</div>
 
-            <% boats.forEach((boat) => { %>
-              <a href="/products/productDetail/<%= boat.id %> "><article class="boatContainer"> 
-                    <h2>
-                          <%= boat.name %> 
-                        </h2>
-                        <div class="imgcontainer">
-                    <img src="<%= boat.image %> " alt="" ></div>
-
-                    <p><%= boat.shortDescription %> </p>
-                    
-                       
-                </article>    </a>   <% }) %>
-
-        </main>
+					<p><%= boat.shortDescription %></p>
+				</article>
+			</a>
+			<% }) %>
+		</main>
 
 		<%- include ('../partials/footer')%>
 	</body>
