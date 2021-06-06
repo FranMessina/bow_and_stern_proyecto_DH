@@ -1,0 +1,121 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-family: 'Pacifico', 'cursive';
+    font-size: 70px;
+    text-align: center;
+    color:  rgb(9,117,136);;
+}   
+
+h2 {
+    font-family: 'Pacifico', 'cursive';
+    font-size: 20px;
+    text-align: center;
+    color:  rgb(9,117,136);
+}   
+
+.button {
+    background-color:  rgb(9,117,136);;
+    border: none;
+    font-size: 15px;
+    color: white;
+    padding: 7px 60px;
+    border-radius: 4PX;
+    display: block;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    transition: 0.5s;
+}
+
+.button:hover {
+    cursor: pointer;
+    background-color: rgb(18,178,206);
+    color: black;
+}
+
+.message {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background-color: #46aceb;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}   
+    
+.sea {
+    height: 220px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    left: 0;
+}
+
+.water {
+    height: 100%;
+    position: absolute;
+    right: 0;
+    animation: water 10s linear infinite;
+}
+
+@keyframes water {
+    0% {
+        transform: translateX(00);
+    }
+    100% {
+        transform: translateX(500px);
+    }
+}
+
+.boat {
+    width: 320px;
+    position: absolute;
+    bottom: 200px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.boat img {
+    width: 100%;
+    -webkit-box-reflect: below 0 linear-gradient(rgba(255,255,255,0.1), rgba(255,255,255,0.6)); 
+    animation: boat 2s linear infinite;
+}   
+
+@keyframes boat {
+    0% {
+        transform: rotate(0deg) translateY(0);
+    }
+    25% {
+        transform: rotate(-1deg) translateY(-3px);
+    }
+    50% {
+        transform: rotate(0deg) translateY(-5px);
+    }
+    75% {
+        transform: rotate(1deg) translateY(-3px);
+    }
+    100% {
+        transform: rotate(0deg) translateY(0);
+    }
+}
+
+.cloud {
+    height: 250px;
+    position: absolute;
+    right: 0%;
+    animation: cloud 10s linear infinite;
+}
+
+@keyframes cloud {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(500px);
+    }
+}
