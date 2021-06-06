@@ -11,11 +11,15 @@ const productController = {
 		res.render('products/listingForm');
 	},
 	catalogue: (req, res) => {
-		res.render('products/catalogue');
+		const boats=productModule.findAll()
+		res.render('products/catalogue', { boats });
+		// le pasa la info de todos los botes del servidor a mi vista catalogue
 	},
 	create: (req, res) => {
 		const {
-			boatName,
+			name,
+			shortDescription,
+			image,
 			regNum,
 			year,
 			measures,
@@ -25,7 +29,9 @@ const productController = {
 		} = req.body;
 
 		const listing = {
-			boatName,
+			name,
+			shortDescription,
+			image,
 			regNum,
 			year,
 			measures,

@@ -148,13 +148,13 @@ div.cajaprincipal{
   .formularioGS {
     width: 500px;
     height:700px;
-    box-shadow: 5px 5px 7px #17b2eb;
+    box-shadow: 5px 5px 7px #1fa7bf;
     border-radius: 50px;
   
   }
 
 body{
-  background-color: #54e5ff ;
+  background: linear-gradient( #54e5ff, #1fa7bf);
 }
 
 }

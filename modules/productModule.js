@@ -8,8 +8,9 @@ module.exports = {
 
 		return JSON.parse(listings);
 	},
-	writeFile(newListing) {
-		const listingJson = JSON.stringify(newListing, null, 2);
+	writeFile(updatedListings) {
+		const listingJson = JSON.stringify(updatedListings, null, 2);
+		//pasa de array a json
 
 		fs.writeFileSync(this.filename, listingJson);
 	},
@@ -19,6 +20,7 @@ module.exports = {
 		const listings = this.readFile();
 
 		const updatedListings = [...listings, listing];
+		//escribe el array viejo mas la nueva info.
 
 		this.writeFile(updatedListings);
 		return listing;
@@ -36,4 +38,8 @@ module.exports = {
 
 		return lastBoat.id + 1;
 	},
+	findAll () {
+		const boats=this.readFile()
+		return boats
+	}
 };

@@ -1,6 +1,8 @@
 [
 	{
-		"boatName": "Rent A Boat in Miami & Sail Right From South Beach! ",
+		"name":"Fountainpajot",
+		"shortDescription": "Rent A Boat in Miami & Sail Right From South Beach! ",
+		"image": "/img/catalogueImage2.jpeg",
 		"regNum": "1658",
 		"year": "1998",
 		"measures": "50ft",
@@ -9,7 +11,9 @@
 		"id": 1
 	},
 	{
-		"boatName": "Charter this Private Sport Yacht - Rental In Bellevue & Seattle, WA",
+		"name":"Fountain pajot",
+		"shortDescription": "Charter this Private Sport Yacht - Rental In Bellevue & Seattle, WA",
+		"image": "/img/catalogueImage2.jpeg",
 		"regNum": "Youra",
 		"year": "1956",
 		"measures": "5613",
@@ -18,7 +22,9 @@
 		"id": 2
 	},
 	{
-		"boatName": "Efasfa",
+		"name":"Mati boat",
+		"shortDescription": "Efasfa",
+		"image": "/img/catalogueImage2.jpeg",
 		"regNum": "795",
 		"year": "1955",
 		"measures": "60",
@@ -27,7 +33,9 @@
 		"id": 3
 	},
 	{
-		"boatName": "aeaf",
+		"name":"Sil boat",
+		"shortDescription": "aeaf",
+		"image": "/img/catalogueImage2.jpeg",
 		"regNum": "asfasf",
 		"year": "asfas",
 		"measures": "safa",
@@ -36,7 +44,9 @@
 		"id": 4
 	},
 	{
-		"boatName": "",
+		"name":"Fran boat",
+		"shortDescription": "",
+		"image": "/img/catalogueImage2.jpeg",
 		"regNum": "",
 		"year": "",
 		"measures": "",
@@ -45,7 +55,9 @@
 		"id": 5
 	},
 	{
-		"boatName": "asfasf",
+		"name":"Nelo boat",
+		"shortDescription": "asfasf",
+		"image": "/img/catalogueImage2.jpeg",
 		"regNum": "asfasf",
 		"year": "a",
 		"measures": "",
@@ -54,7 +66,9 @@
 		"id": 6
 	},
 	{
-		"boatName": "sfasfasfasfas",
+		"name":"Nelo boat",
+		"shortDescription": "sfasfasfasfas",
+		"image": "/img/catalogueImage2.jpeg",
 		"regNum": "wwaeafaas",
 		"year": "weawea",
 		"measures": "asfafa",
@@ -63,7 +77,9 @@
 		"id": 7
 	},
 	{
-		"boatName": "",
+		"name":"Nelo boat",
+		"shortDescription": "",
+		"image": "/img/catalogueImage2.jpeg",
 		"regNum": "",
 		"year": "",
 		"measures": "",
@@ -72,7 +88,9 @@
 		"id": 8
 	},
 	{
-		"boatName": "",
+		"name":"Nelo boat",
+		"shortDescription": "hola",
+		"image": "/img/cataloguePicture.png",
 		"regNum": "",
 		"year": "",
 		"measures": "",
