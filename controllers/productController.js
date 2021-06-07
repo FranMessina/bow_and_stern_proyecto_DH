@@ -1,9 +1,9 @@
 const path = require('path');
-const productModule = require('../modules/productModule');
+const productModel = require('../models/productModel');
 
 const productController = {
 	productDetail: (req, res) => {
-		const boat = productModule.findByPk(req.params.id);
+		const boat = productModel.findByPk(req.params.id);
 
 		res.render('products/productDetail', { boat });
 	},
@@ -11,7 +11,7 @@ const productController = {
 		res.render('products/listingForm');
 	},
 	catalogue: (req, res) => {
-		const boats=productModule.findAll()
+		const boats=productModel.findAll()
 		res.render('products/catalogue', { boats });
 		// le pasa la info de todos los botes del servidor a mi vista catalogue
 	},
@@ -40,7 +40,7 @@ const productController = {
 			boatimg,
 		};
 
-		const newListing = productModule.create(listing);
+		const newListing = productModel.create(listing);
 
 		res.redirect('/products/detail/' + newListing.id);
 	},
