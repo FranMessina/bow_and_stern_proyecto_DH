@@ -131,16 +131,23 @@ main{
 .boatContainer{
     
     width: 90vw;
-    background-color: #097588;
+    background-color:#00647d;
     border-radius: 30px;
+	transition: all;
+	transition-duration: 100ms;
 
 }
+.boatContainer:hover{
+	box-shadow: 0 0 25px 0px rgb(0 0 0 / 50%);
+	
+}
+
 
 
 article h2{
     text-align: center;
     color: black;
-    font-weight: 300;
+    font-weight: 400;
    padding-top: 10px;
 }
 
@@ -180,7 +187,7 @@ a{
 	}
 	.nav-links ul {
 		position: fixed;
-		background: rgb(9, 117, 136);
+		background: linear-gradient(#09779c, #097588);
 		height: 100vh;
 		width: 200px;
 		top: 0;
@@ -219,14 +226,29 @@ main{
     
 }
 
+.boatContainer:hover{
+	box-shadow: 0 0 25px 0px rgb(0 0 0 / 50%);
+	width: 41vw;
+	height: 51vh;
+}
+
+
+}
+
 @media (min-width: 980px){
     .boatContainer{
         width: 27vw;
     }
+	.boatContainer:hover{
+		
+		width: 28vw;
+		height: 51vh;
+	}
+	
 }
 
 
 
 article h2{
     text-align: center;
-}}
+}
