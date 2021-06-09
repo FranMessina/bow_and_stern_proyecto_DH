@@ -3,6 +3,9 @@ const path = require("path");
 const checkoutRoutes = express.Router();
 const checkoutController = require("../controllers/checkoutController");
 
+
+
+
 checkoutRoutes.get("/groupSize", checkoutController.groupSize);
 checkoutRoutes.get("/foodPackage", checkoutController.foodPackage);
 checkoutRoutes.get("/experiencePackage", checkoutController.experiencePackage);

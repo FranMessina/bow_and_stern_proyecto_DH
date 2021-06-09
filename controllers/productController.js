@@ -16,17 +16,23 @@ const productController = {
 		// le pasa la info de todos los botes del servidor a mi vista catalogue
 	},
 	create: (req, res) => {
+
+		const {filename} = req.file
+		//es req.file porque lo manda por mullter
+
+		image= filename
+
 		const {
 			name,
 			shortDescription,
-			image,
 			regNum,
 			year,
 			measures,
 			vesselType,
 			description,
-			boatimg,
+			
 		} = req.body;
+		//es req.body porque lo manda por el body del formulario.
 
 		const listing = {
 			name,
@@ -37,11 +43,11 @@ const productController = {
 			measures,
 			vesselType,
 			description,
-			boatimg,
+			
 		};
 
 		const newListing = productModel.create(listing);
-
+		console.log(req.file)
 		res.redirect('/products/detail/' + newListing.id);
 	},
 };

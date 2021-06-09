@@ -1,101 +1,102 @@
 [
-	{
-		"name":"Fountain",
-		"shortDescription": "Rent A Boat in Miami & Sail Right From South Beach! ",
-		"image": "/img/catalogueImage2.jpeg",
-		"regNum": "1658",
-		"year": "1998",
-		"measures": "50ft",
-		"vesselType": "Monohull",
-		"description": "Come spend your boat day with us on our 50’ luxury express cruiser.  Sailing right from South Beach, we give you convenient boarding and easy access to all of the beautiful Miami Biscayne Bay area (including the sandbars!) and beyond.  You can cruise under the sun or in the moonlight, there is plenty of space and all the amenities and little luxuries to make your boating experience absolutely the best. We can put together everything you need for your bachelor or bachelorette party, birthday, or family event. The early birds can enjoy a sunrise over the ocean or you can take a romantic sunset cruise and see Miami at night.  But really, no special reason is needed, we would love for you to just come aboard with your friends and enjoy because being out on the water is absolutely amazing!!!",
-		"id": 1
-	},
-	{
-		"name":"Fountain pajot",
-		"shortDescription": "Charter this Private Sport Yacht - Rental In Bellevue & Seattle, WA",
-		"image": "/img/catalogueImage2.jpeg",
-		"regNum": "Youra",
-		"year": "1956",
-		"measures": "5613",
-		"vesselType": "Yacht",
-		"description": "Huge sun pad area, seating area and swim platform. Boat is in excellent condition, clean and fast. This boat comes fully equipped with air conditioned cabin, bathroom with shower, fresh water, ice maker and fridge, BBQ, ice chest, satellite radio stereo system, microwave, stove, coffee maker and much more! German captain will ensure you will have fun and a great time on the boat. Non-alcoholic beverages are included. Also available, for extra charge, is the super fast Jetski Seadoo GTR 215 - 3 seater- with 215 horsepower. You will never forget the day when you rode this beast behind the boat and jumping over the waves. Perfect for a day out with family and friends on the water or even for the weekend!",
-		"id": 2
-	},
-	{
-		"name":"Mati boat",
-		"shortDescription": "u have an excellent opportunity to get away from the routine of everyday life, have a new experience, and see new places! B",
-		"image": "/img/catalogueImage2.jpeg",
-		"regNum": "795",
-		"year": "1955",
-		"measures": "60",
-		"vesselType": "monohull",
-		"description": "Enjoy the breathtaking views of Fort Lauderdale by boat! Charter the 61 feet Viking Sports Yacht for up to 12 people.  Rates as low as $500 per hour (4-6 hour charters). Only with our approved insured Captains.",
-		"id": 3
-	},
-	{
-		"name":"Sil boat",
-		"shortDescription": "u have an excellent opportunity to get away from the routine of everyday life, have a new experience, and see new places! B",
-		"image": "/img/catalogueImage2.jpeg",
-		"regNum": "asfasf",
-		"year": "asfas",
-		"measures": "safa",
-		"vesselType": "",
-		"description": "Enjoy the breathtaking views of Fort Lauderdale by boat! Charter the 61 feet Viking Sports Yacht for up to 12 people.  Rates as low as $500 per hour (4-6 hour charters). Only with our approved insured Captains.",
-		"id": 4
-	},
-	{
-		"name":"Fran boat",
-		"shortDescription": "u have an excellent opportunity to get away from the routine of everyday life, have a new experience, and see new places! B",
-		"image": "/img/catalogueImage2.jpeg",
-		"regNum": "",
-		"year": "",
-		"measures": "",
-		"vesselType": "",
-		"description": "Enjoy the breathtaking views of Fort Lauderdale by boat! Charter the 61 feet Viking Sports Yacht for up to 12 people.  Rates as low as $500 per hour (4-6 hour charters). Only with our approved insured Captains.",
-		"id": 5
-	},
-	{
-		"name":"Nelo boat",
-		"shortDescription": "u have an excellent opportunity to get away from the routine of everyday life, have a new experience, and see new places! B",
-		"image": "/img/catalogueImage2.jpeg",
-		"regNum": "asfasf",
-		"year": "a",
-		"measures": "",
-		"vesselType": "",
-		"description": "Enjoy the breathtaking views of Fort Lauderdale by boat! Charter the 61 feet Viking Sports Yacht for up to 12 people.  Rates as low as $500 per hour (4-6 hour charters). Only with our approved insured Captains.",
-		"id": 6
-	},
-	{
-		"name":"Nelo boat",
-		"shortDescription": "Spend a fantastic day on the water in Miami Beach by boat! Charter the 30 feet Formula 280 ss Power Boat for up to 6 people with Captain and fuel included. Rate as low as $599.00 for half-day (4 hours). English/Spanish.",
-		"image": "/img/catalogueImage2.jpeg",
-		"regNum": "wwaeafaas",
-		"year": "weawea",
-		"measures": "asfafa",
-		"vesselType": "catamaran",
-		"description": "\t\t\tdsadsafasfasfasfasfasfasf\t\t\t\t",
-		"id": 7
-	},
-	{
-		"name":"Nelo boat",
-		"shortDescription": "Spend a fantastic day on the water in Miami Beach by boat! Charter the 30 feet Formula 280 ss Power Boat for up to 6 people with Captain and fuel included. Rate as low as $599.00 for half-day (4 hours). English/Spanish.",
-		"image": "/img/catalogueImage2.jpeg",
-		"regNum": "",
-		"year": "",
-		"measures": "",
-		"vesselType": "",
-		"description": "Enjoy the breathtaking views of Fort Lauderdale by boat! Charter the 61 feet Viking Sports Yacht for up to 12 people.  Rates as low as $500 per hour (4-6 hour charters). Only with our approved insured Captains.",
-		"id": 8
-	},
-	{
-		"name":"Nelo boat",
-		"shortDescription": "u have an excellent opportunity to get away from the routine of everyday life, have a new experience, and see new places! B",
-		"image": "/img/cataloguePicture.png",
-		"regNum": "",
-		"year": "",
-		"measures": "",
-		"vesselType": "",
-		"description": "\t\tassaadsa\tsafasffffffffff\t\t dsadasd",
-		"id": 9
-	}
+  {
+    "name": "Fountain",
+    "shortDescription": "Rent A Boat in Miami & Sail Right From South Beach! ",
+    "image": "/catalogueImage2.jpeg",
+    "regNum": "1658",
+    "year": "1998",
+    "measures": "50ft",
+    "vesselType": "Monohull",
+    "description": "Come spend your boat day with us on our 50’ luxury express cruiser.  Sailing right from South Beach, we give you convenient boarding and easy access to all of the beautiful Miami Biscayne Bay area (including the sandbars!) and beyond.  You can cruise under the sun or in the moonlight, there is plenty of space and all the amenities and little luxuries to make your boating experience absolutely the best. We can put together everything you need for your bachelor or bachelorette party, birthday, or family event. The early birds can enjoy a sunrise over the ocean or you can take a romantic sunset cruise and see Miami at night.  But really, no special reason is needed, we would love for you to just come aboard with your friends and enjoy because being out on the water is absolutely amazing!!!",
+    "id": 1
+  },
+  {
+    "name": "Fountain pajot",
+    "shortDescription": "Charter this Private Sport Yacht - Rental In Bellevue & Seattle, WA",
+    "image": "/catalogueImage2.jpeg",
+    "regNum": "Youra",
+    "year": "1956",
+    "measures": "5613",
+    "vesselType": "Yacht",
+    "description": "Huge sun pad area, seating area and swim platform. Boat is in excellent condition, clean and fast. This boat comes fully equipped with air conditioned cabin, bathroom with shower, fresh water, ice maker and fridge, BBQ, ice chest, satellite radio stereo system, microwave, stove, coffee maker and much more! German captain will ensure you will have fun and a great time on the boat. Non-alcoholic beverages are included. Also available, for extra charge, is the super fast Jetski Seadoo GTR 215 - 3 seater- with 215 horsepower. You will never forget the day when you rode this beast behind the boat and jumping over the waves. Perfect for a day out with family and friends on the water or even for the weekend!",
+    "id": 2
+  },
+  {
+    "name": "Mati boat",
+    "shortDescription": "u have an excellent opportunity to get away from the routine of everyday life, have a new experience, and see new places! B",
+    "image": "/catalogueImage2.jpeg",
+    "regNum": "795",
+    "year": "1955",
+    "measures": "60",
+    "vesselType": "monohull",
+    "description": "Enjoy the breathtaking views of Fort Lauderdale by boat! Charter the 61 feet Viking Sports Yacht for up to 12 people.  Rates as low as $500 per hour (4-6 hour charters). Only with our approved insured Captains.",
+    "id": 3
+  },
+  {
+    "name": "Sil boat",
+    "shortDescription": "u have an excellent opportunity to get away from the routine of everyday life, have a new experience, and see new places! B",
+    "image": "/catalogueImage2.jpeg",
+    "regNum": "asfasf",
+    "year": "asfas",
+    "measures": "safa",
+    "vesselType": "",
+    "description": "Enjoy the breathtaking views of Fort Lauderdale by boat! Charter the 61 feet Viking Sports Yacht for up to 12 people.  Rates as low as $500 per hour (4-6 hour charters). Only with our approved insured Captains.",
+    "id": 4
+  },
+  {
+    "name": "Fran boat",
+    "shortDescription": "u have an excellent opportunity to get away from the routine of everyday life, have a new experience, and see new places! B",
+    "image": "/catalogueImage2.jpeg",
+    "regNum": "",
+    "year": "",
+    "measures": "",
+    "vesselType": "",
+    "description": "Enjoy the breathtaking views of Fort Lauderdale by boat! Charter the 61 feet Viking Sports Yacht for up to 12 people.  Rates as low as $500 per hour (4-6 hour charters). Only with our approved insured Captains.",
+    "id": 5
+  },
+  {
+    "name": "Nelo boat",
+    "shortDescription": "u have an excellent opportunity to get away from the routine of everyday life, have a new experience, and see new places! B",
+    "image": "/catalogueImage2.jpeg",
+    "regNum": "asfasf",
+    "year": "a",
+    "measures": "",
+    "vesselType": "",
+    "description": "Enjoy the breathtaking views of Fort Lauderdale by boat! Charter the 61 feet Viking Sports Yacht for up to 12 people.  Rates as low as $500 per hour (4-6 hour charters). Only with our approved insured Captains.",
+    "id": 6
+  },
+  {
+    "name": "Nelo boat",
+    "shortDescription": "Spend a fantastic day on the water in Miami Beach by boat! Charter the 30 feet Formula 280 ss Power Boat for up to 6 people with Captain and fuel included. Rate as low as $599.00 for half-day (4 hours). English/Spanish.",
+    "image": "/catalogueImage2.jpeg",
+    "regNum": "wwaeafaas",
+    "year": "weawea",
+    "measures": "asfafa",
+    "vesselType": "catamaran",
+    "description": "\t\t\tdsadsafasfasfasfasfasfasf\t\t\t\t",
+    "id": 7
+  },
+  {
+    "name": "Nelo boat",
+    "shortDescription": "Spend a fantastic day on the water in Miami Beach by boat! Charter the 30 feet Formula 280 ss Power Boat for up to 6 people with Captain and fuel included. Rate as low as $599.00 for half-day (4 hours). English/Spanish.",
+    "image": "/catalogueImage2.jpeg",
+    "regNum": "",
+    "year": "",
+    "measures": "",
+    "vesselType": "",
+    "description": "Enjoy the breathtaking views of Fort Lauderdale by boat! Charter the 61 feet Viking Sports Yacht for up to 12 people.  Rates as low as $500 per hour (4-6 hour charters). Only with our approved insured Captains.",
+    "id": 8
+  },
+  {
+    "name": "Nelo boat",
+    "shortDescription": "u have an excellent opportunity to get away from the routine of everyday life, have a new experience, and see new places! B",
+    "image": "/cataloguePicture.png",
+    "regNum": "",
+    "year": "",
+    "measures": "",
+    "vesselType": "",
+    "description": "\t\tassaadsa\tsafasffffffffff\t\t dsadasd",
+    "id": 9
+  }
+ 
 ]
