@@ -9,41 +9,39 @@ module.exports = {
 		return JSON.parse(users);
 	},
 	writeFile(updatedUser) {
-        // Pasa data a Json
+		// Pasa data a Json
 		const userJson = JSON.stringify(updatedUser, null, 2);
 		// Escribe archivo
 		fs.writeFileSync(this.filename, userJson);
 	},
 
-    generateId() {
+	generateId() {
 		const users = this.readFile();
 		const lastUser = users.pop();
 
 		return lastUser.id + 1;
 	},
 
-   //findAll () {
+	//findAll () {
 	//	const users=this.readFile()
-	//	return users 
+	//	return users
 
-  //  findByPk(id) {
+	//  findByPk(id) {
 	//	const users = this.readFile();
-        // filtra por id de user
+	// filtra por id de user
 	//	const userfound = users.find((user) => user.id == id);
-        // devuelve user
+	// devuelve user
 	// 	return userfound;
 
-	create(userData) {
+	create(user) {
 		user.id = this.generateId();
 
 		const users = this.readFile();
 
-		const updatedUser = [...users, userData];
+		const updatedUsers = [...users, user];
 		//escribe el array viejo mas la nueva info.
 
-		this.writeFile(updatedUser);
+		this.writeFile(updatedUsers);
 		return user;
 	},
-	
-
 };

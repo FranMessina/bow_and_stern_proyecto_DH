@@ -1,5 +1,5 @@
 const path = require('path');
-const usersModel = require("../models/usersModel")
+const usersModel = require('../models/usersModel');
 
 const userController = {
 	login: (req, res) => {
@@ -11,17 +11,10 @@ const userController = {
 	logreg: (req, res) => {
 		res.render('users/loginregister');
 	},
-	
+
 	create: (req, res) => {
 		//crear el usuario
-		const {
-			firsName,
-			lastName,
-			user,
-			email,
-			pass,
-			passConfirm,
-		} = req.body;
+		const { firsName, lastName, user, email, pass, passConfirm } = req.body;
 
 		const userData = {
 			firsName,
@@ -34,7 +27,7 @@ const userController = {
 
 		const newUser = usersModel.create(userData);
 
-		res.redirect('/users/register' + newUser.id)
+		res.redirect('/user/register');
 	},
 };
 
