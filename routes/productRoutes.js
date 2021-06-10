@@ -27,4 +27,6 @@ productRoutes.get('/catalogue', productController.catalogue);
 
 productRoutes.post('/create', upload.single('boatImg'), productController.create);
 
+productRoutes.delete('/:id', productController.delete)
+
 module.exports = productRoutes;

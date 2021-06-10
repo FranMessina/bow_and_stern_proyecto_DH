@@ -50,6 +50,20 @@ const productController = {
 		console.log(req.file)
 		res.redirect('/products/detail/' + newListing.id);
 	},
+
+	delete: (req,res) =>{
+
+		//requiero el id del producto que fue selecccionado para eliminar 
+		const id= req.params.id;
+		//ahora le paso ese id al modelo para que haga su magia
+		productModel.delete(id)
+
+		// Por ultimo, lo redirijo a la pajina principal una vez que el archivo ya fue #destroyed
+
+		res.redirect('/products/catalogue')
+
+
+	}
 };
 
 module.exports = productController;
