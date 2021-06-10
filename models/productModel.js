@@ -41,5 +41,18 @@ module.exports = {
 	findAll () {
 		const boats=this.readFile()
 		return boats
+	},
+	
+	delete: (id)=>{
+//notar que aca recibo el id del req.params.id del controlador pues ese fue su trabajo
+//ahora le toca al modelo efectivamemnte eliminar, hay que implementar logica.
+//primero leo la "base de datos" como siempre
+		const boats= this.readFile;
+
+		//genero el nuevo array SIN el objetivo a eliminar
+
+		const boatsNew= boats.filter(boat=> boat.id!= id)
+
+		this.writeFile(boatsNew)
 	}
 };
