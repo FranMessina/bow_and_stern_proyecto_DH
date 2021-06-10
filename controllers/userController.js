@@ -14,10 +14,10 @@ const userController = {
 
 	create: (req, res) => {
 		//crear el usuario
-		const { firsName, lastName, user, email, pass, passConfirm } = req.body;
+		const { firstName, lastName, user, email, pass, passConfirm } = req.body;
 
 		const userData = {
-			firsName,
+			firstName,
 			lastName,
 			user,
 			email,
