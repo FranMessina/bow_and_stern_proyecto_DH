@@ -203,6 +203,7 @@ a {
 	width: 80vw;
 	justify-content: center;
 	margin: auto;
+	flex-direction: column;
 }
 
 .formcol {
@@ -266,3 +267,4 @@ footer p {
 .fab {
 	margin-left: 7px;
 }
+
