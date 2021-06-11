@@ -28,26 +28,24 @@
 
 		<main>
 			<h1>Please input the following information</h1>
-			<div class="formbox">
-				<form
-					action="/products/create"
-					method="POST"
-					class="create-form"
-					autocomplete="off"
-					enctype="multipart/form-data"
-				>
-					<div class="formcol">
-						<h3>Vessel´s information</h3>
-						<div class="form-field">
-							<input
-								type="text"
-								name="boatName"
-								placeholder="Name of the vessel"
-								class="field"
-							/>
-						</div>
+			<form
+				action="/products/create"
+				method="POST"
+				class="create-form"
+				autocomplete="off"
+				enctype="multipart/form-data"
+			>
+				<h3>Vessel´s information</h3>
+				<div class="form-field">
+					<input
+						type="text"
+						name="boatName"
+						placeholder="Name of the vessel"
+						class="field"
+					/>
+				</div>
 
-						<!-- <div class="form-field">
+				<!-- <div class="form-field">
 							<input
 								type="text"
 								name="regNum"
@@ -56,98 +54,48 @@
 							/>
 						</div> -->
 
-						<div class="form-field">
-							<input
-								type="text"
-								name="year"
-								placeholder="Manufacture Year"
-								class="field"
-							/>
-						</div>
+				<div class="form-field">
+					<input
+						type="text"
+						name="year"
+						placeholder="Manufacture Year"
+						class="field"
+					/>
+				</div>
 
-						<div class="form-field">
-							<input
-								type="text"
-								name="measures"
-								placeholder="How many feet?"
-								class="field"
-							/>
-						</div>
+				<div class="form-field">
+					<input
+						type="text"
+						name="measures"
+						placeholder="How many feet?"
+						class="field"
+					/>
+				</div>
 
-						<div class="form-field">
-							<p>Vessel</p>
-							<select name="vesselType">
-								<option value="">Select Vessel type</option>
-								<option value="monohull">Monohull</option>
-								<option value="catamaran">Catamaran</option>
-								<option value="monohull">Yacht</option>
-							</select>
-						</div>
+				<div class="form-field">
+					<p>Vessel</p>
+					<select name="vesselType">
+						<option value="">Select Vessel type</option>
+						<option value="monohull">Monohull</option>
+						<option value="catamaran">Catamaran</option>
+						<option value="monohull">Yacht</option>
+					</select>
+				</div>
 
-						<div class="form-field">
-							<label for="description">Description:</label>
-							<textarea id="description" name="description"> </textarea>
-						</div>
+				<div class="form-field">
+					<label for="description">Description:</label>
+					<textarea id="description" name="description"> </textarea>
+				</div>
 
-						<div class="form-field">
-							<label for="">Pictures of your boat</label>
-							<input type="file" name="boatImg" class="field" multiple />
-						</div>
-					</div>
-					<!-- <div class="formcol">
-						<h3>Owner Information</h3>
-						<div class="form-field">
-							<input
-								type="text"
-								name="ownername"
-								placeholder="Full Name"
-								class="field"
-							/>
-						</div>
+				<div class="form-field">
+					<label for="">Pictures of your boat</label>
+					<input type="file" name="boatImg" class="field" multiple />
+				</div>
 
-						<div class="form-field">
-							<input
-								type="text"
-								name=""
-								placeholder="Last Name"
-								class="field"
-							/>
-						</div>
-
-						<div class="form-field">
-							<input
-								type="text"
-								name="userID"
-								placeholder="ID Document Number"
-								class="field"
-							/>
-						</div>
-
-						<div class="form-field">
-							<input
-								type="email"
-								name="email"
-								placeholder="johndoe@example.com"
-								class="field"
-							/>
-						</div>
-					</div> -->
-
-					<button type="submit" class="button" onclick="succesBox()">
-						Send Information
-					</button>
-				</form>
-			</div>
-			<!-- 
-			<div class="succes" id="succesBox">
-				<p><span class="bigtext">Thank You!</span> <br /></p>
-				<p>
-					The information has been sent and we will contact you as soon as
-					possible to add your boat to our page!
-				</p>
-
-				<a href="/"><button>Return to home</button></a>
-			</div> -->
+				<button type="submit" class="button" onclick="succesBox()">
+					Send Information
+				</button>
+			</form>
 		</main>
 		<!-- footer -->
 		<%- include ('../partials/footer')%>
@@ -161,11 +109,6 @@
 			function hideMenu() {
 				navLinks.style.right = '-200px';
 			}
-
-			// 	var box = document.getElementById('succesBox');
-			// 	function succesBox() {
-			// 		box.style.opacity = 1;
-			// 	}
 		</script>
 	</body>
 </html>
