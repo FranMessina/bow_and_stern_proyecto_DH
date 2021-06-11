@@ -30,6 +30,12 @@ productRoutes.post(
 	productController.create
 );
 
+
+productRoutes.get('/edit',)
+
+
 productRoutes.delete('/:id', productController.delete)
+
+
 
 module.exports = productRoutes;

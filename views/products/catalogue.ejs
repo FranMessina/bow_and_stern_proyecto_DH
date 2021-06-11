@@ -40,6 +40,9 @@
 					<p><%= boat.shortDescription %></p>
 				</article>
 			</a>
+			<form action="/products/<%= boat.id %>?_method=DELETE" method="POST">
+				<button type="submit">DELETE</button>
+			</form>
 			<% }) %>
 		</main>
 

@@ -15,6 +15,15 @@ const productController = {
 		res.render('products/catalogue', { boats });
 		// le pasa la info de todos los botes del servidor a mi vista catalogue
 	},
+
+	edit: (req, res) => {
+		const boats=productModel.findAll()
+		res.render('products/catalogue', { boats });
+		// le pasa la info de todos los botes del servidor a mi vista catalogue
+	},
+
+
+
 	create: (req, res) => {
 
 		const {filename} = req.file
