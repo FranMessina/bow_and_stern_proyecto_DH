@@ -41,7 +41,10 @@
 				</article>
 			</a>
 			<form action="/products/<%= boat.id %>?_method=DELETE" method="POST">
-				<button type="submit">DELETE</button>
+				<button type="submit" class="button">DELETE</button>
+			</form>
+			<form action="/products/edit/<%= boat.id %>">
+				<button type="submit" class="button">EDIT</button>
 			</form>
 			<% }) %>
 		</main>

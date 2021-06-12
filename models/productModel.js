@@ -54,5 +54,20 @@ module.exports = {
 		const boatsNew= boats.filter(boat=> boat.id!= id)
 
 		this.writeFile(boatsNew)
-	}
+	},
+
+	update (data, id){
+		const boats= this.readFile();
+
+		const boatsNew = boats.map(boat =>{
+		if(boat.id == id){
+			boat= {
+				id: boat.id,
+				...data
+			}
+		}
+		return boat;
+		});
+		this.writeFile(boatsNew);
+	},
 };

@@ -21,7 +21,7 @@ const upload = multer({ storage });
 
 productRoutes.get('/detail/:id', productController.productDetail);
 productRoutes.get('/createlisting', productController.createListing);
-
+productRoutes.get('/edit/:id', productController.edit);
 productRoutes.get('/catalogue', productController.catalogue);
 
 productRoutes.post(
@@ -30,11 +30,9 @@ productRoutes.post(
 	productController.create
 );
 
-
-productRoutes.get('/edit',)
-
-
-productRoutes.delete('/:id', productController.delete)
+//aca debemos pasar multer
+productRoutes.put('/:id', upload.single('boatImg'), productController.update);
+productRoutes.delete('/:id', productController.delete);
 
 
 
