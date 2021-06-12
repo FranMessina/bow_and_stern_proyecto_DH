@@ -11,8 +11,9 @@ h1 {
 }   
 
 h2 {
-    font-family: 'Pacifico', 'cursive';
+    font-family:'Pacifico','cursive';
     font-size: 20px;
+    font-weight: normal;
     text-align: center;
     color:  rgb(9,117,136);
 }   
@@ -67,10 +68,10 @@ a:hover {
 
 @keyframes water {
     0% {
-        transform: translateX(00);
+        transform: translateX(0);
     }
     100% {
-        transform: translateX(500px);
+        transform: translateX(400px);
     }
 }
 
@@ -121,4 +122,10 @@ a:hover {
     100% {
         transform: translateX(500px);
     }
+}
+
+@media (max-width: 420px) {
+	.boat {    
+        width: 300px;
+	}
 }
