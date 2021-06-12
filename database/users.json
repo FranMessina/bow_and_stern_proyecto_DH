@@ -55,5 +55,14 @@
     "pass": "",
     "passConfirm": "",
     "id": 7
+  },
+  {
+    "firstName": "Matias",
+    "lastName": "Giles",
+    "user": "Mgiles",
+    "email": "matias@gmail.com",
+    "pass": "Matias1",
+    "passConfirm": "",
+    "id": 8
   }
 ]
