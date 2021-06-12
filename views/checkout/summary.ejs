@@ -21,26 +21,22 @@
             <section class="seccion">               
                     <div>
                         <i class="fas fa-user"></i>
-                        <p class="user">Reservation</h3>
+                        <p class="user"><%= userInfo[0].firstName +' '+userInfo[0].lastName%></h3>
                     </div>
                     <div>
                         <i class="fas fa-envelope-square"></i>
-                        <p class="e-mail">E-mail</p>
+                        <p class="e-mail"><%= userInfo[0].email %> </p>
                     </div>
-                    <div>
+                    <!-- <div>
                         <i class="far fa-calendar-check"></i>
                         <p class="fecha">Reservation date</p>
-                    </div>
+                    </div> -->
                     <div>
                         <i class="fas fa-dharmachakra"></i>
-                        <p class="fecha">Ship type</p>
+                        <p class="fecha"><%= boats[2].vesselType %>  </p>
                     </div>
                     <div>
-                        <i class="fas fa-map-marked-alt"></i>
-                        <p class="maps">Selected route</p>
-                    </div>
-                    <div>
-                        <i class="fas fa-users"></i>
+                        <!-- <i class="fas fa-users"></i>
                         <p class="personas">How many people</p>
                     </div>
                     <div>
@@ -54,7 +50,7 @@
                     <div>
                         <i class="fas fa-swimmer"></i>
                         <p class="buceo">Diving Service: Yes/No </p>
-                    </div>
+                    </div> -->
             </section>
                   
                 <div class="cajaop">

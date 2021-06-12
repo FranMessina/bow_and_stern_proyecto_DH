@@ -1,4 +1,6 @@
 const path = require("path");
+const productModel = require('../models/productModel');
+const userModel = require('../models/usersModel');
 
 const checkoutController = {
 	groupSize: (req, res) => {
@@ -17,7 +19,9 @@ const checkoutController = {
 		res.render("checkout/confirmation");
 	},
 	summary: (req, res) => {
-		res.render("checkout/Summary");
+		const boats=productModel.findAll()
+		const userInfo = userModel.readFile()
+		res.render("checkout/Summary", {boats, userInfo});
 	},
 	createAccount: (req, res) => {
 		res.render("checkout/createAccount");
