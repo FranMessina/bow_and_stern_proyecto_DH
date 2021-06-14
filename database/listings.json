@@ -1,22 +1,11 @@
 [
   {
-    "id": 5,
-    "name": "Fran",
-    "year": "2000",
-    "measures": "50",
-    "vesselType": "",
-    "description": "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tEnjoy the breathtaking views of Fort Lauderdale by boat! Charter the 61 feet Viking Sports Yacht for up to 12 people.  Rates as low as $500 per hour (4-6 hour charters). Only with our approved insured Captains. \r\n\t\t\t\t\t\t\t \r\n\t\t\t\t\t\t\t \r\n\t\t\t\t\t\t\t \r\n\t\t\t\t\t\t\t",
-    "regNum": "",
-    "shortDescription": "u have an excellent opportunity to get away from the routine of everyday life, have a new experience, and see new places! B",
-    "image": "/catalogueImage2.jpeg"
-  },
-  {
     "id": 6,
-    "name": "Nelo",
-    "year": "1998",
+    "name": "Matias",
+    "year": "2000",
     "measures": "24",
     "vesselType": "monohull",
-    "description": "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tEnjoy the breathtaking views of Fort Lauderdale by boat! Charter the 61 feet Viking Sports Yacht for up to 12 people.  Rates as low as $500 per hour (4-6 hour charters). Only with our approved insured Captains. \r\n\t\t\t\t\t\t\t \r\n\t\t\t\t\t\t\t",
+    "description": "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tEnjoy the breathtaking views of Fort Lauderdale by boat! Charter the 61 feet Viking Sports Yacht for up to 12 people.  Rates as low as $500 per hour (4-6 hour charters). Only with our approved insured Captains. \r\n\t\t\t\t\t\t\t \r\n\t\t\t\t\t\t\t \r\n\t\t\t\t\t\t\t",
     "regNum": "asfasf",
     "shortDescription": "u have an excellent opportunity to get away from the routine of everyday life, have a new experience, and see new places! B",
     "image": "/catalogueImage2.jpeg"
