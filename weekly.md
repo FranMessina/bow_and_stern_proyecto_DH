@@ -1,4 +1,4 @@
-3er Sprint 
+3er SPRINT
 
 Matias: Cambio de logo. Diseño para forms checkout -archivos experiencePackage groupSize foodPackage-. Ajustes carrito css.
 
@@ -12,12 +12,17 @@ Silvina: EJS instalacion-ejecucion-implementacion. Mapa de ubicacion para produc
 
 Francisco/Silvina: Ajustes form login/registro. Pendiente de def: Elegir opcion a implementar -form arch separdados/juntos. Revision vistas/rutas.
 
-4to Sprint 
 
-Matias: Summary y catalogo con datos parametrizados. Vista catalogo. Crud delete. Crud create.-
+4to SPRINT
 
-Silvina: Crud Register. Error 404. Crud create.-
+Matias: Summary y catalogo con datos parametrizados. Vista catalogo. Crud delete.-
 
-Nelo: Crud edit producto. Crud create.-
+Nelo: Crud edit producto.-
 
-Francisco: Product Detail. Crud create.-
+Francisco: Product Detail.-
+
+Silvina: Crud Register. Error 404.-
+
+Silvina/Francisco/Matias/Nelo: Crud create.-
+
+
