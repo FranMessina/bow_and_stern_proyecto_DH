@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<%- include('../partials/head')%>
+		<link rel="stylesheet" href="/css/controlPanel.css" />
+		<title>Document</title>
+	</head>
+	<body>
+		<header>
+			<nav>
+				<a href="/" class="logo-name">
+					<img src="/img/logoBlanco.png" alt="" />
+				</a>
+				<div class="nav-links">
+					<ul id="navLinks">
+						<i class="fas fa-times" onclick="hideMenu()"></i>
+						<li><a href="/">HOME</a></li>
+						<li><a href="/products/catalogue">CATALOGUE</a></li>
+						<li><a href="/products/controlpanel">CONTROL PANEL</a></li>
+						<li><a href="/user/login">LOGIN</a></li>
+						<li><a href="/user/register">REGISTER</a></li>
+						<li><a href="/checkout/cart">CHECKOUT</a></li>
+					</ul>
+				</div>
+				<i class="fas fa-bars" onclick="showMenu()"></i>
+			</nav>
+		</header>
+		<main>
+			<a href="/products/createlisting" class="button newprod-btn"
+				>AGREGAR PRODUCTO</a
+			>
+
+			<div class="control-list">
+				<table>
+					<tr>
+						<th>ID</th>
+						<th>NOMBRE</th>
+						<th>AÑO</th>
+						<th>PRECIO</th>
+					</tr>
+					<% boats.forEach((boat) => { %>
+					<tr>
+						<td><%= boat.id %></td>
+						<td><%= boat.name %></td>
+						<td><%= boat.year %></td>
+						<td>$<%= boat.price %></td>
+						<td>
+							<a href="/products/edit/<%= boat.id %> "> EDITAR </a>
+						</td>
+						<td>
+							<button class="myBtn">ELIMINAR</button>
+						</td>
+						<div class="modal">
+							<div class="modal-content">
+								<span class="close">&times;</span>
+								<p>Estas por eliminar "<%= boat.name %>", estas seguro?</p>
+								<form
+									action="/products/<%= boat.id %>?_method=DELETE"
+									method="POST"
+								>
+									<button type="submit" class="button">REMOVE</button>
+								</form>
+							</div>
+						</div>
+					</tr>
+
+					<% }) %>
+				</table>
+			</div>
+		</main>
+
+		<script>
+			// Get the modal
+			var modal = document.querySelectorAll('.modal');
+
+			// Get the button that opens the modal
+			var btn = document.querySelectorAll('.myBtn');
+
+			// Get the <span> element that closes the modal
+			var span = document.querySelectorAll('.close');
+
+			btn.forEach(function (a, b) {
+				a.onclick = function () {
+					modal[b].style.display = 'block';
+				};
+			});
+
+			span.forEach(function (a, b) {
+				a.onclick = function () {
+					modal[b].style.display = 'none';
+				};
+			});
+
+			modal.forEach(function (a) {
+				window.onclick = function (event) {
+					if (event.target == a) {
+						a.style.display = 'none';
+					}
+				};
+			});
+		</script>
+
+		<%- include ('../partials/footer')%>
+	</body>
+</html>

@@ -17,7 +17,7 @@
 						<i class="fas fa-times" onclick="hideMenu()"></i>
 						<li><a href="/">HOME</a></li>
 						<li><a href="/products/catalogue">CATALOGUE</a></li>
-						<li><a href="#">ABOUT US</a></li>
+						<li><a href="/products/controlpanel">CONTROL PANEL</a></li>
 						<li><a href="/user/login">LOGIN</a></li>
 						<li><a href="/user/register">REGISTER</a></li>
 						<li><a href="/checkout/cart">CHECKOUT</a></li>
@@ -33,19 +33,12 @@
 				<article class="boatContainer">
 					<h2><%= boat.name %></h2>
 					<div class="imgcontainer">
-						
 						<img src="/img/<%= boat.image %> " alt="" />
 					</div>
 
 					<p><%= boat.shortDescription %></p>
 				</article>
 			</a>
-			<form action="/products/<%= boat.id %>?_method=DELETE" method="POST">
-				<button type="submit" class="button">DELETE</button>
-			</form>
-			<form action="/products/edit/<%= boat.id %>">
-				<button type="submit" class="button">EDIT</button>
-			</form>
 			<% }) %>
 		</main>
 

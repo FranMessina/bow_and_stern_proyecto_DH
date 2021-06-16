@@ -1,0 +1,186 @@
+* {
+	box-sizing: border-box;
+	padding: 0px;
+	margin: 0px;
+}
+
+body {
+	font-family: 'Poppins', sans-serif;
+}
+
+header {
+	min-height: 35vh;
+	width: 100%;
+	background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)),
+		url(/img/home-main-picture.jpg);
+	background-size: cover;
+	background-position: center;
+	position: relative;
+	overflow: hidden;
+}
+
+nav {
+	display: flex;
+	padding: 2% 6%;
+	justify-content: space-between;
+	align-items: center;
+	align-content: center;
+	flex-flow: row wrap;
+}
+
+nav img {
+	width: 100px;
+	margin-right: 10px;
+}
+
+nav .logo-name {
+	display: flex;
+	text-decoration: none;
+	color: #fff;
+	flex-flow: row wrap;
+	justify-content: start;
+	align-items: center;
+	align-content: center;
+}
+
+.nav-links {
+	flex: 1;
+	text-align: right;
+}
+
+.nav-links ul li {
+	list-style: none;
+	display: inline-block;
+	padding: 8px 12px;
+	position: relative;
+}
+
+.nav-links ul li a {
+	color: #fff;
+	text-decoration: none;
+	font-size: 15px;
+}
+
+.nav-links ul li::after {
+	content: '';
+	width: 0%;
+	height: 3px;
+	background: rgb(9, 117, 136);
+	display: block;
+	margin: auto;
+	transition: 0.5s;
+}
+
+.nav-links ul li:hover::after {
+	width: 80%;
+}
+
+.modal {
+	display: none; /* Hidden by default */
+	position: fixed; /* Stay in place */
+	z-index: 1; /* Sit on top */
+	left: 0;
+	top: 0;
+	width: 100%; /* Full width */
+	height: 100%; /* Full height */
+	overflow: auto; /* Enable scroll if needed */
+	background-color: rgb(0, 0, 0); /* Fallback color */
+	background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+.modal-content {
+	background-color: #fefefe;
+	margin: 15% auto; /* 15% from the top and centered */
+	padding: 20px;
+	border: 1px solid #888;
+	width: 80%; /* Could be more or less, depending on screen size */
+}
+
+.close {
+	color: #aaa;
+	float: right;
+	font-size: 28px;
+	font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+	color: black;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+footer {
+	border-top: 1px #ebebeb solid;
+	width: 100%;
+	text-align: center;
+	padding: 30px 0px;
+	margin-top: 50px;
+}
+
+footer h4 {
+	margin-top: 20px;
+	margin-bottom: 25px;
+	font-size: 20px;
+	font-weight: 300;
+}
+
+footer p {
+	color: #777;
+}
+
+.icons a {
+	text-decoration: none;
+	color: rgb(9, 117, 136);
+}
+
+.icons {
+	color: rgb(9, 117, 136);
+	font-size: 20px;
+	margin: 20px auto;
+}
+.fab {
+	margin-left: 7px;
+}
+
+main {
+	min-height: 100vh;
+	padding: 100px 0;
+	position: relative;
+}
+table {
+	margin: auto;
+	border-collapse: collapse;
+}
+th {
+	text-align: left;
+	padding: 2px 5px;
+	color: #000;
+	font-weight: normal;
+	border: 2px solid black;
+}
+td {
+	padding: 5px 5px;
+}
+.button {
+	width: auto;
+}
+tr {
+	border-bottom: 1px solid black;
+}
+
+a {
+	color: #000;
+	font-size: 12px;
+}
+
+.newprod-btn {
+	position: relative;
+	top: -40px;
+	right: -50%;
+	padding: 1rem 2rem;
+	color: #fff;
+	background-color: black;
+	text-decoration: none;
+	border-radius: 8px;
+}

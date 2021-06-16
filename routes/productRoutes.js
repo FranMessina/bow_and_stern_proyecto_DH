@@ -24,6 +24,8 @@ productRoutes.get('/createlisting', productController.createListing);
 productRoutes.get('/edit/:id', productController.edit);
 productRoutes.get('/catalogue', productController.catalogue);
 
+productRoutes.get('/controlpanel', productController.controlPanel);
+
 productRoutes.post(
 	'/create',
 	upload.single('boatImg'),
@@ -33,7 +35,5 @@ productRoutes.post(
 //aca debemos pasar multer
 productRoutes.put('/:id', upload.single('boatImg'), productController.update);
 productRoutes.delete('/:id', productController.delete);
-
-
 
 module.exports = productRoutes;
