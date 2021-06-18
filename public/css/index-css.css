@@ -308,6 +308,7 @@ footer {
 	margin-top: 50px;
 }
 
+
 footer h4 {
 	margin-top: 20px;
 	margin-bottom: 25px;
@@ -317,6 +318,8 @@ footer h4 {
 
 footer p {
 	color: #777;
+	line-height: 2;
+	
 }
 
 .icons a {
