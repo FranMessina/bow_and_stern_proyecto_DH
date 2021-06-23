@@ -15,8 +15,8 @@ app.use(methodOverride('_method'));
 
 app.set('view engine', 'ejs');
 
-app.listen(3000, () => {
-	console.log('Servidor Corriendo en puerto 3000');
+app.listen(process.env.PORT || 3000, (req, res) => {
+	console.log('Servidor corriendo en puerto 3000');
 });
 
 app.get('/', (req, res) => {
