@@ -1,5 +1,6 @@
 const path = require('path');
 const usersModel = require('../models/usersModel');
+const {validationResult} = require('express-validator');
 
 const userController = {
 	login: (req, res) => {
@@ -13,16 +14,18 @@ const userController = {
 	},
 
 	create: (req, res) => {
+		let errors=validationResult(req)
+
+		if (!errors.isEmpty()) {
+			return res.render('users/register', {errors: errors.mapped(), old: req.body})
+		}
 		//crear el usuario
-		const { firstName, lastName, user, email, pass, passConfirm } = req.body;
+		const { fullName, email, pass} = req.body;
 
 		const userData = {
-			firstName,
-			lastName,
-			user,
+			fullName,
 			email,
 			pass,
-			passConfirm,
 		};
 
 		const newUser = usersModel.create(userData);

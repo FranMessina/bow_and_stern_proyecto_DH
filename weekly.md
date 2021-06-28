@@ -11,8 +11,6 @@ Francisco: Form de carga producto/servicio. Pendiente de def: mantener diseño c
 Silvina: EJS instalacion-ejecucion-implementacion. Mapa de ubicacion para productDetail. Pendiente de def: agregar a la seccion -Get Directions From/to- o por el contrario no aclarar el sitio exacto y ajustar el diseño.
 
 Francisco/Silvina: Ajustes form login/registro. Pendiente de def: Elegir opcion a implementar -form arch separdados/juntos. Revision vistas/rutas.
-<<<<<<< HEAD
-=======
 
 
 4to SPRINT
@@ -28,4 +26,3 @@ Silvina: Crud Register. Error 404.-
 Silvina/Francisco/Matias/Nelo: Crud create.-
 
 
->>>>>>> b807c30f6a804c31b604793e6313cf032c83fe3c

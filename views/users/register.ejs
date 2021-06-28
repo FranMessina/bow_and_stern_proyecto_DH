@@ -39,6 +39,10 @@
 						placeholder="First Name"
 						class="field"
 					/>
+					<% if (locals.errors && errors.fullName) { %>
+						<p> <%= errors.fullName.msg %> </p>
+					<%	} %>
+
 				</div>
 
 				<div class="form-field">
@@ -49,6 +53,10 @@
 						placeholder="johndoe@example.com"
 						class="field"
 					/>
+					<% if (locals.errors && errors.email) { %>
+						<p> <%= errors.email.msg %> </p>
+					<%	} %>
+
 				</div>
 
 				<div class="form-field">
@@ -59,6 +67,10 @@
 						placeholder="Password"
 						class="field"
 					/>
+					<% if (locals.errors && errors.pass) { %>
+						<p> <%= errors.pass.msg %> </p>
+					<%	} %>
+
 				</div>
 
 				<div class="form-field">
@@ -69,6 +81,10 @@
 						placeholder="Confirm your password"
 						class="field"
 					/>
+					<% if (locals.errors && errors.passConfirm) { %>
+						<p> <%= errors.passConfirm.msg %> </p>
+					<%	} %>
+
 				</div>
 
 				<div class="accountcheck">
