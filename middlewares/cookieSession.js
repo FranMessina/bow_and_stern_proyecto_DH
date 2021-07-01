@@ -1,14 +1,14 @@
-const userModel = require('../models/usersModel');
+const usersModel = require('../models/usersModel');
 
 module.exports = (req, res, next) => {
 	const userCookie = req.cookies.user;
 
 	if (userCookie) {
-		const user = userModel.findByPk(userCookie);
+		const user = usersModel.findByPk(userCookie);
 
 		delete user.password;
 
-		res.session.logged = user;
+		req.session.logged = user;
 	}
 
 	next();

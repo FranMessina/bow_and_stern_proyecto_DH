@@ -1,8 +1,14 @@
 [
-	{
-		"fullName": "Test",
-		"email": "test@gmail.com",
-		"pass": "test",
-		"id": 1
-	}
+  {
+    "fullName": "Test",
+    "email": "test@gmail.com",
+    "pass": "test",
+    "id": 1
+  },
+  {
+    "fullName": "test",
+    "email": "test1@test.com",
+    "pass": "$2a$10$5U00aaO6l2O7erwhFEOVU.HnFGZvQC9pWb0q/UKXTATEI6bEsBUQS",
+    "id": 2
+  }
 ]
