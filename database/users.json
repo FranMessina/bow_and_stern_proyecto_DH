@@ -1,83 +1,8 @@
 [
-  {
-    "id": 1,
-    "firstName": "Silvina",
-    "lastName": "Donvito",
-    "user": "Sdonvito",
-    "email": "silvina@gmail.com",
-    "pass": "Silvina1",
-    "passConfirm": "Silvina1"
-  },
-  {
-    "lastName": "Messina",
-    "user": "",
-    "email": "fm230499@gmail.com",
-    "pass": "",
-    "passConfirm": "",
-    "id": 2
-  },
-  {
-    "lastName": "",
-    "user": "",
-    "email": "",
-    "pass": "",
-    "passConfirm": "",
-    "id": 3
-  },
-  {
-    "lastName": "",
-    "user": "",
-    "email": "",
-    "pass": "",
-    "passConfirm": "",
-    "id": 4
-  },
-  {
-    "lastName": "Messina",
-    "user": "",
-    "email": "fm230499@gmail.com",
-    "pass": "",
-    "passConfirm": "",
-    "id": 5
-  },
-  {
-    "lastName": "fasfafs",
-    "user": "",
-    "email": "",
-    "pass": "",
-    "passConfirm": "",
-    "id": 6
-  },
-  {
-    "lastName": "asfasfasfsa",
-    "user": "fasfasf",
-    "email": "",
-    "pass": "",
-    "passConfirm": "",
-    "id": 7
-  },
-  {
-    "firstName": "Francisco",
-    "lastName": "Messina",
-    "user": "Fmesina",
-    "email": "francisco@gmail.com",
-    "pass": "f123",
-    "passConfirm": "F123",
-    "id": 8
-  },
-  {
-    "firstName": "",
-    "lastName": "",
-    "user": "",
-    "email": "",
-    "pass": "",
-    "passConfirm": "",
-    "id": 9
-  },
-  {
-    "fullName": "FSDFA",
-    "email": "FASD@GMAIL.COM",
-    "pass": "1234",
-    "id": 10
-  }
+	{
+		"fullName": "Test",
+		"email": "test@gmail.com",
+		"pass": "test",
+		"id": 1
+	}
 ]

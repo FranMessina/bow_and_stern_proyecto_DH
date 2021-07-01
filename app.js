@@ -8,10 +8,22 @@ const checkoutRoutes = require('./routes/checkoutRoutes');
 const userRoutes = require('./routes/userRoutes');
 const productRoutes = require('./routes/productRoutes');
 
+const cookieParser = require('cookie-parser');
+const session = require('express-session');
+const sessionToLocals = require('./middlewares/sessionToLocals');
+const cookieSession = require('./middlewares/cookieSession');
+
+app.use(session({ secret: 'shh' }));
+
+app.use(cookieParser());
+
 app.use(express.static(path.resolve(__dirname, './public')));
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(methodOverride('_method'));
+
+app.use(cookieSession);
+app.use(sessionToLocals);
 
 app.set('view engine', 'ejs');
 
