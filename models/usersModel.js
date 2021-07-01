@@ -32,12 +32,13 @@ module.exports = {
 	//	const users=this.readFile()
 	//	return users
 
-	//  findByPk(id) {
-	//	const users = this.readFile();
-	// filtra por id de user
-	//	const userfound = users.find((user) => user.id == id);
-	// devuelve user
-	// 	return userfound;
+	findByPk(id) {
+		const users = this.readFile();
+		// filtra por id de user
+		const userfound = users.find((user) => user.id == id);
+		// devuelve user
+		return userfound;
+	},
 
 	create(user) {
 		user.id = this.generateId();

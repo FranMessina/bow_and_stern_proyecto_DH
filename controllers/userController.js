@@ -10,10 +10,6 @@ const userController = {
 	register: (req, res) => {
 		res.render('users/register');
 	},
-	logreg: (req, res) => {
-		res.render('users/loginregister');
-	},
-
 	create: (req, res) => {
 		let errors = validationResult(req);
 
@@ -55,11 +51,10 @@ const userController = {
 		if (remember) {
 			res.cookie('user', user.id, {
 				maxAge: 1000 * 60,
-				signed: true,
 			});
 		}
 
-		res.redirect('/users/profile');
+		res.redirect('/user/profile');
 	},
 	logout: (req, res) => {
 		req.session.destroy();
