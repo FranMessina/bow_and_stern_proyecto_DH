@@ -3,8 +3,12 @@ const path = require('path');
 const userRoutes = express.Router();
 const userController = require('../controllers/userController');
 const validationRegister = require('../middlewares/validationRegister');
+const validationLogin = require('../middlewares/validationLogin');
+
 
 userRoutes.get('/login', userController.login);
+userRoutes.post('/login', validationLogin, userController.login);
+
 
 /* Formulario de registro */
 userRoutes.get('/register', userController.register);
