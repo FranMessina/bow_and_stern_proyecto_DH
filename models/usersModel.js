@@ -22,6 +22,12 @@ module.exports = {
 		return lastUser.id + 1;
 	},
 
+	findByField(field, text) {
+		const users = this.readFile();
+		const userFound = users.find((user) => user[field] === text);
+		return userFound;
+	},
+
 	//findAll () {
 	//	const users=this.readFile()
 	//	return users
