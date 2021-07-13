@@ -26,3 +26,16 @@ Silvina: Crud Register. Error 404.-
 Silvina/Francisco/Matias/Nelo: Crud create.-
 
 
+5to SPRINT
+
+Matias: Profile vista y css.-
+
+Francisco: middlewares session cookies.-
+
+Silvina: middlewares loginValidation, registerValidation.-
+
+Nelo/Silvina/Francisco/Matias: Implementacion rutas.-
+
+
+
+
