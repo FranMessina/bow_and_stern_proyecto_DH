@@ -1,13 +1,15 @@
 Retrospectiva:
 
-Seguir haciendo:
+/// 1er Sprint Retro ///
+
+--Seguir haciendo:
 Mantener la buena organización para las reuniones.
 Distribucion rapida de tareas.
 Buena comunicación de equipo.
 Cumplimiento de fechas establecidas.
 Pactar fechas de pre-entrega para debatir los resultados en el grupo y sugerir mejoras.
 
-Empezar a hacer:
+--Empezar a hacer:
 Mayor planificación previa al desarrollo.
 Incluir micro zooms durante la semana para despejar dudas particulares.
 Aunque nos distribuimos bien las tareas,
@@ -21,35 +23,49 @@ agregar las tareas en el tablero Trello, con mas diligencia.
 Opinion de Matias:
 Me di cuenta que cuando hicimos la division de trabajo, fuimos poco precisos con ciertos aspectos, como por ejemplo colores y tipografias de la pagina. Si bien no aclaramos estos pormenores a proposito, para poder mostrar distintos diseños, termino siendo contraproducente tener que cambiar el estilo de todos para adaptarnos al que consideramos mejor. Por suerte(gran punto a favor) pactamos la primer pre entrega grupal con un gran margen de tiempo hasta la entrega final, por lo que todos tuvimos tiempo de adaptarlo. Por ahi podriamos haber probado colores y tipografias antes de que cada uno empiece con su codigo, decidirlas, y luego implementarlas cada uno por separado.
 
-Retrospectiva segundo sprint:
+/// 2do Sprint Retro ///
 
-Comenzar a hacer:
+--Comenzar a hacer:
 Aplicarle fecha de entrega a los tickets de trello.
 
-Hacer mas:
+--Hacer mas:
 Hacer mas checkouts
 
-Continuar haciendo:
+--Continuar haciendo:
 En el segundo sprint el grupo ha utilizado una metodologia diferente a la primera. Hemos implementado un seguimiento mas riguroso de las tareas de los participantes, dandonos constante feedback en pos de llegar a la entrega con el resultado esperado. A su vez, hemos asignado tareas mucho mas especificas a trello, y le asignamos un responsable (o dos) a cada ticket, de esta manera todos sabiamos que hacer.
 Implementamos tareas sub grupales
 
-Hacer menos:
+--Hacer menos:
 Contar con tus compañeros, pero no sobrecargarlos con preguntas. Realizar un esfuerzo individual por comprender individualmente o con ayuda de los profesores primero.
 
 /// 3er Sprint Retro ///
 
--- Comenzar a hacer:
-
+--Comenzar a hacer:
 Aprender nuevas habilidades adicionales a las aprendidas en el curso y aplicarlas en el proyecto.
 
--- Hacer mas:
-
--- Continuar haciendo:
-
+--Continuar haciendo:
 Reuniones regulares para corroborar el progreso del equipo.
 Contar con nuestros compañeros pero ser independientes a la vez.
 Poner fechas de entrega a las tareas distribuidas en Trello.
 
--- Hacer menos:
-
+--Hacer menos:
 Iniciar tareas las cuales no tiene un final tan definido, para no perder tiempo en eso y en cambio concentrarnos en lo mas necesario/importante.
+
+
+/// 4to Sprint Retro ///
+
+--Comenzar a hacer:
+Sumarle valor a la pagina con propuestas individuales y de equipo, adicionales a los entregables establecidos como obligatorios.
+
+--Hacer mas:
+Realizar revisiones individuales para detectar posibles fallas y/o mejorar detalles no vistos en forma conjunta.
+Definir nuestra propia fecha limite de finalizacion de entregables, previa a la fecha establecida, para asegurar la entrega de calidad. 
+Ser claros en la definicion de cada tarea a desarrollar.
+
+--Continuar haciendo:
+Definir fecha de entrega a los tickets de trello.
+Reuniones regulares para el seguimiento de tareas y posibles atascos.
+Estar comprometidos con las tareas individuales y presentaciones a tiempo.
+
+--Hacer menos:
+Terminar los entregables y no avanzar sobre el proyecto.
