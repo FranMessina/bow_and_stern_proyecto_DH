@@ -10,5 +10,19 @@
     "email": "test1@test.com",
     "pass": "$2a$10$5U00aaO6l2O7erwhFEOVU.HnFGZvQC9pWb0q/UKXTATEI6bEsBUQS",
     "id": 2
+  },
+  {
+    "firstName": "Silvina",
+    "lastName": "Donvito",
+    "email": "silvina@gmail.com",
+    "pass": "$2a$10$Uo876DSj4G9a8VoSco8RfOA5BfyUzEhLPH01EYhqXIlwM2pYT3moS",
+    "id": 3
+  },
+  {
+    "firstName": "Prueba",
+    "lastName": "Doss",
+    "email": "prueba@gmail.com",
+    "pass": "$2a$10$AxmVNh0bUhflez/T7JwuMe0yTlIDEne0sFZLjPSRShdtsJe3qwxu2",
+    "id": 4
   }
 ]
