@@ -35,12 +35,26 @@
 					<!-- <label>Full Name</label> -->
 					<input
 						type="text"
-						name="fullName"
-						placeholder="Full Name"
+						name="firstName"
+						placeholder="First Name"
 						class="field"
 					/>
-					<% if (locals.errors && errors.fullName) { %>
-						<p> <%= errors.fullName.msg %> </p>
+					<% if (locals.errors && errors.firstName) { %>
+						<p> <%= errors.firstName.msg %> </p>
+					<%	} %>
+
+				</div>
+
+				<div class="form-field">
+					<!-- <label>Full Name</label> -->
+					<input
+						type="text"
+						name="lastName"
+						placeholder="Last Name"
+						class="field"
+					/>
+					<% if (locals.errors && errors.lastName) { %>
+						<p> <%= errors.lastName.msg %> </p>
 					<%	} %>
 
 				</div>
