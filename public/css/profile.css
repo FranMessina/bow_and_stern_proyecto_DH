@@ -31,9 +31,7 @@ h1 {
 
 
 
-  footer{
-      height: 10vh;
-  }
+
 
   main {
     display: flex;
@@ -44,7 +42,7 @@ h1 {
     height: 80vh;
   }
 
-  div {
+ main div {
       margin-top:100px;
       width: 40vw;
       border: 1px solid;
@@ -56,4 +54,40 @@ h1 {
       background-color:white;
     
   }
+
+  /* Footer */
+
+footer {
+	border-top: 1px #ebebeb solid;
+	width: 100%;
+	text-align: center;
+}
+
+
+footer h4 {
+	margin-top: 20px;
+	margin-bottom: 25px;
+	font-size: 20px;
+	font-weight: 300;
+}
+
+footer p {
+	color: #777;
+	line-height: 2;
+	
+}
+
+.icons a {
+	text-decoration: none;
+	color: rgb(9, 117, 136);
+}
+
+ .icons {
+	color: rgb(9, 117, 136);
+	font-size: 20px;
+	margin: 20px auto;
+}
+.fab {
+	margin-left: 7px;
+}
 
