@@ -2,9 +2,13 @@ const usersModel = require("../models/usersModel");
 const {body} = require('express-validator');
 
 const validationRegister = [
-    body('fullName') 
+    body('firstName') 
         .notEmpty()
-        .withMessage('Complete your full name'),
+        .withMessage('Complete your first name'),
+
+    body('lastName') 
+        .notEmpty()
+        .withMessage('Complete your last name'),
     
     body('email') 
         .notEmpty()
