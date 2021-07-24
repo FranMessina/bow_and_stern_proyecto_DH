@@ -35,7 +35,7 @@ const userController = {
 	//		res.redirect('/user/login')
 	//	});
 
-	},	
+	},
 	processLogin: (req, res) => {
 		const errors = validationResult(req);
 		const old = req.body;

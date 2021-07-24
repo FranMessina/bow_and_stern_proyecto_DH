@@ -135,6 +135,7 @@ main{
     border-radius: 30px;
 	transition: all;
 	transition-duration: 100ms;
+	min-height: 350px;
 
 }
 .boatContainer:hover{
