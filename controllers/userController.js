@@ -27,7 +27,7 @@ const userController = {
 
 		const newUser = usersModel.create(userData);
 
-		res.redirect('/user/register');
+		res.redirect('/user/login');
 	},
 	processLogin: (req, res) => {
 		const errors = validationResult(req);
