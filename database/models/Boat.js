@@ -1,5 +1,5 @@
 module.exports = (sequelize, dataTypes) => {
-    let alias = 'Boats';
+    let alias = 'Boat';
     let cols = {
         id: {
             type: dataTypes.INTEGER,
@@ -32,7 +32,8 @@ module.exports = (sequelize, dataTypes) => {
     let config = { 
         tableName: 'boats', 
         timestamps: false,
-        underscored: true};
+        underscored: true
+    };
 
     const Boat = sequelize.define(alias, cols, config);
 

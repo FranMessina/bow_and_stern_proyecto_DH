@@ -11,8 +11,8 @@ const productController = {
 			res.render('products/listingForm');
 	},
 	catalogue: async (req, res) => {	
-		const allBoats = await Boat.findAll()  
-			res.render('products/catalogue', { allBoats });
+		const boats = await Boat.findAll()  
+			res.render('products/catalogue', { boats });
 		
 		// le pasa la info de todos los botes del servidor a mi vista catalogue
 	},

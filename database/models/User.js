@@ -1,5 +1,5 @@
 module.exports = (sequelize, dataTypes) => {
-    let alias = 'Users';
+    let alias = 'User';
     // se define la informacion que requiere sequelize para definir el modelo
     let cols = {
         id: {
