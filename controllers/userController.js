@@ -1,7 +1,8 @@
 const path = require('path');
 const usersModel = require('../models/usersModel');
-const { validationResult } = require('express-validator');
+const {validationResult} = require('express-validator');
 const bcrypt = require('bcryptjs');
+const {User} = require('../database/models');
 
 const userController = {
 	login: (req, res) => {
@@ -17,18 +18,24 @@ const userController = {
 			return res.render('users/register', { errors: errors.mapped(), old: req.body });
 		}
 		//crear el usuario
-		const { fullName, email, pass } = req.body;
+		const { firstName, lastName, email, pass } = req.body;
 
 		const userData = {
-			fullName,
+			firstName,
+			lastName,
 			email,
 			pass: bcrypt.hashSync(pass),
 		};
 
 		const newUser = usersModel.create(userData);
+			res.redirect('/user/register');
 
-		res.redirect('/user/register');
-	},
+	//User.create(userData) 
+	//	.then( function (user) {
+	//		res.redirect('/user/login')
+	//	});
+
+	},	
 	processLogin: (req, res) => {
 		const errors = validationResult(req);
 		const old = req.body;
