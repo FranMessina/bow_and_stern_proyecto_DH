@@ -1,5 +1,6 @@
 module.exports = (sequelize, dataTypes) => {
     let alias = 'Users';
+    // se define la informacion que requiere sequelize para definir el modelo
     let cols = {
         id: {
             type: dataTypes.INTEGER,
@@ -24,8 +25,10 @@ module.exports = (sequelize, dataTypes) => {
         tableName: 'users', 
         timestamps: false};
 
+    // se crea el modelo con la informacion configurada 
     const User = sequelize.define(alias, cols, config);
 
+    // devuelve el modelo configurado
     return User
 
 };

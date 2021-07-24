@@ -1,6 +1,6 @@
 const path = require('path');
 const productModel = require('../models/productModel');
-const {Product} = require('../database/models');
+const {Boat} = require('../database/models');
 
 const productController = {
 	productDetail: (req, res) => {
@@ -11,7 +11,7 @@ const productController = {
 			res.render('products/listingForm');
 	},
 	catalogue: async (req, res) => {	
-		const allBoats = await Product.findAll()  
+		const allBoats = await Boat.findAll()  
 			res.render('products/catalogue', { allBoats });
 		
 		// le pasa la info de todos los botes del servidor a mi vista catalogue
