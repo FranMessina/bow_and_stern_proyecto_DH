@@ -53,7 +53,10 @@ body {
 	border-radius: 5px;
 	font-size: 20px;
 }
-
+.carousel-item{
+	max-height: 500px;
+	
+}
 .secondarysection article {
 	background-color: rgb(9, 117, 136);
 	width: 100%;

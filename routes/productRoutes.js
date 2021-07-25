@@ -26,11 +26,7 @@ productRoutes.get('/catalogue', productController.catalogue);
 
 productRoutes.get('/controlpanel', productController.controlPanel);
 
-productRoutes.post(
-	'/create',
-	upload.single('boatImg'),
-	productController.create
-);
+productRoutes.post('/create',upload.single('image'),productController.create);
 
 //aca debemos pasar multer
 productRoutes.put('/:id', upload.single('boatImg'), productController.update);

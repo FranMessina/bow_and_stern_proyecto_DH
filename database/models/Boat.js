@@ -10,7 +10,7 @@ module.exports = (sequelize, dataTypes) => {
         name: {
             type: dataTypes.STRING
         },
-        shortDescription: {
+        short_description: {
             type: dataTypes.STRING
         },   
         image: {
@@ -22,7 +22,7 @@ module.exports = (sequelize, dataTypes) => {
         measures: {
             type: dataTypes.INTEGER
         },
-        vesselType: {
+        vessel_type: {
             type: dataTypes.STRING
         },
         description: {
