@@ -15,30 +15,49 @@
    </header>
 
 <main>
-    <div class="contenedor">        
-        <!--<form action="/" method="get" class=form1>  -->    
+    <fieldset  class="contenedor">        
+      
         <h1 class="h">Estimated date</h1>
         <p>Please enter your preferred departure date:</p>
         <!--<div class= "cajagendefecha">-->
         <div class="cajadefecha">                       
-            <input type="date" id="start" name="trip-start" value="2021-05-24" min="2021-01-01" max="2021-12-31">                                
+            <input type="date" id="preferredDate" name="preferred_date"  min="2021-01-01" >                                
         </div>
         <h2 class="h">Alternative date</h2>
         <p>Please enter an alternative date in case your preferred date isn´t available:</p>
         <div class="cajadefecha">
-            <input type="date" id="start" name="trip-start"
-            value="2021-05-24"
-            min="2021-01-01" max="2021-12-31">              
+            <input type="date" id="alternativeDate" name="alternative_date"
+            
+            min="2021-01-01" >              
         </div>
         <div class="divCentrado">
-            <button class="button" type="submit">NEXT</button>
+            <a href="/checkout/groupSize"><button class="button" id="insert" onclick="insertData()">NEXT</button></a>
         </div>
         <!--</div>-->
-    </div>
+    </fieldset>
 </main>
+
 
 
 <footer>
 </footer>
 </body>
+
+<script>
+const preferredDate = document.getElementById("preferredDate")
+const alternativeDate = document.getElementById("alternativeDate")
+const insert = document.getElementById("insert")
+
+
+
+function insertData() {
+    const dataDate= preferredDate.value
+    const altDataDate =alternativeDate.value
+    if(dataDate&&altDataDate){
+        localStorage.setItem("preferred_date",dataDate)
+        localStorage.setItem("alternative_date",altDataDate)
+
+    }
+}
+</script>
 </html>

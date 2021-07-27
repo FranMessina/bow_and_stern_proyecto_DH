@@ -21,36 +21,39 @@
             <section class="seccion">               
                     <div>
                         <i class="fas fa-user"></i>
-                        <p class="user"><%= userInfo[0].firstName +' '+userInfo[0].lastName%></h3>
+                        <p class="user">Matias Giles</h3>
                     </div>
                     <div>
                         <i class="fas fa-envelope-square"></i>
-                        <p class="e-mail"><%= userInfo[0].email %> </p>
+                        <p class="e-mail"> matias@gmail.com</p> </p>
                     </div>
-                    <!-- <div>
+                    <div>
                         <i class="far fa-calendar-check"></i>
-                        <p class="fecha">Reservation date</p>
-                    </div> -->
+                        <p class="fecha" id="lsOutputDate">Reservation date: </p>
+                    </div>
+                    <div>
+                        <i class="far fa-calendar-check"></i>
+                        <p class="fecha" id="lsOutputAltDate">Alternative date: </p>
+                    </div>
                     <div>
                         <i class="fas fa-dharmachakra"></i>
-                        <p class="fecha"><%= boats[2].vesselType %>  </p>
+                        <p class="fecha"> Bote Elegido </p>
                     </div>
                     <div>
-                        <!-- <i class="fas fa-users"></i>
-                        <p class="personas">How many people</p>
+                        <i class="fas fa-users"></i>
+                        <p class="personas">Adults: </p>
+                        
                     </div>
                     <div>
-                        <i class="fas fa-drumstick-bite"></i>
-                        <p class="buffet">Buffet on board: Yes /No</p>
-                    </div>
-                    <div>
-                        <i class="fas fa-glass-cheers"></i>
-                        <p class="catering">Catering: Yes/No </p>
+                        <i class="fas fa-users"></i>
+                        <p class="personas">Minors: </p>
                     </div>
                     <div>
                         <i class="fas fa-swimmer"></i>
-                        <p class="buceo">Diving Service: Yes/No </p>
-                    </div> -->
+                        <p class="buceo">Experience</p>
+                    </div>
+               
+                    
             </section>
                   
                 <div class="cajaop">
@@ -77,5 +80,17 @@
     <footer>
 
     </footer>
+
+    <script>
+
+        const outputDate= document.getElementById("lsOutputDate")
+        const date= localStorage.getItem("preferred_date")
+        outputDate.innerHTML+=date
+
+        const outputAltDate= document.getElementById("lsOutputAltDate")
+        const altDate= localStorage.getItem("alternative_date")
+        outputAltDate.innerHTML+=altDate
+       
+    </script>
 </body>
 </html>

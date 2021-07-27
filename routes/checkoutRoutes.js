@@ -14,4 +14,8 @@ checkoutRoutes.get("/summary", checkoutController.summary);
 checkoutRoutes.get("/confirmation", checkoutController.confirmation);
 checkoutRoutes.get("/createAccount", checkoutController.createAccount);
 
+
+checkoutRoutes.post("/date", checkoutController.date);
+checkoutRoutes.post("/size", checkoutController.size)
+
 module.exports = checkoutRoutes;

@@ -17,7 +17,7 @@
     </header>
 
     <main>
-        <form action="/" method="get" class=formularioFP>
+        <fieldset class=formularioFP>
         
             <h2>Choose a gastronomic proposal</h2>
         
@@ -28,8 +28,8 @@
             
             <div id= select>
                
-            <select name="food">
-                <option value="seafood">Please selct one</option>
+            <select id="foodPakage" name="food">
+                <option value="null">Please selct one</option>
                 <option value="seafood">Seafood deluxe</option>
                 <option value="parrilla">Clasic Argentinian "parrillada" </option>
                 <option value="Pasta">Homemade Pasta Selection</option>
@@ -38,13 +38,13 @@
             </select></div>
 
             <div id="botones">
-                <button type="submit">Next</button>
+               <a href="/checkout/experiencePackage"> <button onclick="insertData()">Next</button></a>
                 </div>
         <div id="back">
             <i class="fas fa-chevron-left"> </i>
         </div>
         
-        </form>
+        </fieldset>
 
     </main>
 
@@ -52,6 +52,18 @@
     <footer>
 
     </footer>
+    <script>
+    const foodPackage = document.getElementById("foodPakage")
+    const insert = document.getElementById("insert")
     
+    
+    
+    function insertData() {
+        const foodChoice= foodPackage.value
+            localStorage.setItem("foodChoice",foodChoice)
+            console.log(localStorage)
+    }
+    </script>
+
 </body>
 </html>

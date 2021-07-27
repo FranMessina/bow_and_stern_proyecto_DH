@@ -19,14 +19,14 @@
 <!-- <% %> necesito esta etiqueta para usar javascript -->
 
    <main>
-    <form action="/foodPackage" method="get" class=formularioGS>
+    <fieldset class=formularioGS>
         
         <h2>Group Size</h2>
 <article id= contenedor>
             <label>Adults</label>
     <div>
         <div class="value-button" id="decrease" onclick="decreaseValue()" value="Decrease Value">-</div>
-  <input type="number" id="number" value="0" />
+  <input type="text" id="amountOfAdults" class="number" name=amountOfAdults />
   <div class="value-button" id="increase" onclick="increaseValue()" value="Increase Value">+</div>
 </div>
 </article>
@@ -35,9 +35,9 @@
 <article id= contenedor>
     <label>Seniors</label>
 <div>
-<div class="value-button" id="decrease" onclick="decreaseValue()" value="Decrease Value">-</div>
-<input type="number" id="number" value="0" />
-<div class="value-button" id="increase" onclick="increaseValue()" value="Increase Value">+</div>
+<div class="value-button" id="decrease" onclick="" value="Decrease Value">-</div>
+<input type="number"  class="number" id="amountOfSeniors" value="0" />
+<div class="value-button" id="increase" onclick="" value="Increase Value">+</div>
 </div>
 </article>
 
@@ -45,9 +45,9 @@
 <article id= contenedor>
     <label>Children</label>
 <div>
-<div class="value-button" id="decrease" onclick="decreaseValue()" value="Decrease Value">-</div>
-<input type="number" id="number" value="0" />
-<div class="value-button" id="increase" onclick="increaseValue()" value="Increase Value">+</div>
+<div class="value-button" id="decrease" onclick="" value="Decrease Value">-</div>
+<input class="number"type="number" id="amountOfChildren" value="0"  />
+<div class="value-button" id="increase" onclick="" value="Increase Value">+</div>
 </div>
 </article>
 
@@ -55,52 +55,64 @@
 <article id= contenedor>
     <label>Infants</label>
 <div>
-<div class="value-button" id="decrease" onclick="decreaseValue()" value="Decrease Value">-</div>
-<input type="number" id="number" value="0" />
-<div class="value-button" id="increase" onclick="increaseValue()" value="Increase Value">+</div>
+<div class="value-button" id="decrease" onclick="" value="Decrease Value">-</div>
+<input type="number" class="number" id="amountOfInfants" value="0" />
+<div class="value-button" id="increase" onclick="" value="Increase Value">+</div>
 </div>
 </article>
-  <!-- PARA QUE EL BOTON TENGA FUNCIONALIDAD TENGO QUE DARLE VALLR A LAS FUNCIONES DECREASEVALUE E INCREASEVALUE EN JAVASCRIPT -->
+
   <div id="botones">
-<button type="submit">Next</button>
+<a href="/checkout/foodPackage"><button id="insert" onclick="insertData()">Next</button></a>
     </div>
     <div id="back">
-        <i class="fas fa-chevron-left"> </i>
+       <a href="/checkout/selectDate"><i class="fas fa-chevron-left"> </i></a> 
     </div>
-    <script>
-       function increaseValue() {
-  var value = parseInt(document.getElementById('number').value, 10);
-  value = isNaN(value) ? 0 : value;
-  value++;
-  document.getElementById('number').value = value;
-}
-
-function decreaseValue() {
-  var value = parseInt(document.getElementById('number').value, 10);
-  value = isNaN(value) ? 0 : value;
-  value < 1 ? value = 1 : '';
-  value--;
-  document.getElementById('number').value = value;
-} 
-    </script>
-</form>
-
-    
-    
-
-
-      
-
+    </fieldset>
 
    </main>
 
    <footer>
 
    </footer>
-
-
-
-
-
 </body>
+<script>
+
+
+    const amountOfAdults = document.getElementById("amountOfAdults")
+    const amountOfChildren = document.getElementById("amountOfChildren")
+    const amountOfSeniors = document.getElementById("amountOfSeniors")
+    const amountOfInfants = document.getElementById("amountOfInfants")
+    const insert = document.getElementById("insert")
+    
+    
+    
+    function insertData() {
+        const adults= amountOfAdults.value
+        const children= amountOfChildren.value
+        const seniors= amountOfSeniors.value
+        const infants= amountOfInfants.value
+
+            localStorage.setItem("adults",adults)
+            localStorage.setItem("children",children)
+            localStorage.setItem("seniors",seniors)
+            localStorage.setItem("infants",infants)
+            console.log(localStorage)
+    }
+    
+           function increaseValue() {
+      var value = parseInt(document.getElementById('amountOfAdults').value, 10);
+      value = isNaN(value) ? 0 : value;
+      value++;
+      document.getElementById('amountOfAdults').value = value;
+    }
+    
+    function decreaseValue() {
+      var value = parseInt(document.getElementById('amountOfAdults').value, 10);
+      value = isNaN(value) ? 0 : value;
+      value < 1 ? value = 1 : '';
+      value--;
+      document.getElementById('amountOfAdults').value = value;
+    } 
+        </script>
+    
 </html>
