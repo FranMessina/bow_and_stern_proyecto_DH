@@ -23,7 +23,7 @@
     <section>
          <div>
             <label for="scubaDive">
-               <p id="importante"> <input type="radio" name="experience" value="scubaDive" id='scubaDive' aria-checked="false" onclick="changeCheckbox()">  Scuba Dive:</input></p>
+               <p id="importante"> <input type="radio" name="experience" value="scubaDive" id='scubaDive' aria-checked="false" onclick="changeCheckbox(event)">  Scuba Dive:</input></p>
              
             <article><img src="/img/scubaDive.jpg"></article>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae blanditiis autem quaerat voluptas cum.</p>
@@ -31,7 +31,7 @@
             </div>
         
         <div> 
-            <label for="fishing"><p id="importante"><input id="fishing" type="radio" name="experience" value="Fishing" aria-checked="false" onclick="changeCheckbox2()">  Fishing:</input></p>
+            <label for="fishing"><p id="importante"><input id="fishing" type="radio" name="experience" value="Fishing" aria-checked="false" onclick="changeCheckbox(event)">  Fishing:</input></p>
 
             <article><img src="/img/pescando.jpeg"></article>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae blanditiis autem quaerat voluptas cum.</p>
@@ -39,7 +39,7 @@
         </div>
         <div>
             <label for="Snorkell">
-            <p id="importante"><input id="Snorkell" type="radio" name="experience" value="Snorkell" aria-checked="false" onclick="changeCheckbox3()">  Snorkell</input></p>
+            <p id="importante"><input id="Snorkell" type="radio" name="experience" value="Snorkell" aria-checked="false" onclick="changeCheckbox(event)">  Snorkell</input></p>
             
             <article><img src="/img/snorkell.jpeg"></article>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae blanditiis autem quaerat voluptas cum.</p>
@@ -47,7 +47,7 @@
         </div>
         <div>
             <label for="Beach">
-            <p id="importante"><input id="Beach" type="radio" name="experience" value="beach" aria-checked="false" onclick="changeCheckbox4()">  Beach</input></p>
+            <p id="importante"><input id="Beach" type="radio" name="experience" value="beach" aria-checked="false" onclick="changeCheckbox(event)">  Beach</input></p>
 
             <article><img src="/img/beach.jpeg"></article>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae blanditiis autem quaerat voluptas cum.</p>
@@ -72,51 +72,10 @@
     <script>
 
      
-
-    function changeCheckbox(event) {   
-         let item = document.getElementById("scubaDive");
-    switch(item.getAttribute('aria-checked')) {
-        case "true":
-            item.setAttribute('aria-checked', "false");
-            break;
-        case "false":
-            item.setAttribute('aria-checked', "true");
-            break;
-    }   
-}
-function changeCheckbox2(event) {   
-         let item = document.getElementById("fishing");
-    switch(item.getAttribute('aria-checked')) {
-        case "true":
-            item.setAttribute('aria-checked', "false");
-            break;
-        case "false":
-            item.setAttribute('aria-checked', "true");
-            break;
-    }   
-}
-function changeCheckbox3(event) {   
-         let item = document.getElementById("Snorkell");
-    switch(item.getAttribute('aria-checked')) {
-        case "true":
-            item.setAttribute('aria-checked', "false");
-            break;
-        case "false":
-            item.setAttribute('aria-checked', "true");
-            break;
-    }   
-}
-function changeCheckbox4(event) {   
-         let item = document.getElementById("Beach");
-    switch(item.getAttribute('aria-checked')) {
-        case "true":
-            item.setAttribute('aria-checked', "false");
-            break;
-        case "false":
-            item.setAttribute('aria-checked', "true");
-            break;
-    }   
-}
+     function changeCheckbox(event) {   
+        resetCheckbox() 
+ event.target.setAttribute('aria-checked', "true")    
+ }
 //ATENCION, NO CONTEMPLA EL CASO QUE NO SE SELECCIONE NINGUNA, O SEA NO LE SALTA ERROR.
 function insertData() {
 
@@ -128,6 +87,7 @@ function insertData() {
     const indexOfSelected= map.indexOf("true")
     const selectedExperience= arrayInput[indexOfSelected].getAttribute("id")
     localStorage.setItem("selectedExperience",selectedExperience)
+    console.log(map)
 }
     </script>
 </body>

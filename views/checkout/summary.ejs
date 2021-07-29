@@ -10,77 +10,63 @@
     
     <script src="https://kit.fontawesome.com/8accbfc9de.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <link rel = "stylesheet" href = "/css/productCart.css">
+    <link rel = "stylesheet" href = "/css/foodPackage.css">
 </head>
 <body>
     <header>
     </header>
     <main>         
-        <div class="contenedor">   
-            <h1>SUMMARY</h1>          
-            <section class="seccion">               
-                    <div>
-                        <i class="fas fa-user"></i>
-                        <p class="user">Matias Giles</h3>
-                    </div>
-                    <div>
-                        <i class="fas fa-envelope-square"></i>
-                        <p class="e-mail"> matias@gmail.com</p> </p>
-                    </div>
-                    <div>
-                        <i class="far fa-calendar-check"></i>
-                        <p class="fecha" id="lsOutputDate">Reservation date: </p>
-                    </div>
-                    <div>
-                        <i class="far fa-calendar-check"></i>
-                        <p class="fecha" id="lsOutputAltDate">Alternative date: </p>
-                    </div>
-                    <div>
-                        <i class="fas fa-dharmachakra"></i>
-                        <p class="fecha"> Bote Elegido </p>
-                    </div>
-                    <div>
-                        <i class="fas fa-users"></i>
-                        <p class="personas">Adults: </p>
-                        
-                    </div>
-                    <div>
-                        <i class="fas fa-users"></i>
-                        <p class="personas">Minors: </p>
-                    </div>
-                    <div>
-                        <i class="fas fa-swimmer"></i>
-                        <p class="buceo">Experience</p>
-                    </div>
-               
-                    
-            </section>
-                  
-                <div class="cajaop">
-                    <h3>PAYMENT OPTIONS</h3>
-                    <p>Accepted Payment Methods:</p>
-                    <ul class=tarjetas_contenedoras>
-                        <li class="tarjetas">
-                            <img src = "../img/amex.jpg" alt = "Amex" width = "30px" height = "30px">
-                        </li>
-                        <li class="tarjetas">
-                            <img src = "../img/visa.jpg" alt = "visa" width = "30px" height = "30px">
-                        </li>
-                        <li class="tarjetas">
-                            <img src = "../img/mastercard.jpg" alt = "mastercard" width = "30px" height = "30px">
-                        </li>
-                    </ul>
-                </div>
-                <div class="divCentrado">
-                    <button class="button">Confirm</button>  
-                </div>
+       
+                    <form class="formularioFP" action="/checkout/summary" method="post">
+
+                        <h1>Summary</h1>
+                        <div class="summary"> <p>Nombre: Matias Giles</p> </div>
+                        <div class="crew">
+                            <h2>Crew</h2>
+                            <article>
+                                
+                                <div>
+                                    <h3>Adults:</h3>
+                                    <p id="adults">2</p>
+                                    <input type="hidden" value="2"> </input>
+                                </div>
+                                <div>
+                                    <h3>Minors:</h3>
+                                    <p id="minors">2</p>
+                                <input type="hidden"> </div>
+                                
+                            </article>
+                            
+                        </div>
+                        <div class="crew">
+                            <h2>Date</h2>
+                            <article>
+                                
+                                <div>
+                                    <h3>Preferred Date:</h3>
+                                    <p id="lsOutputDate">2</p>
+                                    <input type="hidden" value="2"> </input>
+                                </div>
+                                <div>
+                                    <h3>Alternative Date:</h3>
+                                    <p id= "lsOutputAltDate">2</p>
+                                <input type="hidden"> </div>  
+                            </article>
+                            
+                        </div>
+                        <div class="summary"><p id="food">Food Choice: </p> </div>
+                        <div class="summary"><p id="experience">Selected Experence:</p> </div>
+                       
+
+                        <div id="boton">
+                        <button type="submit">Enviar</button></div>
+                    </form> 
+           
             
-        </div>      
+             
     </main>
     <footer>
-
-    </footer>
-
+    </footer> 
     <script>
 
         const outputDate= document.getElementById("lsOutputDate")
@@ -90,7 +76,22 @@
         const outputAltDate= document.getElementById("lsOutputAltDate")
         const altDate= localStorage.getItem("alternative_date")
         outputAltDate.innerHTML+=altDate
+
+        const adults= document.getElementById("adults")
+        const amountAdults= localStorage.getItem("adults")
+        adults.innerHTML =amountAdults
+
+        const minors= document.getElementById("minors")
+        const amountChildren= localStorage.getItem("children")
+        minors.innerHTML=amountChildren
+
+        const food= document.getElementById("food")
+        const foodChoice= localStorage.getItem("foodChoice")
+        food.innerHTML+= "</br>"+foodChoice
        
+        const experience= document.getElementById("experience")
+        const selectedExperience= localStorage.getItem("selectedExperience")
+        experience.innerHTML+= "</br>"+ selectedExperience
     </script>
 </body>
 </html>
