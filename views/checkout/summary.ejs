@@ -7,10 +7,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap" rel="stylesheet">
     <link rel = "stylesheet" href = "/css/normalize.css">
-    
-    <script src="https://kit.fontawesome.com/8accbfc9de.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif&family=Yanone+Kaffeesatz:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <link rel = "stylesheet" href = "/css/foodPackage.css">
+    <link rel = "stylesheet" href = "/css/summaryNew.css">
 </head>
 <body>
     <header>
@@ -19,27 +23,35 @@
        
                     <form class="formularioFP" action="/checkout/summary" method="post">
 
-                        <h1>Summary</h1>
-                        <div class="summary"> <p>Nombre: Matias Giles</p> </div>
+                        <h1>Congrats, Captain! You are almost there. </br>
+                            Please confirm the following:</h1>
+<article id="contenedor">
+
+
+                            <section id="mainSection">
+                        <div class="summary"> <p>Name: Matias Giles</p> </div>
+                       
+                        <div class="summary"><p id="food">Food Choice: </p> </div>
+                        <div class="summary"><p id="experience">Selected Experence: </p> </div>
                         <div class="crew">
-                            <h2>Crew</h2>
+                           
                             <article>
-                                
+                                 <h2>Crew:</h2>
                                 <div>
                                     <h3>Adults:</h3>
                                     <p id="adults">2</p>
-                                    <input type="hidden" value="2"> </input>
+                                    <input type="hidden" name="adults"> </input>
                                 </div>
                                 <div>
                                     <h3>Minors:</h3>
                                     <p id="minors">2</p>
-                                <input type="hidden"> </div>
+                                <input type="hidden" name="children"> </div>
                                 
                             </article>
                             
                         </div>
                         <div class="crew">
-                            <h2>Date</h2>
+                          
                             <article>
                                 
                                 <div>
@@ -54,10 +66,12 @@
                             </article>
                             
                         </div>
-                        <div class="summary"><p id="food">Food Choice: </p> </div>
-                        <div class="summary"><p id="experience">Selected Experence:</p> </div>
-                       
+                    </section>
 
+                    <section id="imgSection">
+                        <img src="/img/atardecerPerfil.jpeg" class="image">
+                    </section>
+</article>
                         <div id="boton">
                         <button type="submit">Enviar</button></div>
                     </form> 
@@ -87,11 +101,11 @@
 
         const food= document.getElementById("food")
         const foodChoice= localStorage.getItem("foodChoice")
-        food.innerHTML+= "</br>"+foodChoice
+        food.innerHTML+=foodChoice
        
         const experience= document.getElementById("experience")
         const selectedExperience= localStorage.getItem("selectedExperience")
-        experience.innerHTML+= "</br>"+ selectedExperience
+        experience.innerHTML+= selectedExperience
     </script>
 </body>
 </html>
