@@ -37,6 +37,13 @@ module.exports = (sequelize, dataTypes) => {
 
     const Boat = sequelize.define(alias, cols, config);
 
+    Boat.associate = function(models) {
+        Boat.belongsTo(models.location, {
+            as: 'location',
+            foreignKey: 'location_id'
+        })
+    }
+
     return Boat
 
 };
