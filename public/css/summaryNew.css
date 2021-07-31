@@ -89,6 +89,10 @@ main{
    align-items: center;
    justify-content: space-around
 }
+
+input{
+  display:none;
+}
 .crew article div{
 
   

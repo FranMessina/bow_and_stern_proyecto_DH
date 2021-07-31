@@ -27,22 +27,9 @@ const checkoutController = {
 		res.render("checkout/createAccount");
 	},
 
-	date: (req, res) => {
-		let data= req.body
-		console.log(data)
-		// res.redirect("/checkout/groupSize")
-		
-		
-		return data
-	},
-	size: (req, res) => {
-		let newdata= req.body
-		console.log(newdata)
-		 let previousData= this.date
-		console.log(previousData)
-
-		
-		res.redirect("/checkout/foodPackage")
+	summaryForm: (req,res)=>{
+		console.log(req.body)
+		res.redirect("/checkout/confirmation")
 	}
 
 };

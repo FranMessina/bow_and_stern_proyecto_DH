@@ -29,23 +29,23 @@
 
 
                             <section id="mainSection">
-                        <div class="summary"> <p>Name: Matias Giles</p> </div>
+                        <div class="summary"> <p>Name: Matias Giles</p> <input type="hidden"></div>
                        
-                        <div class="summary"><p id="food">Food Choice: </p> </div>
-                        <div class="summary"><p id="experience">Selected Experence: </p> </div>
+                        <div class="summary"><p id="food">Food Choice: </p> <input type="hidden" name="food_choice" id="food_choice" ></div>
+                        <div class="summary"><p id="experience">Selected Experence: </p> <input type="hidden" name ="selected_experience" id="selected_experience"> </div>
                         <div class="crew">
                            
                             <article>
                                  <h2>Crew:</h2>
                                 <div>
                                     <h3>Adults:</h3>
-                                    <p id="adults">2</p>
-                                    <input type="hidden" name="adults"> </input>
+                                    <p id="adults"></p>
+                                    <input type="hidden" name="adults" id="adultsInput"> 
                                 </div>
                                 <div>
                                     <h3>Minors:</h3>
-                                    <p id="minors">2</p>
-                                <input type="hidden" name="children"> </div>
+                                    <p id="minors"></p>
+                                <input type="hidden" name="children" id="children"> </div>
                                 
                             </article>
                             
@@ -56,13 +56,13 @@
                                 
                                 <div>
                                     <h3>Preferred Date:</h3>
-                                    <p id="lsOutputDate">2</p>
-                                    <input type="hidden" value="2"> </input>
+                                    <p id="lsOutputDate"></p>
+                                    <input type="hidden" name="preferred_date" id="preferred_date"> </input>
                                 </div>
                                 <div>
                                     <h3>Alternative Date:</h3>
-                                    <p id= "lsOutputAltDate">2</p>
-                                <input type="hidden"> </div>  
+                                    <p id= "lsOutputAltDate"></p>
+                                <input type="hidden" name="alternative_date" id="alternative_date"> </div>  
                             </article>
                             
                         </div>
@@ -73,7 +73,7 @@
                     </section>
 </article>
                         <div id="boton">
-                        <button type="submit">Enviar</button></div>
+                        <button type="submit"  >Enviar</button></div>
                     </form> 
            
             
@@ -86,26 +86,45 @@
         const outputDate= document.getElementById("lsOutputDate")
         const date= localStorage.getItem("preferred_date")
         outputDate.innerHTML+=date
+        
+      
 
         const outputAltDate= document.getElementById("lsOutputAltDate")
         const altDate= localStorage.getItem("alternative_date")
         outputAltDate.innerHTML+=altDate
+        
+        
 
         const adults= document.getElementById("adults")
         const amountAdults= localStorage.getItem("adults")
         adults.innerHTML =amountAdults
+        
 
         const minors= document.getElementById("minors")
         const amountChildren= localStorage.getItem("children")
         minors.innerHTML=amountChildren
+        
 
         const food= document.getElementById("food")
         const foodChoice= localStorage.getItem("foodChoice")
         food.innerHTML+=foodChoice
        
+       
         const experience= document.getElementById("experience")
         const selectedExperience= localStorage.getItem("selectedExperience")
         experience.innerHTML+= selectedExperience
+        
+        
+
+    document.getElementById("selected_experience").value=selectedExperience
+    document.getElementById("food_choice").value=foodChoice
+    document.getElementById("children").value=amountChildren
+    document.getElementById("adultsInput").value=amountAdults
+    document.getElementById("alternative_date").value=altDate
+    document.getElementById("preferred_date").value=date
+   
+
+
     </script>
 </body>
 </html>
