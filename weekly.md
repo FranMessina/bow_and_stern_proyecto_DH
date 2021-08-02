@@ -12,8 +12,8 @@ Silvina: EJS instalacion-ejecucion-implementacion. Mapa de ubicacion para produc
 
 Francisco/Silvina: Ajustes form login/registro. Pendiente de def: Elegir opcion a implementar -form arch separdados/juntos. Revision vistas/rutas.
 
-
-4to SPRINT
+ 
+4to SPRINT 
 
 Matias: Summary y catalogo con datos parametrizados. Vista catalogo. Crud delete.-
 
@@ -35,6 +35,13 @@ Francisco: middlewares session cookies.-
 Silvina: middlewares loginValidation, registerValidation.-
 
 Nelo/Silvina/Francisco/Matias: Implementacion rutas.-
+
+
+6to SRPINT
+---------------------------------------------------------------------------------------------------------------------------------------------
+Matias: CRUD productos.-
+Silvina: Diagrama entidad-relacion(DER). Scrip de escritura(structure.sql). Scrip de datos(data.sql). Relaciones e/tablas carpeta sequelize.-
+Silvina/Francisco: carpeta database sequelize - config -.-
 
 
 
