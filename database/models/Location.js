@@ -20,11 +20,12 @@ module.exports = (sequelize, dataTypes) => {
     const Location = sequelize.define(alias, cols, config);
 
     Location.associate = function(models) {
-        Location.hasMany(models.boat, {
+        Location.hasMany(models.Boat, {
             as: 'boats',
             foreignKey: 'location_id'
         })
     }
+    
     return Location
 
 };

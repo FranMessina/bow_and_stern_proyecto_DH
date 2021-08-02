@@ -1,10 +1,11 @@
-const usersModel = require('../models/usersModel');
+const { User } = require('../database/models');
 
-module.exports = (req, res, next) => {
+
+module.exports = async (req, res, next) => {
 	const userCookie = req.cookies.user;
 
 	if (userCookie) {
-		const user = usersModel.findByPk(userCookie);
+		const user = await User.findByPk(userCookie);
 
 		delete user.password;
 

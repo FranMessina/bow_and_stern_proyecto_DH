@@ -38,7 +38,7 @@ module.exports = (sequelize, dataTypes) => {
     const Boat = sequelize.define(alias, cols, config);
 
     Boat.associate = function(models) {
-        Boat.belongsTo(models.location, {
+        Boat.belongsTo(models.Location, {
             as: 'location',
             foreignKey: 'location_id'
         })

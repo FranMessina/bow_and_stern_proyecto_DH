@@ -2,7 +2,7 @@ const path = require('path');
 const usersModel = require('../models/usersModel');
 const {validationResult} = require('express-validator');
 const bcrypt = require('bcryptjs');
-const {User} = require('../database/models');
+const { User } = require('../database/models');
 
 const userController = {
 	login: (req, res) => {
@@ -11,7 +11,7 @@ const userController = {
 	register: (req, res) => {
 		res.render('users/register');
 	},
-	create: (req, res) => {
+	create: async (req, res) => {
 		let errors = validationResult(req);
 
 		if (!errors.isEmpty()) {
@@ -24,19 +24,15 @@ const userController = {
 			firstName,
 			lastName,
 			email,
-			pass: bcrypt.hashSync(pass),
+			password: bcrypt.hashSync(pass),
 		};
 
-		const newUser = usersModel.create(userData);
-			res.redirect('/user/register');
-
-	//User.create(userData) 
-	//	.then( function (user) {
-	//		res.redirect('/user/login')
-	//	});
+		await User.create(userData);
+			
+		res.redirect('/user/register');
 
 	},
-	processLogin: (req, res) => {
+	processLogin: async (req, res) => {
 		const errors = validationResult(req);
 		const old = req.body;
 
@@ -49,7 +45,7 @@ const userController = {
 
 		const { email, remember } = req.body;
 
-		const user = usersModel.findByField('email', email);
+		const user = await User.findOne({ where: { email: email }});
 
 		delete user.password;
 

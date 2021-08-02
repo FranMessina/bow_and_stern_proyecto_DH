@@ -1,6 +1,8 @@
 const usersModel = require('../models/usersModel');
 const { body } = require('express-validator');
 const bcrypt = require('bcryptjs');
+const { User } = require('../database/models');
+
 
 const validationLogin = [
 	body('email')
@@ -14,10 +16,12 @@ const validationLogin = [
 		.notEmpty()
 		.withMessage('Complete your password')
 		.bail()
-		.custom((value, { req }) => {
+		.custom(async (value, { req }) => {
 			const { email, pass } = req.body;
 
-			const userFound = usersModel.findByField('email', email);
+			const userFound = await User.findOne({ where: {
+				email: email
+			}});
 
 			if (userFound) {
 				const passwordMatch = bcrypt.compareSync(pass, userFound.pass);

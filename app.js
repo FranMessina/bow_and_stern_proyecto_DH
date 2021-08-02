@@ -13,7 +13,11 @@ const session = require('express-session');
 const sessionToLocals = require('./middlewares/sessionToLocals');
 const cookieSession = require('./middlewares/cookieSession');
 
-app.use(session({ secret: 'shh' }));
+app.use(session({ 
+	secret: 'shh',
+	resave: false,
+	saveUninitialized: false	
+}));
 
 app.use(cookieParser());
 
