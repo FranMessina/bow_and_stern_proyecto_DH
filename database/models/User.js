@@ -6,24 +6,25 @@ module.exports = (sequelize, dataTypes) => {
             type: dataTypes.INTEGER,
             primaryKey: true,
             autoIncrement: true,
-            unique: true,
         },
         firstName: {
             type: dataTypes.STRING
         },
-        LastName: {
+        lastName: {
             type: dataTypes.STRING
         },
         email: {
             type: dataTypes.STRING
         },   
-        pass: {
+        password: {
             type: dataTypes.STRING
         }
     };
     let config = { 
         tableName: 'users', 
-        timestamps: false};
+        timestamps: false,
+        underscored: true
+    };
 
     // se crea el modelo con la informacion configurada 
     const User = sequelize.define(alias, cols, config);
