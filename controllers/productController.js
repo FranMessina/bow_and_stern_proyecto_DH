@@ -5,7 +5,7 @@ const db = require('../database/models');
 const productController = {
 	productDetail: async (req, res) => {
 		const boat = await db.Boat.findByPk(req.params.id);
-			res.render('products/productDetail', { boat });
+			res.render('products/productDetail', {boat});
 	},
 	createListing: (req, res) => {
 			res.render('products/listingForm');
