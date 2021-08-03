@@ -39,13 +39,18 @@ const userController = {
 		if (!errors.isEmpty()) {
 			return res.render('users/login', {
 				old,
-				errors: errors.mapped(),
+				errors: errors.array(),
 			});
 		}
 
 		const { email, remember } = req.body;
-
+	
 		const user = await User.findOne({ where: { email: email }});
+			
+		
+		console.log(user);
+
+	
 
 		delete user.password;
 

@@ -24,13 +24,13 @@ const validationLogin = [
 			}});
 
 			if (userFound) {
-				const passwordMatch = bcrypt.compareSync(pass, userFound.pass);
+				const passwordMatch = bcrypt.compareSync(pass, userFound.password);
 
 				if (passwordMatch) {
-					return true;
+					return Promise.resolve();
 				}
 			}
-			return false;
+			return Promise.reject();
 		})
 		.withMessage('The email or the password are incorrect'),
 ];
