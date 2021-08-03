@@ -23,7 +23,7 @@
     <section>
          <div>
             <label for="scubaDive">
-               <p id="importante"> <input type="radio" name="experience" value="scubaDive" id='scubaDive' aria-checked="false" onclick="changeCheckbox(event)">  Scuba Dive:</input></p>
+               <p id="importante"> <input type="radio" name="experience" value="scubaDive" id='scubaDive' aria-checked="false"  onclick="changeCheckbox(event)" class="botonRadio">  Scuba Dive:</input></p>
              
             <article><img src="/img/scubaDive.jpg"></article>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae blanditiis autem quaerat voluptas cum.</p>
@@ -31,7 +31,7 @@
             </div>
         
         <div> 
-            <label for="fishing"><p id="importante"><input id="fishing" type="radio" name="experience" value="Fishing" aria-checked="false" onclick="changeCheckbox(event)">  Fishing:</input></p>
+            <label for="fishing"><p id="importante"><input id="fishing" type="radio" name="experience" value="Fishing" aria-checked="false"  onclick="changeCheckbox(event)" class="botonRadio">  Fishing:</input></p>
 
             <article><img src="/img/pescando.jpeg"></article>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae blanditiis autem quaerat voluptas cum.</p>
@@ -39,7 +39,7 @@
         </div>
         <div>
             <label for="Snorkell">
-            <p id="importante"><input id="Snorkell" type="radio" name="experience" value="Snorkell" aria-checked="false" onclick="changeCheckbox(event)">  Snorkell</input></p>
+            <p id="importante"><input id="Snorkell" type="radio" name="experience" value="Snorkell" aria-checked="false"  onclick="changeCheckbox(event)" class="botonRadio">  Snorkell</input></p>
             
             <article><img src="/img/snorkell.jpeg"></article>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae blanditiis autem quaerat voluptas cum.</p>
@@ -47,14 +47,14 @@
         </div>
         <div>
             <label for="Beach">
-            <p id="importante"><input id="Beach" type="radio" name="experience" value="beach" aria-checked="false" onclick="changeCheckbox(event)">  Beach</input></p>
+            <p id="importante"><input id="Beach" type="radio" name="experience" value="beach" aria-checked="false"  onclick="changeCheckbox(event)" class="botonRadio">  Beach</input></p>
 
             <article><img src="/img/beach.jpeg"></article>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae blanditiis autem quaerat voluptas cum.</p>
          </label>
         </div>
         </section>
-       <a href="/checkout/summary"> <div id="botones">
+        <div id="botones">
             <button onclick="insertData()"id="insert" checked>Next</button></a>
             </div>
     <div id="back">
@@ -70,11 +70,18 @@
     </footer>
 
     <script>
+function resetCheckbox(){
+    const inputs= document.querySelectorAll(".botonRadio")
 
+    inputs.forEach((input)=>{input.setAttribute ('aria-checked', "false")})
+}
      
      function changeCheckbox(event) {   
         resetCheckbox() 
- event.target.setAttribute('aria-checked', "true")    
+
+ event.target.setAttribute('aria-checked', "true")   
+ 
+ 
  }
 //ATENCION, NO CONTEMPLA EL CASO QUE NO SE SELECCIONE NINGUNA, O SEA NO LE SALTA ERROR.
 function insertData() {
@@ -83,7 +90,8 @@ function insertData() {
     //lo transformo en array
     let arrayInput=Array.from(input)
     //busco el que se haya chequeado
-    const map =arrayInput.map(function(element){return element.getAttribute("aria-checked")})    
+    const map =arrayInput.map(function(element){return element.getAttribute("aria-checked")})
+    
     const indexOfSelected= map.indexOf("true")
     const selectedExperience= arrayInput[indexOfSelected].getAttribute("id")
     localStorage.setItem("selectedExperience",selectedExperience)
