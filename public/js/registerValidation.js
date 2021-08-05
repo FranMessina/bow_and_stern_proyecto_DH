@@ -12,15 +12,24 @@ const form= document.querySelector("form")
 
 //Mensajes De error
 
-const erroOutput= document.querySelector("#errors")
-const errorName= ""
-const errorSurname= ""
-const errorPassword=""
-const errorEmail=""
-const errorConfirm=""
+const errorOutput= document.querySelector("#errors")
+errorOutput.style.display="none"
+let errorName= ""
+let errorSurname= ""
+let errorPassword=""
+let errorEmail=""
+let errorConfirm=""
 
 
+let errorArray=[errorName, errorSurname, errorPassword, errorEmail, errorConfirm
+]
 
+//no me funciona el reset errors
+function resetErrors() {
+    errorArray.forEach(msg => {
+       msg== ""
+    })
+}
 
 function validateEmail(email) {
     const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
@@ -31,34 +40,46 @@ function formValidation (e){
 
     let hasErrors= false
 
+    
+    resetErrors()
+    console.log(errorArray)
+    console.log(errorName)
     if (firstName.value.length<3 || firstName.value.length>40){
     hasErrors=true
-    errorName="Please, input valid name"
+    errorName="Input valid name."
     }
 
     if (lastName.value.length<3 || lastName.value.length>40){
         hasErrors=true
-        errorSurname="Please, input valid surname"
+        errorSurname="Input valid surname."
         }
 
     if (password.value.length <8) {
         hasErrors=true
-        errorPassword= "minimun length for password is 8."
+        errorPassword= "Minimun length for password is 8."
     }
     if(confirmPassword.value != password.value) {
         hasErrors=true
-        errorConfirm= "passwords must match"
+        errorConfirm= "Passwords must match."
     }
 
     if(!validateEmail(email.value)){
         hasErrors=true
-        errorEmail= "please enter a valid email"
+        errorEmail= "Enter a valid email."
     }
 
+       
     if (hasErrors) {
             e.preventDefault()
+            
+
+            errorOutput.innerHTML = "Please solve the following issues: </br>" +errorName+" " +errorSurname+" " +errorEmail+" "+errorPassword+" "+errorConfirm;
+            errorOutput.style.display="block"
+          errorOutput.style.color="red"
+          console.log(errorName)
         }
-        erroOutput.innerHTML = errorName +errorSurname +errorPassword+errorEmail+errorConfirm
+      
+
 }
 
 

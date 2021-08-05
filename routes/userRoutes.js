@@ -14,7 +14,7 @@ userRoutes.post('/login', guestCheck, validationLogin, userController.processLog
 userRoutes.get('/register', guestCheck, userController.register);
 
 /* Procesar el registro */
-userRoutes.post('/create', validationRegister, userController.create);
+userRoutes.post('/create', userController.create);
 
 userRoutes.get('/profile', authCheck, userController.profile);
 
