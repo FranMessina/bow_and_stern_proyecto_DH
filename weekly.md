@@ -45,7 +45,11 @@ Matias: CRUD productos completo.-
 
 Silvina: Diagrama entidad-relacion(DER). Scrip de escritura(structure.sql). Scrip de datos(data.sql). Carpeta database - relaciones e/tablas -.-
 
-Silvina / Francisco: carpeta database - archivos de configuracion -.-
+Francisco: CRUD usuarios.-
+
+Silvina / Francisco: carpeta database - archivos de configuracion y tablas - primeros ajustes CRUD. -
+
+Nelo / Silvina / Francisco / Matias: Revisiones varias.-
 
 
 
