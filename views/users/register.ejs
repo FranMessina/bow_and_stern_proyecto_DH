@@ -38,6 +38,7 @@
 						name="firstName"
 						placeholder="First Name"
 						class="field"
+						id="firstName"
 					/>
 					<% if (locals.errors && errors.firstName) { %>
 						<p> <%= errors.firstName.msg %> </p>
@@ -52,6 +53,7 @@
 						name="lastName"
 						placeholder="Last Name"
 						class="field"
+						id="lastName"
 					/>
 					<% if (locals.errors && errors.lastName) { %>
 						<p> <%= errors.lastName.msg %> </p>
@@ -66,6 +68,7 @@
 						name="email"
 						placeholder="johndoe@example.com"
 						class="field"
+						id="email"
 					/>
 					<% if (locals.errors && errors.email) { %>
 						<p> <%= errors.email.msg %> </p>
@@ -80,6 +83,7 @@
 						name="pass"
 						placeholder="Password"
 						class="field"
+						id="password"
 					/>
 					<% if (locals.errors && errors.pass) { %>
 						<p> <%= errors.pass.msg %> </p>
@@ -94,6 +98,7 @@
 						name="passConfirm"
 						placeholder="Confirm your password"
 						class="field"
+						id="confirmPassword"
 					/>
 					<% if (locals.errors && errors.passConfirm) { %>
 						<p> <%= errors.passConfirm.msg %> </p>
@@ -102,10 +107,9 @@
 				</div>
 
 				<div class="accountcheck">
-					<label class="remember"
-						>I accept the <a href="">terms of use</a></label
+					<label class="remember">I accept the <a href="">terms of use</a></label
 					>
-					<input type="checkbox" />
+					<input type="checkbox" id="check">
 				</div>
 
 				<button type="submit" class="button">Register</button>
@@ -114,12 +118,15 @@
 					<p>Already a member? <a href="/user/login"> Login </a></p>
 					<a href="/">Return to home</a>
 				</div>
+				<div id="errors">
+				
+				</div>
 			</form>
 		</header>
 
 		<%- include('../partials/footer') %>
 		<!-- Javascript para menu desplegable -->
-		<script>
+		<script src="/js/registerValidation.js">
 			var navLinks = document.getElementById('navLinks');
 			function showMenu() {
 				navLinks.style.right = 0;

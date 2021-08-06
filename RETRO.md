@@ -69,3 +69,21 @@ Estar comprometidos con las tareas individuales y presentaciones a tiempo.
 
 --Hacer menos:
 Terminar los entregables y no avanzar sobre el proyecto.
+
+
+/// 5to Sprint Retro ///
+
+--Comenzar a hacer:
+Enfocarnos en la realizacion de un sitio 100% funcional. 
+Mantener la continuidad del trabajo.
+
+--Hacer mas:
+Incrementar las reuniones para el seguimiento de tareas y posibles atascos.
+
+--Continuar haciendo:
+Realizar revisiones individuales para detectar posibles fallas y/o mejorar detalles no vistos en forma conjunta.
+Definir fecha de entrega a los tickets de trello.
+Estar comprometidos con las tareas individuales y presentaciones a tiempo.
+
+--Hacer menos:
+No aprovechar los colearning para avanzar sobre detalles particulares de mejora.
