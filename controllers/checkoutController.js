@@ -27,8 +27,31 @@ const checkoutController = {
 		res.render("checkout/createAccount");
 	},
 
-	summaryForm: (req,res)=>{
-		console.log(req.body)
+	summaryForm: async(req,res)=>{
+			// const {
+			// 	userId,
+			// 	selectedBoat,
+			// 	food_choice,
+			// 	selected_experience,
+			// 	adults,
+			// 	children,
+			// 	preferred_date,
+			// 	alternative_date,
+			// } = req.body;
+	
+			// await db.Boat.create(
+			// 	{
+			// 		userId: userId,
+			// 		selectedBoat: selectedBoat,
+			// 		food_choice: food_choice,
+			// 		selected_experience: selected_experience,
+			// 		adults: adults,
+			// 		children: children,
+			// 		preferred_date: preferred_date,
+			// 		alternative_date: alternative_date,
+			// 	})
+		
+	
 		res.redirect("/checkout/confirmation")
 	}
 
