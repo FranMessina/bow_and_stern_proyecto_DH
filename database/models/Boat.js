@@ -27,12 +27,11 @@ module.exports = (sequelize, dataTypes) => {
         },
         description: {
             type: dataTypes.STRING
-        }
+        },
     };
     let config = { 
         tableName: 'boats', 
         timestamps: false,
-        underscored: true
     };
 
     const Boat = sequelize.define(alias, cols, config);
@@ -40,7 +39,7 @@ module.exports = (sequelize, dataTypes) => {
     Boat.associate = function(models) {
         Boat.belongsTo(models.Location, {
             as: 'location',
-            foreignKey: 'location_id'
+            foreignKey: 'locations_id'
         })
     }
 
