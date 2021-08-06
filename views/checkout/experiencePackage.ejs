@@ -55,7 +55,7 @@
         </div>
         </section>
         <div id="botones">
-            <button onclick="insertData()"id="insert" checked>Next</button></a>
+           <a href="/checkout/summary"> <button onclick="insertData()"id="insert" checked>Next</button></a>
             </div>
     <div id="back">
         <i class="fas fa-chevron-left"> </i>
@@ -72,7 +72,6 @@
     <script>
 function resetCheckbox(){
     const inputs= document.querySelectorAll(".botonRadio")
-
     inputs.forEach((input)=>{input.setAttribute ('aria-checked', "false")})
 }
      

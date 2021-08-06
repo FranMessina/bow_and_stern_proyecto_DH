@@ -169,6 +169,9 @@ nav .fas {
 	line-height: 22px;
 	padding: 10px;
 }
+p#description{
+	color: #454952
+}
 
 .row {
 	margin-top: 5%;
@@ -297,7 +300,9 @@ nav .fas {
 		margin-top: 15px;
 	}
 }
-
+body{
+	background-color: #e2e8f0
+}
 /* Footer */
 
 footer {

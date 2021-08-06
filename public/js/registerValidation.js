@@ -21,8 +21,7 @@ let errorEmail=""
 let errorConfirm=""
 
 
-let errorArray=[errorName, errorSurname, errorPassword, errorEmail, errorConfirm
-]
+let errorArray=[errorName, errorSurname, errorPassword, errorEmail, errorConfirm]
 
 //no me funciona el reset errors
 function resetErrors() {
@@ -37,10 +36,7 @@ function validateEmail(email) {
 }
 
 function formValidation (e){
-
     let hasErrors= false
-
-    
     resetErrors()
     console.log(errorArray)
     console.log(errorName)
@@ -67,12 +63,9 @@ function formValidation (e){
         hasErrors=true
         errorEmail= "Enter a valid email."
     }
-
        
     if (hasErrors) {
             e.preventDefault()
-            
-
             errorOutput.innerHTML = "Please solve the following issues: </br>" +errorName+" " +errorSurname+" " +errorEmail+" "+errorPassword+" "+errorConfirm;
             errorOutput.style.display="block"
           errorOutput.style.color="red"
