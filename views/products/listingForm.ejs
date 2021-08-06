@@ -36,12 +36,15 @@
 				enctype="multipart/form-data"
 			>
 				<h3>Vessel´s information</h3>
+
+				<div class='error-display'></div>
 				<div class="form-field">
 					<input
 						type="text"
 						name="name"
 						placeholder="Name of the vessel"
 						class="field"
+						id='name'
 					/>
 				</div>
 
@@ -51,6 +54,8 @@
 						name="year"
 						placeholder="Manufacture Year"
 						class="field"
+						id='year'
+
 					/>
 				</div>
 
@@ -60,12 +65,14 @@
 						name="measures"
 						placeholder="How many feet?"
 						class="field"
+						id='measures'
+
 					/>
 				</div>
 
 				<div class="form-field">
 					<p>Vessel</p>
-					<select name="vesselType">
+					<select name="vesselType" id='vessel'>
 						<option value="">Select Vessel type</option>
 						<option value="monohull">Monohull</option>
 						<option value="catamaran">Catamaran</option>
@@ -79,15 +86,15 @@
 				</div>
 				<div class="form-field">
 					<label for="description">Short Description:</label>
-					<textarea maxlength="200" id="description" name="shortDescription"></textarea>
+					<textarea maxlength="200" id="shortDescription" name="shortDescription"></textarea>
 				</div>
 
 				<div class="form-field">
 					<label for="">Pictures of your boat</label>
-					<input type="file" name="image" class="field" multiple />
+					<input type="file" name="image" class="field" multiple id='imgs'/>
 				</div>
 
-				<button type="submit" class="button" onclick="succesBox()">
+				<button type="submit" class="button">
 					Send Information
 				</button>
 				<a href="/products/controlpanel">Cancel</a>
@@ -106,5 +113,6 @@
 				navLinks.style.right = '-200px';
 			}
 		</script>
+		<script src="/js/newProduct.js"></script>
 	</body>
 </html>

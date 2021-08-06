@@ -19,7 +19,7 @@ const productController = {
 
 	edit: async (req, res) => {	
 		const boat = await db.Boat.findByPk(req.params.id) 
-			res.render('products/editProduct', {boat});
+			res.render('products/editProduct', { boat });
 
 		// le pasa la info de todos los botes del servidor a mi vista catalogue
 	},

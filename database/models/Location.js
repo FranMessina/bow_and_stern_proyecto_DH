@@ -22,7 +22,7 @@ module.exports = (sequelize, dataTypes) => {
     Location.associate = function(models) {
         Location.hasMany(models.Boat, {
             as: 'boats',
-            foreignKey: 'location_id'
+            foreignKey: 'locations_id'
         })
     }
     
