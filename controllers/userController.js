@@ -25,6 +25,8 @@ const userController = {
 			lastName,
 			email,
 			password: bcrypt.hashSync(pass),
+
+		
 		};
 
 		await User.create(userData);

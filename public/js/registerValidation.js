@@ -19,7 +19,7 @@ let errorSurname= ""
 let errorPassword=""
 let errorEmail=""
 let errorConfirm=""
-
+let errorConditions = ""
 
 console.log(errorOutput)
 
@@ -30,6 +30,7 @@ function resetErrors() {
      errorPassword=""
      errorEmail=""
      errorConfirm=""
+     errorConditions=""
     
 }
 
@@ -68,14 +69,20 @@ function formValidation (e){
         hasErrors=true
         errorEmail= "Enter a valid email."
     }
+    
+    if (!check.checked) {
+        hasErrors= true
+        errorConditions= "Accept terms and conditions"
+    }
        
      if (hasErrors) {
-        errorOutput.innerHTML = "Please solve the following issues: </br>" +errorName+" " +errorSurname+" " +errorEmail+" "+errorPassword+" "+errorConfirm;
+        errorOutput.innerHTML = "Please solve the following issues: </br>" +errorName+" " +errorSurname+" " +errorEmail+" "+errorPassword+" "+errorConfirm+ " "+ errorConditions;
             errorOutput.style.display="block"
           errorOutput.style.color="red"
        e.preventDefault()
         }
       
+
 
 }
 
