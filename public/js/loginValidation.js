@@ -1,0 +1,51 @@
+window.addEventListener("load", function(){
+
+    const form = document.querySelector(".create-form")
+    
+    // Los inputs
+    const inputUser = form.querySelector("#userName")
+    const inputPassword = form.querySelector("#password")
+    
+    // Error msgs
+    const errorMsg= document.querySelector(".errors")
+        errorMsg.style.display="none"
+
+    let errorUser = ''
+    let errorPassword = ''
+
+   
+    function resetErrors(){
+        errorUser = ''
+        errorPassword = ''
+    }
+    // User
+    function validateMail (inputUser) {
+        const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        return re.test(String(inputUser).toLowerCase());
+    }
+    
+function formValidation (e){
+    let hasErrors = false
+    resetErrors()
+
+    if(!validateMail (inputUser.value)){
+        hasErrors = true
+        errorEmail.innerHTML = "Please, enter a valid email"
+        inputUser.focus()
+    }
+    
+    if (inputPassword.value.length < 8) {
+        hasErrors = true
+        errorPassword = "minimun length for password is 8."
+    }
+    
+    if (hasErrors) {
+      e.preventDefault()
+      errors.innerHTML = errorUser + errorPassword
+    } 
+
+  }
+    
+form.addEventListener("submit", formValidation)
+    
+}) 
