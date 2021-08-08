@@ -21,7 +21,7 @@ app.use(session({
 
 app.use(cookieParser());
 
-app.use(express.static(path.resolve(__dirname, './public')));
+app.use(express.static(path.resolve(__dirname, '../public')));
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(methodOverride('_method'));
@@ -30,6 +30,7 @@ app.use(cookieSession);
 app.use(sessionToLocals);
 
 app.set('view engine', 'ejs');
+app.set('views', './src/views');
 
 app.listen(process.env.PORT || 3000, (req, res) => {
 	console.log('Servidor corriendo en puerto 3000');
