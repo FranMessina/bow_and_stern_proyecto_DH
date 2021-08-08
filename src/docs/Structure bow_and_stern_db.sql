@@ -44,7 +44,7 @@ CREATE TABLE IF NOT EXISTS `bow_and_stern_db`.`boats` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(255) NOT NULL,
   `short_description` VARCHAR(255) NOT NULL,
-  `image` TEXT NOT NULL,
+  `image` VARCHAR(255) NOT NULL,
   `year` INT NOT NULL,
   `measures` INT NOT NULL,
   `vessel_type` VARCHAR(255) NOT NULL,
