@@ -63,7 +63,7 @@ const userController = {
 			});
 		}
 
-		res.redirect('/user/profile');
+		;
 	},
 	logout: (req, res) => {
 		req.session.destroy();

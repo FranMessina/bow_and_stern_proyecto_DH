@@ -3,7 +3,7 @@ window.addEventListener("load", function(){
     const form = document.querySelector(".create-form")
     
     // Los inputs
-    const inputUser = form.querySelector("#userName")
+    const inputUser = form.querySelector("#username")
     const inputPassword = form.querySelector("#pass")
     
     // Error msgs
@@ -28,10 +28,10 @@ function formValidation (e){
     let hasErrors = false
     resetErrors()
 
-    if(!validateMail (inputUser.value)){
+    if(!validateMail(inputUser.value)){
         hasErrors = true
         errorUser = "Please, enter a valid email"
-        inputUser.focus()
+        
     }
     
     if (inputPassword.value.length < 8) {
@@ -41,7 +41,7 @@ function formValidation (e){
     
     if (hasErrors) {
       e.preventDefault()
-      errors.innerHTML = errorUser + ' ' + errorPassword
+      errorMsg.innerHTML = errorUser + ' ' + errorPassword
     } 
 
   }

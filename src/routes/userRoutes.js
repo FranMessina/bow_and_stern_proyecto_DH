@@ -8,7 +8,7 @@ const authCheck = require('../middlewares/authCheck');
 const guestCheck = require('../middlewares/guestCheck');
 
 userRoutes.get('/login', guestCheck, userController.login);
-userRoutes.post('/login', guestCheck, validationLogin, userController.processLogin);
+userRoutes.post('/login', userController.processLogin);
 
 /* Formulario de registro */
 userRoutes.get('/register', guestCheck, userController.register);
