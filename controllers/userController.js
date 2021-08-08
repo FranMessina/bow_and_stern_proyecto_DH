@@ -31,7 +31,7 @@ const userController = {
 
 		await User.create(userData);
 			
-		res.redirect('/user/login');
+		res.redirect('/user/register');
 
 	},
 	processLogin: async (req, res) => {
@@ -50,6 +50,7 @@ const userController = {
 		const user = await User.findOne({ where: { email: email }});
 			
 		
+		console.log(user);
 
 	
 
@@ -63,7 +64,7 @@ const userController = {
 			});
 		}
 
-		;
+		res.redirect('/user/profile');
 	},
 	logout: (req, res) => {
 		req.session.destroy();

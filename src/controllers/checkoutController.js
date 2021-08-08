@@ -1,6 +1,4 @@
 const path = require("path");
-const productModel = require('../models/productModel');
-const userModel = require('../models/usersModel');
 
 const checkoutController = {
 	groupSize: (req, res) => {
@@ -19,9 +17,7 @@ const checkoutController = {
 		res.render("checkout/confirmation");
 	},
 	summary: (req, res) => {
-		const boats=productModel.findAll()
-		const userInfo = userModel.readFile()
-		res.render("checkout/Summary", {boats, userInfo});
+		res.render("checkout/Summary");
 	},
 	createAccount: (req, res) => {
 		res.render("checkout/createAccount");
@@ -51,7 +47,7 @@ const checkoutController = {
 			// 		alternative_date: alternative_date,
 			// 	})
 		
-	
+	console.log(req.body)
 		res.redirect("/checkout/confirmation")
 	}
 

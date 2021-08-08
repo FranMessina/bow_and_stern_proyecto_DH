@@ -1,4 +1,4 @@
-const usersModel = require("../models/usersModel");
+
 const {body} = require('express-validator');
 
 const validationRegister = [

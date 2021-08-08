@@ -1,5 +1,5 @@
 const path = require('path');
-const productModel = require('../models/productModel');
+
 const db = require('../database/models');
 
 const productController = {
