@@ -4,7 +4,7 @@ window.addEventListener("load", function(){
     
     // Los inputs
     const inputUser = form.querySelector("#userName")
-    const inputPassword = form.querySelector("#password")
+    const inputPassword = form.querySelector("#pass")
     
     // Error msgs
     const errorMsg= document.querySelector(".errors")
@@ -30,18 +30,18 @@ function formValidation (e){
 
     if(!validateMail (inputUser.value)){
         hasErrors = true
-        errorEmail.innerHTML = "Please, enter a valid email"
+        errorUser = "Please, enter a valid email"
         inputUser.focus()
     }
     
     if (inputPassword.value.length < 8) {
         hasErrors = true
-        errorPassword = "minimun length for password is 8."
+        errorPassword = "Please, try again."
     }
     
     if (hasErrors) {
       e.preventDefault()
-      errors.innerHTML = errorUser + errorPassword
+      errors.innerHTML = errorUser + ' ' + errorPassword
     } 
 
   }
