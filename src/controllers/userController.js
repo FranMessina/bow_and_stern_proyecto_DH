@@ -31,7 +31,7 @@ const userController = {
 
 		await User.create(userData);
 			
-		res.redirect('/user/register');
+		res.redirect('/user/login');
 
 	},
 	processLogin: async (req, res) => {
