@@ -19,15 +19,19 @@ let errorSurname= ""
 let errorPassword=""
 let errorEmail=""
 let errorConfirm=""
+let errorConditions = ""
 
-
-let errorArray=[errorName, errorSurname, errorPassword, errorEmail, errorConfirm]
+console.log(errorOutput)
 
 //no me funciona el reset errors
 function resetErrors() {
-    errorArray.forEach(msg => {
-       msg== ""
-    })
+     errorName= ""
+     errorSurname= ""
+     errorPassword=""
+     errorEmail=""
+     errorConfirm=""
+     errorConditions=""
+    
 }
 
 function validateEmail(email) {
@@ -37,41 +41,48 @@ function validateEmail(email) {
 
 function formValidation (e){
     let hasErrors= false
+    
     resetErrors()
-    console.log(errorArray)
-    console.log(errorName)
+
+
+
     if (firstName.value.length<3 || firstName.value.length>40){
     hasErrors=true
     errorName="Input valid name."
     }
 
-    if (lastName.value.length<3 || lastName.value.length>40){
+     if (lastName.value.length<3 || lastName.value.length>40){
         hasErrors=true
         errorSurname="Input valid surname."
         }
 
-    if (password.value.length <8) {
+     if (password.value.length <8) {
         hasErrors=true
         errorPassword= "Minimun length for password is 8."
     }
-    if(confirmPassword.value != password.value) {
+     if(confirmPassword.value != password.value) {
         hasErrors=true
         errorConfirm= "Passwords must match."
     }
 
-    if(!validateEmail(email.value)){
+     if(!validateEmail(email.value)){
         hasErrors=true
         errorEmail= "Enter a valid email."
     }
+    
+    if (!check.checked) {
+        hasErrors= true
+        errorConditions= "Accept terms and conditions"
+    }
        
-    if (hasErrors) {
-            e.preventDefault()
-            errorOutput.innerHTML = "Please solve the following issues: </br>" +errorName+" " +errorSurname+" " +errorEmail+" "+errorPassword+" "+errorConfirm;
+     if (hasErrors) {
+        errorOutput.innerHTML = "Please solve the following issues: </br>" +errorName+" " +errorSurname+" " +errorEmail+" "+errorPassword+" "+errorConfirm+ " "+ errorConditions;
             errorOutput.style.display="block"
           errorOutput.style.color="red"
-          console.log(errorName)
+       e.preventDefault()
         }
       
+
 
 }
 

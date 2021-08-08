@@ -25,6 +25,8 @@ const userController = {
 			lastName,
 			email,
 			password: bcrypt.hashSync(pass),
+
+		
 		};
 
 		await User.create(userData);
@@ -48,7 +50,6 @@ const userController = {
 		const user = await User.findOne({ where: { email: email }});
 			
 		
-		console.log(user);
 
 	
 
