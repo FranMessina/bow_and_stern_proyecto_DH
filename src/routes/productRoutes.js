@@ -5,7 +5,7 @@ const productController = require('../controllers/productController');
 const multer = require('multer');
 const storage = multer.diskStorage({
 	destination: function (req, file, cb) {
-		let ruta = path.join(__dirname, '../public/img');
+		let ruta = path.join(__dirname, '../../public/img');
 		console.log(ruta);
 		cb(null, ruta);
 	},

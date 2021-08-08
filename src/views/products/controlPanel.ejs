@@ -3,7 +3,6 @@
 	<head>
 		<%- include('../partials/head')%>
 		<link rel="stylesheet" href="/css/controlPanel.css" />
-		<title>Document</title>
 	</head>
 	<body>
 		<header>
@@ -25,47 +24,39 @@
 				<i class="fas fa-bars" onclick="showMenu()"></i>
 			</nav>
 		</header>
+
+
+			
+
+
 		<main>
-			<a href="/products/createlisting" class="button newprod-btn"
-				>AGREGAR PRODUCTO</a
-			>
+			<a href="/products/createlisting" class="button newprod-btn">
+				AGREGAR PRODUCTO
+			</a>
+			<div class="main-cont">
+				<% boats.forEach((boat) => { %>
+				<div class="indv-cont">
+					<img src="/img/<%= boat.image %>" alt="" />
 
-			<div class="control-list">
-				<table>
-					<tr>
-						<th>ID</th>
-						<th>NOMBRE</th>
-						<th>AÑO</th>
-						<th>PRECIO</th>
-					</tr>
-					<% boats.forEach((boat) => { %>
-					<tr>
-						<td><%= boat.id %></td>
-						<td><%= boat.name %></td>
-						<td><%= boat.year %></td>
-						<td>$<%= boat.price %></td>
-						<td>
-							<a href="/products/edit/<%= boat.id %> "> EDITAR </a>
-						</td>
-						<td>
-							<button class="myBtn">ELIMINAR</button>
-						</td>
-						<div class="modal">
-							<div class="modal-content">
-								<span class="close">&times;</span>
-								<p>Estas por eliminar "<%= boat.name %>", estas seguro?</p>
-								<form
-									action="/products/<%= boat.id %>?_method=DELETE"
-									method="POST"
-								>
-									<button type="submit" class="button">REMOVE</button>
-								</form>
-							</div>
-						</div>
-					</tr>
-
-					<% }) %>
-				</table>
+					<div class="prod-info">
+						<h4><%= boat.name %></h4>
+						<form action="/products/edit/<%= boat.id %>"> <button type="submit"> EDIT</button></form>	
+						<button class="myBtn">DELETE</button>
+					</div>
+				</div>
+				<div class="modal">
+					<div class="modal-content">
+						<span class="close">&times;</span>
+						<p>You are about to delete "<%= boat.name %>", are you sure?</p>
+						<form
+							action="/products/<%= boat.id %>?_method=DELETE"
+							method="POST"
+						>
+							<button type="submit" class="button">YES, DELETE</button>
+						</form>
+					</div>
+				</div>
+				<% }) %>
 			</div>
 		</main>
 

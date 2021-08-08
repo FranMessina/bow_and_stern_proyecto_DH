@@ -50,7 +50,6 @@ const userController = {
 		const user = await User.findOne({ where: { email: email }});
 			
 		
-		console.log(user);
 
 	
 

@@ -148,25 +148,23 @@ main {
 	padding: 100px 0;
 	position: relative;
 }
-table {
-	margin: auto;
-	border-collapse: collapse;
+
+.item-cont {
+	display: flex;
+	justify-content: flex-start;
+	flex-flow: wrap row;
 }
-th {
-	text-align: left;
-	padding: 2px 5px;
-	color: #000;
-	font-weight: normal;
-	border: 2px solid black;
+
+.item {
+	width: 280px;
+	height: 280px;
+	background-color: #777;
+	margin: 15px;
 }
-td {
-	padding: 5px 5px;
-}
-.button {
-	width: auto;
-}
-tr {
-	border-bottom: 1px solid black;
+
+.item img {
+	width: 100%;
+	object-fit: contain;
 }
 
 a {
@@ -184,3 +182,73 @@ a {
 	text-decoration: none;
 	border-radius: 8px;
 }
+
+.main-cont {
+	max-width: 2000px;
+	padding: 100px 0 100px 0;
+	width: 90vw;
+	margin: auto;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	gap: 4%;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+		-ms-flex-flow: row wrap;
+			flex-flow: row wrap;
+	-webkit-box-pack: start;
+		-ms-flex-pack: start;
+			justify-content: flex-start;
+  }
+
+
+.indv-cont {
+	display: block;
+	min-height: 300px;
+	max-height: 350px;
+	max-width: 450px;
+	-ms-flex-preferred-size: 22%;
+		flex-basis: 22%;
+	position: relative;
+	border-radius: 5px;
+	overflow: hidden;
+	margin-bottom: 3rem;
+	-webkit-transition: 0.5s ease;
+	transition: 0.5s ease;
+	flex-flow: row;
+  }
+
+  .indv-cont:hover {
+	-webkit-box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.5);
+			box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.5);
+	-webkit-transform: scale(1.05);
+			transform: scale(1.05);
+  }
+
+  .indv-cont img {
+	width: 100%;
+	height: 100%;
+	position: relative;
+	-o-object-fit: cover;
+	   object-fit: cover;
+  }
+
+  .prod-info {
+	position: absolute;
+	width: 100%;
+	padding: 2rem;
+	background: -webkit-gradient(linear, left top, left bottom, from(rgba(4, 30, 22, 0)), color-stop(rgba(30, 20, 4, 0.4)), color-stop(rgba(30, 20, 4, 0.6)), to(rgba(30, 20, 4, 0.7)));
+	background: linear-gradient(rgba(4, 30, 22, 0), rgba(30, 20, 4, 0.4), rgba(30, 20, 4, 0.6), rgba(30, 20, 4, 0.7));
+	text-align: center;
+	bottom: 0px;
+	font-size: 20px;
+  }
+
+  .prod-link h4 {
+	font-weight: 400;
+  }
+
+  .myBtn {
+	  margin-left: 10px;
+  }
+  
