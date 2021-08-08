@@ -3,9 +3,10 @@
 -- ----------------------------------------------------
 -- Insert users --
 -- ----------------------------------------------------        
-INSERT INTO bow_and_stern_db.users (id, first_name, last_name, email, password) VALUES (NULL, 'Silvina', 'Donvito', 'silvina@gmail.com', 'A123');
+INSERT INTO bow_and_stern_db.users (id, first_name, last_name, email, password) VALUES (NULL, 'Silvina', 'Donvito', 'silvina@gmail.com', '$2a$10$9f3VGBwT1fbc/J4hjDEFReb9WtAOKk0WRUHcmJ/KY/7yZ/FcQx84C');
 INSERT INTO bow_and_stern_db.users (id, first_name, last_name, email, password) VALUES (NULL, 'Francisco', 'Messina', 'francisco@gmail.com', 'B456');
-INSERT INTO bow_and_stern_db.users (id, first_name, last_name, email, password) VALUES (NULL, 'Matias', 'Giles', 'matias@gmail.com', 'C789');
+INSERT INTO bow_and_stern_db.users (id, first_name, last_name, email, password) VALUES (NULL, 'Matias', 'Giles', 'matias@gmail.com', '$2a$10$8ODZ.VlZ8pe6ZpTLWdltbeRLlcwpb0RvoQXsfq/0Msv3GKkfDlKjK
+');
 INSERT INTO bow_and_stern_db.users (id, first_name, last_name, email, password) VALUES (NULL, 'Nelo', 'Sanchez', 'nelo@gmail.com', 'D101');
 
 -- -----------------------------------------------------
