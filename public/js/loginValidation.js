@@ -18,7 +18,7 @@ window.addEventListener("load", function(){
         errorUser = ''
         errorPassword = ''
     }
-    // User
+    // User mail-validation 
     function validateMail (inputUser) {
         const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
         return re.test(String(inputUser).toLowerCase());
@@ -40,8 +40,10 @@ function formValidation (e){
     }
     
     if (hasErrors) {
+      errorMsg.innerHTML = errorUser + '. ' + errorPassword
+      errorMsg.style.display='block'
+      errorMsg.style.color='red'
       e.preventDefault()
-      errorMsg.innerHTML = errorUser + ' ' + errorPassword
     } 
 
   }
