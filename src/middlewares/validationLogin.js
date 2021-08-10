@@ -32,7 +32,7 @@ const validationLogin = [
 			}
 			return Promise.reject();
 		})
-		.withMessage('Icorrect Email or Password'),
+		.withMessage('Invalid Email or Password'),
 ];
 
 module.exports = validationLogin;
