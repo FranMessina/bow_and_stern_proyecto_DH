@@ -49,7 +49,6 @@ const userController = {
 	
 		const user = await User.findOne({ where: { email: email }});
 			
-
 		delete user.password;
 
 		req.session.logged = user;
@@ -60,7 +59,7 @@ const userController = {
 			});
 		}
 
-		res.redirect('user/profile');
+		res.redirect("/user/profile");
 	},
 	logout: (req, res) => {
 		req.session.destroy();
