@@ -25,9 +25,9 @@
 <article id= contenedor>
             <label>Adults</label>
     <div>
-        <div class="value-button" id="decrease" onclick="decreaseValue()" value="Decrease Value">-</div>
-  <input type="text" id="amountOfAdults" class="number" name=amountOfAdults />
-  <div class="value-button" id="increase" onclick="increaseValue()" value="Increase Value">+</div>
+        <div class="value-button" id="decrease" onclick="decreaseValue(event)" value="Decrease Value">-</div>
+  <input type="text" id="amountOfAdults" class="number" value=0 name=amountOfAdults />
+  <div class="value-button" id="increase" onclick="increaseValue(event)" value="Increase Value">+</div>
 </div>
 </article>
 
@@ -35,9 +35,9 @@
 <article id= contenedor>
     <label>Seniors</label>
 <div>
-<div class="value-button" id="decrease" onclick="" value="Decrease Value">-</div>
+<div class="value-button" id="decrease" onclick="decreaseValue(event)" value="Decrease Value">-</div>
 <input type="number"  class="number" id="amountOfSeniors" value="0" />
-<div class="value-button" id="increase" onclick="" value="Increase Value">+</div>
+<div class="value-button" id="increase" onclick="increaseValue(event)" value="Increase Value">+</div>
 </div>
 </article>
 
@@ -45,9 +45,9 @@
 <article id= contenedor>
     <label>Children</label>
 <div>
-<div class="value-button" id="decrease" onclick="" value="Decrease Value">-</div>
+<div class="value-button" id="decrease" onclick="decreaseValue(event)" value="Decrease Value">-</div>
 <input class="number"type="number" id="amountOfChildren" value="0"  />
-<div class="value-button" id="increase" onclick="" value="Increase Value">+</div>
+<div class="value-button" id="increase" onclick="increaseValue(event)" value="Increase Value">+</div>
 </div>
 </article>
 
@@ -55,9 +55,9 @@
 <article id= contenedor>
     <label>Infants</label>
 <div>
-<div class="value-button" id="decrease" onclick="" value="Decrease Value">-</div>
+<div class="value-button" id="decrease" onclick="decreaseValue(event)" value="Decrease Value">-</div>
 <input type="number" class="number" id="amountOfInfants" value="0" />
-<div class="value-button" id="increase" onclick="" value="Increase Value">+</div>
+<div class="value-button" id="increase" onclick="increaseValue(event)" value="Increase Value">+</div>
 </div>
 </article>
 
@@ -76,16 +76,13 @@
    </footer>
 </body>
 <script>
-
-
     const amountOfAdults = document.getElementById("amountOfAdults")
     const amountOfChildren = document.getElementById("amountOfChildren")
     const amountOfSeniors = document.getElementById("amountOfSeniors")
     const amountOfInfants = document.getElementById("amountOfInfants")
     const insert = document.getElementById("insert")
-    
-    
-    
+
+
     function insertData() {
         const adults= amountOfAdults.value
         const children= amountOfChildren.value
@@ -98,21 +95,25 @@
             localStorage.setItem("infants",infants)
             console.log(localStorage)
     }
-    
-           function increaseValue() {
-      var value = parseInt(document.getElementById('amountOfAdults').value, 10);
+  
+           function increaseValue(event) {  
+               console.log(event.target)  
+      var value = parseInt(event.target.parentElement.querySelector("input").value, 10);
       value = isNaN(value) ? 0 : value;
       value++;
-      document.getElementById('amountOfAdults').value = value;
+      event.target.parentElement.querySelector("input").value= value;
     }
     
     function decreaseValue() {
-      var value = parseInt(document.getElementById('amountOfAdults').value, 10);
+      var value = parseInt(event.target.parentElement.querySelector("input").value, 10);
       value = isNaN(value) ? 0 : value;
       value < 1 ? value = 1 : '';
       value--;
-      document.getElementById('amountOfAdults').value = value;
+      event.target.parentElement.querySelector("input").value= value;
     } 
+
+
+
         </script>
     
 </html>
