@@ -49,10 +49,6 @@ const userController = {
 	
 		const user = await User.findOne({ where: { email: email }});
 			
-		
-
-	
-
 		delete user.password;
 
 		req.session.logged = user;
@@ -61,8 +57,9 @@ const userController = {
 			res.cookie('user', user.id, {
 				maxAge: 1000 * 60 * 60 * 24 * 7,
 			});
-		}
 
+		}
+res.redirect("/user/profile")
 		;
 	},
 	logout: (req, res) => {
