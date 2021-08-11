@@ -3,6 +3,7 @@
 	<head>
 		<%- include('../partials/head')%>
 		<link rel="stylesheet" href="/css/products/controlPanel.css" />
+		<link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
 	</head>
 	<body>
 		<header>
@@ -30,29 +31,34 @@
 
 
 		<main>
-			<a href="/products/createlisting" class="button newprod-btn">
-				AGREGAR PRODUCTO
-			</a>
-			<div class="main-cont">
+			<div class="mx-auto max-w-screen-xl grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 my-5">
+				<div class="indv-cont border border-blue-500 flex items-center justify-center">
+					<a href="/products/createlisting" class="text-4xl text-center">
+						AGREGAR PRODUCTO
+					</a>
+	
+				</div>
 				<% boats.forEach((boat) => { %>
 				<div class="indv-cont">
 					<img src="/img/<%= boat.image %>" alt="" />
 
 					<div class="prod-info">
-						<h4><%= boat.name %></h4>
-						<form action="/products/edit/<%= boat.id %>"> <button type="submit"> EDIT</button></form>	
-						<button class="myBtn">DELETE</button>
+						<h4 class="text-white"><%= boat.name %></h4>
+						<div class="flex justify-evenly mt-2">
+							<form action="/products/edit/<%= boat.id %>"> <button type="submit" class="bg-white py-1 rounded-lg px-2"> EDIT</button></form>	
+							<button class="myBtn bg-white py-1 px-2 rounded-lg">DELETE</button>
+						</div>
 					</div>
 				</div>
 				<div class="modal">
-					<div class="modal-content">
-						<span class="close">&times;</span>
+					<div class="modal-content text-center relative">
+						<span class="close absolute top-2 right-5">&times;</span>
 						<p>You are about to delete "<%= boat.name %>", are you sure?</p>
 						<form
 							action="/products/<%= boat.id %>?_method=DELETE"
 							method="POST"
 						>
-							<button type="submit" class="button">YES, DELETE</button>
+							<button type="submit" class="button bg-red-900 py-1 px-2 rounded-lg text-white mt-5">YES, DELETE</button>
 						</form>
 					</div>
 				</div>
