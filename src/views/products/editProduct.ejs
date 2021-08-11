@@ -3,7 +3,7 @@
 	<head>
 		<%- include('../partials/head')%>
 
-		<link rel="stylesheet" href="/css/listingForm.css" />
+		<link rel="stylesheet" href="/css/products/listingForm.css" />
 	</head>
 	<body>
 		<header>
@@ -74,17 +74,20 @@
 						</div>
 
 						<div class="form-field">
-							<label for="description">Description:</label>
+							<!--<label for="description">Description:</label>-->
+							<p>Description</p>
 							<textarea maxlength="200" id="description" name="description" style="width:100%;height:400px"><%= boat.description %></textarea>
 							
 						</div>
 						<div class="form-field">
-							<label for="shortDescription">Short description:</label>
+							<p>Short description</p>
+							<!--<label for="shortDescription">Short description:</label>-->
 							<textarea maxlength="200" id="shortDescription" name="shortDescription" style="width:100%;height:400px"><%= boat.short_description %></textarea>
 							
 						</div>
 						<div class="form-field">
-							<label for="">Pictures of your boat</label>
+							<p>Pictures of your boat</p>
+							<!--<label for="">Pictures of your boat</label>-->
 							<img src= <%= boat.image %> width="300px">
 						</div>
 						<div class="form-field">					
