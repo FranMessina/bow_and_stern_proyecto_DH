@@ -36,13 +36,14 @@ function formValidation (e){
     
     if (inputPassword.value.length < 8) {
         hasErrors = true
-        errorPassword = "Please, try again."
+        errorPassword = "Password incorrect. Please, try again."
     }
     
     if (hasErrors) {
-      errorMsg.innerHTML = errorUser + '. ' + errorPassword
+      errorMsg.innerHTML = errorUser + ' ' + errorPassword
       errorMsg.style.display='block'
       errorMsg.style.color='red'
+      errorMsg.style.fontSize= "12px"
       e.preventDefault()
     } 
 
