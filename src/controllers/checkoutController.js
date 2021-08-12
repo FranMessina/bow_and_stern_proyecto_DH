@@ -23,6 +23,13 @@ const checkoutController = {
 		res.render("checkout/createAccount");
 	},
 
+	startCheckout: (req, res)=> {
+
+		
+
+		res.render("checkout/selectdate")
+	},
+
 	summaryForm: async(req,res)=>{
 			// const {
 			// 	userId,

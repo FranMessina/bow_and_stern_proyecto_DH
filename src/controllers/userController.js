@@ -55,7 +55,7 @@ const userController = {
 
 		if (remember) {
 			res.cookie('user', user.id, {
-				maxAge: 1000 * 60 * 60 * 24 * 7,
+				maxAge: 10000 * 60 * 60 * 24 * 7,
 			});
 		}
 
