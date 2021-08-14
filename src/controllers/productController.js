@@ -11,7 +11,10 @@ const productController = {
 			res.render('products/listingForm');
 	},
 	catalogue: async (req, res) => {	
-		const boats = await db.Boat.findAll()  
+		const boats = await db.Boat.findAll( {
+			include: ['location']
+		})  
+		console.log (boats)
 			res.render('products/catalogue', { boats });
 		
 		// le pasa la info de todos los botes del servidor a mi vista catalogue
