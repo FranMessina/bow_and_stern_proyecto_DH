@@ -4,6 +4,9 @@
 		<%- include('../partials/head')%>
 
 		<link rel="stylesheet" href="/css/products/productCatalogue.css" />
+		<link rel="stylesheet" href="/css/products/controlPanel.css" />
+		<link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+
 		<title>Document</title>
 	</head>
 	<body>
@@ -43,18 +46,21 @@
 		</header>
 
 		<main>
-			<% boats.forEach((boat) => { %>
-			<a href="/products/detail/<%= boat.id %> ">
-				<article class="boatContainer">
-					<h2><%= boat.name %></h2>
-					<div class="imgcontainer">
+			<div class="mx-auto max-w-screen-xl grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 my-5 p-5">
+				<% boats.forEach((boat) => { %>
+				<a href="/products/detail/<%= boat.id %> " class="indv-cont group relative">
+					<article >
 						<img src="/img/1628448723543.jpg " alt="" />
-					</div>
+						<div class="prod-info">
+							<h2 class="text-white"><%= boat.name %></h2>
+							<p class="text-white opacity-0 group-hover:opacity-100"><%= boat.short_description %></p>
+						</div>
 
-					<p><%= boat.short_description %></p>
-				</article>
-			</a>
-			<% }) %>
+
+					</article>
+				</a>
+				<% }) %>
+			</div>	
 		</main>
 
 		<%- include ('../partials/footer')%>

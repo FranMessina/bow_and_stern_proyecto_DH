@@ -1,5 +1,4 @@
 *{
-    box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
 header {
@@ -123,57 +122,7 @@ footer p {
 }
 
 
-main{
-    display:flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    padding: 10px;
-    align-items: center;
-}
 
-.boatContainer{
-    
-    width: 90vw;
-    background-color:#00647d;
-    border-radius: 30px;
-	transition: all;
-	transition-duration: 100ms;
-	min-height: 350px;
-
-}
-.boatContainer:hover{
-	box-shadow: 0 0 25px 0px rgb(0 0 0 / 50%);
-	
-}
-
-
-
-article h2{
-    text-align: center;
-    color: black;
-    font-weight: 400;
-   padding-top: 10px;
-}
-
-article p {
-    color: white;
-    padding: 10px;
-    text-align: center;
-
-}
-
-a{
-    text-decoration: none;
-}
-
-.imgcontainer{
-    height:65%;
-}
-
-.imgcontainer img{
-    height: 100%;
-    width: 100%;
-}
 
 /* MEDIA QUERIEES */
 
@@ -213,46 +162,3 @@ a{
    
 }
 
-
-@media (min-width: 760px){
-main{
-    display:flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-around;
-}
-
-.boatContainer{
-    height:50vh;
-    width: 40vw;
-
-
-    
-}
-
-.boatContainer:hover{
-	box-shadow: 0 0 25px 0px rgb(0 0 0 / 50%);
-	width: 41vw;
-	height: 51vh;
-}
-
-
-}
-
-@media (min-width: 980px){
-    .boatContainer{
-        width: 27vw;
-    }
-	.boatContainer:hover{
-		
-		width: 28vw;
-		height: 51vh;
-	}
-	
-}
-
-
-
-article h2{
-    text-align: center;
-}

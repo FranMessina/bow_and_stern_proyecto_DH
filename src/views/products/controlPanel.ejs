@@ -4,6 +4,7 @@
 		<%- include('../partials/head')%>
 		<link rel="stylesheet" href="/css/products/controlPanel.css" />
 		<link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+
 	</head>
 	<body>
 		<header>
@@ -45,14 +46,13 @@
 			
 
 
-		<main>
-			<div class="mx-auto max-w-screen-xl grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 my-5">
-				<div class="indv-cont border border-blue-500 flex items-center justify-center">
-					<a href="/products/createlisting" class="text-4xl text-center">
-						AGREGAR PRODUCTO
+		<main class="grid">
+			<div class="grid mx-auto max-w-screen-xl grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 my-5 p-5">
+					<a href="/products/createlisting" class="indv-cont border border-blue-500 flex items-center justify-center">
+						<p class="text-4xl text-center">
+							AGREGAR PRODUCTO
+						</p>	
 					</a>
-	
-				</div>
 				<% boats.forEach((boat) => { %>
 				<div class="indv-cont">
 					<img src="/img/<%= boat.image %>" alt="" />
