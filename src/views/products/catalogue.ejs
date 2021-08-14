@@ -48,16 +48,12 @@
 		<main>
 			<div class="mx-auto max-w-screen-xl grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 my-5 p-5">
 				<% boats.forEach((boat) => { %>
-				<a href="/products/detail/<%= boat.id %> " class="indv-cont group relative">
-					<article >
-						<img src="/img/1628448723543.jpg " alt="" />
+				<a href="/products/detail/<%= boat.id %> " class="indv-cont group relative object-contain">
+						<img src="/img/1628448723543.jpg " alt="" class="object-contain"/>
 						<div class="prod-info">
 							<h2 class="text-white"><%= boat.name %></h2>
 							<p class="text-white opacity-0 group-hover:opacity-100"><%= boat.short_description %></p>
 						</div>
-
-
-					</article>
 				</a>
 				<% }) %>
 			</div>	
