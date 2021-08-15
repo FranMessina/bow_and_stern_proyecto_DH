@@ -29,7 +29,7 @@ const productController = {
 	controlPanel: async (req, res) => {
 		const boats = await db.Boat.findAll();
 		const user = req.session.logged;
-		if(user.id == 1){
+		if(user.role == 'admin'){
 			res.render('products/controlPanel', { boats });
 		}
 		else
