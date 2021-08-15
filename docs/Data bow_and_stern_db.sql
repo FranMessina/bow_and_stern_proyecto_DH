@@ -3,12 +3,15 @@
 -- ----------------------------------------------------
 -- Insert users --
 -- ----------------------------------------------------        
-INSERT INTO bow_and_stern_db.users (id, first_name, last_name, email, password) VALUES (NULL, 'Silvina', 'Donvito', 'silvina@gmail.com', '$2a$10$9f3VGBwT1fbc/J4hjDEFReb9WtAOKk0WRUHcmJ/KY/7yZ/FcQx84C');
+INSERT INTO bow_and_stern_db.users (id, first_name, last_name, email, password, role) VALUES (NULL, 'Silvina', 'Donvito', 'silvina@gmail.com', '$2a$10$9f3VGBwT1fbc/J4hjDEFReb9WtAOKk0WRUHcmJ/KY/7yZ/FcQx84C', '2');
 INSERT INTO bow_and_stern_db.users (id, first_name, last_name, email, password) VALUES (NULL, 'Francisco', 'Messina', 'francisco@gmail.com', '$2a$10$9f3VGBwT1fbc/J4hjDEFReb9WtAOKk0WRUHcmJ/KY/7yZ/FcQx84C');
 INSERT INTO bow_and_stern_db.users (id, first_name, last_name, email, password) VALUES (NULL, 'Matias', 'Giles', 'matias@gmail.com', '$2a$10$8ODZ.VlZ8pe6ZpTLWdltbeRLlcwpb0RvoQXsfq/0Msv3GKkfDlKjK
 ');
 INSERT INTO bow_and_stern_db.users (id, first_name, last_name, email, password) VALUES (NULL, 'Nelo', 'Sanchez', 'nelo@gmail.com', '$2a$10$9f3VGBwT1fbc/J4hjDEFReb9WtAOKk0WRUHcmJ/KY/7yZ/FcQx84C');
 
+INSERT INTO bow_and_stern_db.users (id, first_name, last_name, email, password) VALUES (NULL, 'Usuario', 'Comun', 'usuario@gmail.com', '$2a$10$MFHkruWkpq0clpkLqMUgi.Bt0V2NaWJawqdi8zrqSjcz16h1jjTaS');
+
+INSERT INTO bow_and_stern_db.users (id, first_name, last_name, email, password, role) VALUES (NULL, 'Usuario', 'Administrador', 'administrador@gmail.com', '$2a$10$nMy812SFNNJGXl5wLbfQweOwEFscYxH.kA2OujVzDKoqI2J8m/UwS', '2');
 -- -----------------------------------------------------
 -- Insert boats --
 -- -----------------------------------------------------
