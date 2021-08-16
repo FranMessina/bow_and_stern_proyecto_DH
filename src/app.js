@@ -7,6 +7,9 @@ const methodOverride = require('method-override');
 const checkoutRoutes = require('./routes/checkoutRoutes');
 const userRoutes = require('./routes/userRoutes');
 const productRoutes = require('./routes/productRoutes');
+const boatApiRoutes = require ("./routes/api/boatApiRoutes")
+
+
 
 const cookieParser = require('cookie-parser');
 const session = require('express-session');
@@ -32,7 +35,7 @@ app.use(sessionToLocals);
 app.set('view engine', 'ejs');
 app.set('views', './src/views');
 
-app.listen(process.env.PORT || 3000, (req, res) => {
+app.listen(process.env.PORT || 3001, (req, res) => {
 	console.log('Servidor corriendo en puerto 3000');
 });
 
@@ -49,6 +52,8 @@ app.use('/checkout', checkoutRoutes);
 app.use('/user', userRoutes);
 
 app.use('/products', productRoutes);
+
+app.use("/api", boatApiRoutes )
 
 app.use((req, res, next) => {
 	res.status(404).render('not-found');
