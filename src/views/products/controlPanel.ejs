@@ -46,7 +46,7 @@
 			
 
 
-		<main class="grid">
+		<main>
 			<div class="grid mx-auto max-w-screen-xl grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 my-5 p-5">
 					<a href="/products/createlisting" class="indv-cont border border-blue-500 flex items-center justify-center">
 						<p class="text-4xl text-center">
@@ -60,8 +60,8 @@
 					<div class="prod-info">
 						<h4 class="text-white"><%= boat.name %></h4>
 						<div class="flex justify-evenly mt-2">
-							<form action="/products/edit/<%= boat.id %>"> <button type="submit" class="bg-white py-1 rounded-lg px-2"> EDIT</button></form>	
-							<button class="myBtn bg-white py-1 px-2 rounded-lg">DELETE</button>
+							<form action="/products/edit/<%= boat.id %>"> <button type="submit" class="bg-white py-2 rounded-full px-4 active:scale-95 transition duration-150"> EDIT</button></form>	
+							<button class="myBtn bg-white py-2 px-4 rounded-full active:scale-95 transition duration-150">DELETE</button>
 						</div>
 					</div>
 				</div>
