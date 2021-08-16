@@ -35,7 +35,7 @@ app.use(sessionToLocals);
 app.set('view engine', 'ejs');
 app.set('views', './src/views');
 
-app.listen(process.env.PORT || 3001, (req, res) => {
+app.listen(process.env.PORT || 3000, (req, res) => {
 	console.log('Servidor corriendo en puerto 3000');
 });
 
