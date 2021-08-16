@@ -35,7 +35,7 @@ function doSearch() {
             containerResultsList.innerHTML = ''
 
             if (res.meta.total === 0) {
-                containerResultsList.innerHTML = 'No se encontraron planetas :('
+                containerResultsList.innerHTML = 'Sorry! there are no boats on this location :('
             } else {
                 res.data.location.forEach(location => {
                     
