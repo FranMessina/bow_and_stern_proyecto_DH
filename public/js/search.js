@@ -58,10 +58,11 @@ function copypaste (){
 }
 
 
-window.addEventListener("click", function(event){
-    console.log(event)
-})
 
+window.addEventListener("scroll", function(event){
+    containerResults.style.display = 'none'
+    containerResultsList.style.display = 'none'
+})
 
 
 
