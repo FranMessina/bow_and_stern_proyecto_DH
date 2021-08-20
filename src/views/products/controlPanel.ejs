@@ -60,8 +60,8 @@
 					<div class="prod-info">
 						<h4 class="text-white"><%= boat.name %></h4>
 						<div class="flex justify-evenly mt-2">
-							<form action="/products/edit/<%= boat.id %>"> <button type="submit" class="bg-white py-2 rounded-full px-4 active:scale-95 transition duration-150"> EDIT</button></form>	
-							<button class="myBtn bg-white py-2 px-4 rounded-full active:scale-95 transition duration-150">DELETE</button>
+							<a href="/products/edit/<%= boat.id %>" class="bg-white py-2 rounded-full px-4 active:scale-95 transition duration-150 text-xl">EDIT</a>	
+							<p class="myBtn bg-white py-2 px-4 rounded-full active:scale-95 transition duration-150">DELETE</p>
 						</div>
 					</div>
 				</div>
