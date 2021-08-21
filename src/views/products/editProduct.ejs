@@ -48,10 +48,12 @@
 			
 					<div class="formcol">
 						<h3>Vessel´s information</h3>
+						<div class='error-display'></div>
 						<div class="form-field">
 							<input
 								type="text"
 								name="name"
+								minlength="3"
 								placeholder="Name of the vessel"
 								class="field"
 								value = <%= boat.name %>
@@ -60,7 +62,8 @@
 
 						<div class="form-field">
 							<input
-								type="text"
+								type="number"
+								min="1950"
 								name="year"
 								placeholder="Manufacture Year"
 								class="field"
@@ -70,7 +73,7 @@
 
 						<div class="form-field">
 							<input
-								type="text"
+								type="number"
 								name="measures"
 								placeholder="How many feet?"
 								class="field"
@@ -103,10 +106,11 @@
 						<div class="form-field">
 							<p>Pictures of your boat</p>
 							<!--<label for="">Pictures of your boat</label>-->
-							<img src= <%= boat.image %> width="300px">
+							<img src= "/img/<%= boat.image %>" width="300px">
 						</div>
 						<div class="form-field">					
-							<input type="file" name="boatImg" class="field" multiple value =<%= boat.image %>/>
+							<input type="file" name="image" class="field" multiple id='image'/>
+							<!--<input type="file" name="image" class="field" multiple value =<%= boat.image %>/>-->
 						</div>
 						
 
@@ -150,7 +154,7 @@
 						</div>
 					</div> -->
 
-					<button type="submit" class="button" onclick="succesBox()">
+					<button type="submit" class="button">
 						Send Information
 					</button>
 					<a href="/products/controlpanel">Cancel</a>
@@ -190,5 +194,6 @@
 			// 		box.style.opacity = 1;
 			// 	}
 		</script>
+		<script src="/js/editProduct.js"></script>
 	</body>
 </html>

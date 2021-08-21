@@ -9,6 +9,8 @@ const storage = multer.diskStorage({
 		console.log(ruta);
 		cb(null, ruta);
 	},
+
+	
 	filename: function (req, file, cb) {
 		let imageName = Date.now();
 		let extension = path.extname(file.originalname);
@@ -17,7 +19,11 @@ const storage = multer.diskStorage({
 		cb(null, newName);
 	},
 });
-const upload = multer({ storage });
+//const upload = multer({ storage });
+const upload = multer({ storage: storage });
+	//dest: path.join(_dirname,'../../public/img'),
+//}).single('image')
+
 
 productRoutes.get('/detail/:id', productController.productDetail);
 productRoutes.get('/createlisting', productController.createListing);
@@ -27,9 +33,16 @@ productRoutes.get('/catalogue', productController.catalogue);
 productRoutes.get('/controlpanel', productController.controlPanel);
 
 productRoutes.post('/create',upload.single('image'),productController.create);
-
+//productRoutes.post('/create',upload.array('image'), function (req, res, next){
+//	console.log(req.files)
+//	res.send('Archivos subidos correctamente')
+//});
 //aca debemos pasar multer
-productRoutes.put('/:id', upload.single('boatImg'), productController.update);
+productRoutes.put('/:id', upload.single('image'),productController.update);
+//productRoutes.put('/:id',upload.array('image'), function (req, res, next){
+//	console.log(req.files)
+//	res.send('Archivos subidos correctamente')
+//});
 productRoutes.delete('/:id', productController.delete);
 
 module.exports = productRoutes;
