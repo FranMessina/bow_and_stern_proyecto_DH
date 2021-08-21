@@ -7,6 +7,9 @@ const methodOverride = require('method-override');
 const checkoutRoutes = require('./routes/checkoutRoutes');
 const userRoutes = require('./routes/userRoutes');
 const productRoutes = require('./routes/productRoutes');
+const boatApiRoutes = require ("./routes/api/boatApiRoutes")
+
+
 
 const cookieParser = require('cookie-parser');
 const session = require('express-session');
@@ -49,6 +52,8 @@ app.use('/checkout', checkoutRoutes);
 app.use('/user', userRoutes);
 
 app.use('/products', productRoutes);
+
+app.use("/api", boatApiRoutes )
 
 app.use((req, res, next) => {
 	res.status(404).render('not-found');

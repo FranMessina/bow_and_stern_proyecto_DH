@@ -21,7 +21,7 @@
 						<li><a href="/">HOME</a></li>
 						<li><a href="/products/catalogue">CATALOGUE</a></li>
 
-						<% if(locals.logged.role === "admin") { %> 
+						<% if(locals.logged.role == "admin") { %> 
 						<li><a href="/products/controlpanel">CONTROL PANEL</a></li>
 						<% } %>
 						
@@ -50,6 +50,17 @@
 					<input type="text" class="inputSearch" placeholder="Search For a destination">
 				<button type="submit" class="buttonSubmit">Go!</button>
 				</form>
+				<div class="containerResults">
+					<ul class="list">
+
+					</ul>
+					<div class="searchRecentContainer"></div>
+					<div class="containerResultsList"></div>
+
+				</div>
+
+				
+
 			</div>
 		</header>
 		<!-- Cuerpo principal de la pagina-->
@@ -190,5 +201,7 @@
 				navLinks.style.right = '-200px';
 			}
 		</script>
+
+		<script src="/js/search.js"></script>
 	</body>
 </html>

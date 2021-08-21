@@ -29,13 +29,16 @@ const productController = {
 	controlPanel: async (req, res) => {
 		const boats = await db.Boat.findAll();
 		const user = req.session.logged;
-		if(user.id == 1){
-			res.render('products/controlPanel', { boats });
+
+		if (user) {
+			if (user.role == 'admin') {
+				res.render('products/controlPanel', { boats });
+			} else {		
+				res.send('Usuario no autorizado.');
+			}		
+		} else {
+			res.send('Not allowed, must be administrator')
 		}
-		else
-		{		
-			res.send('Usuario no autorizado.');
-		}		
 	},
 
 	create: async (req, res) => {

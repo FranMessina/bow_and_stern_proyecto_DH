@@ -212,7 +212,7 @@ a {
 	position: relative;
 	border-radius: 5px;
 	overflow: hidden;
-	margin-bottom: 3rem;
+	margin-bottom: 1rem;
 	-webkit-transition: 0.5s ease;
 	transition: 0.5s ease;
 	flex-flow: row;
@@ -221,8 +221,6 @@ a {
   .indv-cont:hover {
 	-webkit-box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.5);
 			box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.5);
-	-webkit-transform: scale(1.05);
-			transform: scale(1.05);
   }
 
   .indv-cont img {

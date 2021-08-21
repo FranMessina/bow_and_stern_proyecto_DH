@@ -114,11 +114,11 @@ nav .logo-name {
 }
 
 
-/* .boats-btn:hover {
+.boats-btn:hover {
 	
-	background: rgb(174, 243, 255);
+	border: 1px solid grey;
 	transition: 1s;
-} */
+} 
 
 .inputSearch {
 	width: 80%;
