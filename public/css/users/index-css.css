@@ -131,7 +131,7 @@ nav .logo-name {
 	margin-top: 20px;
 	background-color:white;
 	border-radius:20px;
-	padding: 10px;
+	padding: 10 0px;
 	display: none;
 }
 .list {
@@ -141,10 +141,18 @@ nav .logo-name {
 	width:100%;
 	text-align:left;
 }
+.list li {
+	border-radius:10px
+}
+
+.list a {
+	text-decoration: none;
+	color: grey;
+}
 
 .list li:hover{
 	cursor:pointer;
-	background-color:#b0cdff;
+	background-color:#e3ecfd;
 	
 
 }

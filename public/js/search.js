@@ -40,8 +40,9 @@ function doSearch() {
                 list.innerHTML = 'Sorry! there are no boats on this location :('
             } else {
                 res.data.location.forEach(location => {
-                    
-                    list.innerHTML +=  "<li>"+"<i class=\"fas fa-search-location\"></i>"+ " " +location.location+"</li>"
+                  
+                    // aca tenemos q poner un maximo de 6 locations
+                 list.innerHTML += "<a href=\"/products/catalogue/"+location.id+"\">"+ "<li>"+"<i class=\"fas fa-search-location\"></i>"+ " " +location.location+"</li>" +"</a>"
                 })
                 list.querySelectorAll("li").forEach(element =>{
                     element.addEventListener("click", copypaste)

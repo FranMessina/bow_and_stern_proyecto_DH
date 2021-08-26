@@ -32,6 +32,11 @@ productRoutes.get('/catalogue', productController.catalogue);
 
 productRoutes.get('/controlpanel', productController.controlPanel);
 
+
+productRoutes.get("/catalogue/:id", productController.location)
+
+
+
 productRoutes.post('/create',upload.single('image'),productController.create);
 //productRoutes.post('/create',upload.array('image'), function (req, res, next){
 //	console.log(req.files)

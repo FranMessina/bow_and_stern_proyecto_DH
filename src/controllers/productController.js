@@ -14,7 +14,6 @@ const productController = {
 		const boats = await db.Boat.findAll( {
 			include: ['location']
 		})  
-		console.log (boats)
 			res.render('products/catalogue', { boats });
 		
 		// le pasa la info de todos los botes del servidor a mi vista catalogue
@@ -86,6 +85,30 @@ const productController = {
 		// Por ultimo, lo redirijo a la pajina principal una vez que el archivo ya fue #destroyed
 		res.redirect('/products/catalogue');
 	},
+
+
+	location: async (req, res) => {
+
+	const locationId = req.params.id
+	const locationFormId = req.body
+
+	if (locationId) {
+		const boats = await db.Boat.findAll( {
+			
+			where: {
+				locations_id: locationId
+			}
+		})  
+		res.render('products/catalogue', { boats })
+	}
+
+
+	}
+	
+	
+	
+	,
+
 
 	update: async (req, res) => {
 		const data = req.body;
