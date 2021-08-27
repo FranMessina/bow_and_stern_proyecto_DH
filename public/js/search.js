@@ -62,11 +62,11 @@ function copypaste (){
 
 
 
-window.addEventListener("scroll", function(event){
-    containerResults.style.display = 'none'
-    containerResultsList.style.display = 'none'
-    list.style.display= "none"
-})
+ window.addEventListener("wheel", function(){
+     containerResults.style.display = 'none'
+     containerResultsList.style.display = 'none'
+     list.style.display= "none"
+ })
 
 
 

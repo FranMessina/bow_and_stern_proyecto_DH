@@ -1,6 +1,10 @@
 const path = require('path');
 
 const db = require('../database/models');
+const Op = db.Sequelize.Op;
+
+
+
 
 const productController = {
 	productDetail: async (req, res) => {
@@ -14,6 +18,7 @@ const productController = {
 		const boats = await db.Boat.findAll( {
 			include: ['location']
 		})  
+		
 			res.render('products/catalogue', { boats });
 		
 		// le pasa la info de todos los botes del servidor a mi vista catalogue
@@ -90,7 +95,7 @@ const productController = {
 	location: async (req, res) => {
 
 	const locationId = req.params.id
-	const locationFormId = req.body
+	const locationFormId = req.body.location
 
 	if (locationId) {
 		const boats = await db.Boat.findAll( {
@@ -101,6 +106,25 @@ const productController = {
 		})  
 		res.render('products/catalogue', { boats })
 	}
+	 if (locationFormId) {
+
+	 	const boats = await db.Boat.findAll( {
+	 		where: {
+				 "$location.location$": {[Op.substring]: locationFormId}
+			 },
+			 include: ["location"]
+	 		
+	 	})  
+	
+	 	res.render('products/catalogue', { boats })
+	 }
+
+	// if (locationFormId) {
+
+	// 	const boats = await db.seq.query("select * from boats inner join locations on locations_id=locations.id where locations.location like" + locationFormId)
+	// 	res.render('products/catalogue', { boats })
+	// }
+
 
 
 	}
@@ -108,6 +132,7 @@ const productController = {
 	
 	
 	,
+	// console.log(boats[0].location.location)
 
 
 	update: async (req, res) => {

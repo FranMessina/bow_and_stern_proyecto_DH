@@ -34,7 +34,7 @@ productRoutes.get('/controlpanel', productController.controlPanel);
 
 
 productRoutes.get("/catalogue/:id", productController.location)
-
+productRoutes.post ("/catalogue", productController.location)
 
 
 productRoutes.post('/create',upload.single('image'),productController.create);

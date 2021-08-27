@@ -12,7 +12,9 @@ module.exports = {
                 location: {
                     [Op.like]: "%"+name+"%"
                 }
-            }
+            
+            },
+            limit:6
         })
 
         res.status(200).json({
