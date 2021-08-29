@@ -52,7 +52,7 @@ Silvina / Francisco: carpeta database - archivos de configuracion y tablas - pri
 Nelo / Silvina / Francisco / Matias: Revisiones varias.-
 
 
-7to SPRINT
+7mo SPRINT
 ---------------------------------------------------------------------------------------------------------------------------------------------
 Silvina: Validacion Front-end Login. Panel de control oculto si no sos admin. Incorporacion diferenciacion rol de usuario user/admin. Nav habilitado para usuario logueado y dependiendo de tipo de rol (user/admin). Ajustes data type en db -
 
