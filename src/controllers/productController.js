@@ -34,14 +34,14 @@ const productController = {
 		const boats = await db.Boat.findAll();
 		const user = req.session.logged;
 
-		if (user) {
-			if (user.role == 'admin') {
-				res.render('products/controlPanel', { boats });
-			} else {		
-				res.send('Usuario no autorizado.');
-			}		
-		} else {
-			res.send('Not allowed, must be administrator')
+		if(user.role == 'admin'){
+            res.render('products/controlPanel', { boats });
+        }
+    
+        // lo que sigue se puede quitar - el nav ya no muestra la opcion para usuario no admin
+        else
+        {       
+            res.send('Not allowed, must be administrator');
 		}
 	},
 
