@@ -87,3 +87,23 @@ Estar comprometidos con las tareas individuales y presentaciones a tiempo.
 
 --Hacer menos:
 No aprovechar los colearning para avanzar sobre detalles particulares de mejora.
+
+
+/// 6to Sprint Retro ///
+
+--Comenzar a hacer:
+Sumarle valor al sitio.
+
+--Hacer mas:
+Enfocarnos en la realizacion de un sitio 100% funcional. 
+Mantenernos mas conectados en cuanto a las tareas que esta realizando cada integrante del equipo. 
+
+--Continuar haciendo:
+Realizar revisiones individuales para detectar posibles fallas y/o mejorar detalles no vistos en forma conjunta.
+Definir fecha de entrega a los tickets de trello.
+Estar comprometidos con las presentaciones a tiempo.
+Aprovechar los colearning para avanzar sobre detalles particulares de mejora.
+Trabajar como equipo.
+
+--Hacer menos:
+Generar espacios de tiempo prolongado sin actividad.
