@@ -52,5 +52,16 @@ Silvina / Francisco: carpeta database - archivos de configuracion y tablas - pri
 Nelo / Silvina / Francisco / Matias: Revisiones varias.-
 
 
+7to SPRINT
+---------------------------------------------------------------------------------------------------------------------------------------------
+Silvina: Validacion Front-end Login. Panel de control oculto si no sos admin. Incorporacion diferenciacion rol de usuario user/admin. Nav habilitado para usuario logueado y dependiendo de tipo de rol (user/admin). Ajustes data type en db -
+
+Matias: Validacion Front-end Registro. Boton log out. Implementacion buscador.-
+
+Nelo: Validacion Front-end Edicion de producto. Orden de carpetas CSS.-
+
+Francisco: Validacion Front-end Nuevo Producto. Mejora en vistas panel de control. Boton reserva.-
+
+
 
 
