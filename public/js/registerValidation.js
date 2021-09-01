@@ -77,8 +77,9 @@ function formValidation (e){
        
      if (hasErrors) {
         errorOutput.innerHTML = "Please solve the following issues: </br>" +errorName+" " +errorSurname+" " +errorEmail+" "+errorPassword+" "+errorConfirm+ " "+ errorConditions;
-            errorOutput.style.display="block"
-          errorOutput.style.color="red"
+        errorOutput.style.display="block"
+        errorOutput.style.color="red"
+        errorOutput.style.fontSize= "13px"
        e.preventDefault()
         }
       
