@@ -15,10 +15,11 @@ let errorsMsgArray = [];
 const errorDisplay = form.querySelector('.error-display')
 
 errorDisplay.style.color = 'red'
+errorDisplay.style.fontSize = '13px'
 
 const displayErrors = () => {
     errorsMsgArray.forEach(msg => {
-       errorDisplay.innerHTML += `<h3>${msg}</h3>`
+       errorDisplay.innerHTML += `<p>${msg}</p>`
      })
  }
 
