@@ -31,7 +31,11 @@
 			
 
 			<form action="/user/login" method="POST" class="create-form">
+				
+				<div class = 'errors'></div>
+
 				<h1>Login</h1>
+				
 				<% if (locals.errors && errors) { %>
 					<% errors.forEach((error) => { %>
 						<p> <%=  error.msg  %> </p>
@@ -62,7 +66,6 @@
 					<p>Don't have an account?<a href="/user/register"> Register</a></p>
 					<a href="/">Return to home</a>
 				</div>
-				<div class = 'errors'> 'there are errors' </div>
 			</form>
 		</header>
 
