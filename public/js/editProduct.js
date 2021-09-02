@@ -23,10 +23,12 @@ const inputImages = form.querySelector('input[name=image]')
     let errorsMsgArray = [];
 
 errorDisplay.style.color = 'red'
+errorDisplay.style.fontSize = "13px"
 
 const displayErrors = () => {
+    errorDisplay.innerHTML = "Please solve the following issues: </br>";
     errorsMsgArray.forEach(msg => {
-       errorDisplay.innerHTML += `<h3>${msg}</h3>`
+       errorDisplay.innerHTML += `<p>${msg}</p>`
      })
  }
 
@@ -44,33 +46,33 @@ const validate = (e) => {
 
     if (!inputName.value) {
         hasErrors = true
-        errorsMsgArray.push('Please input a longer name')
+        errorsMsgArray.push('Input a longer name')
     }
 
     if (!inputYear.value) {
         hasErrors = true
-        errorsMsgArray.push('Please input a valid year')
+        errorsMsgArray.push('Input a valid year')
     }
 
     if (!inputMeasure.value) {
         hasErrors = true
-        errorsMsgArray.push('Please input a valid Measures')
+        errorsMsgArray.push('Input a valid Measures')
     }
 
     if (!inputDesc.value) {
         hasErrors = true
-        errorsMsgArray.push('Please input a description')
+        errorsMsgArray.push('Input a description')
     }
 
     if (!inputShortDesc.value) {
         hasErrors = true
-        errorsMsgArray.push('Please input a short description')
+        errorsMsgArray.push('Input a short description')
     }
 
 
     if (!inputVesselType.value) {
         hasErrors = true
-        errorsMsgArray.push('Please select you vessel category')
+        errorsMsgArray.push('Select you vessel category')
     }
 
 

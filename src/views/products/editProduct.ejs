@@ -46,9 +46,10 @@
 			<div class="formbox">
 				<form action="/products/<%=boat.id%>?_method=PUT" class="create-form" method="POST" enctype="multipart/form-data">
 			
+					<div class='error-display'></div>
+					
 					<div class="formcol">
 						<h3>Vessel´s information</h3>
-						<div class='error-display'></div>
 						<div class="form-field">
 							<input
 								type="text"
