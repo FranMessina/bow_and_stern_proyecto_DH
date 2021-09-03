@@ -54,7 +54,7 @@ const validate = e => {
 
 	if (!isNumeric(inputYear.value) || !inputYear) {
 		hasErrors = true;
-		errorsMsgArray.push(" Input a valid year");
+		errorsMsgArray.push("Input a valid year");
 	}
 
 	if (!isNumeric(inputMeasures.value)) {
@@ -69,17 +69,17 @@ const validate = e => {
 
 	if (!inputShortDesc.value) {
 		hasErrors = true;
-		errorsMsgArray.push(" Input a short description");
+		errorsMsgArray.push("Input a short description");
 	}
 
 	if (!inputImages.value) {
 		hasErrors = true;
-		errorsMsgArray.push(" Upload an image");
+		errorsMsgArray.push("Upload an image");
 	}
 
 	if (!inputVessel.value) {
 		hasErrors = true;
-		errorsMsgArray.push(" Select you vessel category");
+		errorsMsgArray.push("Select you vessel category");
 	}
 
 	if (hasErrors) {
