@@ -117,7 +117,7 @@
 			</section>
 			<!-- Sobre nosotros/servicios/porque elegirnos/que ofrecemos -->
 			<section class="information">
-				<h3>About us</h3>
+				<h3 id='aboutUs'>About us</h3>
 			
 				<div class="col-cont">
 					<div class="col">
@@ -125,7 +125,7 @@
 							<img src="/img/home-main-picture.jpg" alt="" />
 						</div>
 						<div class="textcont">
-							<h4 id='aboutUs'>About our service</h4>
+							<h4>About our service</h4>
 							<p>
 								Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa
 								ipsam nisi, saepe eius consequatur tempora unde labore beatae
@@ -201,6 +201,18 @@
 			function hideMenu() {
 				navLinks.style.right = '-200px';
 			}
+		</script>
+
+		<script>
+			document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+				anchor.addEventListener('click', function (e) {
+					e.preventDefault();
+
+					document.querySelector(this.getAttribute('href')).scrollIntoView({
+						behavior: 'smooth',
+					});
+				});
+			});	
 		</script>
 
 		<script src="/js/search.js"></script>
