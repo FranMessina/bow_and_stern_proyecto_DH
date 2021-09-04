@@ -30,7 +30,7 @@
 
                             <section id="mainSection">
                         <div class="summary"> <p>Name: Matias Giles</p> <input type="hidden" name="userId" value="2"></div>
-                        <div class="summary"> <p>Selected Boat: Fountain Pjot</p> <input type="hidden" name="selectedBoat" value="Fountain Pjot"></div>
+                        <div class="summary"id="boatName"> <p>Selected Boat:</p> <input type="hidden" name="selectedBoat" value="Fountain Pjot"></div>
                         <div class="summary"><p id="food">Food Choice: </p> <input type="hidden" name="food_choice" id="food_choice" ></div>
                         <div class="summary"><p id="experience">Selected Experence: </p> <input type="hidden" name="selected_experience" id="selected_experience"> </div>
                         <div class="crew">
@@ -129,9 +129,15 @@
    
     let id = localStorage.getItem("selectedBoat")
 
-    fetch ("http://localhost:3000/api/getBoat?id="+id).then(
-        res => res.json
-    ).then(boat => console.log(boat))
+    fetch ("http://localhost:3000/api/getBoat?id="+id)
+    .then(res => res.json())
+    .then(boat => {
+        if (boat.meta.status=="success"){
+            document.querySelector("#boatName p").innerHTML += " "+boat.data.boat.name
+  
+        }
+        else(document.querySelector("#boatName").innerHTML = "no boat selected")
+    })
 
     </script>
 </body>
