@@ -86,9 +86,9 @@
 							<p>Vessel</p>
 							<select name="vesselType">
 								<option value="">Select Vessel type</option>
-								<option value="monohull">Monohull</option>
-								<option value="catamaran">Catamaran</option>
-								<option value="monohull">Yacht</option>
+								<option value="monohull" <%= boat.vessel_type === 'Monohull' ? 'selected' : ''%>>Monohull</option>
+								<option value="catamaran" <%= boat.vessel_type === 'Catamaran' ? 'selected' : ''%>>Catamaran</option>
+								<option value="yacht"<%= boat.vessel_type === 'Yacht' ? 'selected' : ''%>>Yacht</option>
 							</select>
 						</div>
 
