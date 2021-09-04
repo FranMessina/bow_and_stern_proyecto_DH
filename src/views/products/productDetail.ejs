@@ -189,6 +189,19 @@
 			function hideMenu() {
 				navLinks.style.right = '-200px';
 			}
+
+
+			let path= window.location.pathname.split("/")
+
+			let boatId= path[3]
+
+			let button =document.querySelector(".cta-btn")
+
+		
+			
+	button.addEventListener("click",function(e){
+		localStorage.setItem("selectedBoat", boatId)
+		})
 		</script>
 		<script
 			src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"

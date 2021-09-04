@@ -26,6 +26,22 @@ module.exports = {
                 location: location.rows
             }
         })
+    },
+
+    async getBoat (req, res){
+const boatId = req.query.id
+        const boat = await db.Boat.findByPk(boatId)
+
+        res.status(200).json({
+            meta: {
+                status: "success",
+            },
+            data: {
+                boat: boat
+            }
+        })
+
+
     }
 
 }

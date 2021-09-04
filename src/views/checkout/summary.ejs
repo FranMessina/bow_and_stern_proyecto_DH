@@ -127,7 +127,11 @@
     document.getElementById("alternative_date").value=altDate
     document.getElementById("preferred_date").value=date
    
+    let id = localStorage.getItem("selectedBoat")
 
+    fetch ("http://localhost:3000/api/getBoat?id="+id).then(
+        res => res.json
+    ).then(boat => console.log(boat))
 
     </script>
 </body>

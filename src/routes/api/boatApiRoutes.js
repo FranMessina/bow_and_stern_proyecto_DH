@@ -4,4 +4,7 @@ const boatApiRoutes = express.Router()
 
 boatApiRoutes.get("/search", productApiController.searchLocations)
 
+boatApiRoutes.get("/getBoat", productApiController.getBoat)
+
+
 module.exports= boatApiRoutes;
