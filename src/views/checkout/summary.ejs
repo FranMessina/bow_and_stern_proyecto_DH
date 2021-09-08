@@ -83,8 +83,7 @@
             
              
     </main>
-    <footer>
-    </footer> 
+
     <script>
 
         const outputDate= document.getElementById("lsOutputDate")
@@ -134,7 +133,6 @@
     .then(boat => {
         if (boat.meta.status=="success"){
             document.querySelector("#boatName p").innerHTML += " "+boat.data.boat.name
-  
         }
         else(document.querySelector("#boatName").innerHTML = "no boat selected")
     })
