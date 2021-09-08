@@ -96,7 +96,7 @@ const productController = {
 
 	const locationId = req.params.id
 	const locationFormId = req.body.location
-
+//para el get
 	if (locationId) {
 		const boats = await db.Boat.findAll( {
 			
@@ -106,6 +106,8 @@ const productController = {
 		})  
 		res.render('products/catalogue', { boats })
 	}
+
+//para el post
 	 if (locationFormId) {
 
 	 	const boats = await db.Boat.findAll( {
