@@ -67,8 +67,10 @@ const userController = {
 
 		res.redirect('/');
 	},
-	profile: (req, res) => {
-		res.render('users/profile');
+	profile: async (req, res) => {
+		
+		const user= await User.findOne({where:{id:id}})
+		res.render('users/profile', user);
 	},
 };
 

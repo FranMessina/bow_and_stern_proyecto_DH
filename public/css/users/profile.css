@@ -120,3 +120,18 @@ body{
 .shadow-none {
   box-shadow: none!important;
 }
+
+.confirmButton{
+  display: none ;
+}
+
+.inputEmail{
+  display: none ;
+}
+.inputFirstName{
+  display: none ;
+}
+
+.inputLastName{
+  display: none ;
+}
