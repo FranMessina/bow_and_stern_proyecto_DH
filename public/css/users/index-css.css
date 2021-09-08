@@ -81,6 +81,8 @@ nav .logo-name {
 	width: 80%;
 }
 
+/* aca esta todo el buscador */
+
 .text-box {
 	width: 90%;
 	color: #fff;
@@ -95,33 +97,30 @@ nav .logo-name {
 }
 
 .text-box h1 {
-	font-size: 60px;
+	font-size: 50px;
+	font-weight: normal;
 }
 
 .text-box p {
 	margin: 10px 0 40px;
 	font-size: 15px;
-	color: #fff;
+	color: rgb(177, 174, 174);
 }
 
-
-/* aca esta todo el buscador */
 .boats-btn {
 	display: flex;
 	text-decoration: none;
-	color: #fff;
-	border: 1px solid #fff;
+	color: white;
+	border: 2px solid #fff;
 	padding: 12px 34px;
 	font-size: 13px;
-	background: #ffffff;
+	background: transparent;
 	height: 60px;
 	width:550px;
 	border-radius: 30px;
 }
 
-
 .boats-btn:hover {
-	
 	border: 1px solid grey;
 	transition: 1s;
 } 
@@ -134,6 +133,7 @@ nav .logo-name {
 	padding: 10 0px;
 	display: none;
 }
+
 .list {
 	color: grey;
 	list-style-type: none;
@@ -141,6 +141,7 @@ nav .logo-name {
 	width:100%;
 	text-align:left;
 }
+
 .list li {
 	border-radius:10px
 }
@@ -153,10 +154,7 @@ nav .logo-name {
 .list li:hover{
 	cursor:pointer;
 	background-color:#e3ecfd;
-	
-
 }
-
 
 .inputSearch {
 	width: 80%;
@@ -166,14 +164,16 @@ nav .logo-name {
 	text-align: left;
 	margin-left:30px;
 	font-size: 20px;
-	 line-height: 1.15;
-	 outline:none;
+	color: rgb(196, 194, 194);
+	line-height: 1.15;
+	outline:none;
 	
 }
+
 .buttonSubmit{
 	border: none;
 	width: 20%;
-
+	border-radius: 30px;
 	transition-property: all;
 	transition-duration:1s;
 }
@@ -182,13 +182,37 @@ nav .logo-name {
 	background-color: #c1c4c7
 }
 
+.fa-search{
+	color: rgb(177, 174, 174);
+	font-size: 17px;
+	align-self: center;
+}
+
+@media (max-width: 980px) {
+
+.text-box h1 {
+	font-size: 30px;
+}
+
+.boats-btn {
+	padding: 12px 20px;
+	height: 50px;
+	width: 370px;
+}
+
+.inputSearch {
+	font-size: 15px;
+}
+
+.containerResults{
+	width: 370px;
+	margin-top: 15px;
+	}
+
+}
 
 /* aca termina el buscador */
 
-.fa-search{
-	color: black;
-	align-self: center;
-}
 nav .fas {
 	display: none;
 }
@@ -197,9 +221,7 @@ nav .fas {
 	nav {
 		flex-flow: row wrap;
 	}
-	.text-box h1 {
-		font-size: 20px;
-	}
+	
 	.nav-links ul li {
 		display: block;
 	}
