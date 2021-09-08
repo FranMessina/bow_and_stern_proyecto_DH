@@ -3,8 +3,8 @@
 }
 
 body {
-	font-family: 'Poppins', sans-serif;
-	font-weight: 400;
+	font-family: "Poppins", sans-serif;
+	font-weight: 300;
 }
 
 /* rgb(9, 117, 136); */
@@ -53,9 +53,8 @@ body {
 	border-radius: 5px;
 	font-size: 20px;
 }
-.carousel-item{
+.carousel-item {
 	max-height: 500px;
-	
 }
 .secondarysection article {
 	background-color: rgb(9, 117, 136);
