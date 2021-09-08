@@ -48,8 +48,8 @@
 			<div class="mx-auto max-w-screen-xl grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 my-5 p-5">
 				<% boats.forEach((boat) => { %>
 				<a href="/products/detail/<%= boat.id %> " class="indv-cont group relative object-contain">
-						<img src="/img/1628448723543.jpg " alt="" class="object-contain"/>
-						<h2 class="text-white text-3xl w-full back-gray z-10 top-0 absolute px-2 py-1 mb-8"><%= boat.name %></h2>
+						<img src="/img/<%= boat.image %>"  alt="" class="object-contain"/>
+						<h2 class="text-white text-3xl w-full back-gray z-10 top-0 absolute px-2 py-1 mb-8"><%= boat.name %></h2>	
 						<div class="prod-info w-full mt-8">
 							<p class="text-white opacity-0 group-hover:opacity-100 transition duration-200 ease-out mt-10"><%= boat.short_description %></p>
 						</div>
