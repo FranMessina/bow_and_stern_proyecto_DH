@@ -51,7 +51,7 @@
 		</header>
 
 		<main>
-					
+			
 			<section class="mainsection">
 				<article class="article1">
 					<h1><%= boat.name %></h1>
@@ -121,11 +121,8 @@
 							featuring many new amenities including a  saloon balcony/terrace, a hot tub, and a huge foredeck Portuguese bridge. This yacht has every option a discerning, experienced yachtsman could wish for and is fully equipped for long-range cruising in style, safety and comfort. 
 						</p>
 					</article>
-
-					
 				</div>
 				
-
 				<section class="maps">
 					<h5>Approximate location</h5>
 					<p>
@@ -145,39 +142,41 @@
 		<!-- reviews -->
 
 		<section class="exfooter">
-			<h4>See what previous clients think about this boat!</h4>
-			<div class="review">
-				<h5>Jonathan Marquee</h5>
-				<p>
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio ex amet
-					enim sint incidunt qui laborum omnis ea, facere, illum nesciunt quas
-					ratione nihil magni assumenda dolorum nam porro officia.
-				</p>
-			</div>
-			<div class="review">
-				<h5>Alice Monroe</h5>
-				<p>
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio ex amet
-					enim sint incidunt qui laborum omnis ea, facere, illum nesciunt quas
-					ratione nihil magni assumenda dolorum nam porro officia.
-				</p>
-			</div>
-			<div class="review">
-				<h5>Michael Birmingham</h5>
-				<p>
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio ex amet
-					enim sint incidunt qui laborum omnis ea, facere, illum nesciunt quas
-					ratione nihil magni assumenda dolorum nam porro officia.
-				</p>
-			</div>
-		</section>
-		<a href="/checkout/selectDate" class="cta-btn">Make a reservation!</a>
+
+            <h4>See what previous clients think about this boat!</h4>
+
+            <div class="review">
+                <h5>Jonathan Marquee</h5>
+                <p>
+                    “Amazing family cruise with young and older children including a teenager. Everything from booking, arranging the surprise trip and the wonderful kind way we were treated by management and crew. Was the highlight of our holiday and we all loved the experience. The boat and service were pure luxury.”
+                </p>
+            </div>
+            <div class="review">
+                <h5>Alice Monroe</h5>
+                <p>
+                    We loved <strong> <%= boat.name %> </strong> experience! <br> <br>
+                    “We absolutely loved our cruise. Lovely staff who mingled and added to the fun. A real fun trip along the Islands and very memorable. Highly recommended.”
+                </p>
+            </div>
+            <div class="review">
+                <h5>Michael Birmingham</h5>
+                <p>
+                    “We had such a great time. The yacht was super clean, we were greeted by their staff, and they were all super nice. They made our time on board so special and so much and more enjoyable! Great service, we loved the experience and we would absolutely do it again!”
+                </p>
+            </div>
+
+        </section>
+
+		<!-- Boton para hacer reserva desde productDetail -->
+
+        <a href="/checkout/selectDate" class="cta-btn">Make a reservation!</a>
 
 		<!-- footer -->
 
 		<%- include ('../partials/footer')%>
 
 		<!-- Javascript para menu desplegable -->
+
 		<script>
 			var navLinks = document.getElementById('navLinks');
 			function showMenu() {
@@ -194,17 +193,17 @@
 
 			let button =document.querySelector(".cta-btn")
 
-		
-			
-	button.addEventListener("click",function(e){
+		button.addEventListener("click",function(e){
 		localStorage.setItem("selectedBoat", boatId)
 		})
 		</script>
+
 		<script
 			src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
 			integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
 			crossorigin="anonymous"
 		></script>
+
 	</body>
 </html>
 
