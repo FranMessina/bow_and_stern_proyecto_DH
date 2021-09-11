@@ -99,13 +99,30 @@ const productController = {
 		}
 
 		// if (locationFormId) {
+		const locationId = req.params.id;
+		const locationFormId = req.body.location;
+		//para el get
+		if (locationId) {
+			const boats = await db.Boat.findAll({
+				where: {
+					locations_id: locationId,
+				},
+			});
+			res.render("products/catalogue", { boats });
+		}
 
-		// 	const boats = await db.seq.query("select * from boats inner join locations on locations_id=locations.id where locations.location like" + locationFormId)
-		// 	res.render('products/catalogue', { boats })
-		// }
+		//para el post
+		if (locationFormId) {
+			const boats = await db.Boat.findAll({
+				where: {
+					"$location.location$": { [Op.substring]: locationFormId },
+				},
+				include: ["location"],
+			});
+
+			res.render("products/catalogue", { boats });
+		}
 	},
-
-	// console.log(boats[0].location.location)
 
 	update: async (req, res) => {
 		const data = req.body;

@@ -88,6 +88,7 @@ footer{
     background-color: white;
     border-radius: 50px;
     position:relative;
+    border: 0px;
   }
 
 @media (min-width: 768px) {

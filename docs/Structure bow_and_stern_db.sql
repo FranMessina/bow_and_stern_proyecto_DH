@@ -61,7 +61,7 @@ CREATE TABLE IF NOT EXISTS `bow_and_stern_db`.`boats` (
 ENGINE = InnoDB;
 
 ALTER TABLE `bow_and_stern_db`.`boats` 
-CHANGE COLUMN `image` `image` VARCHAR(255) NOT NULL DEFAULT '1628448723543.jpg' ;
+CHANGE COLUMN `image` `image` VARCHAR(255) NOT NULL DEFAULT '1628448723543.jpg';
 
 ALTER TABLE `bow_and_stern_db`.`boats` 
 CHANGE COLUMN `locations_id` `locations_id` INT(11) NOT NULL DEFAULT 1 ;

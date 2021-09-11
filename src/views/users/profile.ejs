@@ -65,53 +65,42 @@
                   <div class="card-body">
                     <div class="row">
                       <div class="col-sm-3">
-                        <h6 class="mb-0">Full Name</h6>
+                        <h6 class="mb-0">First Name</h6>
                       </div>
                       <div class="col-sm-9 text-secondary">
-                        Kenneth Valdez
+                       <%= locals.logged.firstName %> 
                       </div>
+                        <input type="text" class="inputFirstName">
                     </div>
                     <hr>
+                  
+                          <div class="row">
+                            <div class="col-sm-3">
+                              <h6 class="mb-0">Last Name</h6>
+                            </div>
+                            <div class="col-sm-9 text-secondary">
+                             <%=  locals.logged.lastName %> 
+                            
+                            </div> <input type="text" class="inputLastName">
+                          </div>
+                          <hr>
+                    
                     <div class="row">
                       <div class="col-sm-3">
                         <h6 class="mb-0">Email</h6>
+
                       </div>
                       <div class="col-sm-9 text-secondary">
-                        fip@jukmuh.al
-                      </div>
-                    </div>
-                    <hr>
-                    <div class="row">
-                      <div class="col-sm-3">
-                        <h6 class="mb-0">Phone</h6>
-                      </div>
-                      <div class="col-sm-9 text-secondary">
-                        (239) 816-9029
-                      </div>
-                    </div>
-                    <hr>
-                    <div class="row">
-                      <div class="col-sm-3">
-                        <h6 class="mb-0">Mobile</h6>
-                      </div>
-                      <div class="col-sm-9 text-secondary">
-                        (320) 380-4539
-                      </div>
-                    </div>
-                    <hr>
-                    <div class="row">
-                      <div class="col-sm-3">
-                        <h6 class="mb-0">Address</h6>
-                      </div>
-                      <div class="col-sm-9 text-secondary">
-                        Bay Area, San Francisco, CA
-                      </div>
-                    </div>
+                        <%= locals.logged.email %> 
+                        
+                      </div><input type="text" class="inputEmail">
+                    </div> 
                     <hr>
                     <div class="row">
                       <div class="col-sm-12">
-                        <a class="btn btn-info " target="__blank" href="/user/edit">Edit</a>
+                        <a class="btn btn-info edit" target="__blank" href="/user/edit">Edit</a>
                         <a class="btn btn-info " target="__blank" href="/user/logout">Log Out</a>
+                        <a class="btn btn-info confirmButton" target="__blank" href="/user/edit">Confirm</a>
                       </div>
                    
                     </div>
@@ -127,6 +116,33 @@
   
   
   <%- include ('../partials/footer')%>   
+   <script>
+    const edit = document.querySelector(".edit")
+    const inputEmail= document.querySelector(".inputEmail")
+    const inputFirstName= document.querySelector(".inputFirstName")
+    const inputLastname= document.querySelector(".inputLastName");
+    const confirmButton = document.querySelector(".confirmButton")
+    const dataContainer = document.querySelectorAll(".col-sm-9")
+
   
+
+
+    edit.addEventListener("click",function (e){
+      e.preventDefault()
+
+      dataContainer.forEach(container => container.style.display = "none")
+      
+      inputEmail.style.display="block"
+      inputLastname.style.display="inline-block"
+      inputFirstName.style.display="inline-block"
+      confirmButton.style.display="inline-block"
+      
+      
+
+
+    })
+
+  </script>
 	</body>
+ 
 </html>

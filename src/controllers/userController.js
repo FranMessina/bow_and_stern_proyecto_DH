@@ -67,7 +67,7 @@ const userController = {
 
 		res.redirect('/');
 	},
-	profile: (req, res) => {
+	profile: async (req, res) => {
 		res.render('users/profile');
 	},
 };

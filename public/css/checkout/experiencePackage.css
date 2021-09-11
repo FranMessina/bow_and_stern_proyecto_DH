@@ -22,6 +22,7 @@ main{
     background-color: white;
     justify-content: space-around;
     position:relative; 
+    border: 0px;
   }
 
   .formularioFP section{
