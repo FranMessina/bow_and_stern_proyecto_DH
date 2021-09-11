@@ -264,13 +264,14 @@ nav .fas {
 
 .destacados p {
 	color: #fff;
-	font-size: 14px;
+	font-size: 15px;
 	font-weight: 300;
 	line-height: 22px;
 	padding: 10px;
 }
 p#description{
-	color: #454952
+	color: #454952;
+	font-size: 17px;
 }
 
 .row {
