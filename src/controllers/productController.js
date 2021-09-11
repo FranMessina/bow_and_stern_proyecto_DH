@@ -79,28 +79,6 @@ const productController = {
 		const locationId = req.params.id;
 		const locationFormId = req.body.location;
 
-		if (locationId) {
-			const boats = await db.Boat.findAll({
-				where: {
-					locations_id: locationId,
-				},
-			});
-			res.render("products/catalogue", { boats });
-		}
-		if (locationFormId) {
-			const boats = await db.Boat.findAll({
-				where: {
-					"$location.location$": { [Op.substring]: locationFormId },
-				},
-				include: ["location"],
-			});
-
-			res.render("products/catalogue", { boats });
-		}
-
-		// if (locationFormId) {
-		const locationId = req.params.id;
-		const locationFormId = req.body.location;
 		//para el get
 		if (locationId) {
 			const boats = await db.Boat.findAll({
