@@ -117,16 +117,11 @@ const productController = {
 			 include: ["location"]
 	 		
 	 	})  
-	
-	 	res.render('products/catalogue', { boats })
+
+res.render('products/catalogue', { boats })
+
+	 	
 	 }
-
-	// if (locationFormId) {
-
-	// 	const boats = await db.seq.query("select * from boats inner join locations on locations_id=locations.id where locations.location like" + locationFormId)
-	// 	res.render('products/catalogue', { boats })
-	// }
-
 
 
 	}
