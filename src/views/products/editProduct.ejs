@@ -43,12 +43,11 @@
 
 		<main>
 			<h1>Please input the following information</h1>
-			<div class="formbox">
-				<form action="/products/<%=boat.id%>?_method=PUT" class="create-form" method="POST" enctype="multipart/form-data">
+				<form action="/products/<%=boat.id%>?_method=PUT" method="POST" class="create-form" enctype="multipart/form-data">
 			
 					<div class='error-display'></div>
 					
-					<div class="formcol">
+					<div class="block">
 						<h3>Vessel´s information</h3>
 						<div class="form-field">
 							<input
@@ -95,22 +94,22 @@
 						<div class="form-field">
 							<!--<label for="description">Description:</label>-->
 							<p>Description</p>
-							<textarea maxlength="200" id="description" name="description" style="width:100%;height:400px"><%= boat.description %></textarea>
+							<textarea maxlength="200" id="description" name="description" ><%= boat.description %></textarea>
 							
 						</div>
 						<div class="form-field">
 							<p>Short description</p>
 							<!--<label for="shortDescription">Short description:</label>-->
-							<textarea maxlength="200" id="shortDescription" name="shortDescription" style="width:100%;height:400px"><%= boat.short_description %></textarea>
+							<textarea maxlength="200" id="shortDescription" name="shortDescription"><%= boat.short_description %></textarea>
 							
 						</div>
-						<div class="form-field">
-							<p>Pictures of your boat</p>
-							<!--<label for="">Pictures of your boat</label>-->
+						<div class="block">
+						<!--	<p>Pictures of your boat</p> -->
+							<label for="">Pictures of your boat</label>
 							<img src= "/img/<%= boat.image %>" width="300px">
 						</div>
-						<div class="form-field">					
-							<input type="file" name="image" class="field" multiple id='image'/>
+						<div class="block">					
+							<input type="file" name="image" multiple id='image'/>
 							<!--<input type="file" name="image" class="field" multiple value =<%= boat.image %>/>-->
 						</div>
 						
@@ -154,11 +153,12 @@
 							/>
 						</div>
 					</div> -->
-
+				<div class="block">
 					<button type="submit" class="button">
 						Send Information
 					</button>
 					<a href="/products/controlpanel">Cancel</a>
+				</div>
 				</form>
 			</div>
 			<!-- 
