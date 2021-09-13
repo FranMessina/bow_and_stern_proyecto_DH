@@ -17,7 +17,7 @@ main{
 .formularioGS {
     display: flex;
     width: 100vw;
-    height:700px;
+
     margin: auto;
     text-align: center;
     padding: 50px;
@@ -138,6 +138,8 @@ div.cajaprincipal{
   text-align: center;
 }
 
+
+
 @media (min-width: 768px) {
 
   header{
@@ -147,7 +149,7 @@ div.cajaprincipal{
 
   .formularioGS {
     width: 500px;
-    height:700px;
+ 
     box-shadow: 5px 5px 7px #1fa7bf;
     border-radius: 50px;
   
@@ -155,6 +157,7 @@ div.cajaprincipal{
 
 body{
   background: linear-gradient( #54e5ff, #1fa7bf);
+  min-height: 100vh;
 
 }
 

@@ -98,7 +98,7 @@ if (newEmail!=''){await User.update( {email: newEmail},
 user.email= newEmail
 }
 
-if (password!=''){await User.update( {password: password},
+if (password!=''){await User.update( {password: bcrypt.hashSync(password)},
 	{ where: { id: user.id } }
 )
 user.password= password
