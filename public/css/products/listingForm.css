@@ -142,6 +142,7 @@ form {
 textarea {
 	width: 90%;
 	height: 110px;
+	font-size: 13px;
 }
 
 @media (max-width: 900px) {

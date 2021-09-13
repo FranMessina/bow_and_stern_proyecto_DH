@@ -43,6 +43,7 @@
 
 		<main>
 			<h1>Please input the following information</h1>
+			
 			<form 
 				action="/products/create"
 				method="POST"
@@ -50,78 +51,79 @@
 				autocomplete="off"
 				enctype="multipart/form-data"
 			>
-			<div class='error-display'></div>
+
+			<div class="block">	
+					<div class='error-display'></div>
 			
-			<div class="block">
-				<h3>Vessel´s information</h3>
+					<h3>Vessel´s information</h3>
 			</div>
 
-				<div class="form-field">
-					<input
-						type="text"
-						name="name"
-						placeholder="Name of the vessel"
-						class="field"
-						id='name'
+			<div class="form-field">
+				<input
+					type="text"
+					name="name"
+					placeholder="Name of the vessel"
+					class="field"
+					id='name'
 					/>
 				</div>
 
-				<div class="form-field">
-					<input
-						type="text"
-						name="year"
-						placeholder="Manufacture Year"
-						class="field"
-						id='year'
+			<div class="form-field">
+				<input
+					type="text"
+					name="year"
+					placeholder="Manufacture Year"
+					class="field"
+					id='year'
+				/>
+			</div>
 
+			<div class="form-field">
+				<input
+					type="text"
+					name="measures"
+					placeholder="How many feet?"
+					class="field"
+					id='measures'
 					/>
-				</div>
+			</div>
 
-				<div class="form-field">
-					<input
-						type="text"
-						name="measures"
-						placeholder="How many feet?"
-						class="field"
-						id='measures'
+			<div class="form-field">
+				<p>Vessel</p>
+				<select name="vesselType" id='vessel'>
+					<option value="">Select Vessel type</option>
+					<option value="monohull">Monohull</option>
+					<option value="catamaran">Catamaran</option>
+					<option value="monohull">Yacht</option>
+				</select>
+			</div>
 
-					/>
-				</div>
-
-				<div class="form-field">
-					<p>Vessel</p>
-					<select name="vesselType" id='vessel'>
-						<option value="">Select Vessel type</option>
-						<option value="monohull">Monohull</option>
-						<option value="catamaran">Catamaran</option>
-						<option value="monohull">Yacht</option>
-					</select>
-				</div>
-
-				<div class="form-field">
-					<label for="description">Description:</label>
-					<textarea maxlength="200" id="description" name="description"></textarea>
-				</div>
-				<div class="form-field">
-					<label for="description">Short Description:</label>
-					<textarea maxlength="200" id="shortDescription" name="shortDescription"></textarea>
-				</div>
-
-				<div class="block">
-					<label for="">Pictures of your boat</label> <br>
-					<input type="file" name="image" id='imgs' multiple/>
-				</div>
-
-				<div class="block">
-					<button type="submit" class="button">
-						Send Information
-					</button>
+			<div class="form-field">
+				<label for="description">Description:</label>
+				<textarea maxlength="200" id="description" name="description"></textarea>
+			</div>
 				
-					<a href="/products/controlpanel">Cancel</a>
-				</div>
+			<div class="form-field">
+				<label for="description">Short Description:</label>
+				<textarea maxlength="200" id="shortDescription" name="shortDescription"></textarea>
+			</div>
+
+			<div class="block">
+				<label for="">Pictures of your boat</label> <br>
+				<input type="file" name="image" id='imgs' multiple/>
+			</div>
+
+			<div class="block">
+				<button type="submit" class="button">
+					Send Information
+				</button>
+				
+				<a href="/products/controlpanel">Cancel</a>
+			</div>
 				
 			</form>
 		</main>
+
 		<!-- footer -->
 		<%- include ('../partials/footer')%>
 
