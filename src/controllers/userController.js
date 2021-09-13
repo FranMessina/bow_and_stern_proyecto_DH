@@ -3,6 +3,7 @@ const path = require('path');
 const {validationResult} = require('express-validator');
 const bcrypt = require('bcryptjs');
 const { User } = require('../database/models');
+const { ResultWithContext } = require('express-validator/src/chain');
 
 const userController = {
 	login: (req, res) => {
@@ -52,6 +53,7 @@ const userController = {
 		delete user.password;
 
 		req.session.logged = user;
+		console.log(req.session.logged)
 
 		if (remember) {
 			res.cookie('user', user.id, {
@@ -70,6 +72,42 @@ const userController = {
 	profile: async (req, res) => {
 		res.render('users/profile');
 	},
+
+	editProfile: async (req, res) => {
+		const user = req.session.logged
+		
+
+		const { name, surname,newEmail, password } = req.body;
+console.log(req.body);
+
+if (name!=''){await User.update( {firstName: name},
+	{ where: { id: user.id } }
+)
+user.firstName= name
+}
+
+if (surname!=''){await User.update( {lastName: surname},
+	{ where: { id: user.id } }
+)
+user.lastName= surname
+}
+
+if (newEmail!=''){await User.update( {email: newEmail},
+	{ where: { id: user.id } }
+)
+user.email= newEmail
+}
+
+if (password!=''){await User.update( {password: password},
+	{ where: { id: user.id } }
+)
+user.password= password
+}
+
+console.log(req.session.logged)
+		
+res.redirect("/user/profile")
+	}
 };
 
 module.exports = userController;

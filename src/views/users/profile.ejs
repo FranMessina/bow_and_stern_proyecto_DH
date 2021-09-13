@@ -60,7 +60,10 @@
                   </ul>
                 </div>
               </div>
-              <div class="col-md-8">
+
+              <form action="/user/editProfile" class="col-md-8" method="POST">
+              
+                
                 <div class="card mb-3">
                   <div class="card-body">
                     <div class="row">
@@ -70,7 +73,8 @@
                       <div class="col-sm-9 text-secondary">
                        <%= locals.logged.firstName %> 
                       </div>
-                        <input type="text" class="inputFirstName">
+                        <input type="text" name="name" class="inputFirstName" >
+                 
                     </div>
                     <hr>
                   
@@ -79,9 +83,9 @@
                               <h6 class="mb-0">Last Name</h6>
                             </div>
                             <div class="col-sm-9 text-secondary">
-                             <%=  locals.logged.lastName %> 
+                             <%= locals.logged.lastName %> 
                             
-                            </div> <input type="text" class="inputLastName">
+                            </div> <input type="text" name="surname"class="inputLastName">
                           </div>
                           <hr>
                     
@@ -93,14 +97,33 @@
                       <div class="col-sm-9 text-secondary">
                         <%= locals.logged.email %> 
                         
-                      </div><input type="text" class="inputEmail">
+                      </div><input type="text" class="inputEmail" name="newEmail" >
                     </div> 
                     <hr>
+                    
+                    <div class="row">
+                      <div class="col-sm-3">
+                        <h6 class="mb-0">Password</h6>
+
+                      </div>
+                      <div class="col-sm-9 text-secondary">
+                       <p>*******</p>
+                        
+                      </div><input type="text" class="inputPassword" name="password" >
+
+                     
+                    </div> 
+                    <hr>
+
+
+
                     <div class="row">
                       <div class="col-sm-12">
                         <a class="btn btn-info edit" target="__blank" href="/user/edit">Edit</a>
                         <a class="btn btn-info " target="__blank" href="/user/logout">Log Out</a>
-                        <a class="btn btn-info confirmButton" target="__blank" href="/user/edit">Confirm</a>
+                         <button type="submit" class="btn btn-info confirmButton">Confirm</button>
+                  
+                       
                       </div>
                    
                     </div>
@@ -108,7 +131,8 @@
                 </div>
   
   
-              </div>
+              
+           </form>
             </div>
   
           </div>
@@ -123,6 +147,7 @@
     const inputLastname= document.querySelector(".inputLastName");
     const confirmButton = document.querySelector(".confirmButton")
     const dataContainer = document.querySelectorAll(".col-sm-9")
+    const inputPassword = document.querySelector(".inputPassword")
 
   
 
@@ -131,7 +156,7 @@
       e.preventDefault()
 
       dataContainer.forEach(container => container.style.display = "none")
-      
+      inputPassword.style.display = "inline-block"
       inputEmail.style.display="block"
       inputLastname.style.display="inline-block"
       inputFirstName.style.display="inline-block"

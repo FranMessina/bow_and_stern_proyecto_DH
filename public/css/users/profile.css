@@ -135,3 +135,11 @@ body{
 .inputLastName{
   display: none ;
 }
+
+.inputPassword{
+  display: none ;
+}
+
+.form{
+  display: flex ;
+}
