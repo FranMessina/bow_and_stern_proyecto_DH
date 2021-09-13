@@ -43,7 +43,7 @@
 
 		<main>
 			<h1>Please input the following information</h1>
-			<form
+			<form 
 				action="/products/create"
 				method="POST"
 				class="create-form"
@@ -52,7 +52,9 @@
 			>
 			<div class='error-display'></div>
 			
+			<div class="block">
 				<h3>Vessel´s information</h3>
+			</div>
 
 				<div class="form-field">
 					<input
@@ -105,15 +107,19 @@
 					<textarea maxlength="200" id="shortDescription" name="shortDescription"></textarea>
 				</div>
 
-				<div class="form-field">
-					<label for="">Pictures of your boat</label>
-					<input type="file" name="image" class="field" id='imgs' multiple/>
+				<div class="block">
+					<label for="">Pictures of your boat</label> <br>
+					<input type="file" name="image" id='imgs' multiple/>
 				</div>
 
-				<button type="submit" class="button">
-					Send Information
-				</button>
-				<a href="/products/controlpanel">Cancel</a>
+				<div class="block">
+					<button type="submit" class="button">
+						Send Information
+					</button>
+				
+					<a href="/products/controlpanel">Cancel</a>
+				</div>
+				
 			</form>
 		</main>
 		<!-- footer -->
