@@ -9,7 +9,7 @@ body {
 }
 
 header {
-	min-height: 35vh;
+	min-height: 20vh;
 	width: 100%;
 	background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)),
 		url(/img/home-main-picture.jpg);
