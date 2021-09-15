@@ -35,15 +35,10 @@ module.exports = {
 
 	async getUser(req, res) {
 		try {
-			const user = await DB.User.findByPk(req.params.id);
-			console.log("1", user);
-
-			delete user.password;
-			delete user.role;
-
-			console.log("2", user);
-
-			user.img = "http://localhost:3000/img/";
+			const user = await DB.User.findOne({
+				where: { id: req.params.id },
+				attributes: ["firstName", "lastName", "email"],
+			});
 
 			res.status(200).json({
 				meta: {
