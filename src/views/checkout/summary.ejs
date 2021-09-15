@@ -130,7 +130,7 @@
    
     let id = localStorage.getItem("selectedBoat")
 
-    fetch ("http://localhost:3000/api/getBoat?id="+id)
+    fetch ("http://localhost:3000/api/boat/detail/"+id)
     .then(res => res.json())
     .then(boat => {
         if (boat.meta.status=="success"){
