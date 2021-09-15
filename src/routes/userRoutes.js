@@ -24,4 +24,6 @@ userRoutes.get("/profile", userController.profile);
 
 userRoutes.get("/logout", authCheck, userController.logout);
 
+userRoutes.post("/editProfile", userController.editProfile); 
+
 module.exports = userRoutes;

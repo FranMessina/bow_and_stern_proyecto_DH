@@ -43,92 +43,94 @@
 
 		<main>
 			<h1>Please input the following information</h1>
-			<div class="formbox">
-				<form action="/products/<%=boat.id%>?_method=PUT" class="create-form" method="POST" enctype="multipart/form-data">
 			
-					<div class='error-display'></div>
+			<form action="/products/<%=boat.id%>?_method=PUT" method="POST" class="create-form" enctype="multipart/form-data">
 					
-					<div class="formcol">
-						<h3>Vessel´s information</h3>
-						<div class="form-field">
-							<input
-								type="text"
-								name="name"
-								minlength="3"
-								placeholder="Name of the vessel"
-								class="field"
-								value = <%= boat.name %>
-							/>
-						</div>
+			<div class="block">
+					<div class='error-display'></div>
+						
+					<h3>Vessel´s information</h3>
+			</div>	
+					
+			<div class="form-field">
+					<input
+						type="text"
+						name="name"
+						minlength="3"
+						placeholder="Name of the vessel"
+						class="field"
+						value = <%= boat.name %>
+					/>
+			</div>
 
-						<div class="form-field">
-							<input
-								type="number"
-								min="1950"
-								name="year"
-								placeholder="Manufacture Year"
-								class="field"
-								value = <%= boat.year %>
-							/>
-						</div>
+			<div class="form-field">
+					<input
+						type="number"
+						min="1950"
+						name="year"
+						placeholder="Manufacture Year"
+						class="field"
+						value = <%= boat.year %>
+					/>
+			</div>
 
-						<div class="form-field">
-							<input
-								type="number"
-								name="measures"
-								placeholder="How many feet?"
-								class="field"
-								value = <%= boat.measures %>
-							/>
-						</div>
+			<div class="form-field">
+					<input
+						type="number"
+						name="measures"
+						placeholder="How many feet?"
+						class="field"
+						value = <%= boat.measures %>
+					/>
+			</div>
 
-						<div class="form-field">
-							<p>Vessel</p>
-							<select name="vesselType">
-								<option value="">Select Vessel type</option>
-								<option value="monohull" <%= boat.vessel_type === 'Monohull' ? 'selected' : ''%>>Monohull</option>
-								<option value="catamaran" <%= boat.vessel_type === 'Catamaran' ? 'selected' : ''%>>Catamaran</option>
-								<option value="yacht"<%= boat.vessel_type === 'Yacht' ? 'selected' : ''%>>Yacht</option>
-							</select>
-						</div>
+			<div class="form-field">
+				<p>Vessel</p>
+				<select name="vesselType">
+					<option value="">Select Vessel type</option>
+					<option value="monohull" <%= boat.vessel_type === 'Monohull' ? 'selected' : ''%>>Monohull</option>
+					<option value="catamaran" <%= boat.vessel_type === 'Catamaran' ? 'selected' : ''%>>Catamaran</option>
+					<option value="yacht"<%= boat.vessel_type === 'Yacht' ? 'selected' : ''%>>Yacht</option>
+				</select>
+			</div>
 
-						<div class="form-field">
-							<!--<label for="description">Description:</label>-->
-							<p>Description</p>
-							<textarea maxlength="200" id="description" name="description" style="width:100%;height:400px"><%= boat.description %></textarea>
-							
-						</div>
-						<div class="form-field">
-							<p>Short description</p>
-							<!--<label for="shortDescription">Short description:</label>-->
-							<textarea maxlength="200" id="shortDescription" name="shortDescription" style="width:100%;height:400px"><%= boat.short_description %></textarea>
-							
-						</div>
-						<div class="form-field">
-							<p>Pictures of your boat</p>
-							<!--<label for="">Pictures of your boat</label>-->
-							<img src= "/img/<%= boat.image %>" width="300px">
-						</div>
-						<div class="form-field">					
-							<input type="file" name="image" class="field" multiple id='image'/>
-							<!--<input type="file" name="image" class="field" multiple value =<%= boat.image %>/>-->
-						</div>
+			<div class="form-field">
+				<!--<p>Description</p>-->
+				<label for="description">Description:</label>
+				<textarea maxlength="200" id="description" name="description" ><%= boat.description %></textarea>			
+			</div>
+						
+			<div class="form-field">
+				<!--<p>Short description</p>-->
+				<label for="shortDescription">Short description:</label>
+				<textarea maxlength="200" id="shortDescription" name="shortDescription"><%= boat.short_description %></textarea>			
+			</div>
+			
+			<div class="block">
+				<!--<p>Pictures of your boat</p> -->
+				<label for="">Pictures of your boat</label>
+				<img src= "/img/<%= boat.image %>" width="300px">
+			</div>
+			
+			<div class="block">					
+				<input type="file" name="image" multiple id='image'/>
+				<!--<input type="file" name="image" class="field" multiple value =<%= boat.image %>/>-->
+			</div>
 						
 
-					</div>
-					<!-- <div class="formcol">
-						<h3>Owner Information</h3>
-						<div class="form-field">
-							<input
-								type="text"
-								name="ownername"
-								placeholder="Full Name"
-								class="field"
-							/>
-						</div>
+			<!-- <div class="formcol">
+			<h3>Owner Information</h3>
+			<div class="form-field">
+			<input
+					type="text"
+					name="ownername"
+					placeholder="Full Name"
+					class="field"
+			/>
+			</div>
 
-						<div class="form-field">
-							<input
+			<div class="form-field">
+				<input
 								type="text"
 								name=""
 								placeholder="Last Name"
@@ -154,13 +156,14 @@
 							/>
 						</div>
 					</div> -->
-
+				<div class="block">
 					<button type="submit" class="button">
 						Send Information
 					</button>
 					<a href="/products/controlpanel">Cancel</a>
-				</form>
-			</div>
+				</div>
+
+			</form>
 			<!-- 
 			<div class="succes" id="succesBox">
 				<p><span class="bigtext">Thank You!</span> <br /></p>
@@ -171,10 +174,6 @@
 
 				<a href="/"><button>Return to home</button></a>
 			</div> -->
-
-			</form>
-
-        
 
 		</main>
 		<!-- footer -->

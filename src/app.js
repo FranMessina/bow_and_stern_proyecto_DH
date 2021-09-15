@@ -1,5 +1,6 @@
 const express = require('express');
 const app = express();
+const db = require("./database/models");
 
 const path = require('path');
 const methodOverride = require('method-override');
@@ -39,9 +40,16 @@ app.listen(process.env.PORT || 3000, (req, res) => {
 	console.log('Servidor corriendo en puerto 3000');
 });
 
-app.get('/', (req, res) => {
-	res.render('index');
-});
+//app.get('/', (req, res) => {
+//	res.render('index');
+	
+app.get('/', async function (req, res) {
+		const boats= await db.Boat.findAll()
+		res.render("index", {boats})
+	}
+	);
+	
+//});
 
 app.get('/header', (req, res) => {
 	res.render('header-suelto');

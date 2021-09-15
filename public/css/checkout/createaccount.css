@@ -2,7 +2,8 @@
   padding-top: 2%;
   display: flex;
   justify-content: center;
-  padding-block-end: 2%;
+  height: 60px;
+  margin-bottom: 10px;
 }
 
 .consulta{
@@ -13,7 +14,6 @@
 
 .button {
   background-color: rgb(31, 139, 158);
-  height: 40px;
   width: 60%;
   border: 0px;
   border-radius: 10px;
@@ -26,13 +26,13 @@
 
 .button2 {
   background-color: rgb(255, 255, 255);
-  height: 40px;
   width: 60%;
   border: 0px;
   border-radius: 10px;
   color: rgb(31, 139, 158);
   font-weight: bold;
-  padding: 2px;
+  margin-left: 2px;
+  margin-right: 2px;
   transition-property: all;
   transition-duration: 500ms;
   text-decoration: none;

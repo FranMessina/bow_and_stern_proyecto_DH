@@ -45,7 +45,10 @@
 		</header>
 
 		<main>
-			<div class="mx-auto max-w-screen-xl grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 my-5 p-5">
+
+
+			<% if (boats.length>0) { %>
+			 		<div class="mx-auto max-w-screen-xl grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 my-5 p-5">
 				<% boats.forEach((boat) => { %>
 				<a href="/products/detail/<%= boat.id %> " class="indv-cont group relative object-contain">
 						<img src="/img/<%= boat.image %>"  alt="" class="object-contain"/>
@@ -56,6 +59,16 @@
 				</a>
 				<% }) %>
 			</div>	
+			
+
+			<% } else { %>
+
+
+				<h1>Sorry! no boats were found for this location</h1>
+
+				<% } %>
+			 
+	
 		</main>
 
 		<%- include ('../partials/footer')%>

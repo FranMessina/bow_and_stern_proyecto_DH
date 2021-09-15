@@ -60,58 +60,70 @@
                   </ul>
                 </div>
               </div>
-              <div class="col-md-8">
+
+              <form action="/user/editProfile" class="col-md-8" method="POST">
+              
+                
                 <div class="card mb-3">
                   <div class="card-body">
                     <div class="row">
                       <div class="col-sm-3">
-                        <h6 class="mb-0">Full Name</h6>
+                        <h6 class="mb-0">First Name</h6>
                       </div>
                       <div class="col-sm-9 text-secondary">
-                        Kenneth Valdez
+                       <%= locals.logged.firstName %> 
                       </div>
+                        <input type="text" name="name" class="inputFirstName" >
+                 
                     </div>
                     <hr>
+                  
+                          <div class="row">
+                            <div class="col-sm-3">
+                              <h6 class="mb-0">Last Name</h6>
+                            </div>
+                            <div class="col-sm-9 text-secondary">
+                             <%= locals.logged.lastName %> 
+                            
+                            </div> <input type="text" name="surname"class="inputLastName">
+                          </div>
+                          <hr>
+                    
                     <div class="row">
                       <div class="col-sm-3">
                         <h6 class="mb-0">Email</h6>
+
                       </div>
                       <div class="col-sm-9 text-secondary">
-                        fip@jukmuh.al
-                      </div>
-                    </div>
+                        <%= locals.logged.email %> 
+                        
+                      </div><input type="text" class="inputEmail" name="newEmail" >
+                    </div> 
                     <hr>
+                    
                     <div class="row">
                       <div class="col-sm-3">
-                        <h6 class="mb-0">Phone</h6>
+                        <h6 class="mb-0">Password</h6>
+
                       </div>
                       <div class="col-sm-9 text-secondary">
-                        (239) 816-9029
-                      </div>
-                    </div>
+                       <p>*******</p>
+                        
+                      </div><input type="password" class="inputPassword" name="password" >
+
+                     
+                    </div> 
                     <hr>
-                    <div class="row">
-                      <div class="col-sm-3">
-                        <h6 class="mb-0">Mobile</h6>
-                      </div>
-                      <div class="col-sm-9 text-secondary">
-                        (320) 380-4539
-                      </div>
-                    </div>
-                    <hr>
-                    <div class="row">
-                      <div class="col-sm-3">
-                        <h6 class="mb-0">Address</h6>
-                      </div>
-                      <div class="col-sm-9 text-secondary">
-                        Bay Area, San Francisco, CA
-                      </div>
-                    </div>
-                    <hr>
+
+
+
                     <div class="row">
                       <div class="col-sm-12">
-                        <a class="btn btn-info " target="__blank" href="/user/edit">Edit</a>
+                        <a class="btn btn-info edit" target="__blank" href="/user/edit">Edit</a>
                         <a class="btn btn-info " target="__blank" href="/user/logout">Log Out</a>
+                         <button type="submit" class="btn btn-info confirmButton">Confirm</button>
+                  
+                       
                       </div>
                    
                     </div>
@@ -119,7 +131,8 @@
                 </div>
   
   
-              </div>
+              
+           </form>
             </div>
   
           </div>
@@ -127,6 +140,34 @@
   
   
   <%- include ('../partials/footer')%>   
+   <script>
+    const edit = document.querySelector(".edit")
+    const inputEmail= document.querySelector(".inputEmail")
+    const inputFirstName= document.querySelector(".inputFirstName")
+    const inputLastname= document.querySelector(".inputLastName");
+    const confirmButton = document.querySelector(".confirmButton")
+    const dataContainer = document.querySelectorAll(".col-sm-9")
+    const inputPassword = document.querySelector(".inputPassword")
+
   
+
+
+    edit.addEventListener("click",function (e){
+      e.preventDefault()
+
+      dataContainer.forEach(container => container.style.display = "none")
+      inputPassword.style.display = "inline-block"
+      inputEmail.style.display="block"
+      inputLastname.style.display="inline-block"
+      inputFirstName.style.display="inline-block"
+      confirmButton.style.display="inline-block"
+      
+      
+
+
+    })
+
+  </script>
 	</body>
+ 
 </html>
