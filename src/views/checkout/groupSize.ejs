@@ -64,21 +64,15 @@
 <script>
     const amountOfAdults = document.getElementById("amountOfAdults")
     const amountOfChildren = document.getElementById("amountOfChildren")
-    const amountOfSeniors = document.getElementById("amountOfSeniors")
-    const amountOfInfants = document.getElementById("amountOfInfants")
     const insert = document.getElementById("insert")
 
 
     function insertData() {
         const adults= amountOfAdults.value
         const children= amountOfChildren.value
-        const seniors= amountOfSeniors.value
-        const infants= amountOfInfants.value
 
             localStorage.setItem("adults",adults)
             localStorage.setItem("children",children)
-            localStorage.setItem("seniors",seniors)
-            localStorage.setItem("infants",infants)
             console.log(localStorage)
     }
   
