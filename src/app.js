@@ -6,10 +6,10 @@ const methodOverride = require('method-override');
 
 const checkoutRoutes = require('./routes/checkoutRoutes');
 const userRoutes = require('./routes/userRoutes');
-const productRoutes = require('./routes/productRoutes');
-const boatApiRoutes = require ("./routes/api/boatApiRoutes")
-
-
+const productRoutes =  require('./routes/productRoutes');
+//api
+const userApiRoutes = require('./routes/api/userApiRoutes');
+const boatApiRoutes = require('./routes/api/boatApiRoutes');
 
 const cookieParser = require('cookie-parser');
 const session = require('express-session');
@@ -53,7 +53,8 @@ app.use('/user', userRoutes);
 
 app.use('/products', productRoutes);
 
-app.use("/api", boatApiRoutes )
+app.use('/api/user', userApiRoutes);
+app.use('/api/boat', boatApiRoutes);
 
 app.use((req, res, next) => {
 	res.status(404).render('not-found');
