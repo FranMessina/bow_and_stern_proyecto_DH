@@ -16,7 +16,7 @@ module.exports = {
 						id: user.id,
 						name: user.firstName + " " + user.lastName,
 						email: user.email,
-						detail: "http://localhost:3000/api/user/" + user.id,
+						detail: "http://localhost:3000/api/user/detail/" + user.id,
 					})),
 				},
 			});
