@@ -71,4 +71,35 @@ module.exports = {
 			});
 		}
 	},
+	async getLocations(req, res) {
+		try {
+			const locations = await DB.Location.findAll({
+				include: ["boats"],
+			});
+
+			const mappedLocations = locations.map(loc => {
+				loc.setDataValue("numberOfBoats", loc.boats.length);
+				return loc;
+			});
+
+			res.status(200).json({
+				meta: {
+					status: "success",
+				},
+				data: {
+					locations: mappedLocations,
+				},
+			});
+		} catch (err) {
+			res.status(500).json({
+				meta: {
+					status: "error",
+				},
+				error: {
+					msg: "Cant connect to database",
+					err,
+				},
+			});
+		}
+	},
 };
