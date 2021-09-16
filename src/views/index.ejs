@@ -23,10 +23,11 @@
 
 						<% if(locals.logged.role == "admin") { %> 
 						<li><a href="/products/controlpanel">CONTROL PANEL</a></li>
+						<li><a href="/checkout/selectDate">CHECKOUT</a></li>
 						<% } %>
 						
 						<li><a href="/user/profile">PROFILE</a></li>
-						<li><a href="/checkout/selectDate">CHECKOUT</a></li>
+						
 					
 					<% } else { %>
 						<i class="fas fa-times" onclick="hideMenu()"></i>
@@ -35,7 +36,7 @@
 						<li><a href="#aboutUs">ABOUT US</a></li>
 						<li><a href="/user/login">LOGIN</a></li>
 						<li><a href="/user/register">REGISTER</a></li>
-						<li><a href="/checkout/selectDate">CHECKOUT</a></li>
+						
 						<% } %>  
 					</ul>
 				</div>
