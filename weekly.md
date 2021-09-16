@@ -70,7 +70,7 @@ Nelo: Subir imagenes de barcos. APIs.-
 
 Silvina: Unificar vista error msg con validacion front. Texto en product amenities. Ajustes de estilo para vista edit y create product. Carga de info para boats destacados. Reseñas de clientes. Cambio estilo buscador y responsive. Mensajes de error reubicados. Nav scroll a About Us en home. Edit con preseleccion de categoria. Informacion de valor de referencia en productDetail.
 
-Matias: Profile completo. Ajustes varios.-
+Matias: Profile completo. Continuacion checkout. Ajustes varios.-
 
 
 
