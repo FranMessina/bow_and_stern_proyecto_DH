@@ -107,3 +107,13 @@ Trabajar como equipo.
 
 --Hacer menos:
 Generar espacios de tiempo prolongado sin actividad.
+
+/// 7mo Sprint Retro ///
+
+--Continuar haciendo:
+Para proximos proyectos hemos aprendido y aplicaremos las practicas que resultaron efectivas para la realización de este proyecto.
+Realizar una buena planificacion desde inicio facilita el trabajo y desarrollo posterior. 
+Mantener una fluida comunicación entre los integrantes del grupo evita posibles atascos y/o doble trabajo. 
+Responsabilidad y compromiso mutuo generan un clima propicio de trabajo con resultados siempre positivos. 
+Mantener siempre claros los objetivos y metas nos mantienen en el buen camino del desarrollo y nos llevan al exito del proyecto. 
+Vamos por mas!
