@@ -50,11 +50,11 @@ const userController = {
 
 		const user = await User.findOne({
 			where: { email: email },
-			attributes: ["firstName", "lastName", "email"],
+			attributes: ["firstName", "lastName", "email", "role"],
 		});
 
 		req.session.logged = user;
-		console.log(req.session.logged);
+
 
 		if (remember) {
 			res.cookie("user", user.id, {
