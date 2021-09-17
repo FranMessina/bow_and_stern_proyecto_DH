@@ -4,7 +4,8 @@ const DB = require("../../database/models");
 module.exports = {
 	async listBoats(req, res) {
 		try {
-			const boats = await DB.Boat.findAndCountAll();
+			const boats = await DB.Boat.findAndCountAll({ include: ["location"] });
+
 			const locations = await DB.Location.findAll({
 				include: ["boats"],
 			});
