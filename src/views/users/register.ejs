@@ -1,131 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<%- include('../partials/head')%>
+
+<head>
+	<%- include('../partials/head')%>
 
 		<link rel="stylesheet" href="/css/users/account.css" />
-	</head>
+</head>
 
-	<body>
-		<header>
-			<nav>
-				<a href="/" class="logo-name">
-					<img src="/img/logoBlanco.png" alt="" />
-				</a>
-				<div class="nav-links">
-					<!-- Links de navegacion -->
-					<ul id="navLinks">
+<body>
+	<header>
+		<nav>
+			<a href="/" class="logo-name">
+				<img src="/img/logoBlanco.png" alt="" />
+			</a>
+			<div class="nav-links">
+				<!-- Links de navegacion -->
+				<ul id="navLinks">
+					<% if(locals.logged) { %>
 						<i class="fas fa-times" onclick="hideMenu()"></i>
 						<li><a href="/">HOME</a></li>
 						<li><a href="/products/catalogue">CATALOGUE</a></li>
-						<!--<li><a href="#">ABOUT US</a></li>-->
-						<li><a href="/user/login">LOGIN</a></li>
-						<li><a href="/user/register">REGISTER</a></li>
-						<li><a href="/checkout/cart">CHECKOUT</a></li>
-					</ul>
-				</div>
-				<!-- Icono para abrir menu en mobile -->
-				<i class="fas fa-bars" onclick="showMenu()"></i>
-			</nav>
 
-			<form action="/user/create" method="POST" class="create-form">
-				
-				<div id="errors"></div>
+						<% if(locals.logged.role=="admin" ) { %>
+							<li><a href="/products/controlpanel">CONTROL PANEL</a></li>
+							<li><a href="/checkout/selectDate">CHECKOUT</a></li>
+							<% } %>
 
-				<h1>Create your account</h1>
+								<li><a href="/user/profile">PROFILE</a></li>
 
-				<div class="form-field">
-					<!-- <label>Full Name</label> -->
-					<input
-						type="text"
-						name="firstName"
-						placeholder="First Name"
-						class="field"
-						id="firstName"
-					/>
-					<% if (locals.errors && errors.firstName) { %>
-						<p> <%= errors.firstName.msg %> </p>
-					<%	} %>
 
-				</div>
+								<% } else { %>
+									<i class="fas fa-times" onclick="hideMenu()"></i>
+									<li><a href="/">HOME</a></li>
+									<li><a href="/products/catalogue">CATALOGUE</a></li>
 
-				<div class="form-field">
-					<!-- <label>Full Name</label> -->
-					<input
-						type="text"
-						name="lastName"
-						placeholder="Last Name"
-						class="field"
-						id="lastName"
-					/>
-					<% if (locals.errors && errors.lastName) { %>
-						<p> <%= errors.lastName.msg %> </p>
-					<%	} %>
+									<li><a href="/user/login">LOGIN</a></li>
+									<li><a href="/user/register">REGISTER</a></li>
 
-				</div>
+									<% } %>
+				</ul>
+			</div>
+			<!-- Icono para abrir menu en mobile -->
+			<i class="fas fa-bars" onclick="showMenu()"></i>
+		</nav>
 
-				<div class="form-field">
-					<!-- <label>Email Address</label> -->
-					<input
-						type="email"
-						name="email"
-						placeholder="johndoe@example.com"
-						class="field"
-						id="email"
-					/>
-					<% if (locals.errors && errors.email) { %>
-						<p> <%= errors.email.msg %> </p>
-					<%	} %>
+		<form action="/user/create" method="POST" class="create-form">
 
-				</div>
+			<div id="errors"></div>
 
-				<div class="form-field">
-					<!-- <label>Password</label> -->
-					<input
-						type="password"
-						name="pass"
-						placeholder="Password"
-						class="field"
-						id="password"
-					/>
-					<% if (locals.errors && errors.pass) { %>
-						<p> <%= errors.pass.msg %> </p>
-					<%	} %>
+			<h1>Create your account</h1>
 
-				</div>
+			<div class="form-field">
+				<!-- <label>Full Name</label> -->
+				<input type="text" name="firstName" placeholder="First Name" class="field" id="firstName" />
+				<% if (locals.errors && errors.firstName) { %>
+					<p>
+						<%= errors.firstName.msg %>
+					</p>
+					<% } %>
 
-				<div class="form-field">
-					<!-- <label>Confirm Password</label> -->
-					<input
-						type="password"
-						name="passConfirm"
-						placeholder="Confirm your password"
-						class="field"
-						id="confirmPassword"
-					/>
-					<% if (locals.errors && errors.passConfirm) { %>
-						<p> <%= errors.passConfirm.msg %> </p>
-					<%	} %>
+			</div>
 
-				</div>
+			<div class="form-field">
+				<!-- <label>Full Name</label> -->
+				<input type="text" name="lastName" placeholder="Last Name" class="field" id="lastName" />
+				<% if (locals.errors && errors.lastName) { %>
+					<p>
+						<%= errors.lastName.msg %>
+					</p>
+					<% } %>
 
-				<div class="accountcheck">
-					<label class="remember">I accept the <a href="">terms of use</a></label
-					>
-					<input type="checkbox" id="check">
-				</div>
+			</div>
 
-				<button type="submit" class="button">Register</button>
+			<div class="form-field">
+				<!-- <label>Email Address</label> -->
+				<input type="email" name="email" placeholder="johndoe@example.com" class="field" id="email" />
+				<% if (locals.errors && errors.email) { %>
+					<p>
+						<%= errors.email.msg %>
+					</p>
+					<% } %>
 
-				<div class="link">
-					<p>Already a member? <a href="/user/login"> Login </a></p>
-					<a href="/">Return to home</a>
-				</div>
+			</div>
 
-			</form>
-		</header>
+			<div class="form-field">
+				<!-- <label>Password</label> -->
+				<input type="password" name="pass" placeholder="Password" class="field" id="password" />
+				<% if (locals.errors && errors.pass) { %>
+					<p>
+						<%= errors.pass.msg %>
+					</p>
+					<% } %>
 
-		<%- include('../partials/footer') %>
+			</div>
+
+			<div class="form-field">
+				<!-- <label>Confirm Password</label> -->
+				<input type="password" name="passConfirm" placeholder="Confirm your password" class="field"
+					id="confirmPassword" />
+				<% if (locals.errors && errors.passConfirm) { %>
+					<p>
+						<%= errors.passConfirm.msg %>
+					</p>
+					<% } %>
+
+			</div>
+
+			<div class="accountcheck">
+				<label class="remember">I accept the <a href="">terms of use</a></label>
+				<input type="checkbox" id="check">
+			</div>
+
+			<button type="submit" class="button">Register</button>
+
+			<div class="link">
+				<p>Already a member? <a href="/user/login"> Login </a></p>
+				<a href="/">Return to home</a>
+			</div>
+
+		</form>
+	</header>
+
+	<%- include('../partials/footer') %>
 		<!-- Javascript para menu desplegable -->
 		<script src="/js/registerValidation.js">
 			var navLinks = document.getElementById('navLinks');
@@ -136,5 +132,6 @@
 				navLinks.style.right = '-200px';
 			}
 		</script>
-	</body>
+</body>
+
 </html>

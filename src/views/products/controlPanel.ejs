@@ -1,67 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<%- include('../partials/head')%>
+
+<head>
+	<%- include('../partials/head')%>
 		<link rel="stylesheet" href="/css/products/controlPanel.css" />
 		<link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
 
-	</head>
-	<body>
-		<header>
-			<nav>
-				<a href="/" class="logo-name">
-					<img src="/img/logoBlanco.png" alt="" />
-				</a>
-				<div class="nav-links">
-					<ul id="navLinks">
+</head>
 
-						<% if(locals.logged) { %> 
+<body>
+	<header>
+		<nav>
+			<a href="/" class="logo-name">
+				<img src="/img/logoBlanco.png" alt="" />
+			</a>
+			<div class="nav-links">
+				<ul id="navLinks">
+
+					<% if(locals.logged) { %>
 						<i class="fas fa-times" onclick="hideMenu()"></i>
 						<li><a href="/">HOME</a></li>
 						<li><a href="/products/catalogue">CATALOGUE</a></li>
 
-						<% if(locals.logged.role == "admin") { %> 
-						<li><a href="/products/controlpanel">CONTROL PANEL</a></li>
-						<% } %>
-						
-						<li><a href="/user/profile">PROFILE</a></li>
-						<li><a href="/checkout/selectDate">CHECKOUT</a></li>
-					
-						<% } else { %>
-						<i class="fas fa-times" onclick="hideMenu()"></i>
-						<li><a href="/">HOME</a></li>
-						<li><a href="/products/catalogue">CATALOGUE</a></li>
-						<li><a href="/user/login">LOGIN</a></li>
-						<li><a href="/user/register">REGISTER</a></li>
-						<li><a href="/checkout/selectDate">CHECKOUT</a></li>
-						<% } %>  				
-						
-					</ul>
-				</div>
-				<i class="fas fa-bars" onclick="showMenu()"></i>
-			</nav>
-		</header>
+						<% if(locals.logged.role=="admin" ) { %>
+							<li><a href="/products/controlpanel">CONTROL PANEL</a></li>
+							<li><a href="/checkout/selectDate">CHECKOUT</a></li>
+
+							<% } %>
+
+								<li><a href="/user/profile">PROFILE</a></li>
+
+								<% } else { %>
+									<i class="fas fa-times" onclick="hideMenu()"></i>
+									<li><a href="/">HOME</a></li>
+									<li><a href="/products/catalogue">CATALOGUE</a></li>
+									<li><a href="/user/login">LOGIN</a></li>
+									<li><a href="/user/register">REGISTER</a></li>
+									<% } %>
+
+				</ul>
+			</div>
+			<i class="fas fa-bars" onclick="showMenu()"></i>
+		</nav>
+	</header>
 
 
-			
 
 
-		<main>
-			<div class="grid mx-auto max-w-screen-xl grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 my-5 p-5">
-					<a href="/products/createlisting" class="indv-cont border border-blue-500 flex items-center justify-center">
-						<p class="text-4xl text-center">
-							AGREGAR PRODUCTO
-						</p>	
-					</a>
-				<% boats.forEach((boat) => { %>
+
+	<main>
+		<div
+			class="grid mx-auto max-w-screen-xl grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 my-5 p-5">
+			<a href="/products/createlisting" class="indv-cont border border-blue-500 flex items-center justify-center">
+				<p class="text-4xl text-center">
+					ADD PRODUCT
+				</p>
+			</a>
+			<% boats.forEach((boat)=> { %>
 				<div class="indv-cont">
 					<img src="/img/<%= boat.image %>" alt="" />
 
 					<div class="prod-info">
-						<h4 class="text-white"><%= boat.name %></h4>
+						<h4 class="text-white">
+							<%= boat.name %>
+						</h4>
 						<div class="flex justify-evenly mt-2">
-							<a href="/products/edit/<%= boat.id %>" class="bg-white py-2 rounded-full px-4 active:scale-95 transition duration-150 text-xl">EDIT</a>	
-							<p class="myBtn bg-white py-2 px-4 rounded-full active:scale-95 transition duration-150">DELETE</p>
+							<a href="/products/edit/<%= boat.id %>"
+								class="bg-white py-2 rounded-full px-4 active:scale-95 transition duration-150 text-xl">EDIT</a>
+							<p class="myBtn bg-white py-2 px-4 rounded-full active:scale-95 transition duration-150">
+								DELETE</p>
 						</div>
 					</div>
 				</div>
@@ -69,49 +76,48 @@
 					<div class="modal-content text-center relative">
 						<span class="close absolute top-2 right-5">&times;</span>
 						<p>You are about to delete "<%= boat.name %>", are you sure?</p>
-						<form
-							action="/products/<%= boat.id %>?_method=DELETE"
-							method="POST"
-						>
-							<button type="submit" class="button bg-red-900 py-1 px-2 rounded-lg text-white mt-5">YES, DELETE</button>
+						<form action="/products/<%= boat.id %>?_method=DELETE" method="POST">
+							<button type="submit" class="button bg-red-900 py-1 px-2 rounded-lg text-white mt-5">YES,
+								DELETE</button>
 						</form>
 					</div>
 				</div>
 				<% }) %>
-			</div>
-		</main>
+		</div>
+	</main>
 
-		<script>
-			// Get the modal
-			var modal = document.querySelectorAll('.modal');
+	<script>
+		// Get the modal
+		var modal = document.querySelectorAll('.modal');
 
-			// Get the button that opens the modal
-			var btn = document.querySelectorAll('.myBtn');
+		// Get the button that opens the modal
+		var btn = document.querySelectorAll('.myBtn');
 
-			// Get the <span> element that closes the modal
-			var span = document.querySelectorAll('.close');
+		// Get the <span> element that closes the modal
+		var span = document.querySelectorAll('.close');
 
-			btn.forEach(function (a, b) {
-				a.onclick = function () {
-					modal[b].style.display = 'block';
-				};
-			});
+		btn.forEach(function (a, b) {
+			a.onclick = function () {
+				modal[b].style.display = 'block';
+			};
+		});
 
-			span.forEach(function (a, b) {
-				a.onclick = function () {
-					modal[b].style.display = 'none';
-				};
-			});
+		span.forEach(function (a, b) {
+			a.onclick = function () {
+				modal[b].style.display = 'none';
+			};
+		});
 
-			modal.forEach(function (a) {
-				window.onclick = function (event) {
-					if (event.target == a) {
-						a.style.display = 'none';
-					}
-				};
-			});
-		</script>
+		modal.forEach(function (a) {
+			window.onclick = function (event) {
+				if (event.target == a) {
+					a.style.display = 'none';
+				}
+			};
+		});
+	</script>
 
-		<%- include ('../partials/footer')%>
-	</body>
+	<%- include ('../partials/footer')%>
+</body>
+
 </html>

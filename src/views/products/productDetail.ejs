@@ -1,181 +1,153 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<%- include('../partials/head')%>
 
-		<link
-			href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
-			rel="stylesheet"
+<head>
+	<%- include('../partials/head')%>
+
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
 			integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
-			crossorigin="anonymous"
-		/>
+			crossorigin="anonymous" />
 
 		<link rel="stylesheet" href="/css/partials/header-suelto.css" />
 		<link rel="stylesheet" href="/css/products/productDetail.css" />
-	</head>
+</head>
 
-	<body>
-		<header>
-			<nav>
-				<a href="/" class="logo-name">
-					<img src="/img/logoBlanco.png" alt="" />
-				</a>
-				<div class="nav-links">
-					<ul id="navLinks">
+<body>
+	<header>
+		<nav>
+			<a href="/" class="logo-name">
+				<img src="/img/logoBlanco.png" alt="" />
+			</a>
+			<div class="nav-links">
+				<ul id="navLinks">
 
-						<% if(locals.logged) { %> 
+					<% if(locals.logged) { %>
 						<i class="fas fa-times" onclick="hideMenu()"></i>
 						<li><a href="/">HOME</a></li>
 						<li><a href="/products/catalogue">CATALOGUE</a></li>
 
-						<% if(locals.logged.role == "admin") { %> 
-						<li><a href="/products/controlpanel">CONTROL PANEL</a></li>
-						<% } %>
-						
-						<li><a href="/user/profile">PROFILE</a></li>
-						<li><a href="/checkout/selectDate">CHECKOUT</a></li>
-					
-						<% } else { %>
-						<i class="fas fa-times" onclick="hideMenu()"></i>
-						<li><a href="/">HOME</a></li>
-						<li><a href="/products/catalogue">CATALOGUE</a></li>
-						<li><a href="/user/login">LOGIN</a></li>
-						<li><a href="/user/register">REGISTER</a></li>
-						<li><a href="/checkout/selectDate">CHECKOUT</a></li>
-						<% } %>  					
-					
-					</ul>
-				</div>
-				<i class="fas fa-bars" onclick="showMenu()"></i>
-			</nav>
-		</header>
+						<% if(locals.logged.role=="admin" ) { %>
+							<li><a href="/products/controlpanel">CONTROL PANEL</a></li>
+							<li><a href="/checkout/selectDate">CHECKOUT</a></li>
 
-		<main>
-			
-			<section class="mainsection">
-				<article class="article1">
-					<h1><%= boat.name %></h1>
-				</article>
-			</section>		
+							<% } %>
 
-			<div
-				id="carouselExampleFade"
-				class="carousel slide carousel-fade"
-				data-bs-ride="carousel"
-			>
-				<div class="carousel-inner">
-					<div class="carousel-item active">
-						<img
-							class="d-block w-100"
-							src="/img/<%= boat.image %>"
-							alt="First slide"
-						/>
-					</div>
-					<div class="carousel-item">
-						<img
-							class="d-block w-100"
-							src="/img/catamaranAtadecer-horizontal.jpeg"
-							alt="Second slide"
-						/>
-					</div>
-					<div class="carousel-item">
-						<img
-							class="d-block w-100"
-							src="/img/catamaranFrente-horizontal.jpeg"
-							alt="Third slide"
-							
-						/>
-					</div>
+								<li><a href="/user/profile">PROFILE</a></li>
+
+								<% } else { %>
+									<i class="fas fa-times" onclick="hideMenu()"></i>
+									<li><a href="/">HOME</a></li>
+									<li><a href="/products/catalogue">CATALOGUE</a></li>
+									<li><a href="/user/login">LOGIN</a></li>
+									<li><a href="/user/register">REGISTER</a></li>
+									<% } %>
+
+				</ul>
+			</div>
+			<i class="fas fa-bars" onclick="showMenu()"></i>
+		</nav>
+	</header>
+
+	<main>
+
+		<section class="mainsection">
+			<article class="article1">
+				<h1>
+					<%= boat.name %>
+				</h1>
+			</article>
+		</section>
+
+		<div id="carouselExampleFade" class="carousel slide carousel-fade w-50" data-bs-ride="carousel">
+			<div class="carousel-inner">
+				<div class="carousel-item active">
+					<img class="d-block w-100" src="/img/<%= boat.image %>" alt="First slide" />
 				</div>
-				<button
-					class="carousel-control-prev"
-					type="button"
-					data-bs-target="#carouselExampleFade"
-					data-bs-slide="prev"
-				>
-					<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-					<span class="visually-hidden">Previous</span>
-				</button>
-				<button
-					class="carousel-control-next"
-					type="button"
-					data-bs-target="#carouselExampleFade"
-					data-bs-slide="next"
-				>
-					<span class="carousel-control-next-icon" aria-hidden="true"></span>
-					<span class="visually-hidden">Next</span>
-				</button>
 			</div>
 
-			<section class="mainsection">
-				<article class="article2">
-					<p><%= boat.description %></p>
-				</article>
-			</section>
 
-			<section class="secondarysection">
-				<div class="test">
-					<article>
-						<h3>This boat includes the following amenities:</h3>
-						<p> <strong> <%= boat.name %> </strong>
-							featuring many new amenities including a  saloon balcony/terrace, a hot tub, and a huge foredeck Portuguese bridge. This yacht has every option a discerning, experienced yachtsman could wish for and is fully equipped for long-range cruising in style, safety and comfort. 
-							<br> <br>
-							<strong>You'll get a custom price. Contact Us!</strong> From USD350 hour -2 hours minimum- 
-						</p>
-					</article>
-				</div>
-				
-				<section class="maps">
-					<h5>Approximate location</h5>
-					<p>
-						You'll get directions to the departure location when you make a
-						booking
+		</div>
+
+		<section class="mainsection">
+			<article class="article2">
+				<p>
+					<%= boat.description %>
+				</p>
+			</article>
+		</section>
+
+		<section class="secondarysection">
+			<div class="test">
+				<article>
+					<h3>This boat includes the following amenities:</h3>
+					<p> <strong>
+							<%= boat.name %>
+						</strong>
+						featuring many new amenities including a saloon balcony/terrace, a hot tub, and a huge foredeck
+						Portuguese bridge. This yacht has every option a discerning, experienced yachtsman could wish
+						for and is fully equipped for long-range cruising in style, safety and comfort.
+						<br> <br>
+						<strong>You'll get a custom price. Contact Us!</strong> From USD350 hour -2 hours minimum-
 					</p>
+				</article>
+			</div>
 
-					<iframe
-						src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3291.411270533529!2d-58.56903898506724!3d-34.41630705511248!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bca591f8dd6a0d%3A0x1e17d0fa6d823716!2sPuerto%20Encantado!5e0!3m2!1ses-419!2sar!4v1622226180854!5m2!1ses-419!2sar"
-						allowfullscreen=""
-						loading="lazy"
-					></iframe>
-				</section>
+			<section class="maps">
+				<h5>Approximate location</h5>
+				<p>
+					You'll get directions to the departure location when you make a
+					booking
+				</p>
+
+				<iframe
+					src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3291.411270533529!2d-58.56903898506724!3d-34.41630705511248!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bca591f8dd6a0d%3A0x1e17d0fa6d823716!2sPuerto%20Encantado!5e0!3m2!1ses-419!2sar!4v1622226180854!5m2!1ses-419!2sar"
+					allowfullscreen="" loading="lazy"></iframe>
 			</section>
-		</main>
+		</section>
+	</main>
 
-		<!-- reviews -->
+	<!-- reviews -->
 
-		<section class="exfooter">
+	<section class="exfooter">
 
-            <h4>See what previous clients think about this boat!</h4>
+		<h4>See what previous clients think about this boat!</h4>
 
-            <div class="review">
-                <h5>Jonathan Marquee</h5>
-                <p>
-                    “Amazing family cruise with young and older children including a teenager. Everything from booking, arranging the surprise trip and the wonderful kind way we were treated by management and crew. Was the highlight of our holiday and we all loved the experience. The boat and service were pure luxury.”
-                </p>
-            </div>
-            <div class="review">
-                <h5>Alice Monroe</h5>
-                <p>
-                    We loved <strong> <%= boat.name %> </strong> experience! <br> <br>
-                    “We absolutely loved our cruise. Lovely staff who mingled and added to the fun. A real fun trip along the Islands and very memorable. Highly recommended.”
-                </p>
-            </div>
-            <div class="review">
-                <h5>Michael Birmingham</h5>
-                <p>
-                    “We had such a great time. The yacht was super clean, we were greeted by their staff, and they were all super nice. They made our time on board so special and so much and more enjoyable! Great service, we loved the experience and we would absolutely do it again!”
-                </p>
-            </div>
+		<div class="review">
+			<h5>Jonathan Marquee</h5>
+			<p>
+				“Amazing family cruise with young and older children including a teenager. Everything from booking,
+				arranging the surprise trip and the wonderful kind way we were treated by management and crew. Was the
+				highlight of our holiday and we all loved the experience. The boat and service were pure luxury.”
+			</p>
+		</div>
+		<div class="review">
+			<h5>Alice Monroe</h5>
+			<p>
+				We loved <strong>
+					<%= boat.name %>
+				</strong> experience! <br> <br>
+				“We absolutely loved our cruise. Lovely staff who mingled and added to the fun. A real fun trip along
+				the Islands and very memorable. Highly recommended.”
+			</p>
+		</div>
+		<div class="review">
+			<h5>Michael Birmingham</h5>
+			<p>
+				“We had such a great time. The yacht was super clean, we were greeted by their staff, and they were all
+				super nice. They made our time on board so special and so much and more enjoyable! Great service, we
+				loved the experience and we would absolutely do it again!”
+			</p>
+		</div>
 
-        </section>
+	</section>
 
-		<!-- Boton para hacer reserva desde productDetail -->
+	<!-- Boton para hacer reserva desde productDetail -->
 
-        <a href="/checkout/selectDate" class="cta-btn">Make a reservation!</a>
+	<a href="/checkout/selectDate" class="cta-btn">Make a reservation!</a>
 
-		<!-- footer -->
+	<!-- footer -->
 
-		<%- include ('../partials/footer')%>
+	<%- include ('../partials/footer')%>
 
 		<!-- Javascript para menu desplegable -->
 
@@ -189,24 +161,22 @@
 			}
 
 
-			let path= window.location.pathname.split("/")
+			let path = window.location.pathname.split("/")
 
-			let boatId= path[3]
+			let boatId = path[3]
 
-			let button =document.querySelector(".cta-btn")
+			let button = document.querySelector(".cta-btn")
 
-		button.addEventListener("click",function(e){
-		
-		localStorage.setItem("selectedBoat", boatId)
-		})
+			button.addEventListener("click", function (e) {
+
+				localStorage.setItem("selectedBoat", boatId)
+			})
 		</script>
 
-		<script
-			src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
 			integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
-			crossorigin="anonymous"
-		></script>
+			crossorigin="anonymous"></script>
 
-	</body>
+</body>
+
 </html>
-

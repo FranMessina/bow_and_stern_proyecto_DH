@@ -1,91 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<%- include('../partials/head')%>
+
+<head>
+	<%- include('../partials/head')%>
 
 		<link rel="stylesheet" href="/css/products/listingForm.css" />
-	</head>
-	<body>
-		<header>
-			<nav>
-				<a href="/" class="logo-name">
-					<img src="/img/logoBlanco.png" alt="" />
-				</a>
-				<div class="nav-links">
-					<ul id="navLinks">
+</head>
 
-						<% if(locals.logged) { %> 
+<body>
+	<header>
+		<nav>
+			<a href="/" class="logo-name">
+				<img src="/img/logoBlanco.png" alt="" />
+			</a>
+			<div class="nav-links">
+				<ul id="navLinks">
+
+					<% if(locals.logged) { %>
 						<i class="fas fa-times" onclick="hideMenu()"></i>
 						<li><a href="/">HOME</a></li>
 						<li><a href="/products/catalogue">CATALOGUE</a></li>
 
-						<% if(locals.logged.role == "admin") { %> 
-						<li><a href="/products/controlpanel">CONTROL PANEL</a></li>
-						<% } %>
-						
-						<li><a href="/user/profile">PROFILE</a></li>
-						<li><a href="/checkout/selectDate">CHECKOUT</a></li>
-					
-						<% } else { %>
-						<i class="fas fa-times" onclick="hideMenu()"></i>
-						<li><a href="/">HOME</a></li>
-						<li><a href="/products/catalogue">CATALOGUE</a></li>
-						<li><a href="/user/login">LOGIN</a></li>
-						<li><a href="/user/register">REGISTER</a></li>
-						<li><a href="/checkout/selectDate">CHECKOUT</a></li>
-						<% } %> 
+						<% if(locals.logged.role=="admin" ) { %>
+							<li><a href="/checkout/selectDate">CHECKOUT</a></li>
+							<li><a href="/products/controlpanel">CONTROL PANEL</a></li>
+							<% } %>
 
-					</ul>
-				</div>
-				<i class="fas fa-bars" onclick="showMenu()"></i>
-			</nav>
-		</header>
+								<li><a href="/user/profile">PROFILE</a></li>
 
-		<main>
-			<h1>Please input the following information</h1>
-			
-			<form 
-				action="/products/create"
-				method="POST"
-				class="create-form"
-				autocomplete="off"
-				enctype="multipart/form-data"
-			>
+								<% } else { %>
+									<i class="fas fa-times" onclick="hideMenu()"></i>
+									<li><a href="/">HOME</a></li>
+									<li><a href="/products/catalogue">CATALOGUE</a></li>
+									<li><a href="/user/login">LOGIN</a></li>
+									<li><a href="/user/register">REGISTER</a></li>
+									<% } %>
 
-			<div class="block">	
-					<div class='error-display'></div>
-			
-					<h3>Vessel´s information</h3>
+				</ul>
+			</div>
+			<i class="fas fa-bars" onclick="showMenu()"></i>
+		</nav>
+	</header>
+
+	<main>
+		<h1>Please input the following information</h1>
+
+		<form action="/products/create" method="POST" class="create-form" autocomplete="off"
+			enctype="multipart/form-data">
+
+			<div class="block">
+				<div class='error-display'></div>
+
+				<h3>Vessel´s information</h3>
 			</div>
 
 			<div class="form-field">
-				<input
-					type="text"
-					name="name"
-					placeholder="Name of the vessel"
-					class="field"
-					id='name'
-					/>
-				</div>
-
-			<div class="form-field">
-				<input
-					type="text"
-					name="year"
-					placeholder="Manufacture Year"
-					class="field"
-					id='year'
-				/>
+				<input type="text" name="name" placeholder="Name of the vessel" class="field" id='name' />
 			</div>
 
 			<div class="form-field">
-				<input
-					type="text"
-					name="measures"
-					placeholder="How many feet?"
-					class="field"
-					id='measures'
-					/>
+				<input type="text" name="year" placeholder="Manufacture Year" class="field" id='year' />
+			</div>
+
+			<div class="form-field">
+				<input type="text" name="measures" placeholder="How many feet?" class="field" id='measures' />
 			</div>
 
 			<div class="form-field">
@@ -102,7 +80,7 @@
 				<label for="description">Description:</label>
 				<textarea maxlength="200" id="description" name="description"></textarea>
 			</div>
-				
+
 			<div class="form-field">
 				<label for="description">Short Description:</label>
 				<textarea maxlength="200" id="shortDescription" name="shortDescription"></textarea>
@@ -110,22 +88,22 @@
 
 			<div class="block">
 				<label for="">Pictures of your boat</label> <br>
-				<input type="file" name="image" id='imgs' multiple/>
+				<input type="file" name="image" id='imgs' multiple />
 			</div>
 
 			<div class="block">
 				<button type="submit" class="button">
 					Send Information
 				</button>
-				
+
 				<a href="/products/controlpanel">Cancel</a>
 			</div>
-				
-			</form>
-		</main>
 
-		<!-- footer -->
-		<%- include ('../partials/footer')%>
+		</form>
+	</main>
+
+	<!-- footer -->
+	<%- include ('../partials/footer')%>
 
 		<!-- Javascript para menu desplegable -->
 		<script>
@@ -138,5 +116,6 @@
 			}
 		</script>
 		<script src="/js/newProduct.js"></script>
-	</body>
+</body>
+
 </html>

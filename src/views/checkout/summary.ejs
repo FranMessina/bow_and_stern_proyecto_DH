@@ -1,144 +1,161 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Producto seleccionado</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap" rel="stylesheet">
-    <link rel = "stylesheet" href = "/css/normalize.css">
+    <link rel="stylesheet" href="/css/normalize.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif&family=Yanone+Kaffeesatz:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif&family=Yanone+Kaffeesatz:wght@300&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <link rel = "stylesheet" href = "/css/checkout/summaryNew.css">
+    <link rel="stylesheet" href="/css/checkout/summaryNew.css">
 </head>
+
 <body>
     <header>
     </header>
-    <main>         
-       
-                    <form class="formularioFP" action="/checkout/summary" method="post">
+    <main>
 
-                        <h1>Congrats, Captain! You are almost there. </br>
-                            Please confirm the following:</h1>
-<article id="contenedor">
+        <form class="formularioFP" action="/checkout/summary" method="post">
+
+            <h1>Congrats, Captain! You are almost there. </br>
+                Please confirm the following:</h1>
+            <article id="contenedor">
 
 
-                            <section id="mainSection">
-                        <div class="summary"> <p>Name: Matias Giles</p> <input type="hidden" name="userId" value="2"></div>
-                        <div class="summary"id="boatName"> <p>Selected Boat:</p> <input type="hidden" name="selectedBoat" value="Fountain Pjot"></div>
-                        <div class="summary"><p id="food">Food Choice: </p> <input type="hidden" name="food_choice" id="food_choice" ></div>
-                        <div class="summary"><p id="experience">Selected Experence: </p> <input type="hidden" name="selected_experience" id="selected_experience"> </div>
-                        <div class="crew">
-                           
-                            <article>
-                                 <h2>Crew:</h2>
-                                <div>
-                                    <h3>Adults:</h3>
-                                    <p id="adults"></p>
-                                    <input type="hidden" name="adults" id="adultsInput"> 
-                                </div>
-                                <div>
-                                    <h3>Minors:</h3>
-                                    <p id="minors"></p>
-                                <input type="hidden" name="children" id="children"> </div>
-                                
-                            </article>
-                            
-                        </div>
-                        <div class="crew">
-                          
-                            <article>
-                                
-                                <div>
-                                    <h3>Preferred Date:</h3>
-                                    <p id="lsOutputDate"></p>
-                                    <input type="hidden" name="preferred_date" id="preferred_date"> </input>
-                                </div>
-                                <div>
-                                    <h3>Alternative Date:</h3>
-                                    <p id= "lsOutputAltDate"></p>
-                                <input type="hidden" name="alternative_date" id="alternative_date"> </div>  
-                            </article>
-                            
-                        </div>
+                <section id="mainSection">
+                    <div class="summary">
+                        <p>Name: Matias Giles</p> <input type="hidden" name="userId" value="2">
+                    </div>
+                    <div class="summary" id="boatName">
+                        <p>Selected Boat:</p> <input type="hidden" name="selectedBoat" value="Fountain Pjot">
+                    </div>
+                    <div class="summary">
+                        <p id="food">Food Choice: </p> <input type="hidden" name="food_choice" id="food_choice">
+                    </div>
+                    <div class="summary">
+                        <p id="experience">Selected Experence: </p> <input type="hidden" name="selected_experience"
+                            id="selected_experience">
+                    </div>
+                    <div class="crew">
 
-                        <div id="back">
-                            <a href="/checkout/experiencePackage"><i class="fas fa-chevron-left"> </i></a> 
-                         </div>
-                    </section>
+                        <article>
+                            <h2>Crew:</h2>
+                            <div>
+                                <h3>Adults:</h3>
+                                <p id="adults"></p>
+                                <input type="hidden" name="adults" id="adultsInput">
+                            </div>
+                            <div>
+                                <h3>Minors:</h3>
+                                <p id="minors"></p>
+                                <input type="hidden" name="children" id="children">
+                            </div>
 
-                    <section id="imgSection">
-                        <img src="/img/atardecerPerfil.jpeg" class="image">
-                    </section>
-</article>
-                        <div id="boton">
-                        <button type="submit">Send</button></div>
-                    </form> 
-           
-            
-             
+                        </article>
+
+                    </div>
+                    <div class="crew">
+
+                        <article>
+
+                            <div>
+                                <h3>Preferred Date:</h3>
+                                <p id="lsOutputDate"></p>
+                                <input type="hidden" name="preferred_date" id="preferred_date"> </input>
+                            </div>
+                            <div>
+                                <h3>Alternative Date:</h3>
+                                <p id="lsOutputAltDate"></p>
+                                <input type="hidden" name="alternative_date" id="alternative_date">
+                            </div>
+                        </article>
+
+                    </div>
+
+                    <div id="back">
+                        <a href="/checkout/experiencePackage"><i class="fas fa-chevron-left"> </i></a>
+                    </div>
+                </section>
+
+                <section id="imgSection">
+                    <img src="" class="image boat-img">
+                </section>
+            </article>
+            <div id="boton">
+                <button type="submit">Send</button>
+            </div>
+        </form>
+
+
+
     </main>
 
     <footer></footer>
 
     <script>
 
-        const outputDate= document.getElementById("lsOutputDate")
-        const date= localStorage.getItem("preferred_date")
-        outputDate.innerHTML+=date
-        
-      
+        const outputDate = document.getElementById("lsOutputDate")
+        const date = localStorage.getItem("preferred_date")
+        outputDate.innerHTML += date
 
-        const outputAltDate= document.getElementById("lsOutputAltDate")
-        const altDate= localStorage.getItem("alternative_date")
-        outputAltDate.innerHTML+=altDate
-        
-        
 
-        const adults= document.getElementById("adults")
-        const amountAdults= localStorage.getItem("adults")
-        adults.innerHTML =amountAdults
-        
 
-        const minors= document.getElementById("minors")
-        const amountChildren= localStorage.getItem("children")
-        minors.innerHTML=amountChildren
-        
+        const outputAltDate = document.getElementById("lsOutputAltDate")
+        const altDate = localStorage.getItem("alternative_date")
+        outputAltDate.innerHTML += altDate
 
-        const food= document.getElementById("food")
-        const foodChoice= localStorage.getItem("foodChoice")
-        food.innerHTML+=foodChoice
-       
-       
-        const experience= document.getElementById("experience")
-        const selectedExperience= localStorage.getItem("selectedExperience")
-        experience.innerHTML+= selectedExperience
-        
-        
 
-    document.getElementById("selected_experience").value=selectedExperience
-    document.getElementById("food_choice").value=foodChoice
-    document.getElementById("children").value=amountChildren
-    document.getElementById("adultsInput").value=amountAdults
-    document.getElementById("alternative_date").value=altDate
-    document.getElementById("preferred_date").value=date
-   
-    let id = localStorage.getItem("selectedBoat")
 
-    fetch ("http://localhost:3000/api/boat/detail/"+id)
-    .then(res => res.json())
-    .then(boat => {
-        if (boat.meta.status=="success"){
-            document.querySelector("#boatName p").innerHTML += " "+boat.data.boat.name
-        }
-        else(document.querySelector("#boatName").innerHTML = "no boat selected")
-    })
+        const adults = document.getElementById("adults")
+        const amountAdults = localStorage.getItem("adults")
+        adults.innerHTML = amountAdults
+
+
+        const minors = document.getElementById("minors")
+        const amountChildren = localStorage.getItem("children")
+        minors.innerHTML = amountChildren
+
+
+        const food = document.getElementById("food")
+        const foodChoice = localStorage.getItem("foodChoice")
+        food.innerHTML += foodChoice
+
+
+        const experience = document.getElementById("experience")
+        const selectedExperience = localStorage.getItem("selectedExperience")
+        experience.innerHTML += selectedExperience
+
+
+
+        document.getElementById("selected_experience").value = selectedExperience
+        document.getElementById("food_choice").value = foodChoice
+        document.getElementById("children").value = amountChildren
+        document.getElementById("adultsInput").value = amountAdults
+        document.getElementById("alternative_date").value = altDate
+        document.getElementById("preferred_date").value = date
+
+        let id = localStorage.getItem("selectedBoat")
+
+        fetch("http://localhost:3000/api/boat/detail/" + id)
+            .then(res => res.json())
+            .then(boat => {
+                if (boat.meta.status == "success") {
+                    document.querySelector("#boatName p").innerHTML += " " + boat.data.boat.name
+                    document.querySelector('.boat-img').src = `/img/${boat.data.boat.image}`
+                }
+                else (document.querySelector("#boatName").innerHTML = "no boat selected")
+            })
 
     </script>
 </body>
+
 </html>
