@@ -50,7 +50,7 @@ const userController = {
 
 		const user = await User.findOne({
 			where: { email: email },
-			attributes: ["firstName", "lastName", "email", "role"],
+			attributes: ["firstName", "lastName", "email", "role", "id"],
 		});
 
 		req.session.logged = user;

@@ -3,7 +3,7 @@
 const inputSearch = document.querySelector(".inputSearch")
 const containerResultsList = document.querySelector(".containerResultsList")
 const containerResults= document.querySelector(".containerResults")
-const API_SEARCH_URL = "http://localhost:3000/api/search?name="
+const API_SEARCH_URL = "http://localhost:3000/api/boat/search?name="
 const search = document.querySelector('.boats-btn')
 const list= document.querySelector(".list")
 
