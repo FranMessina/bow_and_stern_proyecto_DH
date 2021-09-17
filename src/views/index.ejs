@@ -23,10 +23,11 @@
 
 						<% if(locals.logged.role == "admin") { %> 
 						<li><a href="/products/controlpanel">CONTROL PANEL</a></li>
+						<li><a href="/checkout/selectDate">CHECKOUT</a></li>
 						<% } %>
 						
 						<li><a href="/user/profile">PROFILE</a></li>
-						<li><a href="/checkout/selectDate">CHECKOUT</a></li>
+						
 					
 					<% } else { %>
 						<i class="fas fa-times" onclick="hideMenu()"></i>
@@ -35,7 +36,7 @@
 						<li><a href="#aboutUs">ABOUT US</a></li>
 						<li><a href="/user/login">LOGIN</a></li>
 						<li><a href="/user/register">REGISTER</a></li>
-						<li><a href="/checkout/selectDate">CHECKOUT</a></li>
+						
 						<% } %>  
 					</ul>
 				</div>
@@ -75,15 +76,13 @@
 
 				<div class="row">
 					<article class="boat-ex">
-						<!--<a href="/products/detail/1">-->
 						<h3> <%= boats[1].name %> </h3>
 						<img src="/img/1627745272214.jpg" alt="" />
 						<p> 
 							<%= boats[1].short_description %> 
 							<br> <br>
 							<%= boats[1].description %>
-						</p> 
-						</a> 
+						</p>
 					</article>
 					<article class="boat-ex">
 						<h3><%= boats[3].name %></h3>
@@ -117,8 +116,8 @@
 						<div class="textcont">
 							<h4>About our service</h4>
 							<p>
-								We are a professional and experienced team committed to your safety and happy memories.
-								Ipsam nisi, saepe eius consequatur tempora unde labore beatae
+								Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa
+								ipsam nisi, saepe eius consequatur tempora unde labore beatae
 								laborum qui officiis totam, natus magni quas, perferendis non
 								corporis sed possimus doloribus est perspiciatis odit dolorum?
 								Rem suscipit vitae voluptatum aliquid?Lorem ipsum, dolor sit
@@ -139,8 +138,8 @@
 						<div class="textcont">
 							<h4>How it works</h4>
 							<p>
-								We seek excellence, we want to please your dreams and surprise you with much more.
-								Ipsam nisi, saepe eius consequatur tempora unde labore beatae
+								Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa
+								ipsam nisi, saepe eius consequatur tempora unde labore beatae
 								laborum qui officiis totam, natus magni quas, perferendis non
 								corporis sed possimus doloribus est perspiciatis odit dolorum?
 								Rem suscipit vitae voluptatum aliquid?Lorem ipsum dolor sit amet
@@ -161,8 +160,8 @@
 						<div class="textcont">
 							<h4></h4>
 							<p>
-								To keep abreast of the ever-changing charter market, our luxury yacht specialists travel throughout the world to personally inspect charter yachts and develop an intimate knowledge of each vessel.
-								Ipsam nisi, saepe eius consequatur tempora unde labore beatae
+								Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa
+								ipsam nisi, saepe eius consequatur tempora unde labore beatae
 								laborum qui officiis totam, natus magni quas, perferendis non
 								corporis sed possimus doloribus est perspiciatis odit dolorum?
 								Rem suscipit vitae voluptatum aliquid?Lorem ipsum dolor, sit
@@ -208,3 +207,4 @@
 		<script src="/js/search.js"></script>
 	</body>
 </html>
+hola
