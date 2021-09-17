@@ -1,187 +1,195 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<%- include('./partials/head')%>
+
+<head>
+	<%- include('./partials/head')%>
 
 		<link rel="stylesheet" href="/css/users/index-css.css" />
-	</head>
+</head>
 
-	<body>
-		<!-- Header - barra de navegacion - imagen principal -->
-		<header>
-			<nav>
-				<a href="/" class="logo-name">
-					<img src="/img/logoBlanco.png" alt="" />
-				</a>
-				<div class="nav-links">
-					<!-- Links de navegacion -->
-					<ul id="navLinks">
-						<% if(locals.logged) { %> 
+<body>
+	<!-- Header - barra de navegacion - imagen principal -->
+	<header>
+		<nav>
+			<a href="/" class="logo-name">
+				<img src="/img/logoBlanco.png" alt="" />
+			</a>
+			<div class="nav-links">
+				<!-- Links de navegacion -->
+				<ul id="navLinks">
+					<% if(locals.logged) { %>
 						<i class="fas fa-times" onclick="hideMenu()"></i>
 						<li><a href="/">HOME</a></li>
 						<li><a href="/products/catalogue">CATALOGUE</a></li>
 
-						<% if(locals.logged.role == "admin") { %> 
-						<li><a href="/products/controlpanel">CONTROL PANEL</a></li>
-						<% } %>
-						
-						<li><a href="/user/profile">PROFILE</a></li>
-						<li><a href="/checkout/selectDate">CHECKOUT</a></li>
-					
-					<% } else { %>
-						<i class="fas fa-times" onclick="hideMenu()"></i>
-						<li><a href="/">HOME</a></li>
-						<li><a href="/products/catalogue">CATALOGUE</a></li>
-						<li><a href="#aboutUs">ABOUT US</a></li>
-						<li><a href="/user/login">LOGIN</a></li>
-						<li><a href="/user/register">REGISTER</a></li>
-						<li><a href="/checkout/selectDate">CHECKOUT</a></li>
-						<% } %>  
-					</ul>
-				</div>
-				<!-- Icono para abrir menu en mobile -->
-				<i class="fas fa-bars" onclick="showMenu()"></i>
-			</nav>
+						<% if(locals.logged.role=="admin" ) { %>
+							<li><a href="/products/controlpanel">CONTROL PANEL</a></li>
+							<% } %>
 
-			<div class="text-box">
-				<h1>An amaizing experience</h1>
-				
-				<form action="/products/catalogue" method="post" class="boats-btn">
-					<i class="fas fa-search"></i>
-					<input type="text" class="inputSearch" placeholder="Search for a destination" name="location">
-					<button type="submit" class="buttonSubmit">Go!</button>
-				</form>
-				<div class="containerResults">
-					<ul class="list">
+								<li><a href="/user/profile">PROFILE</a></li>
+								<li><a href="/checkout/selectDate">CHECKOUT</a></li>
 
-					</ul>
-					<div class="searchRecentContainer"></div>
-					<div class="containerResultsList"></div>
+								<% } else { %>
+									<i class="fas fa-times" onclick="hideMenu()"></i>
+									<li><a href="/">HOME</a></li>
+									<li><a href="/products/catalogue">CATALOGUE</a></li>
+									<li><a href="#aboutUs">ABOUT US</a></li>
+									<li><a href="/user/login">LOGIN</a></li>
+									<li><a href="/user/register">REGISTER</a></li>
+									<li><a href="/checkout/selectDate">CHECKOUT</a></li>
+									<% } %>
+				</ul>
+			</div>
+			<!-- Icono para abrir menu en mobile -->
+			<i class="fas fa-bars" onclick="showMenu()"></i>
+		</nav>
 
-				</div>
+		<div class="text-box">
+			<h1>An amazing experience</h1>
 
-				
+			<form action="/products/catalogue" method="post" class="boats-btn">
+				<i class="fas fa-search"></i>
+				<input type="text" class="inputSearch" placeholder="Search for a destination" name="location">
+				<button type="submit" class="buttonSubmit">Go!</button>
+			</form>
+			<div class="containerResults">
+				<ul class="list">
+
+				</ul>
+				<div class="searchRecentContainer"></div>
+				<div class="containerResultsList"></div>
 
 			</div>
-		</header>
-		<!-- Cuerpo principal de la pagina-->
-		<main>
-			<!-- Barcos destacados -->
-			<section class="destacados">
-				<h2>Featured boats</h2>
-				<p id="description">
-					We've got the best selection of top boat and yacht brands - all just a click away from being yours. Check out some of our favorites below.
-				</p>
 
-				<div class="row">
-					<article class="boat-ex">
-						<h3> <%= boats[1].name %> </h3>
-						<img src="/img/1627745272214.jpg" alt="" />
-						<p> 
-							<%= boats[1].short_description %> 
+
+
+		</div>
+	</header>
+	<!-- Cuerpo principal de la pagina-->
+	<main>
+		<!-- Barcos destacados -->
+		<section class="destacados">
+			<h2>Featured boats</h2>
+			<p id="description">
+				We've got the best selection of top boat and yacht brands - all just a click away from being yours.
+				Check out some of our favorites below.
+			</p>
+
+			<div class="row">
+				<article class="boat-ex">
+					<h3>
+						<%= boats[1].name %>
+					</h3>
+					<img src="/img/1627745272214.jpg" alt="" />
+					<p>
+						<%= boats[1].short_description %>
 							<br> <br>
 							<%= boats[1].description %>
-						</p>
-					</article>
-					<article class="boat-ex">
-						<h3><%= boats[3].name %></h3>
-						<img src="/img/alea.jpg" alt="" />
-						<p>
-							<%= boats[3].short_description %> 
+					</p>
+				</article>
+				<article class="boat-ex">
+					<h3>
+						<%= boats[3].name %>
+					</h3>
+					<img src="/img/alea.jpg" alt="" />
+					<p>
+						<%= boats[3].short_description %>
 							<br> <br>
 							<%= boats[3].description %>
-						</p>
-					</article>
-					<article class="boat-ex">
-						<h3><%= boats[2].name %></h3>
-						<img src="/img/Adventurer.jpg" alt="" />
-						<p>
-							<%= boats[2].short_description %> 
+					</p>
+				</article>
+				<article class="boat-ex">
+					<h3>
+						<%= boats[2].name %>
+					</h3>
+					<img src="/img/Adventurer.jpg" alt="" />
+					<p>
+						<%= boats[2].short_description %>
 							<br> <br>
-							<%= boats[2].description %>						
-						</p>
-					</article>
-				</div>
-			</section>
-			<!-- Sobre nosotros/servicios/porque elegirnos/que ofrecemos -->
-			<section class="information">
-				<h3 id='aboutUs'>About us</h3>
-			
-				<div class="col-cont">
-					<div class="col">
-						<div class="imgcont">
-							<img src="/img/home-main-picture.jpg" alt="" />
-						</div>
-						<div class="textcont">
-							<h4>About our service</h4>
-							<p>
-								Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa
-								ipsam nisi, saepe eius consequatur tempora unde labore beatae
-								laborum qui officiis totam, natus magni quas, perferendis non
-								corporis sed possimus doloribus est perspiciatis odit dolorum?
-								Rem suscipit vitae voluptatum aliquid?Lorem ipsum, dolor sit
-								amet consectetur adipisicing elit. Dolorum inventore tempora
-								optio repudiandae id molestias ex rem iste. Obcaecati at
-								repudiandae fugiat aperiam placeat quo commodi ab voluptatem
-								sequi alias, deserunt aliquid vel nihil facere cum quam
-								explicabo quia voluptate minus aliquam praesentium inventore! Et
-								quo sapiente dolore unde voluptatum debitis iure blanditiis vel
-								culpa incidunt! Id nam voluptates delectus?
-							</p>
-						</div>
-					</div>
-					<div class="colb">
-						<div class="imgcont">
-							<img src="/img/home-main-picture.jpg" alt="" />
-						</div>
-						<div class="textcont">
-							<h4>How it works</h4>
-							<p>
-								Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa
-								ipsam nisi, saepe eius consequatur tempora unde labore beatae
-								laborum qui officiis totam, natus magni quas, perferendis non
-								corporis sed possimus doloribus est perspiciatis odit dolorum?
-								Rem suscipit vitae voluptatum aliquid?Lorem ipsum dolor sit amet
-								consectetur adipisicing elit. Deserunt iure a quis at autem
-								earum in vitae aliquid fugit possimus distinctio officia, quos
-								perspiciatis illo omnis adipisci dolores animi suscipit ad nobis
-								eos numquam est nemo modi! Voluptatum culpa et labore quod
-								repellat distinctio neque exercitationem quos id harum. Quae
-								perspiciatis vitae minus a dolorem ratione possimus! Soluta, vel
-								magni.
-							</p>
-						</div>
-					</div>
-					<div class="col">
-						<div class="imgcont">
-							<img src="/img/home-main-picture.jpg" alt="" />
-						</div>
-						<div class="textcont">
-							<h4></h4>
-							<p>
-								Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa
-								ipsam nisi, saepe eius consequatur tempora unde labore beatae
-								laborum qui officiis totam, natus magni quas, perferendis non
-								corporis sed possimus doloribus est perspiciatis odit dolorum?
-								Rem suscipit vitae voluptatum aliquid?Lorem ipsum dolor, sit
-								amet consectetur adipisicing elit. Beatae sapiente consequuntur
-								alias voluptatum sit blanditiis. Alias libero sit et neque quis,
-								corporis aperiam incidunt, consequatur dicta recusandae harum a
-								nobis, unde perferendis facere eligendi. Ipsa vitae officia
-								eveniet repellat provident deserunt vel corporis nesciunt
-								expedita voluptates maxime dicta libero, doloribus ullam a
-								iusto, eligendi aut facere! Possimus alias atque accusamus?
-							</p>
-						</div>
-					</div>
-				</div>
-			</section>
-		</main>
+							<%= boats[2].description %>
+					</p>
+				</article>
+			</div>
+		</section>
+		<!-- Sobre nosotros/servicios/porque elegirnos/que ofrecemos -->
+		<section class="information">
+			<h3 id='aboutUs'>About us</h3>
 
-		<%- include ('./partials/footer')%>
+			<div class="col-cont">
+				<div class="col">
+					<div class="imgcont">
+						<img src="/img/home-main-picture.jpg" alt="" />
+					</div>
+					<div class="textcont">
+						<h4>About our service</h4>
+						<p>
+							Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa
+							ipsam nisi, saepe eius consequatur tempora unde labore beatae
+							laborum qui officiis totam, natus magni quas, perferendis non
+							corporis sed possimus doloribus est perspiciatis odit dolorum?
+							Rem suscipit vitae voluptatum aliquid?Lorem ipsum, dolor sit
+							amet consectetur adipisicing elit. Dolorum inventore tempora
+							optio repudiandae id molestias ex rem iste. Obcaecati at
+							repudiandae fugiat aperiam placeat quo commodi ab voluptatem
+							sequi alias, deserunt aliquid vel nihil facere cum quam
+							explicabo quia voluptate minus aliquam praesentium inventore! Et
+							quo sapiente dolore unde voluptatum debitis iure blanditiis vel
+							culpa incidunt! Id nam voluptates delectus?
+						</p>
+					</div>
+				</div>
+				<div class="colb">
+					<div class="imgcont">
+						<img src="/img/home-main-picture.jpg" alt="" />
+					</div>
+					<div class="textcont">
+						<h4>How it works</h4>
+						<p>
+							Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa
+							ipsam nisi, saepe eius consequatur tempora unde labore beatae
+							laborum qui officiis totam, natus magni quas, perferendis non
+							corporis sed possimus doloribus est perspiciatis odit dolorum?
+							Rem suscipit vitae voluptatum aliquid?Lorem ipsum dolor sit amet
+							consectetur adipisicing elit. Deserunt iure a quis at autem
+							earum in vitae aliquid fugit possimus distinctio officia, quos
+							perspiciatis illo omnis adipisci dolores animi suscipit ad nobis
+							eos numquam est nemo modi! Voluptatum culpa et labore quod
+							repellat distinctio neque exercitationem quos id harum. Quae
+							perspiciatis vitae minus a dolorem ratione possimus! Soluta, vel
+							magni.
+						</p>
+					</div>
+				</div>
+				<div class="col">
+					<div class="imgcont">
+						<img src="/img/home-main-picture.jpg" alt="" />
+					</div>
+					<div class="textcont">
+						<h4></h4>
+						<p>
+							Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa
+							ipsam nisi, saepe eius consequatur tempora unde labore beatae
+							laborum qui officiis totam, natus magni quas, perferendis non
+							corporis sed possimus doloribus est perspiciatis odit dolorum?
+							Rem suscipit vitae voluptatum aliquid?Lorem ipsum dolor, sit
+							amet consectetur adipisicing elit. Beatae sapiente consequuntur
+							alias voluptatum sit blanditiis. Alias libero sit et neque quis,
+							corporis aperiam incidunt, consequatur dicta recusandae harum a
+							nobis, unde perferendis facere eligendi. Ipsa vitae officia
+							eveniet repellat provident deserunt vel corporis nesciunt
+							expedita voluptates maxime dicta libero, doloribus ullam a
+							iusto, eligendi aut facere! Possimus alias atque accusamus?
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<%- include ('./partials/footer')%>
 
 		<!-- Javascript para menu desplegable -->
-		
+
 
 		<script>
 			document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
@@ -192,7 +200,7 @@
 						behavior: 'smooth',
 					});
 				});
-			});	
+			});
 
 			var navLinks = document.getElementById('navLinks');
 			function showMenu() {
@@ -204,5 +212,6 @@
 		</script>
 
 		<script src="/js/search.js"></script>
-	</body>
+</body>
+
 </html>
